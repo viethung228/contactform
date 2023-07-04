@@ -1,0 +1,340 @@
+[03/07/2023 11:11:03 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 11:11:03 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 11:11:03 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 11:11:03 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 11:11:03 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 16:45:50 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 16:45:50 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 16:45:50 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 16:45:50 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 16:45:50 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 16:47:07 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 16:47:07 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 16:47:07 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 16:47:07 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 16:47:07 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 16:47:53 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:47:53 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:48:08 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:48:08 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:48:39 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:50:23 ERR ] Could not DecryptText because: System.Security.Cryptography.CryptographicException: The input data is not a complete block.
+   at System.Security.Cryptography.UniversalCryptoDecryptor.UncheckedTransformFinalBlock(ReadOnlySpan`1 inputBuffer, Span`1 outputBuffer)
+   at System.Security.Cryptography.UniversalCryptoDecryptor.UncheckedTransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.UniversalCryptoTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.ReadAsyncCore(Memory`1 buffer, CancellationToken cancellationToken, Boolean useAsync)
+   at System.Security.Cryptography.CryptoStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:50:45 ERR ] Could not DecryptText because: System.Security.Cryptography.CryptographicException: The input data is not a complete block.
+   at System.Security.Cryptography.UniversalCryptoDecryptor.UncheckedTransformFinalBlock(ReadOnlySpan`1 inputBuffer, Span`1 outputBuffer)
+   at System.Security.Cryptography.UniversalCryptoDecryptor.UncheckedTransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.UniversalCryptoTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.ReadAsyncCore(Memory`1 buffer, CancellationToken cancellationToken, Boolean useAsync)
+   at System.Security.Cryptography.CryptoStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:52:04 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:58:05 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 16:58:56 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 16:58:56 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 16:58:56 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 16:58:56 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 16:58:56 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 17:00:06 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:00:26 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:00:26 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:01:38 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 17:01:38 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 17:01:38 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 17:01:38 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 17:01:38 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 17:01:49 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:01:49 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:01:49 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:02:33 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:02:33 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:02:34 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:03:40 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 17:03:40 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 17:03:40 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 17:03:40 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 17:03:40 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 17:04:31 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:04:31 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:04:31 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:04:52 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:05:08 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:05:08 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:05:20 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:05:20 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:05:20 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:05:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 17:05:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 17:05:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 17:05:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 17:05:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 17:05:33 ERR ] Could not DecryptText because: System.Security.Cryptography.CryptographicException: The input data is not a complete block.
+   at System.Security.Cryptography.UniversalCryptoDecryptor.UncheckedTransformFinalBlock(ReadOnlySpan`1 inputBuffer, Span`1 outputBuffer)
+   at System.Security.Cryptography.UniversalCryptoDecryptor.UncheckedTransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.UniversalCryptoTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.ReadAsyncCore(Memory`1 buffer, CancellationToken cancellationToken, Boolean useAsync)
+   at System.Security.Cryptography.CryptoStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:05:35 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:05:35 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:07:21 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:07:43 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:07:43 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:08:29 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:08:33 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:08:33 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:12:48 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:12:48 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:12:48 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:17:21 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:17:21 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:17:21 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) 
+[03/07/2023 17:19:43 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 17:19:43 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 17:19:43 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 17:19:43 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 17:19:43 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 17:20:35 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:20:35 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:20:35 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:22:56 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[03/07/2023 17:22:57 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 17:22:57 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 17:22:57 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 17:22:57 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 17:22:57 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 17:23:49 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:23:49 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:23:49 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:24:41 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:24:41 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:24:41 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 380 
+[03/07/2023 17:29:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 17:29:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 17:29:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 17:29:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 17:29:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 17:29:53 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 386 
+[03/07/2023 17:29:54 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 386 
+[03/07/2023 17:29:54 ERR ] Could not DecryptText because: System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at RijndaelEncryptDecrypt.EncryptDecryptUtils.Decrypt(String cipherText, String passPhrase, String saltValue, String hashAlgorithm)
+   at MainApi.Helpers.Utility.DecryptText(String input, String password, String salt, String hashAlgorithm) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Common\Utility.cs:line 386 
+[03/07/2023 17:30:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 17:30:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 17:30:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 17:30:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 17:30:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[03/07/2023 17:32:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[03/07/2023 17:32:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[03/07/2023 17:32:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[03/07/2023 17:32:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[03/07/2023 17:32:10 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 

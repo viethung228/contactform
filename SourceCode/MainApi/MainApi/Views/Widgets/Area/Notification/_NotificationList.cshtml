@@ -1,0 +1,13 @@
+﻿@using MainApi.Models
+@using MainApi.SharedLibs
+
+@model List<NotificationItemModel>
+
+@{
+    var hasData = Model.HasData();
+}
+
+@if (hasData)
+{
+    @Html.Partial("../Widgets/Items/Notification/_NotificationItems", Model)
+}

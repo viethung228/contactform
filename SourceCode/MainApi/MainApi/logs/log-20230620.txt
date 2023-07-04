@@ -1,0 +1,325 @@
+[20/06/2023 08:43:06 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 08:43:06 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 08:43:06 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 08:43:06 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 08:43:06 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 08:46:38 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Update. Error: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 85
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 36
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 64 
+[20/06/2023 08:47:18 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 08:47:18 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 08:47:18 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 08:47:18 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 08:47:18 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 08:47:18 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 08:47:33 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Update. Error: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 85
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 36
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 64 
+[20/06/2023 08:48:15 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Update. Error: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 85
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 36
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 64 
+[20/06/2023 08:48:48 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Update. Error: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 85
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 36
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 64 
+[20/06/2023 08:49:42 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Update. Error: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 85
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 36
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 64 
+[20/06/2023 08:52:44 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 08:52:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 08:52:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 08:52:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 08:52:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 08:52:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 08:54:01 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 08:54:01 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 08:54:01 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 08:54:01 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 08:54:01 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 08:54:37 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 08:54:37 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 08:54:37 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 08:54:37 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 08:54:37 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 08:54:43 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Insert. Error: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Insert(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 89
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Insert(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 45
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 64 
+[20/06/2023 08:55:01 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Insert. Error: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Insert(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 89
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Insert(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 45
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 64 
+[20/06/2023 08:55:30 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Insert. Error: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Insert(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 89
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Insert(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 45
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 64 
+[20/06/2023 08:55:52 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 08:55:52 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 08:55:52 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 08:55:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 08:55:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 08:55:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 08:57:23 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 08:57:23 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 08:57:23 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 08:57:23 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 08:57:23 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 09:55:43 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 09:55:43 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 09:55:43 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 09:55:43 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 09:55:43 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 10:09:08 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 10:09:08 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 10:09:08 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 10:09:08 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 10:09:08 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 10:10:02 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 10:10:02 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 10:10:02 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 10:10:02 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 10:10:02 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 11:26:47 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 11:26:47 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 11:26:48 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 11:26:48 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 11:26:48 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 11:26:48 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 11:26:48 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 14:06:11 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 14:06:11 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 14:06:11 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 14:06:11 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 14:06:11 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 14:43:10 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 14:43:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 14:43:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 14:43:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 14:43:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 14:43:10 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 14:45:51 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 14:45:51 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 14:45:51 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 14:45:51 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 14:45:51 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 14:46:31 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 14:46:31 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 14:46:31 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 14:46:31 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 14:46:31 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 14:46:31 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 14:50:24 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 14:50:24 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 14:50:24 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 14:50:24 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 14:50:24 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:21:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:21:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:21:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:21:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:21:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:41:45 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:41:45 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:41:45 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:41:45 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:41:45 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:41:49 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreCoin' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 29 
+[20/06/2023 15:42:01 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreCoin' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 29 
+[20/06/2023 15:44:23 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreCoin' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 29 
+[20/06/2023 15:44:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:44:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:44:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:44:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:44:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:45:19 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreCoin' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 29 
+[20/06/2023 15:47:31 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:47:31 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:47:31 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:47:31 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:47:31 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:47:44 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.CoinController.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\CoinController.cs:line 48
+   at lambda_method24(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[20/06/2023 15:49:54 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 15:49:54 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:49:54 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:49:54 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:49:54 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:49:54 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:51:54 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:51:54 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:51:54 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:51:54 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:51:54 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:52:00 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreCoin' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 29 
+[20/06/2023 15:52:07 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreCoin' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 29 
+[20/06/2023 15:52:44 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreCoin' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 29 
+[20/06/2023 15:53:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:53:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:53:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:53:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:53:10 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:55:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:55:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:55:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:55:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:55:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 15:57:53 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 15:57:53 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 15:57:53 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 15:57:53 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 15:57:53 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 16:42:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 16:42:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 16:42:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 16:42:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 16:42:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:04:41 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:04:41 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:04:41 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:04:41 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:04:41 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:06:19 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 17:06:19 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:06:19 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:06:19 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:06:19 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:06:19 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:24:57 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 17:24:57 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:24:57 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:24:57 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:24:57 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:24:57 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:27:19 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 17:27:19 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 17:27:19 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:27:19 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:27:19 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:27:19 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:27:19 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:31:58 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:31:58 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:31:58 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:31:58 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:31:58 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:32:00 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_GetPointById. Error: wallpoint
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 70
+   at MainApi.DataLayer.Stores.StoreCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 36
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 26 
+[20/06/2023 17:32:02 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_GetPointById. Error: wallpoint
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 70
+   at MainApi.DataLayer.Stores.StoreCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 36
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 26 
+[20/06/2023 17:32:11 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_GetPointById. Error: wallpoint
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 70
+   at MainApi.DataLayer.Stores.StoreCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 36
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 26 
+[20/06/2023 17:32:40 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_GetPointById. Error: wallpoint
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 70
+   at MainApi.DataLayer.Stores.StoreCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 36
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 26 
+[20/06/2023 17:33:11 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:33:11 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:33:11 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:33:11 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:33:11 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:33:14 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_GetPointById. Error: wallpoint
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 70
+   at MainApi.DataLayer.Stores.StoreCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 36
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 26 
+[20/06/2023 17:33:35 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_GetPointById. Error: wallpoint
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 70
+   at MainApi.DataLayer.Stores.StoreCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 36
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 26 
+[20/06/2023 17:33:50 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_GetPointById. Error: wallpoint
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 70
+   at MainApi.DataLayer.Stores.StoreCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 36
+   at MainApi.Helpers.HelperCoin.GetPointById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 26 
+[20/06/2023 17:34:04 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:34:04 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:34:04 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:34:04 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:34:04 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:46:08 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/06/2023 17:46:08 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:46:08 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:46:08 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:46:08 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:46:08 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:52:09 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:52:09 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:52:09 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:52:09 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:52:09 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[20/06/2023 17:57:40 ERR MainApi.Controllers.Manager.UserController] Api MainApi.Controllers.Manager.UserController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_Delete. Error: Procedure or function 'User_Delete' expects parameter '@StaffId', which was not supplied.
+   at Manager.Datalayer.Repositories.RpsUser.Delete(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 557
+   at MainApi.DataLayer.Stores.StoreUser.Delete(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 125
+   at MainApi.Controllers.Manager.UserController.Delete(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\UserController.cs:line 173 
+[20/06/2023 17:58:14 ERR MainApi.Controllers.Manager.UserController] Api MainApi.Controllers.Manager.UserController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_Delete. Error: Procedure or function 'User_Delete' expects parameter '@StaffId', which was not supplied.
+   at Manager.Datalayer.Repositories.RpsUser.Delete(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 557
+   at MainApi.DataLayer.Stores.StoreUser.Delete(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 125
+   at MainApi.Controllers.Manager.UserController.Delete(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\UserController.cs:line 173 
+[20/06/2023 17:58:30 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/06/2023 17:58:30 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/06/2023 17:58:30 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/06/2023 17:58:30 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/06/2023 17:58:30 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 

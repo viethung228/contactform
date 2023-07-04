@@ -1,0 +1,308 @@
+﻿@using Manager.WebApp.Helpers;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Models
+@model Manager.WebApp.Models.CustomerDetailModel
+
+
+@{
+    ViewBag.Title = "Detail";
+    ViewBag.HideSubHeader = true;
+    ViewBag.ParentController = "User";
+    ViewBag.ParentAction = "Index";
+
+    var imageUrl = CdnHelper.GetFullFilePath(Model.Avatar);
+    var totalCount = ViewBag.TotalCount == null ? 0 : ViewBag.TotalCount;
+    var currentPage = ViewBag.CurrentPage == null ? 1 : ViewBag.CurrentPage;
+    var pagesize = ViewBag.PageSize == null ? 0 : ViewBag.PageSize;
+    //var html = HtmlHelpers.BootstrapPager(currentPage,index => SecurityHelper.GenerateSecureLink("User", "Detail", new { id = Model.StaffId, currentpage = index, pagesize = @pagesize }), totalCount, pageSize: (int)pagesize, numberOfLinks: 10);
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+    .tabset > input[type="radio"] {
+        position: absolute;
+        left: -200vw;
+    }
+
+    .tabset .tab-panel {
+        display: none;
+    }
+
+    .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+    .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+    .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+    .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+    .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+    .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+        display: block;
+    }
+
+    /*
+                                                     Styling
+                                                    */
+    .tabset > label {
+        position: relative;
+        display: inline-block;
+        padding: 15px 15px 10px;
+        /*border: 1px solid transparent;*/
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+        .tabset > label:focus {
+            position: relative;
+            display: inline-block;
+            padding: 15px 15px 10px;
+            /*border: 1px solid transparent;*/
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+    input:focus-visible + label {
+        outline: 1px solid rgba(0,102,204,1);
+        border-radius: 3px;
+    }
+
+    .tabset > label:hover,
+    .tabset > input:focus + label,
+    .tabset > input:checked + label {
+        color: #06586e;
+        border-bottom: 1px solid #06586e;
+    }
+
+        .tabset > label:hover::after,
+        .tabset > input:focus + label::after,
+        .tabset > input:checked + label::after {
+            background: #06586e;
+            border-bottom: 1px solid #06586e;
+        }
+
+    .tabset > input:checked + label {
+        border-color: #06586e;
+    }
+
+    label {
+        margin-bottom: -1px !important;
+    }
+
+    .tab-panel {
+        padding: 30px 0;
+        border-top: 1px solid #ccc;
+    }
+
+    /*
+                                                     Demo purposes only
+                                                    */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .tabset {
+        max-width: 65em;
+    }
+</style>
+<div class="modal-header">
+    <h5 class="modal-title" id="">
+        @ManagerResource.LB_DETAIL
+    </h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+            &times;
+        </span>
+    </button>
+</div>
+
+<div class="modal-body" data-size="full">
+    <div class="m-portlet__body">
+        <div class="tabset">
+            <!-- Tab 1 -->
+            <input type="radio" name="tabset" id="tab1" aria-controls="information" checked>
+            <label style="height:50px;" for="tab1"><i class="fa fa-file-text-o"></i> @ManagerResource.LB_INFORMATION</label>
+            <!-- Tab 2 -->
+            <input type="radio" name="tabset" id="tab2" aria-controls="coin_history">
+            <label style="height:50px;" for="tab2"><i class="fa fa-history" aria-hidden="true"></i> コインの歴史</label>
+            <div class="tab-panels">
+                <section id="information" class="tab-panel">
+                    <div class="detail">
+                        <div class="">
+                            <div class="row info-item">
+                                <div class="col-md-2 info-label">
+                                    @ManagerResource.LB_AVATAR
+                                </div>
+                                <div class="col-md-10">
+                                    <div>
+                                        <a href="javascript:;" title="@ManagerResource.LB_IMAGE" class="logo-sm ml10" style="width:120px;height:70px;">
+                                            @if (!string.IsNullOrEmpty(imageUrl))
+                                            {
+                                                <img class="lazy" data-fancybox="group_@Model.Id" data-src="@imageUrl" src="@imageUrl" data-original="@imageUrl" />
+                                            }
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row info-item">
+                                <div class="col-md-2 info-label">
+                                    @ManagerResource.LB_FULL_NAME
+                                </div>
+                                <div class="col-md-10">
+                                    @Model.FullName
+                                </div>
+                            </div>
+                            <div class="row info-item">
+                                <div class="col-md-2 info-label">
+                                    @ManagerResource.LB_PHONE
+                                </div>
+                                <div class="col-md-10">
+                                    @Model.PhoneNumber
+                                </div>
+                            </div>
+                            <div class="row info-item">
+                                <div class="col-md-2 info-label">
+                                    コインポイント
+                                </div>
+                                <div class="col-md-10">
+                                    @ViewBag.Point
+                                </div>
+                            </div>
+                            <div class="row info-item">
+                                <div class="col-md-2 info-label">
+                                    @ManagerResource.LB_CREATED_DATE
+                                </div>
+                                <div class="col-md-10">
+                                    @Html.ValueFor(model => model.CreatedDateUtc, "{0:dd/MM/yyyy}")
+                                </div>
+                            </div>
+                            <div class="row info-item">
+                                <div class="col-md-2 info-label">
+                                    すべてのアップデートを受信する
+                                </div>
+                                <div class="col-md-10">
+                                    @(Model.ReceiveAllUpdate ? "Yes" : "No")
+                                </div>
+                            </div>
+                            <div class="row info-item">
+                                <div class="col-md-2 info-label">
+                                    広告を削除
+                                </div>
+                                <div class="col-md-10">
+                                    @(Model.RemoveAds ? "Yes" : "No")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="coin_history" class="tab-panel">
+                    <table id="sample-table-1" class="table table-hover table-bordered">
+                        <thead class="text-nowrap">
+                            <tr class="sticky-row">
+                                <th class="text-center" width="3%">#</th>
+                                <th class="text-center">@ManagerResource.LB_CREATED_DATE</th>
+                                <th class="text-center">値が変更されました</th>
+                                <th class="text-center">@ManagerResource.LB_TYPE</th>
+                                <th class="text-center" width="5%"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-nowrap">
+                            @if (ViewBag.CoinHistoryList != null && ViewBag.CoinHistoryList.Count > 0)
+                            {
+                                var stt = 0;
+                                foreach (var record in ViewBag.CoinHistoryList)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td class="text-center">@(stt) </td>
+                                        <td class="">
+                                            @record.CreatedDate
+                                        </td>
+                                        <td class="">
+                                            @(record.ValueChange.Contains('-') ? record.ValueChange : "+" + record.ValueChange)
+                                        </td>
+
+                                        <td class="">
+                                            @record.SourceType
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="11">
+                                        @ManagerResource.LB_NO_RECORD
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                    @{
+                        await RenderPaging(Model.StaffId, currentPage, pagesize, totalCount);
+                    }
+                </section>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<div class="modal-dialog modal-dialog-centered justify-content-center" role="document" id="modal-load" hidden>
+    <span class="fa fa-spinner fa-spin fa-3x"></span>
+</div>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/ImageModal/preview.js"></script>
+<script>
+
+    $(".m-datatable__pager-link-number").click(function () {
+        $(".modal-content").addClass("sk-loading");
+        setTimeout(function () { $("#tab2").click(); }, 500);
+        setTimeout(function () { $(".modal-content").removeClass("sk-loading"); }, 1000);
+    });
+</script>
+@functions {
+    private async Task RenderPaging(int id, int currentPage, int pagesize, int totalCount)
+    {
+        <div class="coin-history-paging d-flex justify-content-between">
+            <div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded">
+                <div class="m-datatable__pager m-datatable--paging-loaded clearfix mt-0">
+                    @{
+                        var html = HtmlHelpers.BootstrapPager(currentPage, index => SecurityHelper.GenerateSecureLink("User", "Detail",
+                        new
+                        {
+                            id = id,
+                            currentpage = index,
+                            pagesize = pagesize
+                        }),
+                        totalCount, pageSize: pagesize, numberOfLinks: 10);
+
+                        @html
+                    }
+                </div>
+            </div>
+            @if (totalCount > 0)
+            {
+                <div class="m-datatable__pager-info d-flex align-items-end">
+                    <span class="m-datatable__pager-detail">
+                        @ManagerResource.LB_RECORDS_ALL @totalCount @ManagerResource.LB_RECORDS @(currentPage == 1 ? 1 : pagesize * currentPage + 1 - pagesize) 〜 @(pagesize * currentPage >= totalCount ? totalCount : currentPage == 1 ? (pagesize * currentPage) : (pagesize * currentPage))
+                    </span>
+                </div>
+            }
+        </div>
+    }
+}
+<script>
+    var listPage = $(".m-datatable__pager-link-number");
+    listPage.each(function (index, value) {
+        let link = value;
+        let oldHref = link.href;
+        link.removeAttribute('href');
+        link.setAttribute("data-href", oldHref);
+        link.setAttribute("data-modal", " ");
+    });
+</script>

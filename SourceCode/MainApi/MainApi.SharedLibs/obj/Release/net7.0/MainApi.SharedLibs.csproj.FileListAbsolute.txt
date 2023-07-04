@@ -1,0 +1,12 @@
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\bin\Release\net7.0\MainApi.SharedLibs.deps.json
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\bin\Release\net7.0\MainApi.SharedLibs.dll
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\bin\Release\net7.0\MainApi.SharedLibs.pdb
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\MainApi.SharedLibs.csproj.AssemblyReference.cache
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\MainApi.SharedLibs.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\MainApi.SharedLibs.AssemblyInfoInputs.cache
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\MainApi.SharedLibs.AssemblyInfo.cs
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\MainApi.SharedLibs.csproj.CoreCompileInputs.cache
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\MainApi.SharedLibs.dll
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\refint\MainApi.SharedLibs.dll
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\MainApi.SharedLibs.pdb
+E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.SharedLibs\obj\Release\net7.0\ref\MainApi.SharedLibs.dll

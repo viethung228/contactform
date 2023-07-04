@@ -1,0 +1,179 @@
+﻿@using MainApi.DataLayer.Entities;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers
+@using Manager.SharedLibs
+@model Manager.WebApp.Models.ManageLinkSettingModel
+
+@{
+    ViewBag.Title = "LinkSetting manage";
+
+    var linksettings = new List<IdentityLinkSetting>();
+    if (ViewBag.LinkSettings != null)
+    {
+        linksettings = ViewBag.LinkSettings as List<IdentityLinkSetting>;
+    }
+}
+
+@await Html.PartialAsync("_Notifications")
+
+@await Html.PartialAsync("../Widgets/Modals/_DefaultModal")
+
+<div class="m-portlet m-portlet--collapse" m-portlet="true" id="FormSearchTool">
+    <div class="m-portlet__head">
+        <div class="m-portlet__head-caption">
+            <div class="m-portlet__head-title">
+                <span class="m-portlet__head-icon">
+                    <i class="fa fa-search"></i>
+                </span>
+                <h3 class="m-portlet__head-text">
+                    @ManagerResource.LB_SEARCH
+                </h3>
+            </div>
+        </div>
+        <div class="m-portlet__head-tools">
+            <ul class="m-portlet__nav">
+                <li class="m-portlet__nav-item">
+                    <a href="javascript:;" m-portlet-tool="toggle" class="m-portlet__nav-link m-portlet__nav-link--icon">
+                        <i class="la la-angle-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    @await Html.PartialAsync("Partials/_SearchForm", Model)
+</div>
+
+<div class="m-portlet">
+    <div class="m-portlet__body">
+        <div class="m-section">
+            <div class="m-section__content table-responsive">
+                <div class="row mb10">
+                    <div class="col-lg-12 text-right">
+                        <a href="javascript:;" data-href="/LinkSetting/Create" class="btn btn-info btn-sm" data-current="" data-control="" data-modal="">
+                            <i class="fa fa-plus"></i> @ManagerResource.LB_ADD_NEW
+                        </a>
+                    </div>
+                </div>
+                <div class="sticky-table sticky-headers sticky-ltr-cells">
+                    <table id="sample-table-1" class="table table-hover table-bordered">
+                        <thead class="text-nowrap">
+                            <tr class="sticky-row">
+                                <th class="text-center" width="3%">#</th>
+                                @*<th class="text-center" width="5%">@ManagerResource.LB_CODE</th>*@
+                                <th class="text-center">@ManagerResource.LB_NAME</th>
+                                <th class="text-center" width="6.5%">@ManagerResource.LB_IMAGE</th>
+                                <th class="text-center ">LinkSetting</th>
+                                <th class="text-center">Type</th>
+                                <th class="text-center" width="5%"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-nowrap">
+                            @if (Model.SearchResults != null && Model.SearchResults.Count > 0)
+                            {
+                                var stt = 0;
+                                foreach (var record in Model.SearchResults)
+                                {
+                                    stt++;
+                                    var editLink = SecurityHelper.GenerateSecureLink("LinkSetting", "Edit", new { id = record.Id });
+                                    <tr>
+                                        <td class="text-center">@(stt + (Model.Page - 1) * Model.PageSize) </td>
+                                        <td>
+                                            <div class="display-flex">
+                                                <div>
+                                                    @{
+                                                        var dtLink = SecurityHelper.GenerateSecureLink("LinkSetting", "Detail", new { id = record.Id });
+                                                        var imageUrl = CdnHelper.GetFullFilePath(record.CoverImage);
+                                                    }
+                                                </div>
+
+                                                <div class="ml5 pt15">
+                                                    <a class="" data-href="@dtLink" data-modal="" title="Detail">
+                                                        <span class="">@record.SettingName</span>
+                                                    </a>
+                                                    @*<a href="@dtLink"><span class="">@record.Name</span></a>*@
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="">
+                                            <a href="javascript:;" title="@ManagerResource.LB_IMAGE" class="logo-sm ml10 ml-3" style="width:60px;height:50px;margin-left:100px;">
+                                                
+                                                @if (!string.IsNullOrEmpty(imageUrl))
+                                                {
+                                                    <img class="lazy" data-fancybox="group_@record.Id" data-src="@imageUrl" src="@imageUrl" data-original="@imageUrl" />
+                                                }
+                                            </a>
+                                        </td>
+                                        <td class="">
+                                            @record.Link
+                                        </td>
+                                        <td class="">
+                                            @(record.Type == true ? "Image" : "URL")
+                                        </td>
+                                        <td class="text-center">
+                                            @{
+                                                var newModel = Model;
+                                                newModel.Id = record.Id;
+                                                newModel.SearchExec = "Y";
+                                            }
+                                            <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-href="@editLink" data-modal="" title="@ManagerResource.LB_EDIT">
+                                                <i class="la la-pencil"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="11">
+                                        @ManagerResource.LB_NO_RECORD
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            @{
+                await RenderPaging();
+            }
+
+        </div>
+    </div>
+</div>
+
+@functions {
+    private async Task RenderPaging()
+    {
+        <div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded">
+            <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+                @if (Model.WasOverRecordsInPage())
+                {
+                    var html = HtmlHelpers.BootstrapPager(Model.Page, index => Url.Action("Index", "LinkSetting",
+                    new
+                    {
+                        Page = index,
+                        SearchExec = "Y",
+                        Keyword = Model.Keyword,
+                    }),
+                    Model.TotalCount, pageSize: Model.PageSize, numberOfLinks: 10);
+
+                    await Task.FromResult(html);
+
+                    @html
+                }
+
+                @if (Model.TotalCount > 0)
+                {
+                    <div class="m-datatable__pager-info">
+                        <span class="m-datatable__pager-detail">
+                            @ManagerResource.LB_RECORDS_ALL @Model.TotalCount @ManagerResource.LB_RECORDS @Model.StartCount() 〜 @Model.EndCount(Model.SearchResults.Count())
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}

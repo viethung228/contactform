@@ -1,0 +1,276 @@
+﻿@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers
+@model Manager.WebApp.Models.UserViewModel
+
+@{
+    ViewBag.Title = ManagerResource.LB_USER_MANAGE;
+}
+
+@await Html.PartialAsync("_Notifications")
+
+@await Html.PartialAsync("../Widgets/Modals/_LargeModal")
+
+<div class="space"></div>
+
+<div class="m-portlet" m-portlet="true" id="FormSearchTool">
+    <div class="m-portlet__head">
+        <div class="m-portlet__head-caption">
+            <div class="m-portlet__head-title">
+                <span class="m-portlet__head-icon">
+                    <i class="fa fa-search"></i>
+                </span>
+                <h3 class="m-portlet__head-text">
+                    検索条件
+                </h3>
+            </div>
+        </div>
+        <div class="m-portlet__head-tools">
+            <ul class="m-portlet__nav">
+                <li class="m-portlet__nav-item">
+                    <a href="javascript:;" m-portlet-tool="toggle" class="m-portlet__nav-link m-portlet__nav-link--icon">
+                        <i class="la la-angle-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    @await Html.PartialAsync("_SearchForm", Model)
+</div>
+
+<div class="m-portlet">
+    <div class="m-portlet__body">
+        <div class="row">
+            <div class="col-md-12">
+                @if (CommonHelpers.CurrentUserIsAgency())
+                {
+                    <div class="clearfix operation">
+                        <a class="btn btn-white btn-sm btn-info" href="@Url.Action("Create", "UsersAdmin")" title="@ManagerResource.LB_ADD_NEW"><i class="fa fa-plus"></i> @ManagerResource.LB_ADD_NEW</a>
+                    </div>
+                }
+            </div>
+        </div>
+        <!--end::Section-->
+        <!--begin::Section-->
+        <div class="m-section">
+            <div class="m-section__content table-responsive">
+                <div class="sticky-table sticky-headers sticky-ltr-cells">
+                    <table id="sample-table-1" class="table m-table table-hover table-bordered">
+                        <thead>
+                            <tr class="sticky-row">
+                                <th class="text-center" width="3%">#</th>
+                                <th class="text-center">@ManagerResource.LB_USERNAME</th>
+                                <th class="text-center">@ManagerResource.LB_FULL_NAME</th>
+                                <th class="text-center">@ManagerResource.LB_ROLE</th>
+                                <th class="text-center" width="10%">通知が届く</th>
+                                <th class="text-center" width="10%">@ManagerResource.LB_CREATED_DATE</th>
+                                <th class="text-center" width="10%">@ManagerResource.LB_ACTION</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @if (Model.SearchResult != null && Model.SearchResult.Count > 0)
+                            {
+                                var isAdmin = CommonHelpers.CurrentUserIsAdmin();
+                                var stt = 0;
+                                foreach (var record in Model.SearchResult)
+                                {
+                                    if (!isAdmin)
+                                    {
+                                        if (record.UserName == "admin" || record.UserName == "bangvl")
+                                        {
+                                            if (Model.Total > 1)
+                                            {
+                                                continue;
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td colspan="11">
+                                                        @ManagerResource.LB_NO_RECORD
+                                                    </td>
+                                                </tr>
+                                                break;
+                                            }
+                                        }
+                                    }
+
+                                    var avatarUrl = string.Empty;
+                                    if (string.IsNullOrEmpty(record.Avatar))
+                                    {
+                                        avatarUrl = "/assets/app/media/img/users/default-avatar.jpg";
+                                    }
+                                    else
+                                    {
+                                        avatarUrl = "/" + record.Avatar;
+                                    }
+
+                                    stt++;
+                                    <tr>
+                                        <td class="text-center">@(stt + (Model.Page - 1) * Model.PageSize) </td>
+                                        <td>
+                                            @{
+                                                var dtLink = Url.Action("Details", "UsersAdmin", new { id = record.Id, SearchExec = 'Y', Page = Model.Page, Email = Model.Email, RoleId = Model.RoleId, IsLocked = Model.IsLocked });
+                                            }
+
+                                            <div class="display-flex">
+                                                <div>
+                                                    <a href="javascript:;" title="@ManagerResource.LB_IMAGE" class="logo-sm ml10" style="width:60px;height:60px;overflow:hidden">
+                                                        @if (!string.IsNullOrEmpty(avatarUrl))
+                                                        {
+                                                            <img class="lazy" data-src="@avatarUrl" src="@avatarUrl" data-original="@avatarUrl" style="border-radius:50%;" />
+                                                        }
+                                                    </a>
+                                                </div>
+
+                                                <div class="ml5 pt15">
+                                                    @if (record.LockoutEnabled)
+                                                    {
+                                                        if (record.LockoutEndDateUtc.HasValue)
+                                                        {
+                                                            if (record.LockoutEndDateUtc.Value >= DateTime.UtcNow)
+                                                            {
+                                                                <b class=""><a href="@dtLink" class="text-danger">@record.UserName (@ManagerResource.LB_LOCKED)</a></b>
+                                                            }
+                                                            else
+                                                            {
+                                                                <a href="@dtLink">@record.UserName</a>
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            <a href="@dtLink">@record.UserName</a>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="@dtLink">@record.UserName</a>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>@record.FullName</td>
+                                        <td>
+                                            @if (record.Roles != null)
+                                            {
+                                                @String.Join(", ", record.Roles.ToArray())
+                                                ;
+                                            }
+                                        </td>
+                                        <td class="text-center">
+                                            @if (record.ReceiveAllUpdate)
+                                            {
+                                                <i class="fa fa-check text-success"></i>
+                                            }
+                                        </td>
+                                        <td>
+                                            @{
+                                                var localTime = record.CreatedDateUtc;
+                                            }
+                                            <span class="local-time" data-time="@localTime.ToString("MM/dd/yyyy HH:mm:ss")"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            @{
+                                                //var assignLink = SecurityHelper.GenerateSecureLink("Company", "AssignToCompany", new { id = record.StaffId });
+                                            }
+                                            <input type="hidden" id="hdName_@record.Id" value="@record.Id" />
+
+                                            <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" href="@Url.Action("Edit", "UsersAdmin", new { id = record.Id, SearchExec = 'Y', Page = Model.Page, Email = Model.Email, RoleId = Model.RoleId, IsLocked = Model.IsLocked })" title="@ManagerResource.LB_EDIT">
+                                                <i class="la la-pencil"></i>
+                                            </a>
+
+                                            <a class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" href="javascript" data-href="@Url.Action("DeleteUser", "UsersAdmin", new { id = record.Id })" data-modal="" data-size="default" title="@ManagerResource.LB_DELETE">
+                                                <i class="la la-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="11">
+                                        @ManagerResource.LB_NO_RECORD
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+
+                @{
+                    await RenderPaging();
+                }
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="separator description-title">ボタンの説明</div>
+            @if (Model.SearchResult != null && Model.SearchResult.Count > 0)
+            {
+                if (CommonHelpers.CurrentUserIsAgency())
+                {
+                    <div class="pt-3">
+                        <a class="btn btn-white btn-sm btn-info" href="javascript:;" title="追加"><i class="fa fa-plus"></i> 追加</a><span class="description-item">新規ユーザを追加する。</span>
+                    </div>
+                }
+            }
+            else
+            {
+                <div>
+                    <span class="description-item">※ 従業員様専用のアカウント「追加」のボタンをクリックして発給しましょう。</span>
+                </div>
+            }
+
+        </div>
+        <!--end::Section-->
+    </div>
+    <!--end::Form-->
+</div>
+
+@functions {
+    private async Task RenderPaging()
+    {
+        <div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded">
+            <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+                @if (Model.WasOverRecordsInPage())
+                {
+                    var html = HtmlHelpers.BootstrapPager(Model.Page, index => Url.Action("Index", "UsersAdmin",
+                    new
+                    {
+                        Page = index,
+                        SearchExec = "Y",
+                        IsLocked = Model.IsLocked,
+                        RoleId = Model.RoleId,
+                        Email = Model.Email
+                    }),
+                    Model.TotalCount, pageSize: Model.PageSize, numberOfLinks: 10);
+
+                    @html
+                }
+
+                @if (Model.TotalCount > 0)
+                {
+                    <div class="m-datatable__pager-info">
+                        <span class="m-datatable__pager-detail">
+                            @ManagerResource.LB_RECORDS_ALL @Model.TotalCount @ManagerResource.LB_RECORDS @Model.StartCount() 〜 @Model.EndCount(Model.SearchResult.Count())
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
+
+@section PageInlineScripts
+    {
+    <!-- inline scripts related to this page -->
+    <script type="text/javascript">
+        $('#frmCompanies').on('shown.bs.modal', function (e) {
+            $(".selectpicker").selectpicker('refresh');
+        });
+
+        function CreateUser() {
+            $('#frmCreate').modal('show');
+        }
+    </script>
+}

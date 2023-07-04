@@ -1,0 +1,11 @@
+﻿.jz-custom-form-btn-panel {
+    /*position: sticky;*/
+    z-index: 999;
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.jz-custom-form-btn-panel-content {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}

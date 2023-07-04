@@ -1,0 +1,201 @@
+[23/06/2023 09:14:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 09:14:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 09:14:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 09:14:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 09:14:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 09:20:31 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 09:20:31 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 09:20:31 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 09:20:31 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 09:20:31 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 09:22:27 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 09:22:27 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 09:22:27 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 09:22:27 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 09:22:27 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 09:34:45 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert null to 'int' because it is a non-nullable value type
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at AspNetCore.Views_User_Detail.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\User\Detail.cshtml:line 237
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[23/06/2023 09:35:08 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert null to 'int' because it is a non-nullable value type
+   at CallSite.Target(Closure, CallSite, Object)
+   at AspNetCore.Views_User_Detail.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\User\Detail.cshtml:line 237
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[23/06/2023 09:37:25 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 09:37:25 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 09:37:25 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 09:37:25 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 09:37:25 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 09:38:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 09:38:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 09:38:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 09:38:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 09:38:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 09:41:40 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[23/06/2023 09:48:30 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The call is ambiguous between the following methods or properties: 'Manager.WebApp.Helpers.HtmlHelpers.BootstrapPager(int, System.Func<int,string>, int, int, int, string)' and 'Manager.WebApp.Helpers.HtmlHelpers.BootstrapPager(int, string, int, int, int, string)'
+   at CallSite.Target(Closure, CallSite, Type, Object, Object, Object, Int32, Int32)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute6[T0,T1,T2,T3,T4,T5,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+   at AspNetCore.Views_User_Detail.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\User\Detail.cshtml:line 236
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[23/06/2023 10:05:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 10:05:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 10:05:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 10:05:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 10:05:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 10:12:46 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[23/06/2023 10:13:05 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[23/06/2023 10:27:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 10:27:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 10:27:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 10:27:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 10:27:10 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 10:29:46 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 10:29:46 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 10:29:46 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 10:29:46 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 10:29:46 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 11:23:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 11:23:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 11:23:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 11:23:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 11:23:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 11:32:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 11:32:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 11:32:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 11:32:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 11:32:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 13:39:56 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 13:39:57 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 13:39:57 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 13:39:57 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 13:39:57 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 13:39:57 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 14:14:03 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 14:14:04 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 14:14:04 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 14:14:04 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 14:14:04 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 14:14:04 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 14:21:03 ERR Manager.WebApp.Services.UserServices] Return code: 0, message:  
+[23/06/2023 16:03:11 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 16:03:11 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 16:03:11 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 16:03:11 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 16:03:11 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 16:06:00 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 16:06:00 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 16:06:00 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 16:06:00 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 16:06:00 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 16:06:00 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 16:17:31 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 16:17:31 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 16:17:31 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 16:17:31 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 16:17:31 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 16:18:36 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 16:18:36 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 16:18:36 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 16:18:36 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 16:18:36 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 16:18:36 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 17:30:20 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 17:30:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 17:30:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 17:30:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 17:30:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 17:30:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 17:38:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 17:38:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 17:38:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 17:38:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 17:38:10 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 17:57:39 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 17:57:40 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 17:57:40 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 17:57:40 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 17:57:40 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 17:57:40 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 17:57:52 ERR Manager.WebApp.Controllers.UserController] History0 
+[23/06/2023 18:02:39 ERR Manager.WebApp.Controllers.UserController] History0 
+[23/06/2023 18:19:37 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 18:19:37 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[23/06/2023 18:19:37 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 18:19:37 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 18:19:37 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[23/06/2023 18:19:52 ERR Manager.WebApp.Controllers.UserController] Hao Nguyen 
+[23/06/2023 18:19:52 ERR Manager.WebApp.Controllers.UserController] 1 
+[23/06/2023 18:19:52 ERR Manager.WebApp.Controllers.UserController] History0 

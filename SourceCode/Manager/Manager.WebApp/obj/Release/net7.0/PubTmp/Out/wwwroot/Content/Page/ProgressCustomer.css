@@ -1,0 +1,102 @@
+﻿.m-datatable.m-datatable--default.m-datatable--subtable > .m-datatable__table > .m-datatable__body .m-datatable__row-subtable {
+    max-width: 100%;
+    overflow: auto;
+    display: grid;
+}
+
+.m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__body .m-datatable__row > .m-datatable__cell > span, .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__foot .m-datatable__row > .m-datatable__cell > span, .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__head .m-datatable__row > .m-datatable__cell > span {
+    overflow: unset;
+}
+
+.m-datatable__subtable .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__body .m-datatable__row.m-datatable__row--hover:not(.m-datatable__row--active) > .m-datatable__cell {
+    background: #c3c3c3 !important;
+}
+
+    .m-datatable__subtable .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__body .m-datatable__row.m-datatable__row--hover:not(.m-datatable__row--active) > .m-datatable__cell * {
+        color: #1a3365 !important;
+    }
+
+.m-datatable__lock--scroll {
+    height: auto !important;
+}
+
+.m-datatable__head .td-click {
+    cursor: auto;
+}
+
+#myModal .modal-dialog {
+    float: right;
+    margin-top: 70px;
+}
+
+.content-custom {
+    height: 100%;
+}
+
+.td-click {
+    cursor: pointer;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #myModal .modal-dialog {
+        width: 88vw;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@@media only screen and (min-width : 321px) {
+
+    #myModal .modal-dialog {
+        width: 88vw;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    #myModal .modal-dialog {
+        width: 88vw;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    #myModal .modal-dialog {
+        width: 50vw;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    #myModal .modal-dialog {
+        width: 50vw;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    #myModal .modal-dialog {
+        width: 50vw;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    #myModal .modal-dialog {
+        width: 50vw;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    #myModal .modal-dialog {
+        width: 60vw;
+    }
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    #myModal .modal-dialog {
+        width: 88vw;
+    }
+}

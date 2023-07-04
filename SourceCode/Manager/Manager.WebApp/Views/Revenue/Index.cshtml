@@ -1,0 +1,248 @@
+﻿@using Manager.WebApp.Helpers;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Models
+@model Manager.WebApp.Models.ManageRevenueModel
+<div>
+    <div class="m-portlet" id="section-saleschart">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-tools">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--left m-tabs-line--primary" role="tablist" id="RootMainTabs">
+                            <li class="nav-item m-tabs__item">
+                                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#Revenue" role="tab" onclick="divFunction(Revenue)">
+                                    <i class="fa fa-calculator"></i> 収益の詳細
+                                </a>
+                            </li>
+                            <li class="nav-item m-tabs__item">
+                                <a class="nav-link m-tabs__link " data-toggle="tab" href="#Chart" role="tab" onclick="divFunction(Chart)">
+                                    <i class="fa fa-bar-chart"></i> チャート
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <div class="tab-content tab-content-custom">
+                <div class="tab-pane loaded active show" id="Revenue">
+                    <div class="m-form m-form--fit m-form--label-align-left">
+                        <div class="area-loading">
+                            <div class="m-section">
+                                <div id="section-sales-chart-filter" class="mb-4">
+                                    @await Html.PartialAsync("Partials/_SearchForm", Model)
+                                </div>
+                                @await Html.PartialAsync("Partials/Detail", Model)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content tab-content-custom">
+                <div class="tab-pane loaded" id="Chart">
+                    <div class="m-form m-form--fit m-form--label-align-left">
+                        <div class="area-loading">
+                            @await Html.PartialAsync("Partials/Chart", Model)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PageInlineStyles {
+
+    <style>
+        .btn.dropdown-toggle.btn-light {
+            padding-bottom: 4px;
+            padding-top: 7px;
+        }
+    </style>
+}
+
+@section PageInlineScripts {
+    @*//Chart*@
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+    <script>
+        const month = document.getElementById('myMonthChart');
+        const week = document.getElementById('myWeekChart');
+        const source = document.getElementById('mySourceChart');
+        function number_format(number, decimals, dec_point, thousands_sep) {
+            // *     example: number_format(1234.56, 2, ',', ' ');
+            // *     return: '1 234,56'
+            number = (number + '').replace(',', '').replace(' ', '');
+            var n = !isFinite(+number) ? 0 : +number,
+                prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+                sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+                dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+                s = '',
+                toFixedFix = function (n, prec) {
+                    var k = Math.pow(10, prec);
+                    return '' + Math.round(n * k) / k;
+                };
+            // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+            s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+            if (s[0].length > 3) {
+                s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+            }
+            if ((s[1] || '').length < prec) {
+                s[1] = s[1] || '';
+                s[1] += new Array(prec - s[1].length + 1).join('0');
+            }
+            return s.join(dec);
+        }
+        new Chart(month, {
+            type: 'bar',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"],
+                datasets: [{
+                    label: 'InAppPurchase',
+                    data: @Html.Raw(ViewBag.valMonthPurchase),
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 2
+                },
+                {
+                    label: 'RemoveAds',
+                    data: @Html.Raw(ViewBag.valMonthAds),
+                    backgroundColor: 'rgb(54, 162, 235)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function (value, index, values) {
+                                return '¥ ' + number_format(value);
+                            }
+                        }
+                    }]
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem, chart) {
+                            var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                            return datasetLabel + ': ¥ ' + number_format(tooltipItem.yLabel, 2);
+                        }
+                    }
+                }
+            }
+        });
+        new Chart(week, {
+            type: 'bar',
+            data: {
+                labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                datasets: [{
+                    label: 'InAppPurchase',
+                    data: @Html.Raw(ViewBag.valDayOfWeekPurchase),
+                    backgroundColor: 'rgb(255, 99, 132)'
+                    ,
+                    borderColor: 'rgb(255, 99, 132)'
+                    ,
+                    borderWidth: 2
+                },
+                {
+                    label: 'RemoveAds',
+                    data: @Html.Raw(ViewBag.valDayOfWeekAds),
+                    backgroundColor: 'rgb(54, 162, 235)'
+                    ,
+                    borderColor: 'rgb(54, 162, 235)'
+                    ,
+                    borderWidth: 2
+                }]
+            },
+            options: {                
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function (value, index, values) {
+                                return '¥ ' + number_format(value);
+                            }
+                        }
+                    }]
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem, chart) {
+                            var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                            return datasetLabel + ': ¥ ' + number_format(tooltipItem.yLabel, 2);
+                        }
+                    }
+                }
+            }
+        });
+        new Chart(source, {
+            type: 'pie',
+            data: {
+                labels: ["InAppPurchase", "RemoveAds"],
+                datasets: [{
+                    label: 'InAppPurchase',
+                    data: [@Html.Raw(ViewBag.AppPurchase), @Html.Raw(ViewBag.RemoveAds)],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem, data) {
+                            //console.log(tooltipItem);
+                            return "¥ " + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString();
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    @*//EndChart*@
+    <script>
+        //console.log($(".tab-pane"));
+        //$(".tab-pane").removeClass("active show");
+
+        function divFunction(name) {
+            $(".tab-pane").removeClass("active show");
+            $(this).addClass("active show");
+        }
+
+    </script>
+    <script>
+        //var formData = $("#searchSubmit").closest('form').serializeArray();
+        //console.log(formData);
+        $("#searchSubmit").click(function () {
+            var values = {};
+            var formData = $(this).closest('form').serializeArray();
+            $.each(formData, function (i, field) {
+                values[field.name] = field.value;
+            });
+            window.location.reload();
+            //$.aPost("/Revenue/Index", formData, function (result) {
+            //    if (result.success) {
+            //        $.showToastMessage(result.info, 'Thông báo');
+            //    }
+            //});
+            //$.aPost()
+            //if (values.FromDate == null) {
+            //    var date = new Date(), y = date.getFullYear(), m = date.getMonth();
+            //    var firstDay = new Date(y, m, 1);
+            //    values.FromDate = firstDay;
+            //}
+            //console.log(values);
+
+
+
+            //formData.push({ name: this.name, value: this.value });
+            //now use formData, it includes the submit button
+        });
+    </script>
+}

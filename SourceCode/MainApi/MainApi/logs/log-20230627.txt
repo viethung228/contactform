@@ -1,0 +1,47 @@
+[27/06/2023 08:25:50 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[27/06/2023 08:25:51 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/06/2023 08:25:51 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[27/06/2023 08:25:51 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/06/2023 08:25:51 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/06/2023 08:25:51 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[27/06/2023 09:58:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/06/2023 09:58:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[27/06/2023 09:58:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/06/2023 09:58:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/06/2023 09:58:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[27/06/2023 10:43:00 ERR MainApi.Controllers.Manager.UserController] Test1 
+[27/06/2023 10:43:00 ERR MainApi.Helpers.HelperUser] Test3 
+[27/06/2023 10:43:00 ERR MainApi.Helpers.HelperUser] Test4 
+[27/06/2023 10:43:00 ERR MainApi.Controllers.Manager.UserController] Test2 
+[27/06/2023 10:43:01 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 64 
+[27/06/2023 10:43:05 ERR MainApi.Controllers.Manager.UserController] Test1 
+[27/06/2023 10:43:05 ERR MainApi.Helpers.HelperUser] Test3 
+[27/06/2023 10:43:05 ERR MainApi.Helpers.HelperUser] Test4 
+[27/06/2023 10:43:05 ERR MainApi.Controllers.Manager.UserController] Test2 
+[27/06/2023 10:43:05 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 64 
+[27/06/2023 10:43:07 ERR MainApi.Controllers.Manager.UserController] Test1 
+[27/06/2023 10:43:07 ERR MainApi.Helpers.HelperUser] Test3 
+[27/06/2023 10:43:07 ERR MainApi.Helpers.HelperUser] Test4 
+[27/06/2023 10:43:07 ERR MainApi.Controllers.Manager.UserController] Test2 
+[27/06/2023 10:43:07 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 64 
+[27/06/2023 13:40:39 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[27/06/2023 13:40:40 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/06/2023 13:40:40 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[27/06/2023 13:40:40 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/06/2023 13:40:40 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/06/2023 13:40:40 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[27/06/2023 21:31:34 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[27/06/2023 21:31:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/06/2023 21:31:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[27/06/2023 21:31:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/06/2023 21:31:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/06/2023 21:31:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 

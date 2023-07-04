@@ -1,0 +1,307 @@
+[23/06/2023 09:16:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 09:16:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 09:16:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 09:16:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 09:16:10 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 11:23:15 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 11:23:16 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 11:23:16 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 11:23:16 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 11:23:16 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 11:23:16 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 13:39:55 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 13:39:56 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 13:39:56 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 13:39:56 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 13:39:56 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 13:39:56 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 14:07:39 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 14:07:39 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 14:07:39 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 14:07:39 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 14:07:39 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 14:07:39 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 14:13:12 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 14:13:12 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 14:13:12 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 14:13:12 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 14:13:12 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 14:34:41 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 14:34:41 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 14:34:41 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 14:34:41 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 14:34:41 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 14:34:41 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 14:36:30 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 14:36:30 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 14:36:30 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 14:36:30 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 14:36:30 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 14:36:30 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 14:37:05 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_UpdatePoint. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCoin.cs:line 115
+   at MainApi.DataLayer.Stores.StoreCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 42
+   at MainApi.Helpers.HelperCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 63 
+[23/06/2023 14:37:52 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 14:37:52 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 14:37:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 14:37:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 14:37:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 14:38:53 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_UpdatePoint. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCoin.cs:line 115
+   at MainApi.DataLayer.Stores.StoreCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 42
+   at MainApi.Helpers.HelperCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 63 
+[23/06/2023 14:39:28 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_UpdatePoint. Error: Invalid attempt to call MetaData when reader is closed.
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCoin.cs:line 115
+   at MainApi.DataLayer.Stores.StoreCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 42
+   at MainApi.Helpers.HelperCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 63 
+[23/06/2023 14:39:44 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_UpdatePoint. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCoin.cs:line 115
+   at MainApi.DataLayer.Stores.StoreCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 42
+   at MainApi.Helpers.HelperCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 63 
+[23/06/2023 14:40:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 14:40:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 14:40:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 14:40:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 14:40:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 14:40:38 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_UpdatePoint. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCoin.cs:line 115
+   at MainApi.DataLayer.Stores.StoreCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 42
+   at MainApi.Helpers.HelperCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 63 
+[23/06/2023 14:42:22 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute CoinHistory_GetByPage. Error: Invalid attempt to call MetaData when reader is closed.
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.GetHistoryPointById(String id, Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCoin.cs:line 153
+   at MainApi.DataLayer.Stores.StoreCoin.GetHistoryPointById(String id, Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 46
+   at MainApi.Helpers.HelperCoin.GetHistoryPointById(String id, Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 45 
+[23/06/2023 14:43:14 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_UpdatePoint. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCoin.cs:line 115
+   at MainApi.DataLayer.Stores.StoreCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 42
+   at MainApi.Helpers.HelperCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 63 
+[23/06/2023 14:43:18 ERR MainApi.Helpers.HelperCoin] Function MainApi.Helpers.HelperCoin error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Coin_UpdatePoint. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCoin.cs:line 115
+   at MainApi.DataLayer.Stores.StoreCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCoin.cs:line 42
+   at MainApi.Helpers.HelperCoin.UpdateCoin(String UserId, Int32 ValueChange, Int32 SourceType) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 63 
+[23/06/2023 15:59:13 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 15:59:13 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 15:59:13 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 15:59:13 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 15:59:13 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 15:59:13 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 16:02:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 16:02:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 16:02:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 16:02:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 16:02:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 16:12:45 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 16:12:46 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 16:12:46 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 16:12:46 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 16:12:46 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 16:12:46 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 16:14:50 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[23/06/2023 16:14:51 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 16:14:51 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 16:14:51 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 16:14:51 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 16:14:51 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 16:15:23 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:15:33 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:17:51 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:18:37 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:20:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 16:20:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 16:20:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 16:20:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 16:20:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 16:20:26 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:21:08 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:21:12 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:21:38 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:21:42 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:21:48 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:22:34 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:22:39 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:22:58 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:23:02 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:23:16 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:23:19 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:23:22 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:23:43 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:28:01 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:28:04 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:28:07 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:28:18 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:28:23 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:28:28 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 16:28:36 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCoin.cs:line 62 
+[23/06/2023 17:05:21 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 17:05:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 17:05:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 17:05:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 17:05:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 17:06:19 ERR MainApi.Controllers.Manager.AdsController] Api MainApi.Controllers.Manager.AdsControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Ads_RemoveAds. Error: UserId
+   at MainApi.DataLayer.Repositories.Manager.RpsAds.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsAds.cs:line 72
+   at MainApi.DataLayer.Stores.StoreAds.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreAds.cs:line 38
+   at MainApi.Controllers.Manager.AdsController.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\AdsController.cs:line 46 
+[23/06/2023 17:07:09 ERR MainApi.Controllers.Manager.AdsController] Api MainApi.Controllers.Manager.AdsControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Ads_RemoveAds. Error: UserId
+   at MainApi.DataLayer.Repositories.Manager.RpsAds.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsAds.cs:line 72
+   at MainApi.DataLayer.Stores.StoreAds.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreAds.cs:line 38
+   at MainApi.Controllers.Manager.AdsController.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\AdsController.cs:line 46 
+[23/06/2023 17:07:57 ERR MainApi.Controllers.Manager.AdsController] Api MainApi.Controllers.Manager.AdsControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Ads_RemoveAds. Error: Invalid attempt to call MetaData when reader is closed.
+   at MainApi.DataLayer.Repositories.Manager.RpsAds.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsAds.cs:line 72
+   at MainApi.DataLayer.Stores.StoreAds.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreAds.cs:line 38
+   at MainApi.Controllers.Manager.AdsController.RemoveAds(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\AdsController.cs:line 46 
+[23/06/2023 17:15:41 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 17:15:41 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 17:15:41 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 17:15:41 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 17:15:41 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 17:30:16 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 17:30:16 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 17:30:16 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 17:30:16 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 17:30:16 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 17:30:41 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:38:18 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:38:25 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:38:28 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:38:30 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:38:32 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:38:34 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:38:36 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:38:38 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 62 
+[23/06/2023 17:57:45 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 17:57:45 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 17:57:45 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 17:57:45 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 17:57:45 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 17:57:51 ERR MainApi.Controllers.Manager.UserController] Test1 
+[23/06/2023 17:57:51 ERR MainApi.Helpers.HelperUser] Test3 
+[23/06/2023 17:57:51 ERR MainApi.Helpers.HelperUser] Test4 
+[23/06/2023 17:57:51 ERR MainApi.Controllers.Manager.UserController] Test2 
+[23/06/2023 17:57:52 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 64 
+[23/06/2023 18:02:39 ERR MainApi.Controllers.Manager.UserController] Test1 
+[23/06/2023 18:02:39 ERR MainApi.Helpers.HelperUser] Test3 
+[23/06/2023 18:02:39 ERR MainApi.Helpers.HelperUser] Test4 
+[23/06/2023 18:02:39 ERR MainApi.Controllers.Manager.UserController] Test2 
+[23/06/2023 18:02:39 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 64 
+[23/06/2023 18:19:47 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[23/06/2023 18:19:47 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[23/06/2023 18:19:47 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[23/06/2023 18:19:47 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[23/06/2023 18:19:47 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[23/06/2023 18:19:52 ERR MainApi.Controllers.Manager.UserController] Test1 
+[23/06/2023 18:19:52 ERR MainApi.Helpers.HelperUser] Test3 
+[23/06/2023 18:19:52 ERR MainApi.Helpers.HelperUser] Test4 
+[23/06/2023 18:19:52 ERR MainApi.Controllers.Manager.UserController] Test2 
+[23/06/2023 18:19:52 ERR MainApi.Helpers.HelperUser] Function MainApi.Helpers.HelperUser error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute User_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\System\RpsUser.cs:line 597
+   at MainApi.DataLayer.Stores.StoreUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\System\StoreUser.cs:line 63
+   at MainApi.Helpers.HelperUser.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperUser.cs:line 64 

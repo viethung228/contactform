@@ -1,0 +1,337 @@
+[29/06/2023 08:41:45 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[29/06/2023 08:41:46 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 08:41:46 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 08:41:46 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 08:41:46 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 08:41:46 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[29/06/2023 09:07:22 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 09:07:22 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 09:07:22 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 09:07:22 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 09:07:22 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[29/06/2023 09:08:55 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 09:08:55 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 09:08:55 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 09:08:55 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 09:08:55 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[29/06/2023 09:32:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 09:32:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 09:32:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 09:32:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 09:32:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[29/06/2023 11:18:15 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 11:18:15 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 11:18:15 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 11:18:15 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 11:18:15 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[29/06/2023 11:34:59 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 11:34:59 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 11:34:59 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 11:34:59 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 11:34:59 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[29/06/2023 11:35:16 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:35:16 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:35:16 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 11:35:21 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:35:21 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:35:21 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 11:35:23 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:35:23 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:35:23 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 11:37:41 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:37:41 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:37:41 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 11:37:45 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:37:45 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:37:45 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 11:37:46 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:37:46 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:37:47 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 11:43:38 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:43:38 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:43:38 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 11:43:42 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:43:42 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:43:43 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 11:43:48 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:43:48 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:43:48 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 11:45:00 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:45:00 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:45:00 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 11:45:21 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:45:21 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:45:21 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 11:45:26 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 11:45:26 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 11:45:26 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:35:07 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:35:07 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:35:07 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:35:11 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:35:11 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:35:11 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:35:14 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:35:14 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:35:14 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:35:16 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:35:16 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:35:16 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:36:34 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:36:34 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:36:35 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:36:39 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:36:39 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:36:39 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:36:45 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:36:45 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:36:45 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:36:46 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:36:46 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:36:47 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:39:11 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:39:11 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:39:11 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:42:34 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:42:34 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:42:34 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:43:33 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:43:33 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:43:33 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:43:56 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:43:56 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:43:56 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:44:03 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:44:03 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:44:04 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:44:15 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:44:15 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:44:15 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:44:19 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:44:19 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:44:19 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:44:22 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:44:22 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:44:22 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:44:24 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:44:24 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:44:24 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:44:27 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:44:27 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:44:27 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 13:54:22 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 13:54:22 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 13:54:22 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 13:54:22 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 13:54:22 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[29/06/2023 13:55:01 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:55:01 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:55:16 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:55:16 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:56:16 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:56:16 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:57:03 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:57:03 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:57:10 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:57:10 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 13:57:14 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 13:57:14 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:00:39 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:00:39 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:00:39 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:00:43 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:00:43 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:00:43 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:00:45 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:00:45 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:00:45 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:00:50 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:00:50 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:00:50 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:00:56 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:00:56 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:00:56 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:01:06 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:01:06 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:01:07 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:01:09 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:01:09 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:01:09 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:01:11 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:01:11 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:01:11 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:01:14 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:01:14 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:01:14 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:01:40 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:01:40 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:01:40 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:01:43 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:01:43 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:01:43 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 14:01:46 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 14:01:46 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 14:01:46 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[29/06/2023 15:45:34 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 15:45:34 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 15:45:35 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 15:45:38 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 15:45:38 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 15:45:38 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() 
+[29/06/2023 15:45:43 ERR MainApi.Controllers.CustomerController] Test1 
+[29/06/2023 15:45:43 ERR MainApi.Controllers.CustomerController] Test2 
+[29/06/2023 17:17:03 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[29/06/2023 17:17:03 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 17:17:03 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 17:17:03 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 17:17:03 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 17:17:03 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[29/06/2023 17:17:51 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreLinkSetting' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 80 
+[29/06/2023 17:18:29 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'MainApi.DataLayer.Stores.IStoreLinkSetting' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) 
+[29/06/2023 17:18:41 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[29/06/2023 17:18:41 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[29/06/2023 17:18:41 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[29/06/2023 17:18:41 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[29/06/2023 17:18:41 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 

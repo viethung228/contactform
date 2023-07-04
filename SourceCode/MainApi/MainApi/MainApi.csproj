@@ -1,0 +1,316 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <UserSecretsId>9eb80ae1-6e3a-4343-af0d-31634b786e06</UserSecretsId>
+    <AssemblyName>MainApi</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Compile Remove="Services\Workers\**" />
+    <Compile Remove="wwwroot\Media\Course\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="Services\Workers\**" />
+    <Content Remove="wwwroot\Media\Course\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="Services\Workers\**" />
+    <EmbeddedResource Remove="wwwroot\Media\Course\**" />
+    <None Remove="logs\**" />
+    <None Remove="Services\Workers\**" />
+    <None Remove="wwwroot\Media\Course\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.107.7" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+    <PackageReference Include="JWT" Version="8.9.0" />
+    <PackageReference Include="MailKit" Version="3.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="NPOI" Version="2.5.3" />
+    <PackageReference Include="OpenPop.NET" Version="2.0.6.1120" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="RijndaelEncryptDecrypt" Version="1.0.0.24384" />
+    <PackageReference Include="Rotativa" Version="1.7.3" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Square" Version="25.2.0" />
+    <PackageReference Include="StackExchange.Redis.Extensions.AspNetCore" Version="7.0.1" />
+    <PackageReference Include="StackExchange.Redis.Extensions.Core" Version="7.1.1" />
+    <PackageReference Include="StackExchange.Redis.Extensions.Newtonsoft" Version="7.0.1" />
+    <PackageReference Include="Stripe.net" Version="39.126.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Account\Login.cshtml" />
+    <None Include="wwwroot\assets\app\js\dashboard.js" />
+    <None Include="wwwroot\assets\app\js\layout-builder.js" />
+    <None Include="wwwroot\assets\app\media\img\bg\bg-1.jpg" />
+    <None Include="wwwroot\assets\app\media\img\bg\bg-2.jpg" />
+    <None Include="wwwroot\assets\app\media\img\bg\bg-3.jpg" />
+    <None Include="wwwroot\assets\app\media\img\bg\bg-4.jpg" />
+    <None Include="wwwroot\assets\app\media\img\bg\bg-5.jpg" />
+    <None Include="wwwroot\assets\app\media\img\bg\bg-6.jpg" />
+    <None Include="wwwroot\assets\app\media\img\bg\bg-6.png" />
+    <None Include="wwwroot\assets\app\media\img\bg\bg-7.jpg" />
+    <None Include="wwwroot\assets\app\media\img\files\css.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\csv.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\doc.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\html.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\javascript.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\jpg.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\mp4.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\pdf.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\xml.svg" />
+    <None Include="wwwroot\assets\app\media\img\files\zip.svg" />
+    <None Include="wwwroot\assets\app\media\img\flags\en-US.png" />
+    <None Include="wwwroot\assets\app\media\img\flags\ja-JP.png" />
+    <None Include="wwwroot\assets\app\media\img\flags\vi-VN.png" />
+    <None Include="wwwroot\assets\app\media\img\icons\exchange.svg" />
+    <None Include="wwwroot\assets\app\media\img\icons\logout.svg" />
+    <None Include="wwwroot\assets\app\media\img\icons\question.svg" />
+    <None Include="wwwroot\assets\app\media\img\icons\warning.svg" />
+    <None Include="wwwroot\assets\app\media\img\logos\logo-1.png" />
+    <None Include="wwwroot\assets\app\media\img\logos\logo-2.png" />
+    <None Include="wwwroot\assets\app\media\img\logos\logo-3.png" />
+    <None Include="wwwroot\assets\app\media\img\logos\logo_client_color.png" />
+    <None Include="wwwroot\assets\app\media\img\logos\logo_client_white.png" />
+    <None Include="wwwroot\assets\app\media\img\logos\logo_invoice_dark.png" />
+    <None Include="wwwroot\assets\app\media\img\logos\logo_invoice_white.png" />
+    <None Include="wwwroot\assets\app\media\img\misc\notification_bg.jpg" />
+    <None Include="wwwroot\assets\app\media\img\misc\quick_actions_bg.jpg" />
+    <None Include="wwwroot\assets\app\media\img\misc\user_profile_bg.jpg" />
+    <None Include="wwwroot\assets\app\media\img\users\default-avatar.jpg" />
+    <None Include="wwwroot\assets\app\media\img\users\default-avatar_1.jpg" />
+    <None Include="wwwroot\assets\demo\default\base\scripts.bundle.js" />
+    <None Include="wwwroot\assets\demo\default\base\scripts.bundle_old.js" />
+    <None Include="wwwroot\assets\demo\default\base\style.bundle.css" />
+    <None Include="wwwroot\assets\demo\default\base\style.bundle_old.css" />
+    <None Include="wwwroot\assets\demo\default\custom\components\base\blockui.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\base\bootstrap-notify.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\base\dropdown.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\base\scrollable.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\base\sweetalert2.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\base\toastr.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\base\treeview.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\calendar\background-events.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\calendar\basic.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\calendar\external-events.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\calendar\google.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\calendar\list-view.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\charts\amcharts\charts.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\charts\amcharts\maps.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\charts\amcharts\stock-charts.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\charts\flotcharts.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\charts\google-charts.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\charts\morris-charts.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\api\events.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\api\methods.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\column-rendering.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\column-width.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\data-ajax.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\data-json.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\data-local.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\html-table.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\local-sort.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\record-selection.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\responsive-columns.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\row-details.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\base\translation.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\child\data-ajax.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\child\data-local.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\locked\both.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\locked\html-table.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\locked\left.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\locked\right.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\scrolling\both.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\scrolling\horizontal.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\datatables\scrolling\vertical.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\validation\form-controls.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\validation\form-widgets.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\autosize.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-datepicker.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-daterangepicker.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-datetimepicker.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-markdown.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-maxlength.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-multipleselectsplitter.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-select.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-switch.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-timepicker.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\bootstrap-touchspin.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\clipboard.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\dropzone.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\form-repeater.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\google-recaptcha.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\input-mask.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\ion-range-slider.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\nouislider.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\select2.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\summernote.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\widgets\typeahead.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\forms\wizard\wizard.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\maps\google-maps.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\maps\jqvmap.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\maps\jvectormap.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\portlets\draggable.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\portlets\tools.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\utils\idle-timer.js" />
+    <None Include="wwwroot\assets\demo\default\custom\components\utils\session-timeout.js" />
+    <None Include="wwwroot\assets\demo\default\custom\header\actions.js" />
+    <None Include="wwwroot\assets\demo\default\media\img\logo\favicon.ico" />
+    <None Include="wwwroot\assets\demo\default\media\img\logo\logo.png" />
+    <None Include="wwwroot\assets\demo\default\media\img\logo\logo_compact.png" />
+    <None Include="wwwroot\assets\demo\default\media\img\logo\logo_default_dark.png" />
+    <None Include="wwwroot\assets\demo\default\media\img\logo\logo_default_light.png" />
+    <None Include="wwwroot\assets\demo\default\media\img\misc\notification_bg.jpg" />
+    <None Include="wwwroot\assets\demo\default\media\img\misc\quick_actions_bg.jpg" />
+    <None Include="wwwroot\assets\demo\default\media\img\misc\user_profile_bg.jpg" />
+    <None Include="wwwroot\Content\Samples\SampleReport_ILV.xlsx" />
+    <None Include="wwwroot\Content\Stripe\checkout.css" />
+    <None Include="wwwroot\Scripts\Account\editprofile.js" />
+    <None Include="wwwroot\Scripts\Agency\update.js" />
+    <None Include="wwwroot\Scripts\Brand\main.js" />
+    <None Include="wwwroot\Scripts\Brand\update.js" />
+    <None Include="wwwroot\Scripts\Common\common.changeable.js" />
+    <None Include="wwwroot\Scripts\Common\common.core.js" />
+    <None Include="wwwroot\Scripts\Common\common.formelements.js" />
+    <None Include="wwwroot\Scripts\Common\common.mediaselect.js" />
+    <None Include="wwwroot\Scripts\Common\common.modalform.js" />
+    <None Include="wwwroot\Scripts\Common\common.notifications.js" />
+    <None Include="wwwroot\Scripts\Common\filesaver.js" />
+    <None Include="wwwroot\Scripts\Common\full-calendar-locales-all.js" />
+    <None Include="wwwroot\Scripts\Common\jquery-masked-input.min.js" />
+    <None Include="wwwroot\Scripts\Common\jquery.custom.library.js" />
+    <None Include="wwwroot\Scripts\Common\jquery.mousewheel.min.js" />
+    <None Include="wwwroot\Scripts\Common\mycloud.js" />
+    <None Include="wwwroot\Scripts\Common\site-global.js" />
+    <None Include="wwwroot\Scripts\Common\webfont.js" />
+    <None Include="wwwroot\Scripts\Company\update.js" />
+    <None Include="wwwroot\Scripts\Home\dashboard.js" />
+    <None Include="wwwroot\Scripts\jquery.validate.min.js" />
+    <None Include="wwwroot\Scripts\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-ar-AR.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-bg-BG.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-ca-ES.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-cs-CZ.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-da-DK.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-de-DE.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-el-GR.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-es-ES.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-es-EU.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-fa-IR.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-fi-FI.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-fr-FR.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-gl-ES.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-he-IL.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-hr-HR.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-hu-HU.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-id-ID.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-it-IT.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-ja-JP.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-ko-KR.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-lt-LT.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-lt-LV.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-mn-MN.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-nb-NO.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-nl-NL.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-pl-PL.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-pt-BR.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-pt-PT.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-ro-RO.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-ru-RU.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-sk-SK.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-sl-SI.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-sr-RS-Latin.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-sr-RS.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-sv-SE.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-ta-IN.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-th-TH.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-tr-TR.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-uk-UA.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-vi-VN.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-zh-CN.js" />
+    <None Include="wwwroot\Scripts\Langs\Summernote\summernote-zh-TW.js" />
+    <None Include="wwwroot\Scripts\Material\main.js" />
+    <None Include="wwwroot\Scripts\Material\search.js" />
+    <None Include="wwwroot\Scripts\Material\update.js" />
+    <None Include="wwwroot\Scripts\Plugins\bootbox.js" />
+    <None Include="wwwroot\Scripts\Plugins\chart.min.js" />
+    <None Include="wwwroot\Scripts\Plugins\Dropzone\dropzone.js" />
+    <None Include="wwwroot\Scripts\Plugins\Fancybox\js\fancybox.js" />
+    <None Include="wwwroot\Scripts\Plugins\Fancybox\js\fancybox.min.js" />
+    <None Include="wwwroot\Scripts\Plugins\File\filesaver.js" />
+    <None Include="wwwroot\Scripts\Plugins\File\xlsx.full.min.js" />
+    <None Include="wwwroot\Scripts\Plugins\Gmaps\js\locationpicker.jquery.js" />
+    <None Include="wwwroot\Scripts\Plugins\Gmaps\js\locationpicker.jquery.min.js" />
+    <None Include="wwwroot\Scripts\Plugins\Gmaps\js\locationpicker.jquery.min.js.map" />
+    <None Include="wwwroot\Scripts\Plugins\Nestable\jquery.nestable.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.amd.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.amd.min.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.commonjs.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.commonjs.min.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.global.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.global.min.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.jquery.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.jquery.min.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.kickstart.js" />
+    <None Include="wwwroot\Scripts\Plugins\slim\slim.kickstart.min.js" />
+    <None Include="wwwroot\Scripts\Tax\update.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\EmailResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EmailResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\ManagerResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ManagerResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\EmailResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ManagerResource.ja-JP.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ManagerResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManagerResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Api\Business\" />
+    <Folder Include="Models\Extensions\Image\" />
+    <Folder Include="Views\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MainApi.Datalayer\MainApi.DataLayer.csproj" />
+    <ProjectReference Include="..\MainApi.SharedLibs\MainApi.SharedLibs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Email\ConfirmEmail.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,49 @@
+﻿@using Manager.WebApp.Helpers;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Models
+@model Manager.WebApp.Models.ManageRevenueModel
+@{
+    List<SelectListItem> item = Model.ListUserName.ConvertAll(a =>
+                {
+                    return new SelectListItem()
+                            {
+                                Text = a.ToString(),
+                                Value = a.ToString(),
+                                Selected = false
+                            };
+                });
+}
+<form action="/Revenue" method="get" class="m-form m-form--fit" id="ReportSearchForm">
+    <input id="SearchExec" name="SearchExec" type="hidden" value="">
+    <div class="row">
+        <div class="col-md-10 row">
+            <input type="hidden" id="FromDate" value="2023/01/01 0:00:00">
+            <input type="hidden" id="ToDate" value="2023/06/26 23:59:59">
+            <div class="col-md-3 mt-2">
+                <label>Người dùng</label>
+                <div class="dropdown bootstrap-select form-control">
+                    @Html.DropDownListFor(m => m.UserName, item.DistinctBy(x=>x.Value), new {@class="form-control selectpicker", @id="FieldType"})
+                </div>
+            </div>
+            <div class="col-md-3 mt-2">
+                <label>Nguồn doanh thu</label>
+                <div class="dropdown bootstrap-select form-control">
+                    @Html.DropDownListFor(m => m.CoinSourceType, Html.GetEnumSelectList<EnumSourceCoinType>(), new {@class="form-control selectpicker", @id="FieldType"})
+                </div>
+            </div>
+            <div class="col-md-3 mt-2">
+                <label>Từ ngày</label>
+                @Html.TextBoxFor(m => m.FromDate, Model.FromDate.HasValue ? Model.FromDate.Value.ToString("yyyy-MM-dd") : string.Empty, new {@class="form-control form-control-sm m-input", @type="date"})
+            </div>
+            <div class="col-md-3 mt-2">
+                <label>Đến ngày</label>
+                @Html.TextBoxFor(m => m.ToDate, Model.ToDate.HasValue ? Model.ToDate.Value.ToString("yyyy-MM-dd") : string.Empty, new {@class="form-control form-control-sm m-input", @type="date"})
+            </div>
+        </div>
+        <div class="col-md-2 pt-1">
+            <button type="submit" class="btn btn-info btn-sm m-btn--icon m-btn--icon dashboard-chart-filter" style="margin-top:30px;">
+                <i class="fa fa-filter"></i> Tìm kiếm
+            </button>
+        </div>
+    </div>
+</form>

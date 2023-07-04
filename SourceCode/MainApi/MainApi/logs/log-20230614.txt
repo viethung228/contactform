@@ -1,0 +1,593 @@
+[14/06/2023 08:19:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:19:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:19:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:19:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:19:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:19:28 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:19:31 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:19:55 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 08:19:55 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:19:55 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:19:55 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:19:55 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:19:55 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:20:08 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:21:52 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:21:59 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:21:59 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:21:59 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:21:59 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:21:59 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:22:05 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:22:05 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:22:52 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:22:52 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:22:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:22:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:22:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:22:57 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:23:02 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:24:06 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:24:07 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:24:07 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:24:07 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:24:07 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:24:10 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:24:15 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:26:03 FTL Microsoft.AspNetCore.Hosting.Diagnostics] Application startup exception 
+System.InvalidOperationException: Action 'MainApi.Controllers.AccountController.Login (MainApi)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.GetChangeToken()
+   at Microsoft.Extensions.Primitives.ChangeToken.OnChange(Func`1 changeTokenProducer, Action changeTokenConsumer)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointDataSourceBase.Subscribe()
+   at Microsoft.AspNetCore.Builder.RazorPagesEndpointRouteBuilderExtensions.GetOrCreateDataSource(IEndpointRouteBuilder endpoints)
+   at Microsoft.AspNetCore.Builder.RazorPagesEndpointRouteBuilderExtensions.MapRazorPages(IEndpointRouteBuilder endpoints)
+   at MainApi.Startup.<>c.<Configure>b__10_2(IEndpointRouteBuilder endpoints) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Startup.cs:line 200
+   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder builder, Action`1 configure)
+   at MainApi.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, IRedisCacheClient redisClient) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Startup.cs:line 198
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.WebTools.BrowserLink.Net.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+[14/06/2023 08:26:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:26:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:26:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:26:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:26:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:26:36 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:26:43 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MainApi.Controllers.AccountController.Login (MainApi)
+MainApi.Controllers.AccountController.FakeLogin (MainApi)
+MainApi.Controllers.AccountController.LogOut (MainApi)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:27:30 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:27:30 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:27:30 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:27:30 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:27:30 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:27:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:27:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:27:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:27:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:27:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:27:52 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:27:52 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:27:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:27:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:27:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:27:59 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:27:59 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:27:59 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:27:59 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:27:59 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:30:11 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 08:30:11 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:30:11 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:30:11 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:30:11 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:30:11 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:31:49 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:31:49 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:31:49 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:31:49 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:31:49 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:32:29 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:32:29 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:32:29 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:32:29 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:32:29 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:34:04 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:34:04 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:34:04 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:34:04 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:34:04 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:34:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:34:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:34:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:34:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:34:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:34:58 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 08:34:58 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 08:34:58 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:34:58 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:34:58 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:34:58 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:34:58 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:35:04 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MainApi.Controllers.AccountController.Login (MainApi)
+MainApi.Controllers.AccountController.Signin (MainApi)
+MainApi.Controllers.AccountController.Login (MainApi)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:35:15 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MainApi.Controllers.AccountController.Login (MainApi)
+MainApi.Controllers.AccountController.Signin (MainApi)
+MainApi.Controllers.AccountController.Login (MainApi)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:36:32 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:36:32 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:36:32 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:36:32 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:36:32 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 08:36:34 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 08:58:18 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 08:58:18 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 08:58:18 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 08:58:18 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 08:58:18 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 09:01:23 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 09:01:23 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 09:01:23 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 09:01:23 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 09:01:23 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 09:01:23 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 09:25:43 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 09:25:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 09:25:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 09:25:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 09:25:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 09:25:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 09:35:25 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 09:35:26 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 09:35:26 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 09:35:26 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 09:35:26 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 09:35:26 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 09:50:43 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 09:50:43 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 09:50:43 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 09:50:43 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 09:50:43 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 09:50:43 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 09:50:49 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 09:50:49 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 09:50:49 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 09:50:49 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 09:50:49 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 09:51:10 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 09:57:16 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 09:57:16 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 09:57:16 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 09:57:16 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 09:57:16 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 10:03:48 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 10:03:48 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 10:03:48 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 10:03:48 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 10:03:48 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 10:04:42 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 10:04:42 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 10:04:42 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 10:04:42 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 10:04:42 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 10:06:12 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 10:06:12 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 10:06:12 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 10:06:12 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 10:06:12 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 10:06:32 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 10:06:32 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 10:06:32 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 10:06:32 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 10:06:32 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 10:07:47 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 10:07:47 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 10:07:47 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 10:07:47 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 10:07:47 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 10:17:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 10:17:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 10:17:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 10:17:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 10:17:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 10:22:42 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 10:22:43 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 10:22:43 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 10:22:43 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 10:22:43 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 10:22:43 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 13:57:27 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 13:57:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 13:57:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 13:57:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 13:57:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 13:57:32 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MainApi.Controllers.AccountController.Login (MainApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 15:38:18 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 15:38:18 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 15:38:18 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 15:38:18 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 15:38:18 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 15:42:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 15:42:18 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 15:42:18 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 15:42:18 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 15:42:18 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 15:44:27 ERR MainApi.Controllers.AuthorizeManagerController] Api MainApi.Controllers.AuthorizeManagerController error: System.ArgumentNullException: IDX10000: The parameter 'token' cannot be a 'null' or an empty object. (Parameter 'token')
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MainApi.Controllers.AuthorizeManagerController.GetCurrentUserId() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\AuthorizeManagerController.cs:line 34 
+[14/06/2023 15:44:43 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Update. Error: Conversion failed when converting the nvarchar value 'admin' to data type int.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 86
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 35
+   at MainApi.Controllers.WebhookController.Update(WebhookModel model) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 53 
+[14/06/2023 15:45:48 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 15:45:48 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 15:45:48 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 15:45:48 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 15:45:48 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 15:45:56 ERR MainApi.Controllers.AuthorizeManagerController] Api MainApi.Controllers.AuthorizeManagerController error: System.ArgumentNullException: IDX10000: The parameter 'token' cannot be a 'null' or an empty object. (Parameter 'token')
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MainApi.Controllers.AuthorizeManagerController.GetCurrentUserId() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\AuthorizeManagerController.cs:line 34 
+[14/06/2023 15:46:07 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Update. Error: Object cannot be cast from DBNull to other types.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 86
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 35
+   at MainApi.Controllers.WebhookController.Update(WebhookModel model) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 53 
+[14/06/2023 15:48:53 ERR MainApi.Controllers.AuthorizeManagerController] Api MainApi.Controllers.AuthorizeManagerController error: System.ArgumentNullException: IDX10000: The parameter 'token' cannot be a 'null' or an empty object. (Parameter 'token')
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MainApi.Controllers.AuthorizeManagerController.GetCurrentUserId() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\AuthorizeManagerController.cs:line 34 
+[14/06/2023 15:51:00 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 15:51:00 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 15:51:01 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 15:51:01 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 15:51:01 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 15:51:01 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 15:51:01 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 15:51:07 ERR MainApi.Controllers.AuthorizeManagerController] Api MainApi.Controllers.AuthorizeManagerController error: System.ArgumentNullException: IDX10000: The parameter 'token' cannot be a 'null' or an empty object. (Parameter 'token')
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MainApi.Controllers.AuthorizeManagerController.GetCurrentUserId() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\AuthorizeManagerController.cs:line 34 
+[14/06/2023 15:51:49 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 15:51:49 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 15:51:49 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 15:51:49 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 15:51:49 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 15:51:55 ERR MainApi.Controllers.AuthorizeManagerController] Api MainApi.Controllers.AuthorizeManagerController error: System.ArgumentNullException: IDX10000: The parameter 'token' cannot be a 'null' or an empty object. (Parameter 'token')
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MainApi.Controllers.AuthorizeManagerController.GetCurrentUserId() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\AuthorizeManagerController.cs:line 34 
+[14/06/2023 15:52:11 ERR MainApi.Controllers.AuthorizeManagerController] Api MainApi.Controllers.AuthorizeManagerController error: System.ArgumentNullException: IDX10000: The parameter 'token' cannot be a 'null' or an empty object. (Parameter 'token')
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MainApi.Controllers.AuthorizeManagerController.GetCurrentUserId() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\AuthorizeManagerController.cs:line 34 
+[14/06/2023 15:52:53 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 15:52:53 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 15:52:53 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 15:52:53 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 15:52:53 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 15:53:00 ERR MainApi.Controllers.AuthorizeManagerController] Api MainApi.Controllers.AuthorizeManagerController error: System.ArgumentNullException: IDX10000: The parameter 'token' cannot be a 'null' or an empty object. (Parameter 'token')
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MainApi.Controllers.AuthorizeManagerController.GetCurrentUserId() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\AuthorizeManagerController.cs:line 34 
+[14/06/2023 16:07:30 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 16:07:30 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 16:07:30 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 16:07:30 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 16:07:30 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 16:07:30 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 16:09:53 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 16:09:53 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 16:09:53 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 16:09:53 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 16:09:53 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 16:13:49 ERR MainApi.Controllers.AuthorizeManagerController] Api MainApi.Controllers.AuthorizeManagerController error: System.ArgumentNullException: IDX10000: The parameter 'token' cannot be a 'null' or an empty object. (Parameter 'token')
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MainApi.Controllers.AuthorizeManagerController.GetCurrentUserId() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\AuthorizeManagerController.cs:line 34 
+[14/06/2023 16:19:37 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 16:19:37 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 16:19:37 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 16:19:37 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 16:19:37 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 16:20:16 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 16:20:16 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 16:20:16 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 16:20:16 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 16:20:16 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 16:20:58 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 16:20:58 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 16:20:58 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 16:20:58 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 16:20:58 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 16:24:19 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 16:24:19 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 16:24:19 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 16:24:19 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 16:24:19 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 16:57:31 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 16:57:31 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 16:57:31 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 16:57:31 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 16:57:31 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:00:24 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_GetBySuid. Error: Conversion failed when converting the nvarchar value '433F1BB5-D704-439D-9A39-0A233EE10423' to data type int.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.GetById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 116
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.GetById(String id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 40
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 39 
+[14/06/2023 17:02:28 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 17:02:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:02:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:02:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:02:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:02:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:02:43 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 60
+   at lambda_method24(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 17:05:04 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:05:04 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:05:04 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:05:04 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:05:04 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:05:39 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_GetBySuid. Error: Conversion failed when converting the nvarchar value '433F1BB5-D704-439D-9A39-0A233EE10423' to data type int.
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 85
+   at lambda_method24(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 17:12:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:12:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:12:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:12:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:12:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:12:31 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:12:31 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:12:31 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:12:31 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:12:31 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:12:55 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MainApi.Controllers.WebhookController.GetData (MainApi)
+MainApi.Controllers.WebhookController.GetData (MainApi)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 17:13:29 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 17:13:29 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:13:29 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:13:29 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:13:29 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:13:29 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:13:40 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MainApi.Controllers.WebhookController.GetData (MainApi)
+MainApi.Controllers.WebhookController.GetData (MainApi)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 17:14:21 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:14:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:14:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:14:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:14:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:14:23 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MainApi.Controllers.WebhookController.GetData (MainApi)
+MainApi.Controllers.WebhookController.GetDataWithSUR (MainApi)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14/06/2023 17:18:35 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:18:35 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:18:35 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:18:35 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:18:35 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:19:24 ERR MainApi.Controllers.WebhookController] Api MainApi.Controllers.WebhookController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Webhook_Update. Error: Conversion failed when converting the nvarchar value '433F1BB5-D704-439D-9A39-0A233EE10423' to data type int.
+   at MainApi.DataLayer.Repositories.Manager.RpsWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsWebhook.cs:line 85
+   at MainApi.DataLayer.Stores.Manager.StoreWebhook.Update(IdentityWebhook identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreWebhook.cs:line 36
+   at MainApi.Controllers.WebhookController.GetData(String uid, Int32 adid, Int32 point, DateTime cv_date) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\WebhookController.cs:line 56 
+[14/06/2023 17:25:00 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:25:00 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:25:00 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:25:00 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:25:00 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[14/06/2023 17:25:30 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 17:25:30 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[14/06/2023 17:25:30 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[14/06/2023 17:25:30 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[14/06/2023 17:25:30 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[14/06/2023 17:25:30 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[14/06/2023 17:25:30 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 

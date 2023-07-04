@@ -1,0 +1,12 @@
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\bin\Release\net7.0\Manager.SharedLibs.deps.json
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\bin\Release\net7.0\Manager.SharedLibs.dll
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\bin\Release\net7.0\Manager.SharedLibs.pdb
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\Manager.SharedLibs.csproj.AssemblyReference.cache
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\Manager.SharedLibs.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\Manager.SharedLibs.AssemblyInfoInputs.cache
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\Manager.SharedLibs.AssemblyInfo.cs
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\Manager.SharedLibs.csproj.CoreCompileInputs.cache
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\Manager.SharedLibs.dll
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\refint\Manager.SharedLibs.dll
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\Manager.SharedLibs.pdb
+E:\Project_clone\ogatore\SourceCode\Manager\Manager.SharedLibs\obj\Release\net7.0\ref\Manager.SharedLibs.dll

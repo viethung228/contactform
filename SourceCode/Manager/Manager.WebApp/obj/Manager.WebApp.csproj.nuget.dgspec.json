@@ -1,0 +1,314 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj": {}
+  },
+  "projects": {
+    "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj",
+        "projectName": "Manager.DataLayer",
+        "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\COMPUTER\\.nuget\\packages\\",
+        "outputPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.Datalayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\COMPUTER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj": {
+                "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.30, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj",
+        "projectName": "Manager.SharedLibs",
+        "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj",
+        "packagesPath": "C:\\Users\\COMPUTER\\.nuget\\packages\\",
+        "outputPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\COMPUTER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj",
+        "projectName": "Manager.WebApp",
+        "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj",
+        "packagesPath": "C:\\Users\\COMPUTER\\.nuget\\packages\\",
+        "outputPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\COMPUTER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj": {
+                "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj"
+              },
+              "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj": {
+                "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Barcode": {
+              "target": "Package",
+              "version": "[2023.1.11395, )"
+            },
+            "ExcelDataReader": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "ExcelDataReader.DataSet": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "JWT": {
+              "target": "Package",
+              "version": "[8.9.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "OpenPop.NET": {
+              "target": "Package",
+              "version": "[2.0.6.1120, )"
+            },
+            "PageList": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.7, )"
+            },
+            "RijndaelEncryptDecrypt": {
+              "target": "Package",
+              "version": "[1.0.0.24384, )"
+            },
+            "Rotativa": {
+              "target": "Package",
+              "version": "[1.7.3, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "StackExchange.Redis.Extensions.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "StackExchange.Redis.Extensions.Core": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "StackExchange.Redis.Extensions.Newtonsoft": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.126.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

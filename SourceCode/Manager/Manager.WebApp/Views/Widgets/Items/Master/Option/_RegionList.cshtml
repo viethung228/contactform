@@ -1,0 +1,19 @@
+﻿@using MainApi.DataLayer.Entities
+@using Manager.SharedLibs
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers
+
+@model List<IdentityRegion>
+
+@{
+    var hasData = Model.HasData();
+}
+
+<option value="0">@ManagerResource.LB_SELECT_REGION</option>
+@if (hasData)
+{
+    foreach (var item in Model)
+    {
+        <option value="@item.Id">@item.Name</option>
+    }
+}

@@ -1,0 +1,241 @@
+[30/06/2023 08:17:48 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 08:17:48 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 08:17:48 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 08:17:48 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 08:17:48 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 08:39:51 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 08:39:52 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 08:39:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 08:39:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 08:39:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 09:06:35 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 09:06:35 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 09:06:35 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 09:06:35 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 09:06:35 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 09:17:02 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 09:17:02 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 09:17:02 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 09:17:02 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 09:17:02 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 09:22:04 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 09:22:04 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 09:22:04 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 09:22:04 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 09:22:04 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 09:39:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 09:39:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 09:39:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 09:39:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 09:39:10 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 09:40:36 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 09:40:36 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 09:40:36 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 09:40:36 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 09:40:36 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:31:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:31:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:31:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:31:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:31:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:31:46 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:31:46 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:31:46 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:31:46 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:31:46 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:32:25 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:32:25 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:32:25 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:32:25 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:32:25 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:33:02 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetLinkByName. Error: Id
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 104
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 52
+   at MainApi.Helpers.HelperLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 48 
+[30/06/2023 10:33:14 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetLinkByName. Error: Id
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 104
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 52
+   at MainApi.Helpers.HelperLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 48 
+[30/06/2023 10:33:40 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetLinkByName. Error: Id
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 104
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 52
+   at MainApi.Helpers.HelperLinkSetting.GetLinkByName(String settingName) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 48 
+[30/06/2023 10:35:27 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:35:27 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:35:27 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:35:27 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:35:27 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:35:53 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:35:53 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:35:53 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:35:53 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:35:53 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:42:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:42:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:42:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:42:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:42:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:42:37 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[30/06/2023 10:42:37 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:42:37 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:42:37 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:42:37 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:42:37 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:43:01 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:43:19 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:43:47 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:43:47 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:45:38 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:45:38 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:45:38 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:45:38 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:45:38 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 10:45:50 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:45:52 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:46:01 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:46:21 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:46:51 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:46:52 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:47:09 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:47:11 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:48:05 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:48:10 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:49:24 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: Invalid attempt to call MetaData when reader is closed.
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:49:25 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:50:04 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: Invalid attempt to call MetaData when reader is closed.
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:50:05 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:50:24 ERR MainApi.Helpers.HelperLinkSetting] Function MainApi.Helpers.HelperLinkSetting error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 72
+   at MainApi.DataLayer.Stores.StoreLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 47
+   at MainApi.Helpers.HelperLinkSetting.GetById(Int32 id) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperLinkSetting.cs:line 28 
+[30/06/2023 10:50:29 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingControllerr error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainApi.Controllers.Manager.LinkSettingController.GetByPage(Int32 currentpage, Int32 pagesize) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 89 
+[30/06/2023 10:51:37 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[30/06/2023 10:51:37 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[30/06/2023 10:51:38 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 10:51:38 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 10:51:38 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 10:51:38 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 10:51:38 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 11:12:58 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 11:12:58 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 11:12:58 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 11:12:58 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 11:12:58 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 11:14:21 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: Procedure or function 'LinkSetting_Update' expects parameter '@id', which was not supplied.
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 171
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 44
+   at MainApi.Controllers.Manager.LinkSettingController.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 161 
+[30/06/2023 11:14:51 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: Procedure or function 'LinkSetting_Update' expects parameter '@id', which was not supplied.
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 171
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 44
+   at MainApi.Controllers.Manager.LinkSettingController.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 161 
+[30/06/2023 11:15:21 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 11:15:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 11:15:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 11:15:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 11:15:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 11:15:34 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 172
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 44
+   at MainApi.Controllers.Manager.LinkSettingController.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 161 
+[30/06/2023 11:16:35 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 172
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 44
+   at MainApi.Controllers.Manager.LinkSettingController.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 161 
+[30/06/2023 11:16:50 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 172
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 44
+   at MainApi.Controllers.Manager.LinkSettingController.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 161 
+[30/06/2023 11:18:28 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[30/06/2023 11:18:28 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[30/06/2023 11:18:29 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 11:18:29 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 11:18:29 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 11:18:29 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 11:18:29 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 11:18:44 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 173
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 44
+   at MainApi.Controllers.Manager.LinkSettingController.Insert(String settingName, Nullable`1 type, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 161 
+[30/06/2023 11:21:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 11:21:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 11:21:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 11:21:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 11:21:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 11:22:14 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: Procedure or function 'LinkSetting_Update' expects parameter '@settingName', which was not supplied.
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Update(Int32 id, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 137
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Update(Int32 id, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 40
+   at MainApi.Controllers.Manager.LinkSettingController.Update(LinkSettingUpdateModel identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 127 
+[30/06/2023 11:22:56 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: Procedure or function 'LinkSetting_Update' expects parameter '@settingName', which was not supplied.
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Update(Int32 id, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 137
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Update(Int32 id, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 40
+   at MainApi.Controllers.Manager.LinkSettingController.Update(LinkSettingUpdateModel identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 127 
+[30/06/2023 11:23:07 ERR MainApi.Controllers.Manager.LinkSettingController] Api MainApi.Controllers.Manager.LinkSettingController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute LinkSetting_Update. Error: Procedure or function 'LinkSetting_Update' expects parameter '@settingName', which was not supplied.
+   at MainApi.DataLayer.Repositories.Manager.RpsLinkSetting.Update(Int32 id, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsLinkSetting.cs:line 137
+   at MainApi.DataLayer.Stores.StoreLinkSetting.Update(Int32 id, String link) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreLinkSetting.cs:line 40
+   at MainApi.Controllers.Manager.LinkSettingController.Update(LinkSettingUpdateModel identity) in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Controllers\Manager\LinkSettingController.cs:line 127 
+[30/06/2023 11:25:59 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[30/06/2023 11:25:59 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 11:25:59 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 11:25:59 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 11:25:59 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 11:25:59 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 11:54:30 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 11:54:30 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 11:54:30 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 11:54:30 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 11:54:30 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 13:31:49 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 13:31:49 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 13:31:49 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 13:31:49 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 13:31:49 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 
+[30/06/2023 13:50:50 ERR MainApi.Controllers.CustomerController] Test1 
+[30/06/2023 13:50:50 ERR MainApi.Controllers.CustomerController] Test2 
+[30/06/2023 13:50:50 ERR MainApi.Helpers.HelperCustomer] Function MainApi.Helpers.HelperCustomer error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetList. Error: RemoveAds
+   at Manager.Datalayer.Repositories.RpsCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCustomer.cs:line 598
+   at MainApi.DataLayer.Stores.StoreCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCustomer.cs:line 63
+   at MainApi.Helpers.HelperCustomer.GetList() in E:\Project_clone\ogatore\SourceCode\MainApi\MainApi\Helpers\Business\HelperCustomer.cs:line 51 
+[30/06/2023 14:12:15 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[30/06/2023 14:12:16 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[30/06/2023 14:12:16 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[30/06/2023 14:12:16 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[30/06/2023 14:12:16 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[30/06/2023 14:12:16 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\MainApi\MainApi 

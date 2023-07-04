@@ -1,0 +1,123 @@
+﻿@using MainApi.DataLayer;
+@using Manager.DataLayer
+@using Manager.SharedLibs
+@using Manager.WebApp.Helpers
+
+@{
+    var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+    var actionName = ViewContext.RouteData.Values["action"].ToString();
+
+    var menuParentList = new List<IdentityMenu>();
+
+    var menuItems = MenuHelper.GetAdminNavigationMenuItems();
+
+    var currentMenuItem = MenuHelper.CheckCurrentMenuItemInCollectionsCustom(menuItems, actionName, controllerName);
+
+    var listMenuTemp = new List<IdentityMenu>();
+
+    IdentityMenu parentMenuItem = null;
+    if (currentMenuItem != null && currentMenuItem.ParentId != null)
+    {
+        listMenuTemp.Add(currentMenuItem);
+
+        listMenuTemp = MenuHelper.GetCurrentListMenuByLang(listMenuTemp);
+
+        if (listMenuTemp.HasData())
+        {
+            currentMenuItem = listMenuTemp[0];
+        }
+
+        parentMenuItem = MenuHelper.GetMenuItemByIDCustom(currentMenuItem.ParentId.Value);
+    }
+
+    if (ViewBag.ParentController != null)
+    {
+        var parentController = (string)ViewBag.ParentController;
+        var parentAction = (string)ViewBag.ParentAction;
+
+        var allMenuItems = ViewBag.AdminNavMenu as IEnumerable<IdentityMenu>;
+
+        if (allMenuItems != null && allMenuItems.Any())
+        {
+            parentMenuItem = MenuHelper.FindMenuByControllerAndAction(allMenuItems, parentAction, parentController);
+        }
+
+        if (currentMenuItem == null)
+        {
+            currentMenuItem = new IdentityMenu();
+            currentMenuItem.CurrentTitleLang = ViewBag.Title != null ? ViewBag.Title : "Detail";
+        }
+    }
+
+    while (parentMenuItem != null)
+    {
+        menuParentList.Insert(0, parentMenuItem);
+
+        if (parentMenuItem.ParentId == null)
+        {
+            parentMenuItem = null;
+        }
+        else
+        {
+            parentMenuItem = MenuHelper.GetMenuItemByIDCustom(parentMenuItem.ParentId.Value);
+        }
+    }
+
+    if (menuParentList.HasData())
+    {
+        menuParentList = MenuHelper.GetCurrentListMenuByLang(menuParentList);
+    }
+
+    var hasParents = menuParentList.HasData();
+}
+
+
+<div class="m-subheader float-left m--hidden-tablet-and-mobile">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            @if (hasParents)
+            {
+                var parentCount = menuParentList.Count();
+                var ct = 0;
+                <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                    @foreach (var pmi in menuParentList)
+                    {
+                        ct++;
+
+                        var currentAct = !string.IsNullOrEmpty(pmi.Action) && !string.IsNullOrEmpty(pmi.Controller);
+                        var itemUrl = currentAct ? Url.Action(pmi.Action, pmi.Controller) : "javascript:;";
+                        <li class="m-nav__item">
+                            <a href="@itemUrl" class="m-nav__link" style="@(!currentAct ? "cursor:default;" : "")">
+                                <span class="m-nav__link-text">
+                                    @if (!string.IsNullOrEmpty(pmi.IconCss))
+                                    {
+                                        <i class="@pmi.IconCss"></i>
+                                    }
+                                    
+                                    @pmi.CurrentTitleLang
+                                </span>
+
+                                @if (ct <= parentCount)
+                                {
+                                    <span class="m-subheader__title m-subheader__title--separator"></span>
+                                }
+                            </a>
+                        </li>
+                    }
+                </ul>
+            }
+
+            @if (currentMenuItem != null)
+            {
+                <h3 class="m-subheader__title text-info @(hasParents ? "" : string.Empty)">
+                    @if(!string.IsNullOrEmpty(currentMenuItem.IconCss)){
+                        <i class="@currentMenuItem.IconCss" style="font-size:1.5rem;"></i>
+                    }
+
+                    @currentMenuItem.CurrentTitleLang
+                </h3>
+            }            
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+﻿.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 375px;
+    min-width: 375px;
+    grid-gap:5px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-container .grid-3-1 {
+    grid-template-columns: 33% 67%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.grid-container .grid-3-1 .bottle-frame{
+    height:100%;
+}
+
+.bottle-frame {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #e6ffe6;
+}
+
+.bottle-frame img {
+    width: 100%;
+    object-fit: contain;
+    height:200px;
+}

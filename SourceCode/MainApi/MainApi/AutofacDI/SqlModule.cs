@@ -1,11 +1,7 @@
 ﻿using Autofac;
 using MainApi.DataLayer.Stores;
-
-using MainApi.DataLayer.Stores;
-using MainApi.DataLayer.Stores.Manager;
 using MainApi.Helpers;
 using MainApi.Services;
-using Manager.WebApp.Services;
 
 namespace MainApi.AutofacDI
 {
@@ -19,7 +15,7 @@ namespace MainApi.AutofacDI
             builder.RegisterType<SettingsService>().As<ISettingsService>();
             
             builder.RegisterType<StoreUser>().As<IStoreUser>();
-            builder.RegisterType<StoreCustomer>().As<IStoreCustomer>();
+            builder.RegisterType<StoreEmployee>().As<IStoreEmployee>();
             builder.RegisterType<StoreActivity>().As<IStoreActivity>();
             builder.RegisterType<StoreRole>().As<IStoreRole>();
             builder.RegisterType<StoreAccessRoles>().As<IStoreAccessRoles>();
@@ -30,12 +26,8 @@ namespace MainApi.AutofacDI
             builder.RegisterType<StoreCity>().As<IStoreCity>();
             builder.RegisterType<StoreNotification>().As<IStoreNotification>();
             #region Business
-            builder.RegisterType<StoreLinkSetting>().As<IStoreLinkSetting>();
-            builder.RegisterType<StoreSkyflag>().As<IStoreSkyflag>();
-            builder.RegisterType<StoreApplovin>().As<IStoreApplovin>();
-            builder.RegisterType<StoreCoin>().As<IStoreCoin>();
-            builder.RegisterType<StoreAds>().As<IStoreAds>();
-            builder.RegisterType<StoreRevenue>().As<IStoreRevenue>();
+            builder.RegisterType<StoreContactForm>().As<IStoreContactForm>();
+
 
             //builder.RegisterType<MailService>().As<IMailService>();
             #endregion

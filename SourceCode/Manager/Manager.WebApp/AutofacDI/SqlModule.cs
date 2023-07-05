@@ -16,8 +16,7 @@ namespace Manager.WebApp.AutofacDI
             builder.RegisterType<SettingsService>().As<ISettingsService>();
             
             builder.RegisterType<StoreUser>().As<IStoreUser>();
-            builder.RegisterType<StoreCustomer>().As<IStoreCustomer>();
-            builder.RegisterType<StoreRevenue>().As<IStoreRevenue>();
+            builder.RegisterType<StoreEmployee>().As<IStoreEmployee>();
 
             builder.RegisterType<StoreActivity>().As<IStoreActivity>();
             builder.RegisterType<StoreRole>().As<IStoreRole>();

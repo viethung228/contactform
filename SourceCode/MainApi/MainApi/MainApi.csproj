@@ -298,7 +298,6 @@
   <ItemGroup>
     <Folder Include="Models\Api\Business\" />
     <Folder Include="Models\Extensions\Image\" />
-    <Folder Include="Views\NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>

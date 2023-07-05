@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project_VietHung\\contact_form\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\MainApi.DataLayer.Entities.csproj": {}
+    "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\MainApi.DataLayer.Entities.csproj": {}
   },
   "projects": {
-    "E:\\Project_VietHung\\contact_form\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\MainApi.DataLayer.Entities.csproj": {
+    "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\MainApi.DataLayer.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project_VietHung\\contact_form\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\MainApi.DataLayer.Entities.csproj",
+        "projectUniqueName": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\MainApi.DataLayer.Entities.csproj",
         "projectName": "MainApi.DataLayer.Entities",
-        "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\MainApi.DataLayer.Entities.csproj",
+        "projectPath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\MainApi.DataLayer.Entities.csproj",
         "packagesPath": "C:\\Users\\COMPUTER\\.nuget\\packages\\",
-        "outputPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\obj\\",
+        "outputPath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\MainApi\\MainApi.DataLayer.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\COMPUTER\\AppData\\Roaming\\NuGet\\NuGet.Config",

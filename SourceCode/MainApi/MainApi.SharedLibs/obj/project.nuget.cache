@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8NpRLu/j09tzR+4XW6fxoCGxEcGqeBl+p7Y+IQr9W6L8GxXZk4dPsxpLq6WqV2ylx9T3ng9iv+jPrduB//Vrjg==",
+  "dgSpecHash": "I1i+HCc0VuRd6BzbeIwY9QPDi2N7tam/PD/kre5uC6qyUNl2hUaMe1NV12xqtYvBUrQ3Qq8VXZ0bIiDHCOjHWg==",
   "success": true,
-  "projectFilePath": "E:\\Project_VietHung\\contact_form\\SourceCode\\MainApi\\MainApi.SharedLibs\\MainApi.SharedLibs.csproj",
+  "projectFilePath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\MainApi\\MainApi.SharedLibs\\MainApi.SharedLibs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\COMPUTER\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\COMPUTER\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

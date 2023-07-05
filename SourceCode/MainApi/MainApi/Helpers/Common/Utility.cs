@@ -93,7 +93,7 @@ namespace MainApi.Helpers
 
             return token;
         }
-        public static string GenerateAuthCustomerJwtToken(IdentityCustomer info, string secretKey)
+        public static string GenerateAuthEmployeeJwtToken(IdentityEmployee info, string secretKey)
         {
             var token = string.Empty;
             try

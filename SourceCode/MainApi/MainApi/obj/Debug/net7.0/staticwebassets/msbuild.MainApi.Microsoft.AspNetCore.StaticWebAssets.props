@@ -5968,6 +5968,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Media\Avatars\2023\06\29\2f93bcfce3d46e93a6a971f299e76741.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Media\Avatars\2023\07\04\508be4bfd63731f927df4b671d6cb18a.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>MainApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MainApi</BasePath>
+      <RelativePath>Media/Avatars/2023/07/04/508be4bfd63731f927df4b671d6cb18a.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Media\Avatars\2023\07\04\508be4bfd63731f927df4b671d6cb18a.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Media\Avatars\2023\07\04\f9aa37ae054ed44d48ff116889ffc8dd.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MainApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MainApi</BasePath>
+      <RelativePath>Media/Avatars/2023/07/04/f9aa37ae054ed44d48ff116889ffc8dd.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Media\Avatars\2023\07\04\f9aa37ae054ed44d48ff116889ffc8dd.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Media\Avatars\7\4053e252104f37acdd5bdfda503c312d.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MainApi</SourceId>

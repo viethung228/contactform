@@ -11,9 +11,9 @@ using MainApi.DataLayer;
 
 namespace Manager.WebApp.Models
 {
-    public class CustomerViewModel : CommonPagingModel
+    public class EmployeeViewModel : CommonPagingModel
     {
-        public CustomerViewModel()
+        public EmployeeViewModel()
         {
 
         }
@@ -52,9 +52,9 @@ namespace Manager.WebApp.Models
 
         public int PageNo { get; set; }
 
-        public List<IdentityCustomer> SearchResult { get; set; }
+        public List<IdentityEmployee> SearchResult { get; set; }
 
-        public IdentityCustomer CustomerInfoViewModel { get; set; }
+        public IdentityEmployee EmployeeInfoViewModel { get; set; }
 
         public int IsLocked { get; set; }
     }

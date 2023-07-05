@@ -28,40 +28,7 @@ namespace Manager.WebApp.Helpers
 
             return baseInfo;
         }
-        public static IdentityCoin GetPoint(string id)
-        {
-            IdentityCoin baseInfo = null;
-
-            try
-            {
-                var apiRs = UserServices.GetPoint(id).Result;
-
-                baseInfo = apiRs.ConvertData<IdentityCoin>();
-            }
-            catch (Exception ex)
-            {
-                _logger.Error("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
-            }
-
-            return baseInfo;
-        }
-        public static List<CoinHistoryView> GetHistoryPoint(string id, int currentpage, int pagesize)
-        {
-            List<CoinHistoryView> baseInfo = null;
-
-            try
-            {
-                var apiRs = UserServices.GetHistoryPoint(id, currentpage, pagesize).Result;
-
-                baseInfo = apiRs.ConvertData<List<CoinHistoryView>>();
-            }
-            catch (Exception ex)
-            {
-                _logger.Error("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
-            }
-
-            return baseInfo;
-        }
+        
         public static List<IdentityUser> GetList()
         {
             List<IdentityUser> list = null;

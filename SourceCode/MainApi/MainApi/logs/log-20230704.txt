@@ -3,3 +3,424 @@
 [04/07/2023 14:05:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
 [04/07/2023 14:05:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
 [04/07/2023 14:05:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\SourceCode\MainApi\MainApi 
+[04/07/2023 14:39:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[04/07/2023 14:39:18 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[04/07/2023 14:39:18 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[04/07/2023 14:39:18 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[04/07/2023 14:39:18 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[04/07/2023 14:40:20 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[04/07/2023 14:40:20 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[04/07/2023 14:40:21 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[04/07/2023 14:40:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[04/07/2023 14:40:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[04/07/2023 14:40:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[04/07/2023 14:40:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[04/07/2023 14:47:27 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[04/07/2023 14:47:27 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[04/07/2023 14:47:27 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[04/07/2023 14:47:27 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[04/07/2023 14:47:27 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[04/07/2023 15:14:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[04/07/2023 15:14:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[04/07/2023 15:14:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[04/07/2023 15:14:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[04/07/2023 15:14:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[04/07/2023 15:38:24 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:38:24 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:38:29 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:40:21 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[04/07/2023 15:40:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[04/07/2023 15:40:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[04/07/2023 15:40:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[04/07/2023 15:40:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[04/07/2023 15:40:49 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:40:49 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:40:50 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:40:56 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:40:56 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:40:56 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:41:10 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:41:10 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:41:10 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:41:13 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:41:13 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:41:13 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:42:20 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:42:20 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:42:20 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:42:30 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:42:30 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:42:30 ERR MainApi.Controllers.EmployeeController] Api MainApi.Controllers.EmployeeController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_Update. Error: Procedure or function Employee_Update has too many arguments specified.
+   at Manager.Datalayer.Repositories.RpsEmployee.Update(IdentityEmployee identity) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 217
+   at MainApi.DataLayer.Stores.StoreEmployee.Update(IdentityEmployee identity) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 72
+   at MainApi.Controllers.EmployeeController.Update(EmployeeUpdateModel model) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\EmployeeController.cs:line 296 
+[04/07/2023 15:42:32 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:42:32 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:42:32 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:42:36 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:42:36 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:42:36 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:42:40 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:42:40 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:42:40 ERR MainApi.Controllers.EmployeeController] Api MainApi.Controllers.EmployeeController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_Update. Error: Procedure or function Employee_Update has too many arguments specified.
+   at Manager.Datalayer.Repositories.RpsEmployee.Update(IdentityEmployee identity) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 217
+   at MainApi.DataLayer.Stores.StoreEmployee.Update(IdentityEmployee identity) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 72
+   at MainApi.Controllers.EmployeeController.Update(EmployeeUpdateModel model) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\EmployeeController.cs:line 296 
+[04/07/2023 15:42:42 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:42:42 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:42:42 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:42:48 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:42:48 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:42:48 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:43:20 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:43:21 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:43:58 ERR MainApi.Controllers.EmployeeController] Api MainApi.Controllers.EmployeeController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_Update. Error: Procedure or function Employee_Update has too many arguments specified.
+   at Manager.Datalayer.Repositories.RpsEmployee.Update(IdentityEmployee identity) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 217
+   at MainApi.DataLayer.Stores.StoreEmployee.Update(IdentityEmployee identity) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 72
+   at MainApi.Controllers.EmployeeController.Update(EmployeeUpdateModel model) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\EmployeeController.cs:line 296 
+[04/07/2023 15:44:36 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:44:36 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:44:36 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:44:41 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:44:41 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:44:41 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:44:44 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:44:44 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:44:44 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:44:49 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:44:49 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:46:07 ERR MainApi.Controllers.EmployeeController] Api MainApi.Controllers.EmployeeController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_Update. Error: Procedure or function Employee_Update has too many arguments specified.
+   at Manager.Datalayer.Repositories.RpsEmployee.Update(IdentityEmployee identity) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 217
+   at MainApi.DataLayer.Stores.StoreEmployee.Update(IdentityEmployee identity) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 72
+   at MainApi.Controllers.EmployeeController.Update(EmployeeUpdateModel model) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\EmployeeController.cs:line 296 
+[04/07/2023 15:46:16 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:46:16 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:46:16 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:46:19 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:46:19 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:46:19 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:46:27 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:46:27 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:46:35 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:46:35 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:46:35 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:46:37 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:46:37 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:46:38 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:46:40 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:46:40 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 15:46:40 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 15:46:43 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 15:46:43 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:00:02 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:00:02 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:00:02 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:00:37 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:00:37 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:00:37 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:08:59 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:08:59 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:08:59 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:21:51 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:21:51 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:21:51 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:24:08 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:24:08 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:24:08 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:24:32 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:24:32 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:24:32 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:28:20 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:28:20 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:28:21 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:28:37 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:28:37 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:28:37 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:29:59 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:29:59 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:29:59 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:31:44 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:31:44 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:31:44 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:32:12 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:32:12 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:32:12 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:34:14 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:34:14 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:34:14 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:35:16 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:35:16 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:35:16 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:35:18 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:35:18 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:35:18 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:45:20 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:45:20 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:45:20 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:49:05 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:49:05 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:49:05 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:49:08 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:49:08 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:49:08 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:50:01 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:50:02 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:50:02 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:50:09 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:50:09 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:50:10 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:50:46 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:50:46 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:50:46 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:53:07 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:53:07 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:53:07 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:57:12 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:57:12 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:57:12 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:57:28 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:57:28 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:57:28 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 16:57:59 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 16:57:59 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 16:57:59 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:00:03 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:00:03 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:00:03 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:00:32 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:00:32 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:00:32 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:02:41 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:02:41 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:02:41 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:02:44 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:02:44 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:02:44 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:03:31 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:03:31 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:03:31 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:04:24 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:04:24 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:04:24 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:04:27 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:04:27 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:04:27 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:05:28 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:05:28 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:05:28 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:05:50 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:05:50 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:05:50 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:06:34 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:06:34 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:06:34 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:09:14 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:09:14 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:09:14 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:11:39 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:11:39 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:11:39 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:13:09 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:13:09 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:13:09 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:13:37 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:13:37 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:13:37 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:13:39 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:13:39 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:13:40 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:13:44 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:13:44 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:13:44 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:15:06 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:15:06 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:15:07 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:15:16 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:15:16 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:15:16 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 
+[04/07/2023 17:15:52 ERR MainApi.Controllers.EmployeeController] Test1 
+[04/07/2023 17:15:52 ERR MainApi.Controllers.EmployeeController] Test2 
+[04/07/2023 17:15:52 ERR MainApi.Helpers.HelperEmployee] Function MainApi.Helpers.HelperEmployee error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_GetList. Error: Could not find stored procedure 'Employee_GetList'.
+   at Manager.Datalayer.Repositories.RpsEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsEmployee.cs:line 596
+   at MainApi.DataLayer.Stores.StoreEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreEmployee.cs:line 63
+   at MainApi.Helpers.HelperEmployee.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperEmployee.cs:line 51 

@@ -1,0 +1,1063 @@
+﻿@using Manager.WebApp.Helpers;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Models
+@model Manager.WebApp.Models.ContactFormFullDetailModel
+
+
+@{
+    ViewBag.Title = "Contact form";
+    ViewBag.HideSubHeader = true;
+    ViewBag.ParentController = "Employee";
+    ViewBag.ParentAction = "Index";
+    var data = Model;
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .m-body .m-content {
+        padding: 30px;
+    }
+
+    .tabset > input[type="radio"] {
+        position: absolute;
+        left: -200vw;
+    }
+
+    .tabset .tab-panel {
+        display: none;
+    }
+
+    .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+    .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+    .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+    .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+    .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+    .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+        display: block;
+    }
+
+    /*
+                                                                             Styling
+                                                                            */
+    .tabset > label {
+        position: relative;
+        display: inline-block;
+        padding: 15px 15px 10px;
+        /*border: 1px solid transparent;*/
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+        .tabset > label:focus {
+            position: relative;
+            display: inline-block;
+            padding: 15px 15px 10px;
+            /*border: 1px solid transparent;*/
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+    input:focus-visible + label {
+        outline: 1px solid rgba(0,102,204,1);
+        border-radius: 3px;
+    }
+
+    .tabset > label:hover,
+    .tabset > input:focus + label,
+    .tabset > input:checked + label {
+        color: #06586e;
+        border-bottom: 1px solid #06586e;
+    }
+
+        .tabset > label:hover::after,
+        .tabset > input:focus + label::after,
+        .tabset > input:checked + label::after {
+            background: #06586e;
+            border-bottom: 1px solid #06586e;
+        }
+
+    .tabset > input:checked + label {
+        border-color: #06586e;
+    }
+
+    label {
+        margin-bottom: -1px !important;
+    }
+
+    .tab-panel {
+        padding: 30px 0;
+        border-top: 1px solid #ccc;
+    }
+
+    /*
+                                                                             Demo purposes only
+                                                                            */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .tabset {
+        max-width: 65em;
+    }
+</style>
+
+<body>
+    <div class="d-flex justify-content-center align-items-center">
+        @using (Html.BeginForm("SubmitContactForm", "Employee", FormMethod.Post, new { @class = "m-form m-form--fit", role = "form", id = "frmContactForm", EncType = "multipart/form-data" }))
+        {
+            @Html.HiddenFor(m => m.ContactForm.OwnerId)
+            <div class="container-sm">
+                <div class="text-center">
+                    <h1 style="line-height: 27pt;text-align: center;">入 社 連 絡 票</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <div style="line-height: 27pt;text-decoration:underline;text-underline-offset: 5px; padding-left: 10px;">
+                            会社名：
+                            @Html.TextBoxFor(m => m.ContactForm.CompanyName, new { @class = "input-border-none", @required="",@style="text-decoration:underline;text-underline-offset: 5px;" })
+                            @Html.ValidationMessageFor(m => m.ContactForm.CompanyName, "", new { @class = "text-danger" })
+                            @*<input class="input-border-none" style="text-decoration:underline;text-underline-offset: 5px;"
+                                   type="text" name="" id="" placeholder="サトウ ●●">*@
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div style="line-height: 27pt;text-align: right;padding-left: 10px;">
+                            <div class="input-group radio-custom-label-title-wrapper-date">
+                                <span>記入日　令和</span>
+                                <input class="ml-2 input-center input-border-none" type="number" name="" id=""
+                                       style="width: 10%;">
+                                <span>年</span>
+                                <input class=" ml-2 input-center input-border-none" type="number" name="" id=""
+                                       style="width: 10%;">
+                                <span>月</span>
+                                <input class="ml-2 input-center input-border-none" type="number" name="" id=""
+                                       style="width: 10%;">
+                                <span>日</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="">
+                        <table class="table-responsive" cellspacing="0">
+                            <tr style="height:18pt">
+                                <td class="td-furigana hightlight-color hightlight-color">
+                                    <p class="s2" style="padding-left: 13pt;line-height: 17pt;text-align: left;">
+                                        フリガナ
+                                    </p>
+                                </td>
+                                <td class="td-input" colspan="8">
+                                    <input class="input-border-none" type="text" name="" id="" placeholder="サトウ ●●"
+                                           style="width: 100%; height: 40px;">
+                                </td>
+                                <td class="td-first-title hightlight-color">
+                                    <p class="s2" style="padding-left: 6pt;line-height: 17pt;text-align: left;">
+                                        電話番号
+                                    </p>
+                                </td>
+                                <td class="td-input" colspan="10">
+                                    <input class="input-border-none" type="text" name="" id="" placeholder="サトウ ●●"
+                                           style="width: 100%; height: 40px;">
+                                </td>
+                            </tr>
+                            <tr style="height:18pt">
+                                <td class="td-medium-first-title hightlight-color" rowspan="2">
+                                    <p class="s2 mt-4" style="text-align: center;">氏 名</p>
+                                </td>
+                                <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="8" rowspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                    <div class="input-group radio-custom-label-gender-wrapper">
+                                        <input id="name-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                               name="name-radio-group-1" type="radio" hidden>
+                                        <label for="name-pickup-1" class="radio-custom-label radio-custom-label-gender">
+                                            男
+                                        </label>
+                                        <div>・</div>
+                                        <input id="name-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                               name="name-radio-group-1" type="radio" hidden>
+                                        <label for="name-pickup-2" class="radio-custom-label radio-custom-label-gender">
+                                            女
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="td-first-title hightlight-color">
+                                    <p class="s2" style="padding-left: 6pt;line-height: 17pt;text-align: left;">
+                                        社員区分
+                                    </p>
+                                </td>
+                                <td class="td-input" colspan="10">
+                                    <div class="input-group radio-custom-label-gender-wrapper-employee">
+                                        <input id="employee-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                               name="employee-radio-group-2" type="radio" hidden checked>
+                                        <label for="employee-pickup-1" class="radio-custom-label radio-custom-label-employee">
+                                            役員
+                                        </label>
+                                        <div>・</div>
+                                        <input id="employee-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                               name="employee-radio-group-2" type="radio" hidden>
+                                        <label for="employee-pickup-2" class="radio-custom-label radio-custom-label-employee">
+                                            正社員
+                                        </label>
+                                        <div>・</div>
+                                        <input id="employee-pickup-3" class="radio-custom radio-custom-gender input-group-field"
+                                               name="employee-radio-group-2" type="radio" hidden>
+                                        <label for="employee-pickup-3" class="radio-custom-label radio-custom-label-employee">
+                                            契約社員
+                                        </label>
+                                        <div>・</div>
+                                        <input id="employee-pickup-4" class="radio-custom radio-custom-gender input-group-field"
+                                               name="employee-radio-group-2" type="radio" hidden>
+                                        <label for="employee-pickup-4" class="radio-custom-label radio-custom-label-employee">
+                                            ﾊﾟｰﾄﾀｲﾏｰ
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="height:26pt">
+                                <td class="td-first-title hightlight-color">
+                                    <p class="s9" style="padding-left: 7pt;line-height: 14pt;text-align: left;">
+                                        所属部署 支店等
+                                    </p>
+                                </td>
+                                <td class="td-input" colspan="10">
+                                    <input class="input-border-none" type="text" name="" id="" placeholder="サトウ ●●"
+                                           style="width: 100%; height: 40px;">
+                                </td>
+                            </tr>
+                            <tr style="height:22pt">
+                                <td class="td-second-title hightlight-color">
+                                    <p class="s2" style="padding-top: 1pt;padding-left: 13pt;line-height: 20pt;text-align: left;">
+                                        生年月日
+                                    </p>
+                                </td>
+                                <td class="td-input" colspan="8">
+                                    <div class="input-group radio-custom-label-gender-wrapper-date">
+                                        <input id="birth-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                               name="birth-radio-group-1" type="radio" hidden checked>
+                                        <label for="birth-pickup-1" class="radio-custom-label radio-custom-label-gender">
+                                            平
+                                        </label>
+                                        <div>・</div>
+                                        <input id="birth-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                               name="birth-radio-group-1" type="radio" hidden>
+                                        <label for="birth-pickup-2" class="radio-custom-label radio-custom-label-gender">
+                                            昭
+                                        </label>
+                                        <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id=""
+                                               style="width: 10%;">
+                                        <span>年</span>
+                                        <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id=""
+                                               style="width: 10%;">
+                                        <span>月</span>
+                                        <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id=""
+                                               style="width: 10%;">
+                                        <span>日</span>
+                                    </div>
+                                </td>
+                                <td class="td-first-title hightlight-color">
+                                    <p class="s2" style="padding-top: 1pt;padding-left: 10pt;line-height: 20pt;text-align: left;">
+                                        入 社 日
+                                    </p>
+                                </td>
+                                <td class="td-input" colspan="10">
+                                    <div class="input-group radio-custom-label-gender-wrapper-date">
+                                        <span>令和</span>
+                                        <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id=""
+                                               style="width: 10%;">
+                                        <span>年</span>
+                                        <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id=""
+                                               style="width: 10%;">
+                                        <span>月</span>
+                                        <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id=""
+                                               style="width: 10%;">
+                                        <span>日</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="height:20pt">
+                                <td class="td-furigana hightlight-color">
+                                    <p class="s9" style="padding-left: 14pt;line-height: 19pt;text-align: left;">
+                                        フリガナ
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
+                                    colspan="19">
+                                    <input class="input-border-none" type="text" name="" id="" placeholder="Nhập vào đây..."
+                                           style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:17pt">
+                                <td class="td-medium-first-title hightlight-color" rowspan="3">
+
+                                    <p class="s2 mt-4" style="text-align: center;">住 所</p>
+                                </td>
+                                <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
+                                    colspan="19">
+                                    <p class="s6" style="line-height: 13pt;text-align: left;">
+                                        〒<input class="s5 input-border-none"
+                                                style="padding-left: 4pt;line-height: 22pt;text-align: left;" type="text" name="" id=""
+                                                placeholder="Nhập vào đây..." style="width: 100%;">
+                                        <span style="float: right;line-height: 22pt; color: red;">※フリガナ・郵便番号を必ずご記入ください</span>
+
+
+                                </td>
+                            </tr>
+                            <tr style="height:14pt">
+                                <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
+                                    colspan="19">
+                                    <input class="s5 input-border-none"
+                                           style="padding-left: 4pt;line-height: 22pt;text-align: left;" type="text" name="" id=""
+                                           placeholder="Nhập vào đây..." style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:16pt">
+                                <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="19">
+                                    <p class="s11" style="padding-left: 4pt;line-height: 22pt;text-align: left;">
+                                        建物名等： <input class="s5 input-border-none"
+                                                     style="padding-left: 4pt;line-height: 16pt;text-align: left;" type="text" name="" id=""
+                                                     placeholder="Nhập vào đây..." style="width: 100%;">
+                                    </p>
+
+                                </td>
+                            </tr>
+                            <tr style="height:15pt">
+                                <td class="td-second-title hightlight-color">
+                                    <p class="s9" style="padding-left: 14pt;line-height: 14pt;text-align: left;">
+                                        交通手段
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="19">
+                                    <div class="input-group radio-custom-label-gender-wrapper-employee">
+                                        <input id="vehicle-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                               name="vehicle-radio-group-2" type="radio" hidden checked>
+                                        <label for="vehicle-pickup-1" class="radio-custom-label radio-custom-label-employee">
+                                            自家用車
+                                        </label>
+                                        <div>・</div>
+                                        <input id="vehicle-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                               name="vehicle-radio-group-2" type="radio" hidden>
+                                        <label for="vehicle-pickup-2" class="radio-custom-label radio-custom-label-employee">
+                                            公共交通機関
+                                        </label>
+                                        <div>・</div>
+                                        <input id="vehicle-pickup-3" class="radio-custom radio-custom-gender input-group-field"
+                                               name="vehicle-radio-group-2" type="radio" hidden>
+                                        <label for="vehicle-pickup-3" class="radio-custom-label radio-custom-label-employee">
+                                            自転車
+                                        </label>
+                                        <div>・</div>
+                                        <input id="vehicle-pickup-4" class="radio-custom radio-custom-gender input-group-field"
+                                               name="vehicle-radio-group-2" type="radio" hidden>
+                                        <label for="vehicle-pickup-4" class="radio-custom-label radio-custom-label-employee">
+                                            徒歩
+                                        </label>
+                                        <div>・</div>
+                                        <input id="vehicle-pickup-5" class="radio-custom radio-custom-gender input-group-field"
+                                               name="vehicle-radio-group-2" type="radio" hidden>
+                                        <label for="vehicle-pickup-5" class="radio-custom-label radio-custom-label-employee">
+                                            その他 &nbsp
+                                        </label>
+                                        (
+                                        <input class="mt-2 input-center ml-2 input-border-none mb-1" type="text" name="" id=""
+                                               style="width: 35%;font-size: 0.75rem;text-align: left;">
+                                        )
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="height:37pt">
+                                <td class="td-second-title hightlight-color">
+                                    <p class="s9 mt-3" style="text-align: center;">
+                                        基礎年金番 号
+                                    </p>
+                                </td>
+                                <td class="general-border"
+                                    style="padding:5pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt"
+                                    colspan="5">
+
+                                    <input class="mt-2 input-center ml-2" type="number" name="" id=""
+                                           style="width: 25%;height: 35px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 25%;margin-left: -10px;height: 35px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 25%;margin-left: -10px;height: 35px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 25%;margin-left: -10px;height: 35px;">
+                                    <br />
+
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E;width:10px;">
+                                    <p class="s12" style="padding: 6pt;text-align: left;">
+                                        —
+                                    </p>
+                                </td>
+                                <td class="" style="width:10px;">
+                                    <p style="text-align: left;">
+                                        <br />
+                                    </p>
+                                </td>
+                                <td class="general-border"
+                                    style="padding:5pt;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="6">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <br />
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="6">
+                                    <p class="s13" style="padding-top: 2pt;padding-left: 5pt;line-height: 16pt;text-align: left;">
+                                        前職・会社名
+                                    </p>
+                                    <p class="s13" style="padding-left: 5pt;line-height: 16pt;text-align: left; color: red;">
+                                        ※<span class="s9">雇用保険番号が不明な場合</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="height:16pt">
+                                <td class="td-second-title hightlight-color" rowspan="2">
+                                    <p class="s9" style="line-height: 14pt;text-align: center;">
+                                        雇用保険  被 保 険 者 番 号
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E"
+                                    colspan="4" rowspan="2">
+                                    <input class="ml-2 mt-2 mb-2 input-center" type="number" name="" id=""
+                                           style="width: 23%;height: 35px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 23%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 23%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 23%;height: 35px;margin-left: -10px;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E"
+                                    rowspan="2">
+                                    <p class="s12" style="padding: 6pt;text-align: left;">
+                                        —
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E"
+                                    colspan="6" rowspan="2">
+                                    <input class="ml-2 mt-2 mb-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                    <input class="mt-2 input-center" type="number" name="" id=""
+                                           style="width: 16%;height: 35px;margin-left: -10px;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E"
+                                    rowspan="2">
+                                    <p class="s12" style="padding: 6pt;text-align: left;">
+                                        —
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                    rowspan="2">
+                                    <input class="ml-2 mt-2 mb-2 input-center" type="number" name="" id=""
+                                           style="width: 60%;height: 35px;">
+                                </td>
+                                <td style="border-left-style:solid;border-left-width:1pt">
+                                    <p class="s2" style="padding-left: 6pt;line-height: 15pt;text-align: left;">
+                                        1
+                                    </p>
+                                </td>
+                                <td style="border-right-style:solid;border-right-width:2pt" colspan="5">
+                                    <input class="input-border-none" type="text" name="" id="" placeholder="..."
+                                           style="width: 100%;">
+                                </td>
+
+                            </tr>
+                            <tr style="height:15pt">
+                                <td style="border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:2pt;">
+                                    <p class="s2" style="padding-left: 6pt;line-height: 14pt;text-align: left;">
+                                        2
+                                    </p>
+                                </td>
+                                <td style="border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="5">
+                                    <input class="input-border-none" type="text" name="" id="" placeholder="..."
+                                           style="width: 100%;">
+                                </td>
+
+                            </tr>
+                        </table>
+                        <br>
+
+                        <table class="table-responsive" cellspacing="0">
+                            <tr style="height:18pt">
+                                <td class="hightlight-color"
+                                    style="width:6%;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    rowspan="4">
+
+                                    <p class="s2 mt-5" style="text-align: center;">給 与</p>
+                                </td>
+                                <td style="width:14%;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <p class="s2" style="padding-left: 10pt;line-height: 16pt;text-align: left;">
+                                        基 本 給
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt" colspan="4">
+                                    <div class="input-group" style="width: 100%; float: left;">
+                                        <input id="first-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                               name="first-radio-group-1" type="radio" hidden checked>
+                                        <label for="first-pickup-1" class="radio-custom-label radio-custom-label-salary">
+                                            月給
+                                        </label>
+                                        <div>・</div>
+                                        <input id="first-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                               name="first-radio-group-1" type="radio" hidden>
+                                        <label for="first-pickup-2" class="radio-custom-label radio-custom-label-salary">
+                                            日給
+                                        </label>
+                                        <div>・</div>
+                                        <input id="first-pickup-3" class="radio-custom radio-custom-gender input-group-field"
+                                               name="first-radio-group-1" type="radio" hidden>
+                                        <label for="first-pickup-3" class="radio-custom-label radio-custom-label-salary">
+                                            時給
+                                        </label>
+                                        <span style="line-height:30px;">￥</span>
+                                        <input class="input-border-none" type="number" name="" id="" placeholder="..." />
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr style="height:18pt;">
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <p class="s2" style="padding-left: 10pt;line-height: 17pt;text-align: left;">
+                                        諸 手 当
+                                    </p>
+                                </td>
+
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt" colspan="4">
+                                    <p class="s2" style="padding-top: 2pt;padding-left: 3pt;line-height: 14pt;text-align: left;">
+                                        <span class="">
+                                            役職手当：￥<input class="input-border-none ml-2" type="number" name="" id="" placeholder="...">
+                                        </span>
+                                        <span class="ml-3">
+                                            役職手当：￥<input class="input-border-none ml-2" type="number" name="" id="" placeholder="...">
+                                        </span>
+                                        <span class="ml-3">
+                                            役職手当：￥<input class="input-border-none ml-2" type="number" name="" id="" placeholder="...">
+                                        </span>
+                                        <span class="ml-3">
+                                            手当：￥<input class="input-border-none ml-2" type="number" name="" id="" placeholder="...">
+                                        </span>
+
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="height:18pt">
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <p class="s2" style="padding-left: 9pt;line-height: 17pt;text-align: left;">
+                                        通勤手当
+                                    </p>
+                                </td>
+                                <td style="width:70%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"
+                                    colspan="2">
+                                    <p class="s2" style="padding-left: 5pt;line-height: 17pt;text-align: left;">
+                                        <div class="input-group" style="width: 50%; float: left;">
+                                            <input id="sec-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                                   name="sec-radio-group-1" type="radio" hidden checked>
+                                            <label for="sec-pickup-1" class="radio-custom-label radio-custom-label-salary">
+                                                月額
+                                            </label>
+                                            <div>・</div>
+                                            <input id="sec-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                                   name="sec-radio-group-1" type="radio" hidden>
+                                            <label for="sec-pickup-2" class="radio-custom-label radio-custom-label-salary">
+                                                日額
+                                            </label>
+                                            <span style="line-height:30px;">￥</span> <input class="input-border-none" type="number" name="" id="" placeholder="...">
+                                        </div>
+
+                                    </p>
+                                </td>
+
+                                <td colspan="2"
+                                    style="width:50%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s15"
+                                       style="padding-left: 4pt;padding-right: 15pt;line-height: 17pt;text-align: center;">
+                                        <input class="mt-1" type="checkbox" name="" id=""> <span class="s9">所得税乙該当</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="height:18pt">
+                                <td class="td-stype-type2" style="border-right-width:1pt">
+                                    <p class="s6" style="padding-left: 9pt;line-height: 17pt;text-align: left;">
+                                        月の総額
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt" colspan="4">
+                                    <span class="s2" style="padding-left: 5pt;line-height: 17pt;text-align: left;">
+                                        ￥<input class="input-border-none" type="number" name="" id="" placeholder="...">
+                                    </span>
+                                    <span class="s16 ml-5" style="padding-top: 1pt;line-height: 15pt;">
+                                        ※各手当を含みます ※社会保険等級の決定に係ります
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table class="table-responsive" cellspacing="0">
+                            <tr style="height:30pt">
+                                <td class="td-second-title hightlight-color">
+                                    <p class="s9" style="padding-top: 5pt;padding-left: 5pt;padding-right: 5pt;text-align: center;">
+                                        被扶養者
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+                                    <div class="input-group" style=" float: left;">
+                                        <input id="third-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                               name="third-radio-group-3" type="radio" hidden checked>
+                                        <label for="third-pickup-1" class="radio-custom-label radio-custom-label-salary">
+                                            有
+                                        </label>
+                                        <div style="width: 45%;">
+                                            （
+                                            <input class="input-border-none" type="number" name="" id="" placeholder="..."
+                                                   style="width: 10%;">
+                                            ）人
+                                        </div>
+                                        <div>・</div>
+                                        <input id="third-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                               name="third-radio-group-3" type="radio" hidden>
+                                        <label for="third-pickup-2" class="radio-custom-label radio-custom-label-salary">
+                                            無
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="hightlight-color"
+                                    style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s1" style="padding: 5pt;line-height: 120%;text-align: left;">
+                                        被扶養配偶者基礎年金番号
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <p class="s2" style="padding-top: 5pt;padding-left: 5pt;text-align: left;">
+                                        —
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-width:1pt;border-right-color:#7E7E7E;border-right-style: solid;border-right-width:2pt">
+                                    <input class="mt-2 mb-2 input-center input-border-none" type="number" name="" id=""
+                                           style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:13pt">
+                                <td class="td-furigana hightlight-color">
+                                    <p class="s1"
+                                       style="padding-left: 5pt;padding-right: 5pt;line-height: 12pt;text-align: center;">
+                                        フリガナ
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt"
+                                    colspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:28pt">
+                                <td class="hightlight-color"
+                                    style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s9" style="line-height: 14pt;text-align: center;">
+                                        被扶養者 氏 名
+                                    </p>
+                                </td>
+                                <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                    <div class="input-group radio-custom-label-gender-wrapper">
+                                        <input id="pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                               name="radio-group-1" type="radio" hidden>
+                                        <label for="pickup-1" class="radio-custom-label radio-custom-label-gender">
+                                            男
+                                        </label>
+                                        <div>・</div>
+                                        <input id="pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                               name="radio-group-1" type="radio" hidden>
+                                        <label for="pickup-2" class="radio-custom-label radio-custom-label-gender">
+                                            女
+                                        </label>
+                                    </div>
+                                </td>
+                                <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                    <div class="input-group radio-custom-label-gender-wrapper">
+                                        <input id="pickup-3" class="radio-custom radio-custom-gender input-group-field"
+                                               name="radio-group-2" type="radio" hidden>
+                                        <label for="pickup-3" class="radio-custom-label radio-custom-label-gender">
+                                            男
+                                        </label>
+                                        <div>・</div>
+                                        <input id="pickup-4" class="radio-custom radio-custom-gender input-group-field"
+                                               name="radio-group-2" type="radio" hidden>
+                                        <label for="pickup-4" class="radio-custom-label radio-custom-label-gender">
+                                            女
+                                        </label>
+                                    </div>
+                                </td>
+                                <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                    <div class="input-group-3 radio-custom-label-gender-wrapper">
+                                        <input id="pickup-5" class="radio-custom radio-custom-gender input-group-field"
+                                               name="radio-group-3" type="radio" hidden>
+                                        <label for="pickup-5" class="radio-custom-label radio-custom-label-gender">
+                                            男
+                                        </label>
+                                        <div>・</div>
+                                        <input id="pickup-6" class="radio-custom radio-custom-gender input-group-field"
+                                               name="radio-group-3" type="radio" hidden>
+                                        <label for="pickup-6" class="radio-custom-label radio-custom-label-gender">
+                                            女
+                                        </label>
+                                    </div>
+                                </td>
+                                <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                    <div class="input-group radio-custom-label-gender-wrapper">
+                                        <input id="pickup-7" class="radio-custom radio-custom-gender input-group-field"
+                                               name="radio-group-4" type="radio" hidden>
+                                        <label for="pickup-7" class="radio-custom-label radio-custom-label-gender">
+                                            男
+                                        </label>
+                                        <div>・</div>
+                                        <input id="pickup-8" class="radio-custom radio-custom-gender input-group-field"
+                                               name="radio-group-4" type="radio" hidden>
+                                        <label for="pickup-8" class="radio-custom-label radio-custom-label-gender">
+                                            女
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="height:19pt">
+                                <td class="hightlight-color"
+                                    style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s9" style="padding-right: 5pt;line-height: 17pt;text-align: center;">
+                                        生年月日
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="date" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="date" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="date" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="date" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:19pt">
+                                <td class="hightlight-color"
+                                    style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s9" style="padding-right: 5pt;line-height: 17pt;text-align: center;">
+                                        続 柄
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:26pt">
+                                <td class="hightlight-color"
+                                    style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s9" style="line-height: 15pt;text-align: center;">職 業 または学年</p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td class=""
+                                    style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:19pt">
+                                <td class="hightlight-color"
+                                    style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s9" style="padding-right: 5pt;line-height: 17pt;text-align: center;">
+                                        年 収
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:27pt">
+                                <td class="hightlight-color"
+                                    style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s9" style="padding-right: 5pt;line-height: 15pt;text-align: center;">
+                                        住 所 （別居の場合）
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="text" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr style="height:19pt">
+                                <td class="hightlight-color td-stype-type2" style="border-right-width:2pt">
+                                    <p class="s10"
+                                       style="padding-top: 3pt;padding-left: 5pt;padding-right: 5pt;line-height: 14pt;text-align: center;">
+                                        扶養加入日
+                                    </p>
+                                </td>
+                                <td class="td-stype-type2" style="border-right-width:1pt">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="date" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td class="td-stype-type1" style="border-right-width:1pt" colspan="2">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="date" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td class="td-stype-type1" style="border-right-width:1pt" colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="date" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                                <td class="td-stype-type1" style="border-right-width:2pt" colspan="5">
+                                    <input class="mt-2 mb-2 input-border-none input-center" type="date" placeholder="Nhập vào đây.."
+                                           name="" id="" style="width: 100%;">
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p class="s18" style="padding-left: 10pt;text-align: left;">
+                            ※扶養者の収入には、雇用保険の失業等給付、公的年金、健康保険の傷病手当金や出産手当金も含まれます。
+                        </p>
+                        <table class="table-border" style="width: 100%;" cellspacing="0">
+                            <tr style="height:33pt">
+                                <td class="td-second-title hightlight-color">
+                                    <p class="s2 mt-2" style="padding-top: 2pt;text-align: center;">
+                                        備 考
+                                    </p>
+                                </td>
+                                <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+                                    <p class="s2" style="padding-left: 5pt;line-height: 14pt;text-align: left;">
+                                        ※マイナンバーについては担当にご確認くださいますようお願い致します。
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table class="table-responsive" cellspacing="0">
+                            <tr style="height:15pt">
+                                <td class="hightlight-color"
+                                    style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    rowspan="2">
+
+                                    <p class="s19 mt-3" style="text-align: center;">※事務所使用欄</p>
+                                </td>
+                                <td class="td-bottom-column" style="border-left-style:solid;border-left-width:2pt">
+                                    <p class="s19" style="padding-left: 6pt;line-height: 13pt;text-align: left;">
+                                        契約期間<input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+                                <td class="td-bottom-column">
+                                    <p class="s19 mt-1" style="padding-left: 5pt;line-height: 13pt;text-align: center;">
+                                        ～
+                                    </p>
+                                </td>
+                                <td class="td-bottom-column">
+                                    <p class="s19" style="padding-left: 15pt;line-height: 13pt;text-align: center;">
+                                        年金番号<input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+                                <td class="td-bottom-column">
+                                    <p class="s19" style="padding-left: 1pt;line-height: 13pt;text-align: center;">
+                                        雇保番号<input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+                                <td class="td-bottom-column">
+                                    <p class="s19" style="padding-left: 9pt;line-height: 13pt;text-align: center;">
+                                        個人番号<input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+                                <td class="td-bottom-column">
+                                    <p class="s19" style="padding-left: 8pt;line-height: 13pt;text-align: center;">
+                                        口座番号<input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+                                <td class="td-bottom-column">
+                                    <p class="s19" style="padding-left: 8pt;line-height: 13pt;text-align: center;">
+                                        雇用契約書<input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+                                <td class="td-bottom-column" style="border-right-style:solid;border-right-width:2pt">
+                                    <p class="s19" style="padding-left: 6pt;line-height: 13pt;text-align: center;">
+                                        喪失証明書<input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="height:15pt">
+                                <td style="width:10%;border-bottom-style:solid;border-bottom-width:2pt">
+                                    <p class="s19" style="padding-left: 6pt;line-height: 13pt;text-align: left;">
+                                        非課税証明書 <input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+                                <td style="border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                    colspan="7">
+                                    <p class="s19" style="padding-left: 7pt;line-height: 13pt;text-align: left;">
+                                        雇用と給与に関する証明書 <input class="mt-1" style="height: 10px;" type="checkbox" name="" id="">
+                                    </p>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="mt-4 d-flex justify-content-center align-items-center">
+                    <div>
+                        <button type="submit" class="btn btn-warning btn-sm btn-save-version" id="butSubmitContactForm">
+                            <i class="fa fa-save"></i> 新しいバージョンを保存
+                        </button>
+                        <a class="btn btn-outline-info btn-sm" href="/Offer"><i class="fa fa-remove"></i> キャンセル</a>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    </div>
+</body>

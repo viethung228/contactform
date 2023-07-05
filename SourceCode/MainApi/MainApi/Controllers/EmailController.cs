@@ -64,9 +64,9 @@ namespace MainApi.Controllers
                         description = "同じエラーが繰り返し発生する場合は、管理者に問い合わせてください";
                     }
                     var check = Utility.DecryptText(array[1], SystemSettings.EncryptKey);
-                    var getCustomerName = Utility.DecryptText(array[1], SystemSettings.EncryptKey).Substring(0, Utility.DecryptText(array[1], SystemSettings.EncryptKey).IndexOf('|'));
-                    var storeCustomer = Startup.IocContainer.Resolve<IStoreCustomer>();
-                    var getDetail = storeCustomer.GetByEmail(getCustomerName);
+                    var getEmployeeName = Utility.DecryptText(array[1], SystemSettings.EncryptKey).Substring(0, Utility.DecryptText(array[1], SystemSettings.EncryptKey).IndexOf('|'));
+                    var storeEmployee = Startup.IocContainer.Resolve<IStoreEmployee>();
+                    var getDetail = storeEmployee.GetByEmail(getEmployeeName);
 
                     if (getDetail == null || getDetail.SecurityStamp != token || getDetail.EmailConfirmed)
                     {
@@ -75,7 +75,7 @@ namespace MainApi.Controllers
                     }
                     if (result == "")
                     {
-                        var confirm = storeCustomer.ConfirmEmail(getDetail.StaffId);
+                        var confirm = storeEmployee.ConfirmEmail(getDetail.StaffId);
                         if (confirm)
                         {
                             result = "あなたのメールアドレスは正常に認証されました";
@@ -86,7 +86,7 @@ namespace MainApi.Controllers
                             description = "同じエラーが繰り返し発生する場合は、管理者に問い合わせてください";
                         }
                     }
-                    ViewBag.email = getCustomerName;
+                    ViewBag.email = getEmployeeName;
                     ViewBag.description = description;
                     ViewBag.baseURL = baseUrl;
                     ViewBag.result = result;

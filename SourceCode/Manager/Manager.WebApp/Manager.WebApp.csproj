@@ -13,13 +13,6 @@
     <EmbeddedResource Remove="Views\NewFolder1\**" />
     <None Remove="Views\NewFolder1\**" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Views\LinkSetting\Partials\_InsertForm.cshtml" />
-    <Content Remove="Views\Revenue\Partials\Chart.cshtml" />
-    <Content Remove="Views\Revenue\Partials\Detail.cshtml" />
-    <Content Remove="Views\Revenue\Partials\_SearchForm.cshtml" />
-  </ItemGroup>
  
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.2.0" />
@@ -50,21 +43,12 @@
 
   <ItemGroup>
     <None Include="Views\Account\Login.cshtml" />
-    <None Include="Views\LinkSetting\Detail.cshtml" />
-    <None Include="Views\LinkSetting\Edit.cshtml" />
-    <None Include="Views\LinkSetting\Index.cshtml" />
-    <None Include="Views\LinkSetting\Partials\_SearchForm.cshtml" />
-    <None Include="Views\LinkSetting\Partials\_InsertForm.cshtml" />
-    <None Include="Views\LinkSetting\Partials\_UpdateForm.cshtml" />
-    <None Include="Views\Revenue\Partials\Chart.cshtml" />
-    <None Include="Views\Revenue\Partials\Detail.cshtml" />
-    <None Include="Views\Revenue\Partials\_SearchForm.cshtml" />
-    <None Include="Views\User\Detail.cshtml" />
-    <None Include="Views\User\Edit.cshtml" />
-    <None Include="Views\User\Index.cshtml" />
-    <None Include="Views\User\Partials\_PopupDelete.cshtml" />
-    <None Include="Views\User\Partials\_SearchForm.cshtml" />
-    <None Include="Views\User\Partials\_UpdateForm.cshtml" />
+    <None Include="Views\Employee\Detail.cshtml" />
+    <None Include="Views\Employee\Edit.cshtml" />
+    <None Include="Views\Employee\Index.cshtml" />
+    <None Include="Views\Employee\Partials\_PopupDelete.cshtml" />
+    <None Include="Views\Employee\Partials\_SearchForm.cshtml" />
+    <None Include="Views\Employee\Partials\_UpdateForm.cshtml" />
     <None Include="Views\EmailForm\TemplateComponents\_Text.cshtml" />
     <None Include="Views\EmailServer\Create.cshtml" />
     <None Include="Views\EmailServer\Edit.cshtml" />
@@ -563,7 +547,6 @@
 
   <ItemGroup>
     <Folder Include="Models\Extensions\Image\" />
-    <Folder Include="Views\Category\" />
     <Folder Include="wwwroot\Content\FrontEnd\" />
     <Folder Include="wwwroot\Media\QRcode\" />
     <Folder Include="wwwroot\Scripts\LabelDesign\" />

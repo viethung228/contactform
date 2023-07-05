@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZNrKjxLA+E9t7jmyMwB4wXcIy6Lj55Bw6Md31MjUYa6eIg9PALvuPpdVgqABZKTOP0A7JzwtPpL7adDDKbqsmg==",
+  "dgSpecHash": "eKwHDOIzowFiv3N/wFPWPnseIzMBEySuWlcv14RCVgCK69MFB9Piud+f79u3chVTT/zOEm8d7owXwMv8zwR43Q==",
   "success": true,
-  "projectFilePath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj",
+  "projectFilePath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\COMPUTER\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\COMPUTER\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

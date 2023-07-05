@@ -41,7 +41,7 @@ namespace MainApi.Models
         public string Page { get; set; }
         public int SIsLocked { get; set; }
 
-        public IdentityCustomer User { get; set; }
+        public IdentityUser User { get; set; }
         public LockoutViewModel Lockout { get; set; }
 
         public bool IsActived { get; set; }

@@ -1,5 +1,4 @@
 ﻿using MainApi.DataLayer.Entities;
-using MainApi.DataLayer.Entities.Entities;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 
@@ -10,7 +9,7 @@ namespace MainApi.Models
         public List<UserDetailModel> SearchResults { get; set; }
     }
 
-    public class UserDetailModel : IdentityCustomer
+    public class UserDetailModel : IdentityUser
     {
 
     }

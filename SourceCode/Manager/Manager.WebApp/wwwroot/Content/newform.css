@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+h1 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16pt;
+}
+
+.s1 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 9pt;
+}
+
+.s2 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10.5pt;
+}
+
+.s3 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: underline;
+  font-size: 12pt;
+}
+
+.s4 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 12pt;
+}
+
+.s5 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10pt;
+}
+
+.s6 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 10.5pt;
+}
+
+.s7 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 14pt;
+}
+
+.s8 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10.5pt;
+}
+
+.s9 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10pt;
+}
+
+.s10 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 8pt;
+}
+
+.s11 {
+  color: #808080;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10.5pt;
+}
+
+.s12 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 16pt;
+}
+
+.s13 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 10pt;
+}
+
+.s14 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 6pt;
+}
+
+.s15 {
+  color: black;
+  font-family: "MS Gothic", monospace;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10.5pt;
+}
+
+.s16 {
+  color: #f00;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 9pt;
+}
+
+.s17 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 12pt;
+}
+
+.s18 {
+  color: #333;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 9pt;
+}
+
+.s19 {
+  color: black;
+  font-family: "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 7pt;
+}
+
+p {
+  color: black;
+  font-family: "MS Gothic", monospace;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10.5pt;
+  margin: 0pt;
+}
+
+.s20 {
+  color: black;
+  font-family: Cambria, serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 10.5pt;
+}
+
+table,
+tbody {
+  vertical-align: top;
+  overflow: visible;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 6.75pt;
+}
+
+.td-input {
+  border-top-style: solid;
+  border-top-width: 2pt;
+  border-left-style: solid;
+  border-left-width: 2pt;
+  border-bottom-style: dashed;
+  border-bottom-width: 1pt;
+  border-bottom-color: #7e7e7e;
+  border-right-style: solid;
+  border-right-width: 2pt;
+}
+
+.td-input p {
+  padding-left: 59pt;
+  text-indent: 0pt;
+  line-height: 17pt;
+  text-align: left;
+}
+.td-first-title {
+  width: 57pt;
+  border-top-style: solid;
+  border-top-width: 2pt;
+  border-left-style: solid;
+  border-left-width: 2pt;
+  border-bottom-style: solid;
+  border-bottom-width: 2pt;
+  border-right-style: solid;
+  border-right-width: 2pt;
+}
+
+.td-second-title {
+  width: 70pt;
+  border-top-style: solid;
+  border-top-width: 2pt;
+  border-left-style: solid;
+  border-left-width: 2pt;
+  border-bottom-style: solid;
+  border-bottom-width: 2pt;
+  border-right-style: solid;
+  border-right-width: 2pt;
+}
+.td-medium-first-title {
+  width: 70pt;
+  border-top-style: dashed;
+  border-top-width: 1pt;
+  border-top-color: #7e7e7e;
+  border-left-style: solid;
+  border-left-width: 2pt;
+  border-bottom-style: solid;
+  border-bottom-width: 2pt;
+  border-right-style: solid;
+  border-right-width: 2pt;
+}
+.td-furigana {
+  width: 70pt;
+  border-top-style: solid;
+  border-top-width: 2pt;
+  border-left-style: solid;
+  border-left-width: 2pt;
+  border-bottom-style: dashed;
+  border-bottom-width: 1pt;
+  border-bottom-color: #7e7e7e;
+  border-right-style: solid;
+  border-right-width: 2pt;
+}
+.input-center {
+  text-align: center;
+}
+
+.border-bottom-with {
+  border-bottom-width: 2px;
+}
+.general-border {
+  border-top-style: solid;
+  border-top-width: 2pt;
+  border-bottom-style: solid;
+}
+.hightlight-color {
+  background-color: #ffd966;
+}
+
+.input-border-none {
+  border: 0;
+  outline: 0;
+}
+
+.td-stype-type1 {
+  border-top-style: solid;
+  border-top-width: 1pt;
+  border-left-style: solid;
+  border-left-width: 1pt;
+  border-bottom-style: solid;
+  border-bottom-width: 2pt;
+  border-right-style: solid;
+}
+
+.td-stype-type2 {
+  border-top-style: solid;
+  border-top-width: 1pt;
+  border-left-style: solid;
+  border-left-width: 2pt;
+  border-bottom-style: solid;
+  border-bottom-width: 2pt;
+  border-right-style: solid;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+fieldset {
+  overflow: hidden;
+}
+
+.selection {
+  float: left;
+  clear: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.radio-custom-label-gender-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 20px;
+}
+.radio-custom-label-gender-wrapper-employee {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.radio-custom-label-gender-wrapper-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.radio-custom-label-title-wrapper-date {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.radio-custom-label-gender {
+  margin-bottom: unset;
+}
+
+.radio-custom-label-gender {
+  border: 1px solid transparent;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-custom-gender:checked + label {
+  border-color: black;
+}
+.radio-custom-label.radio-custom-label-gender {
+  font-size: 0.75rem;
+}
+
+.radio-custom-label-salary {
+  font-size: 0.75rem;
+  border: 1px solid transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-custom-label-employee {
+  font-size: 0.75rem;
+  border: 1px solid transparent;
+  width: fit-content;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 0;
+}
+
+.td-bottom-column {
+    width: 12%;
+    border-top-style: solid;
+    border-top-width: 2pt;
+}
+
+input {
+    background-color: #F2F3F8;
+}

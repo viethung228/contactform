@@ -131,7 +131,7 @@ namespace MainApi.Helpers
 
     public static class EnumListCacheKeys
     {
-        public static string CachePrefix = "OGATORE_HIT_";
+        public static string CachePrefix = "CONTACT_FORM_";
         public static string Accounts = CachePrefix + "ACCOUNTS";
         public static string RegionByCountry = CachePrefix +  "REGIONS_{0}";
         public static string PrefecturesByRegion = CachePrefix + "PREFECTURES_{0}";
@@ -148,7 +148,7 @@ namespace MainApi.Helpers
         public static string LinkSettings = CachePrefix + "LINKSETTINGS_";
         public static string Adss = CachePrefix + "ADSS_";
         public static string Users = CachePrefix + "USERS_";
-        public static string Customers = CachePrefix + "CUSTOMERS_";
+        public static string Employees = CachePrefix + "EMPLOYEES_";
         public static string ProductProperties = CachePrefix + "PRODUCTS_PROPERTY_";
         public static string Volumes = CachePrefix + "VOLUMES_";
         public static string Brands = CachePrefix + "BRANDS_";
@@ -184,7 +184,7 @@ namespace MainApi.Helpers
         public static string SalesAccount = CachePrefix + "SALESACCOUNT_{0}";
         public static string SalesMonthAccount = CachePrefix + "SALESMONTH_ACCOUNT_{0}";
 
-        public static string Customer = CachePrefix + "CUSTOMER_{0}";
+        public static string Employee = CachePrefix + "EMPLOYEE_{0}";
         public static string ProgressStatus = CachePrefix + "PROGRESS_STATUS_{0}";
         public static string EmailSchedule = CachePrefix + "EMAIL_TEMPLATE_{0}";
         public static string EmailForm = CachePrefix + "EMAILFORM_{0}";

@@ -1,7 +1,7 @@
 ﻿using MainApi.DataLayer.Entities;
 using System.Collections.Generic;
 using System;
-using MainApi.DataLayer.Entities.Entities;
+using MainApi.DataLayer.Entities;
 using Manager.WebApp.Resources;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Http;

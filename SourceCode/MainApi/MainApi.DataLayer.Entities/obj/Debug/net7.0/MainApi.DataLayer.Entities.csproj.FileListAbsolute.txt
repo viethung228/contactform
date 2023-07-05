@@ -34,3 +34,15 @@ E:\Project_VietHung\contact_form\SourceCode\MainApi\MainApi.DataLayer.Entities\o
 E:\Project_VietHung\contact_form\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\refint\MainApi.DataLayer.Entities.dll
 E:\Project_VietHung\contact_form\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\MainApi.DataLayer.Entities.pdb
 E:\Project_VietHung\contact_form\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\ref\MainApi.DataLayer.Entities.dll
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\bin\Debug\net7.0\MainApi.DataLayer.Entities.deps.json
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\bin\Debug\net7.0\MainApi.DataLayer.Entities.dll
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\bin\Debug\net7.0\MainApi.DataLayer.Entities.pdb
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\MainApi.DataLayer.Entities.csproj.AssemblyReference.cache
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\MainApi.DataLayer.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\MainApi.DataLayer.Entities.AssemblyInfoInputs.cache
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\MainApi.DataLayer.Entities.AssemblyInfo.cs
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\MainApi.DataLayer.Entities.csproj.CoreCompileInputs.cache
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\MainApi.DataLayer.Entities.dll
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\refint\MainApi.DataLayer.Entities.dll
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\MainApi.DataLayer.Entities.pdb
+E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.DataLayer.Entities\obj\Debug\net7.0\ref\MainApi.DataLayer.Entities.dll

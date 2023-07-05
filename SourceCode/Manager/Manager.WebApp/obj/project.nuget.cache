@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HnGkMp/wenfP5aOHO4F45+cBMZnGSwbuS8rml9LEhirDGgY0X3n4ydmbAHmSdZ7UzHpv+X6oytuvzX/KGEd33Q==",
+  "dgSpecHash": "bCbrCYsFlnOpJcCqgMc6zSS6YGL875alcd8YDCuv7PA0zF2QeRk9kCB6skG/aMr8CBGmaN/4EQx6eWsjYhYOeA==",
   "success": true,
-  "projectFilePath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj",
+  "projectFilePath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\COMPUTER\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\COMPUTER\\.nuget\\packages\\barcode\\2023.1.11395\\barcode.2023.1.11395.nupkg.sha512",

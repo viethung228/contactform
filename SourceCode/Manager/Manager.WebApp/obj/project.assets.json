@@ -5700,11 +5700,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj",
+      "projectUniqueName": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj",
       "projectName": "Manager.WebApp",
-      "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj",
+      "projectPath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\Manager.WebApp.csproj",
       "packagesPath": "C:\\Users\\COMPUTER\\.nuget\\packages\\",
-      "outputPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.WebApp\\obj\\",
+      "outputPath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\COMPUTER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5722,11 +5722,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj": {
-              "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj"
+            "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj": {
+              "projectPath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.Datalayer\\Manager.DataLayer.csproj"
             },
-            "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj": {
-              "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj"
+            "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj": {
+              "projectPath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj"
             }
           }
         }

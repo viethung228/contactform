@@ -550,11 +550,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj",
+      "projectUniqueName": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj",
       "projectName": "Manager.SharedLibs",
-      "projectPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj",
+      "projectPath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.SharedLibs\\Manager.SharedLibs.csproj",
       "packagesPath": "C:\\Users\\COMPUTER\\.nuget\\packages\\",
-      "outputPath": "E:\\Project_VietHung\\contact_form\\SourceCode\\Manager\\Manager.SharedLibs\\obj\\",
+      "outputPath": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.SharedLibs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\COMPUTER\\AppData\\Roaming\\NuGet\\NuGet.Config",

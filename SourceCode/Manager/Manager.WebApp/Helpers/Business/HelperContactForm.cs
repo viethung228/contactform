@@ -80,5 +80,41 @@ namespace Manager.WebApp.Helpers
             return baseInfo;
         }
 
+
+        public static List<IdentityContactForm> GetAllCompany(string companyName, int currentpage = 1, int pagesize = 10)
+        {
+            List<IdentityContactForm> baseInfo = null;
+
+            try
+            {
+                var apiRs = ContactFormServices.GetAllCompany(companyName, currentpage, pagesize).Result;
+
+                baseInfo = apiRs.ConvertData<List<IdentityContactForm>>();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            return baseInfo;
+        }
+
+        public static List<IdentityContactForm> GetEmployeeByCompanyName(string companyName, int currentpage = 1, int pagesize = 10)
+        {
+            List<IdentityContactForm> baseInfo = null;
+
+            try
+            {
+                var apiRs = ContactFormServices.GetEmployeeByCompanyName(companyName, currentpage, pagesize).Result;
+
+                baseInfo = apiRs.ConvertData<List<IdentityContactForm>>();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            return baseInfo;
+        }
     }
 }

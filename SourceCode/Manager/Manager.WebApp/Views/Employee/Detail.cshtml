@@ -121,8 +121,7 @@
             <input type="radio" name="tabset" id="tab1" aria-controls="information" checked>
             <label style="height:50px;" for="tab1"><i class="fa fa-file-text-o"></i> @ManagerResource.LB_INFORMATION</label>
             <!-- Tab 2 -->
-            <input type="radio" name="tabset" id="tab2" aria-controls="coin_history">
-            <label style="height:50px;" for="tab2"><i class="fa fa-history" aria-hidden="true"></i> コインの歴史</label>
+           
             <div class="tab-panels">
                 <section id="information" class="tab-panel">
                     <div class="detail">
@@ -187,55 +186,6 @@
                         </div>
                     </div>
                 </section>
-                <section id="coin_history" class="tab-panel">
-                    <table id="sample-table-1" class="table table-hover table-bordered">
-                        <thead class="text-nowrap">
-                            <tr class="sticky-row">
-                                <th class="text-center" width="3%">#</th>
-                                <th class="text-center">@ManagerResource.LB_CREATED_DATE</th>
-                                <th class="text-center">値が変更されました</th>
-                                <th class="text-center">@ManagerResource.LB_TYPE</th>
-                                <th class="text-center" width="5%"></th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-nowrap">
-                            @if (ViewBag.CoinHistoryList != null && ViewBag.CoinHistoryList.Count > 0)
-                            {
-                                var stt = 0;
-                                foreach (var record in ViewBag.CoinHistoryList)
-                                {
-                                    stt++;
-                                    <tr>
-                                        <td class="text-center">@(stt) </td>
-                                        <td class="">
-                                            @record.CreatedDate
-                                        </td>
-                                        <td class="">
-                                            @(record.ValueChange.Contains('-') ? record.ValueChange : "+" + record.ValueChange)
-                                        </td>
-
-                                        <td class="">
-                                            @record.SourceType
-                                        </td>
-                                    </tr>
-                                }
-                            }
-                            else
-                            {
-                                <tr>
-                                    <td colspan="11">
-                                        @ManagerResource.LB_NO_RECORD
-                                    </td>
-                                </tr>
-                            }
-
-                        </tbody>
-                    </table>
-                    @{
-                        await RenderPaging(Model.StaffId, currentPage, pagesize, totalCount);
-                    }
-                </section>
-
             </div>
 
         </div>

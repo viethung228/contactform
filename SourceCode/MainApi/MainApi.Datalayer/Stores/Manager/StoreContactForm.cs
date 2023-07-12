@@ -16,7 +16,14 @@ namespace MainApi.DataLayer.Stores
         IdentityAllowance InsertAllowance(IdentityAllowance identity);
         IdentityAllowanceDetail InsertAllowanceDetail(IdentityAllowanceDetail identity);
         IdentityContactForm InsertContactForm(IdentityContactForm identity);
-
+        List<IdentityDependent> GetDependentsByFormId(int formId);
+        IdentityAllowance GetAllowanceByFormId(int formId);
+        IdentityAllowanceDetail GetAllowanceDetailByAllowanceId(int allowanceId);
+        IdentityContactForm GetContactFormByFormId(int formId);
+        List<IdentityContactForm> GetContactFormByEmployeeId(int id);
+        IdentityContactForm DeleteContactForm(int formId);
+        List<IdentityContactForm> GetAllCompany(IdentityContactForm identity, int currentpage, int pagesize);
+        List<IdentityContactForm> GetEmployeeByCompanyName(string companyName, int currentpage, int pagesize);
     }
     public class StoreContactForm : IStoreContactForm
     {
@@ -38,6 +45,14 @@ namespace MainApi.DataLayer.Stores
         {
             return r.InsertDependent(identity);
         }
+        public List<IdentityContactForm> GetEmployeeByCompanyName(string companyName, int currentpage, int pagesize)
+        {
+            return r.GetEmployeeByCompanyName(companyName, currentpage, pagesize);
+        }
+        public List<IdentityContactForm> GetAllCompany(IdentityContactForm identity, int currentpage, int pagesize)
+        {
+            return r.GetAllCompany(identity,currentpage,pagesize);
+        }
         public IdentityAllowance InsertAllowance(IdentityAllowance identity)
         {
             return r.InsertAllowance(identity);
@@ -49,6 +64,31 @@ namespace MainApi.DataLayer.Stores
         public IdentityContactForm InsertContactForm(IdentityContactForm identity)
         {
             return r.InsertContactForm(identity);
+        }
+        public IdentityContactForm DeleteContactForm(int formId)
+        {
+            return r.DeleteContactForm(formId);
+        }
+        public List<IdentityDependent> GetDependentsByFormId(int formId)
+        {
+            return r.GetDependentsByFormId(formId);
+        }
+        public IdentityAllowance GetAllowanceByFormId(int formId)
+        {
+            return r.GetAllowanceByFormId(formId);
+        }
+        public IdentityAllowanceDetail GetAllowanceDetailByAllowanceId(int allowanceId)
+        {
+            return r.GetAllowanceDetailByAllowanceId(allowanceId);
+        }
+        public IdentityContactForm GetContactFormByFormId(int formId)
+        {
+            return r.GetContactFormByFormId(formId);
+        }
+
+        public List<IdentityContactForm> GetContactFormByEmployeeId(int id)
+        {
+            return r.GetContactFormByEmployeeId(id);
         }
     }
 }

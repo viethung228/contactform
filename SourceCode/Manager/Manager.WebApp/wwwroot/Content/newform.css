@@ -410,6 +410,17 @@ label {
     border-top-width: 2pt;
 }
 
-input {
+input, textarea {
     background-color: #F2F3F8;
+}
+
+.nenkinnumbers {
+    border-top-style: solid;
+    border-top-width: 2pt;
+    border-left-width: 2pt;
+    border-bottom-style: solid;
+    border-bottom-width: 2pt;
+    border-right-width: 1pt;
+    border-right-color: #7E7E7E;
+    border-right-style: dotted;
 }

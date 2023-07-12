@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -34,5 +35,17 @@ namespace Manager.WebApp.Helpers
     public enum EnumNotificationUserType
     {
         Manager = 0,
+    }
+
+    public static class EnumJapaneseImperialNengo
+    {
+        [Description("令和")]
+        public static string Reiwa = "reiwa";
+        [Description("平成")]
+        public static string Heisei = "heisei";
+        [Description("昭和")]
+        public static string Shouwa = "shouwa";
+        [Description("大正")]
+        public static string Taishou = "taishou";
     }
 }

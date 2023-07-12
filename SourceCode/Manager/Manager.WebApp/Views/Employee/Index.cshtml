@@ -59,7 +59,7 @@
                                 <th class="text-center">@ManagerResource.LB_NAME</th>
                                 <th class="text-center">@ManagerResource.LB_EMAIL</th>
                                 <th class="text-center">@ManagerResource.LB_STATUS_CONFIRM</th>
-                                <th class="text-center">Add contact form</th>
+                                <th class="text-center">Contact Form</th>
                                 <th class="text-center" width="5%"></th>
                             </tr>
                         </thead>
@@ -71,8 +71,8 @@
                                 {
                                     stt++;
                                     var editLink = SecurityHelper.GenerateSecureLink("Employee", "Edit", new { id = record.StaffId });
-                                    var delLink = SecurityHelper.GenerateSecureLink("Employee", "Delete", new { id = record.StaffId });
-                                    var contactFormLink = SecurityHelper.GenerateSecureLink("Employee", "ContactForm", new { id = record.StaffId });
+                                    var delLink = SecurityHelper.GenerateSecureLink("Employee", "Delete", new { id = record.StaffId });                                  
+                                    var contactFormViewLink = SecurityHelper.GenerateSecureLink("Employee", "ListContactForm", new { id = record.StaffId });
                                     var dtLink = SecurityHelper.GenerateSecureLink("Employee", "Detail", new { id = record.StaffId, currentpage = 1 });
                                     var imageUrl = CdnHelper.GetFullFilePath(record.Avatar);
 
@@ -106,9 +106,9 @@
                                             
                                         </td>
                                         <td class="text-center">
-                                            <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" href="@contactFormLink" title="@ManagerResource.LB_EDIT">
-                                                <i class="fa-solid fa-file-lines"></i>
-                                            </a>
+                                            <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-modal="" data-href="@contactFormViewLink" title="@ManagerResource.LB_ADD_NEW">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>                                                                                       
                                         </td>
                                         <td class="text-center">
                                             <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-href="@editLink" data-modal="" title="@ManagerResource.LB_EDIT">

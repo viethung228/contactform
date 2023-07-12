@@ -15,6 +15,7 @@ using Manager.DataLayer.Stores;
 using Autofac;
 using System.Linq;
 using Microsoft.CodeAnalysis;
+using Manager.SharedLibs.Extensions;
 
 namespace Manager.WebApp.Controllers
 {
@@ -52,7 +53,7 @@ namespace Manager.WebApp.Controllers
                 {
                     model.TotalCount = model.SearchResult[0].TotalCount;
                     model.Page = model.Page;
-                    model.PageSize = model.PageSize;                   
+                    model.PageSize = model.PageSize;
                 }
             }
             catch (Exception ex)
@@ -105,8 +106,8 @@ namespace Manager.WebApp.Controllers
 
 
                 this.AddNotification(ManagerResource.LB_INSERT_SUCCESS, NotificationType.SUCCESS);
-
-                return Json(new { success = true, message = ManagerResource.LB_UPDATE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
+                return RedirectToAction("Index");
+                //return Json(new { success = true, message = ManagerResource.LB_UPDATE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
             }
             catch (Exception ex)
             {
@@ -115,8 +116,8 @@ namespace Manager.WebApp.Controllers
                 this.AddNotification(ManagerResource.LB_ERROR_OCCURED, NotificationType.ERROR);
             }
             LoadNeededInformation();
-
-            return Json(new { success = false, message = strError });
+            return RedirectToAction("Index");
+            //return Json(new { success = false, message = strError });
         }
 
         /*[RequestParamsValidation]*/
@@ -156,7 +157,34 @@ namespace Manager.WebApp.Controllers
 
             return PartialView("Partials/_PopupDelete", id);
         }
-        public ActionResult ContactForm(int id)
+        public ActionResult ListContactForm(int id)
+        {
+            var model = new ManageContactFormModel();
+
+            try
+            {
+                var info = HelperEmployee.GetBaseInfo(id);
+                if (info != null)
+                {
+                    var apiRes = ContactFormServices.GetContactFormsByEmployeeIdAsync(id).Result;
+                    if (apiRes != null)
+                    {
+                        model.SearchResults = apiRes.Data.MappingObject<List<IdentityContactForm>>();
+                    }
+                }
+                else
+                {
+                    return RedirectToErrorPage();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+            LoadNeededInformation();
+            return PartialView("ListContactForm", model);
+        }
+        public ActionResult AddContactForm(int id)
         {
             var model = new ContactFormFullDetailModel();
             try
@@ -179,23 +207,85 @@ namespace Manager.WebApp.Controllers
             LoadNeededInformation();
             return View("ContactForm", model);
         }
-        [HttpPost, ActionName("SubmitContactForm")]
-        public ActionResult ContactForm_Submit(ContactFormFullDetailModel model)
+
+        public ActionResult EditContactForm(int id)
+        {
+            var model = new ContactFormFullDetailModel();
+            try
+            {
+
+                var apiRes = ContactFormServices.GetContactFormByFormIdAsync(id).Result;
+                if (apiRes != null)
+                {
+                    model.ContactForm = apiRes.ConvertData<IdentityContactForm>();
+                    var allowance = ContactFormServices.GetAllowanceByFormIdAsync(model.ContactForm.FormId).Result.ConvertData<IdentityAllowance>();
+                    if (allowance != null)
+                    {
+                        model.Allowance = allowance;
+                        var allowance_type = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(allowance.AllowanceId).Result.ConvertData<IdentityAllowanceDetail>();
+                        model.AllowanceDetail = allowance_type;
+                    }
+
+                    var dependents = ContactFormServices.GetDependentsByFormIdAsync(model.ContactForm.FormId).Result;
+                    if (dependents != null && dependents.Data != null)
+                    {
+                        foreach (var item in dependents.ConvertData<List<IdentityDependent>>())
+                        {
+                            model.Dependents.Add(item);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+            LoadNeededInformation();
+
+            return View("EditContactForm", model);
+        }
+
+        [HttpPost, ActionName("EditSubmitContactForm")]
+        public ActionResult ContactForm_EditSubmit(ContactFormFullDetailModel model)
         {
             var strError = string.Empty;
+
             try
-            {               
+            {
                 var info = HelperEmployee.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {
-                    //var apiRes = ContactFormServices.UpdateContactFormAsync(model).Result;
-                    //var apiRes2 = ContactFormServices.UpdateAllowanceAsync(model).Result;
-                    //var apiRes3 = ContactFormServices.UpdateAllowanceDetailAsync(model).Result;
-                    //var apiRes4 = ContactFormServices.UpdateDependentAsync(model).Result;
+                    model.ContactForm.UpdatedDate = DateTime.Now;
+                    var apiResContactForm = ContactFormServices.UpdateContactFormAsync(model).Result.Data.MappingObject<IdentityContactForm>();
+                    if (apiResContactForm != null)
+                    {
+                        model.Allowance.FormId = apiResContactForm.FormId;
+                        var apiRes2 = ContactFormServices.UpdateAllowanceAsync(model).Result.Data.MappingObject<IdentityAllowance>();
+                        if (apiRes2 != null)
+                        {
+                            model.AllowanceDetail.AllowanceId = apiRes2.AllowanceId;
+                            var apiRes3 = ContactFormServices.UpdateAllowanceDetailAsync(model).Result;
+                        }
+                        var tempListDependents = new List<IdentityDependent>();
+                        for (int i = 0; i < model.Dependents.Count; i++)
+                        {
+                            if (string.IsNullOrEmpty(model.Dependents[i].FullName) && model.Dependents[i].DependentId == 0)
+                            {
+                                tempListDependents.Add(model.Dependents[i]);
+                                continue;
+                            }
+                            model.Dependents[i].FormId = apiResContactForm.FormId;
+                        }
+                        foreach (var item in tempListDependents)
+                        {
+                            model.Dependents.Remove(item);
+                        }
+                        var apiRes4 = ContactFormServices.UpdateDependentAsync(model).Result;
+                    }
                 }
-                //this.AddNotification(ManagerResource.LB_INSERT_SUCCESS, NotificationType.SUCCESS);
-
-                return Json(new { success = true, message = ManagerResource.LB_UPDATE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
+                return RedirectToAction("Index");
+                //return Json(new { success = true, message = ManagerResource.LB_UPDATE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
             }
             catch (Exception ex)
             {
@@ -203,9 +293,66 @@ namespace Manager.WebApp.Controllers
 
                 this.AddNotification(ManagerResource.LB_ERROR_OCCURED, NotificationType.ERROR);
             }
-            LoadNeededInformation();
 
-            return Json(new { success = false, message = strError });
+            LoadNeededInformation();
+            return RedirectToAction("Index");
+            //return Json(new { success = false, message = strError });
+
+        }
+
+        [HttpPost, ActionName("SubmitContactForm")]
+        public ActionResult ContactForm_Submit(ContactFormFullDetailModel model)
+        {
+            var strError = string.Empty;
+
+            try
+            {
+                var info = HelperEmployee.GetBaseInfo(model.ContactForm.OwnerId);
+                if (info != null)
+                {
+                    var apiResContactForm = ContactFormServices.UpdateContactFormAsync(model).Result.Data.MappingObject<IdentityContactForm>();
+                    if (apiResContactForm != null)
+                    {
+                        model.Allowance.FormId = apiResContactForm.FormId;
+                        var apiRes2 = ContactFormServices.UpdateAllowanceAsync(model).Result.Data.MappingObject<IdentityAllowance>();
+                        if (apiRes2 != null)
+                        {
+                            model.AllowanceDetail.AllowanceId = apiRes2.AllowanceId;
+                            var apiRes3 = ContactFormServices.UpdateAllowanceDetailAsync(model).Result;
+                        }
+                        var tempListDependents = new List<IdentityDependent>();
+                        for (int i = 0; i < model.Dependents.Count; i++)
+                        {
+                            if (string.IsNullOrEmpty(model.Dependents[i].FullName))
+                            {
+                                tempListDependents.Add(model.Dependents[i]);
+                                continue;
+                            }
+                            model.Dependents[i].FormId = apiResContactForm.FormId;
+                        }
+                        foreach (var item in tempListDependents)
+                        {
+                            model.Dependents.Remove(item);
+                        }
+                        var apiRes4 = ContactFormServices.UpdateDependentAsync(model).Result;
+                    }
+
+                }
+                this.AddNotification(ManagerResource.LB_INSERT_SUCCESS, NotificationType.SUCCESS);
+                return RedirectToAction("Index");
+                //return Json(new { success = true, message = ManagerResource.LB_UPDATE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                this.AddNotification(ManagerResource.LB_ERROR_OCCURED, NotificationType.ERROR);
+            }
+
+            LoadNeededInformation();
+            return RedirectToAction("Index");
+            //return Json(new { success = false, message = strError });
+
         }
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -226,6 +373,33 @@ namespace Manager.WebApp.Controllers
             return Json(new { success = true, message = ManagerResource.LB_DELETE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
         }
 
+        public ActionResult DeleteCF(int id)
+        {
+            if (id <= 0)
+            {
+                return new NotFoundResult();
+            }
+
+            return PartialView("Partials/_PopupDeleteCF", id);
+        }
+        [HttpPost, ActionName("DeleteCF")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCF_Submit(int id)
+        {
+            var strError = string.Empty;
+            try
+            {
+                var apiRes = ContactFormServices.DeleteContactFormAsync(id).Result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                return Json(new { success = false, message = strError });
+            }
+
+            return Json(new { success = true, message = ManagerResource.LB_DELETE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
+        }
         #region Helper
         private void LoadNeededInformation()
         {
@@ -233,7 +407,6 @@ namespace Manager.WebApp.Controllers
             var categories = HelperEmployee.GetList();
             ViewBag.Categories = categories;
         }
-
         private string UploadImage(EmployeeUpdateModel model)
         {
             var fileUrl = string.Empty;

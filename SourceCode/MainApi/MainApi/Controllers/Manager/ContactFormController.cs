@@ -18,6 +18,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
 using System.Linq;
+using Stripe;
 
 namespace MainApi.Controllers.Manager
 {
@@ -31,8 +32,8 @@ namespace MainApi.Controllers.Manager
         {
             _logger = logger;
         }
-        
-        [HttpPost("update/contact_form")]
+
+        [HttpPost("contact_form")]
         public ApiResponseModel Insert(ContactFormDetailModel identity)
         {
 
@@ -58,7 +59,7 @@ namespace MainApi.Controllers.Manager
 
             return returnModel;
         }
-        [HttpPost("update/dependent")]
+        [HttpPost("dependent")]
         public ApiResponseModel InsertDependent(DependentDetailModel identity)
         {
 
@@ -84,7 +85,7 @@ namespace MainApi.Controllers.Manager
 
             return returnModel;
         }
-        [HttpPost("update/allowance")]
+        [HttpPost("allowance")]
         public ApiResponseModel InsertAllowance(AllowanceDetailModel identity)
         {
 
@@ -110,7 +111,7 @@ namespace MainApi.Controllers.Manager
 
             return returnModel;
         }
-        [HttpPost("update/allowance_type")]
+        [HttpPost("allowance_type")]
         public ApiResponseModel InsertAllowanceType(AllowanceTypeDetailModel identity)
         {
 
@@ -134,6 +135,271 @@ namespace MainApi.Controllers.Manager
                 returnModel.Code = EnumCommonCode.Error;
             }
 
+            return returnModel;
+        }
+
+
+        [HttpGet("contact_form")]
+        public ApiResponseModel GetById(int id)
+        {
+
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+                //Update DB
+                var returnId = store.GetContactFormByFormId(id);
+                if (returnId != null && returnId.FormId > 0)
+                {
+                    returnModel.Data = returnId;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+
+            return returnModel;
+        }
+        [HttpGet("contact_form_employee")]
+        public ApiResponseModel GetByEmployeeId(int id)
+        {
+
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+                //Update DB
+                var returnId = store.GetContactFormByEmployeeId(id);
+                if (returnId != null && returnId.Count > 0)
+                {
+                    returnModel.Data = returnId;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+
+            return returnModel;
+        }
+        [HttpGet("dependent")]
+        public ApiResponseModel GetDependentsByFormId(int id)
+        {
+
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+                //Update DB
+                var returnId = store.GetDependentsByFormId(id);
+                if (returnId != null && returnId.Count > 0)
+                {
+                    returnModel.Data = returnId;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+
+            return returnModel;
+        }
+        [HttpGet("allowance")]
+        public ApiResponseModel GetAllowanceByFormId(int id)
+        {
+
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+                //Update DB
+                var returnId = store.GetAllowanceByFormId(id);
+                if (returnId != null && returnId.AllowanceId > 0)
+                {
+                    returnModel.Data = returnId;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+
+            return returnModel;
+        }
+        [HttpGet("allowance_type")]
+        public ApiResponseModel GetAllowanceDetailByAllowanceId(int id)
+        {
+
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+                //Update DB
+                var returnId = store.GetAllowanceDetailByAllowanceId(id);
+                if (returnId != null && returnId.Id > 0)
+                {
+                    returnModel.Data = returnId;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+
+            return returnModel;
+        }
+        [HttpGet("getallcompany")]
+        public ApiResponseModel GetAllCompany(string companyName,int currentpage = 1, int pagesize = 10)
+        {
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                ManageContactFormModel model = new ManageContactFormModel();
+                model.Page = currentpage;
+                model.PageSize = pagesize;
+                model.Keyword = companyName;
+
+                if (model.PageSize <= 0 || model.PageSize > SystemSettings.DefaultPageSize) model.PageSize = SystemSettings.DefaultPageSize;
+                if (model.Page <= 0) model.Page = 1;
+
+                var filter = new IdentityContactForm
+                {
+                    Keyword = !string.IsNullOrEmpty(model.Keyword) ? model.Keyword.ToStringNormally() : string.Empty,
+                    PageSize = model.PageSize,
+                    PageIndex = model.Page,
+                };
+
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+
+                var rs = store.GetAllCompany(filter, model.Page, model.PageSize);
+                if (rs.HasData())
+                {
+                    var returnList = new List<IdentityContactForm>();
+                    foreach (var item in rs)
+                    {
+                        var info = item;
+                        info.TotalCount = rs.FirstOrDefault().TotalCount;
+                        if (info != null)
+                        {
+                            returnList.Add(info);
+                        }
+                    }
+
+                    model.SearchResults = returnList.MappingObject<List<ContactFormDetailModel>>();
+                }
+
+                returnModel.Data = model.SearchResults;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0}r error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }           
+            return returnModel;
+        }
+        [HttpGet("getemployeebycompany")]
+        public ApiResponseModel GetAllEmployeeByCompany(string companyName, int currentpage = 1, int pagesize = 10)
+        {
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                ManageContactFormModel model = new ManageContactFormModel();
+                model.Page = currentpage;
+                model.PageSize = pagesize;
+                model.Keyword = companyName;
+
+                if (model.PageSize <= 0 || model.PageSize > SystemSettings.DefaultPageSize) model.PageSize = SystemSettings.DefaultPageSize;
+                if (model.Page <= 0) model.Page = 1;
+
+                var filter = new IdentityContactForm
+                {
+                    Keyword = !string.IsNullOrEmpty(model.Keyword) ? model.Keyword.ToStringNormally() : string.Empty,
+                    PageSize = model.PageSize,
+                    PageIndex = model.Page,
+                };
+
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+
+                var rs = store.GetEmployeeByCompanyName(filter.Keyword, model.Page, model.PageSize);
+                if (rs.HasData())
+                {
+                    var returnList = new List<IdentityContactForm>();
+                    foreach (var item in rs)
+                    {
+                        var info = item;
+                        info.TotalCount = rs.FirstOrDefault().TotalCount;
+                        if (info != null)
+                        {
+                            returnList.Add(info);
+                        }
+                    }
+
+                    model.SearchResults = returnList.MappingObject<List<ContactFormDetailModel>>();
+                }
+
+                returnModel.Data = model.SearchResults;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0}r error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+            return returnModel;
+        }
+        [HttpDelete("{id}")]
+        public ApiResponseModel DeleteContactForm(int id)
+        {
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+                var returnId = store.GetContactFormByFormId(id);
+                if (returnId != null)
+                {
+                    var getResult = store.DeleteContactForm(id);
+                    if (getResult != null && getResult.FormId != 0)
+                    {
+                        returnModel.Data = getResult;
+                        returnModel.Message = ManagerResource.LB_DELETE_SUCCESS;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+            if (returnModel.Data == null)
+            {
+                returnModel.Code = EnumCommonCode.Error;
+            }
             return returnModel;
         }
     }

@@ -869,10 +869,6 @@
       "PackagePath": "staticwebassets\\Content\\images\\logoOgatore.png"
     },
     {
-      "Id": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\Content\\images\\logo_default.png",
-      "PackagePath": "staticwebassets\\Content\\images\\logo_default.png"
-    },
-    {
       "Id": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\Content\\images\\messenger.png",
       "PackagePath": "staticwebassets\\Content\\images\\messenger.png"
     },

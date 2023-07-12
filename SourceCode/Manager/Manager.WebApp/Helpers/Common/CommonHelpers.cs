@@ -11,7 +11,10 @@ using Newtonsoft.Json;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Security.Claims;
 
 namespace Manager.WebApp.Helpers
@@ -62,7 +65,33 @@ namespace Manager.WebApp.Helpers
 
             return LanguageMessageHandler.GetDefaultLanguage();
         }
+        public static int ImperialYearToNormalYear(string nengou, int imperialYear)
+        {
+            int westYear = 0;
 
+            DateTime reiwa = new DateTime(2019, 10, 26);
+            DateTime heisei = new DateTime(1989, 1, 8);
+            DateTime shouwa = new DateTime(1926, 1, 1);
+            DateTime taishou = new DateTime(1912, 1, 1);
+
+            switch (nengou)
+            {
+                case "reiwa":
+                    westYear = reiwa.Year + imperialYear - 1;
+                    break;
+                case "heisei":
+                    westYear = heisei.Year + imperialYear - 1;
+                    break;
+                case "shouwa":
+                    westYear = shouwa.Year + imperialYear - 1;
+                    break;
+                case "taishou":
+                    westYear = taishou.Year + imperialYear - 1;
+                    break;
+            }
+
+            return westYear;
+        }
         public static string GetCookie(string key)
         {
             return System.Web.HttpContext.Current.Request.Cookies[key];

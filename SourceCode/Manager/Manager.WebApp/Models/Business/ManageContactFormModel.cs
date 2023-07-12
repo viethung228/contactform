@@ -24,6 +24,7 @@ namespace Manager.WebApp.Models
         public IdentityAllowance Allowance { get; set; }
         public IdentityAllowanceDetail AllowanceDetail { get; set; }
         public List<IdentityDependent> Dependents { get; set; }
+
     }
 
 

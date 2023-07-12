@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -53,7 +54,16 @@ namespace MainApi.DataLayer.Repositories.Manager
             record.Remarks = reader["Remarks"].ToString();
             record.ForOffice = reader["ForOffice"].ToString();
             record.OwnerId = Utils.ConvertToInt32(reader["OwnerId"]);
-            record.Status = Utils.ConvertToInt32(reader["Status"]);           
+            record.Status = Utils.ConvertToInt32(reader["Status"]);
+            return record;
+        }
+        public static IdentityContactForm ExtractCompanyData(IDataReader reader)
+        {
+            var record = new IdentityContactForm();
+
+            //Seperate properties
+            record.CompanyName = reader["CompanyName"].ToString();
+            record.TotalCount = Utils.ConvertToInt32(reader["TotalCount"]);
             return record;
         }
         public static IdentityDependent ExtractDependentData(IDataReader reader)
@@ -87,7 +97,7 @@ namespace MainApi.DataLayer.Repositories.Manager
             record.CommutingAllowanceType = reader["CommutingAllowanceType"].ToString();
             record.CommutingAllowance = Utils.ConvertToInt32(reader["CommutingAllowance"]);
             record.ApplicableToTax = Utils.ConvertToBoolean(reader["ApplicableToTax"]);
-            record.TotalMonthlyAmount = Utils.ConvertToInt32(reader["TotalMonthlyAmount"]);          
+            record.TotalMonthlyAmount = Utils.ConvertToInt32(reader["TotalMonthlyAmount"]);
             return record;
         }
         public static IdentityAllowanceDetail ExtractAllowanceDetailData(IDataReader reader)
@@ -105,6 +115,74 @@ namespace MainApi.DataLayer.Repositories.Manager
             return record;
         }
         #endregion
+        public List<IdentityContactForm> GetEmployeeByCompanyName(string companyName, int currentpage, int pagesize)
+        {
+            //Common syntax           
+            var sqlCmd = @"Company_GetAllEmployee";
+            var info = new List<IdentityContactForm>();
+            //For parameters
+            int offset = (currentpage - 1) * pagesize;
+            var parameters = new Dictionary<string, object>
+            {
+                {"@CompanyName", companyName},
+                {"@Offset", offset},
+                {"@PageSize", pagesize }
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        while (returnObj.Read())
+                        {
+                            var data = ExtractContactFormData(returnObj);
+                            info.Add(data);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
+        public List<IdentityContactForm> GetAllCompany(IdentityContactForm identity, int currentpage, int pagesize)
+        {
+            //Common syntax           
+            var sqlCmd = @"Company_GetAll";
+            var info = new List<IdentityContactForm>();
+            int offset = (currentpage - 1) * pagesize;
+            //For parameters
+            var parameters = new Dictionary<string, object>
+            {
+                {"@Keyword", identity.Keyword},
+                {"@Offset", offset},
+                {"@PageSize", pagesize }
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        while (returnObj.Read())
+                        {
+                            var data = ExtractCompanyData(returnObj);
+                            info.Add(data);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
         public IdentityDependent InsertDependent(IdentityDependent identity)
         {
             //Common syntax           
@@ -114,6 +192,7 @@ namespace MainApi.DataLayer.Repositories.Manager
             var parameters = new Dictionary<string, object>
             {
                 {"@FormId", identity.FormId},
+                {"@DependentId", identity.DependentId},
                 {"@DependentSpouseNenkinNumber", identity.DependentSpouseNenkinNumber},
                 {"@Furigana", identity.Furigana},
                 {"@FullName", identity.FullName},
@@ -266,6 +345,198 @@ namespace MainApi.DataLayer.Repositories.Manager
                 throw new CustomSQLException(strError);
             }
             return info;
-        }      
+        }
+
+        public IdentityAllowance GetAllowanceByFormId(int formId)
+        {
+            //Common syntax           
+            var sqlCmd = @"Allowance_GetByFormId";
+            var info = new IdentityAllowance();
+            //For parameters
+            var parameters = new Dictionary<string, object>
+            {
+                {"@FormId", formId}
+
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        if (returnObj.Read())
+                        {
+                            info = ExtractAllowanceData(returnObj);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
+
+        public List<IdentityDependent> GetDependentsByFormId(int formId)
+        {
+            //Common syntax           
+            var sqlCmd = @"Dependent_GetByFormId";
+            var info = new List<IdentityDependent>();
+            //For parameters
+            var parameters = new Dictionary<string, object>
+            {
+                {"@FormId", formId}
+
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        while (returnObj.Read())
+                        {
+                            var data = ExtractDependentData(returnObj);
+                            info.Add(data);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
+
+        public IdentityContactForm GetContactFormByFormId(int formId)
+        {
+            //Common syntax           
+            var sqlCmd = @"Employee_ContactForm_GetById";
+            var info = new IdentityContactForm();
+            //For parameters
+            var parameters = new Dictionary<string, object>
+            {
+                {"@FormId", formId}
+
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        if (returnObj.Read())
+                        {
+                            info = ExtractContactFormData(returnObj);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
+        public List<IdentityContactForm> GetContactFormByEmployeeId(int id)
+        {
+            //Common syntax           
+            var sqlCmd = @"Employee_ContactForm_GetByEmployeeId";
+            var info = new List<IdentityContactForm>();
+            //For parameters
+            var parameters = new Dictionary<string, object>
+            {
+                {"@OwnerId", id}
+
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        while (returnObj.Read())
+                        {
+                            var dat = ExtractContactFormData(returnObj);
+                            info.Add(dat);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
+        public IdentityAllowanceDetail GetAllowanceDetailByAllowanceId(int allowanceId)
+        {
+            //Common syntax           
+            var sqlCmd = @"AllowanceType_GetByAllowanceId";
+            var info = new IdentityAllowanceDetail();
+            //For parameters
+            var parameters = new Dictionary<string, object>
+            {
+                {"@AllowanceId", allowanceId}
+
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        if (returnObj.Read())
+                        {
+                            info = ExtractAllowanceDetailData(returnObj);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
+
+        public IdentityContactForm DeleteContactForm(int formId)
+        {
+            //Common syntax           
+            var sqlCmd = @"Employee_ContactForm_Delete";
+            var info = new IdentityContactForm();
+            //For parameters
+            var parameters = new Dictionary<string, object>
+            {
+                {"@FormId", formId}
+
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        if (returnObj.Read())
+                        {
+                            info = ExtractContactFormData(returnObj);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace MainApi.DataLayer.Entities
+﻿using System.Net;
+
+namespace MainApi.DataLayer.Entities
 {
     public class IdentityContactForm : IdentityCommon
     {
@@ -61,4 +63,5 @@
         public string Address { get; set; }
         public DateTime EnrollmentDate { get; set; }
     }
+
 }

@@ -13,6 +13,12 @@
     <EmbeddedResource Remove="Views\NewFolder1\**" />
     <None Remove="Views\NewFolder1\**" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Company\Partials\_PopupDelete.cshtml" />
+    <Content Remove="Views\Company\Partials\_SearchForm.cshtml" />
+    <Content Remove="Views\Employee\Partials\_PopupDeleteCF.cshtml" />
+  </ItemGroup>
  
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.2.0" />
@@ -43,9 +49,12 @@
 
   <ItemGroup>
     <None Include="Views\Account\Login.cshtml" />
+    <None Include="Views\Company\Partials\_PopupDelete.cshtml" />
+    <None Include="Views\Company\Partials\_SearchForm.cshtml" />
     <None Include="Views\Employee\Detail.cshtml" />
     <None Include="Views\Employee\Edit.cshtml" />
     <None Include="Views\Employee\Index.cshtml" />
+    <None Include="Views\Employee\Partials\_PopupDeleteCF.cshtml" />
     <None Include="Views\Employee\Partials\_PopupDelete.cshtml" />
     <None Include="Views\Employee\Partials\_SearchForm.cshtml" />
     <None Include="Views\Employee\Partials\_UpdateForm.cshtml" />

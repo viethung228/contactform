@@ -1,0 +1,25 @@
+[19/07/2023 10:19:27 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[19/07/2023 10:19:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[19/07/2023 10:19:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[19/07/2023 10:19:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[19/07/2023 10:19:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[19/07/2023 16:55:03 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[19/07/2023 16:55:03 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[19/07/2023 16:55:03 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[19/07/2023 16:55:03 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[19/07/2023 16:55:03 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[19/07/2023 17:08:09 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[19/07/2023 17:08:09 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[19/07/2023 17:08:09 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[19/07/2023 17:08:09 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[19/07/2023 17:08:09 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[19/07/2023 17:11:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[19/07/2023 17:11:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[19/07/2023 17:11:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[19/07/2023 17:11:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[19/07/2023 17:11:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[19/07/2023 17:17:19 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[19/07/2023 17:17:19 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[19/07/2023 17:17:19 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[19/07/2023 17:17:19 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[19/07/2023 17:17:19 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 

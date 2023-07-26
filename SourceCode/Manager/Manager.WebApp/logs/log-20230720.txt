@@ -1,0 +1,176 @@
+[20/07/2023 08:48:26 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 08:48:26 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 08:48:26 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 08:48:26 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 08:48:26 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 10:21:14 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 10:21:14 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 10:21:14 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 10:21:14 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 10:21:14 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 10:40:23 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 10:40:23 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 10:40:23 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 10:40:23 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 10:40:23 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 10:48:23 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 10:48:23 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 10:48:23 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 10:48:23 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 10:48:23 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 10:50:27 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 10:50:27 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 10:50:27 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 10:50:27 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 10:50:27 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 10:52:22 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 10:52:22 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 10:52:22 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 10:52:22 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 10:52:22 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 11:01:59 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 11:01:59 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 11:01:59 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 11:01:59 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 11:01:59 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 14:15:56 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 14:15:56 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 14:15:56 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 14:15:56 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 14:15:56 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 15:36:20 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/07/2023 15:36:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 15:36:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 15:36:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 15:36:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 15:36:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 15:40:43 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'Manager.WebApp.Models.ManageCompanyModel' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+   at Manager.SharedLibs.ObjectExt.MappingObject[T](Object obj) in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.SharedLibs\Extensions\ObjectExt.cs:line 119
+   at Manager.WebApp.Controllers.CompanyController.GetAllCompanyNames() 
+[20/07/2023 15:40:43 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at AspNetCore.Views_Company_Partials__ListCompanyNames.ExecuteAsync() in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp\Views\Company\Partials\_ListCompanyNames.cshtml:line 27
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[20/07/2023 15:41:30 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'Manager.WebApp.Models.ManageCompanyModel' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+   at Manager.SharedLibs.ObjectExt.MappingObject[T](Object obj) in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.SharedLibs\Extensions\ObjectExt.cs:line 119
+   at Manager.WebApp.Controllers.CompanyController.GetAllCompanyNames() 
+[20/07/2023 15:41:30 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at AspNetCore.Views_Company_Partials__ListCompanyNames.ExecuteAsync() in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp\Views\Company\Partials\_ListCompanyNames.cshtml:line 27
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[20/07/2023 15:42:17 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/07/2023 15:42:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 15:42:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 15:42:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 15:42:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 15:42:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 15:42:45 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Manager.WebApp.Controllers.CompanyController.GetAllCompanyNames() in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp\Controllers\Business\CompanyController.cs:line 199 
+[20/07/2023 15:42:45 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at AspNetCore.Views_Company_Partials__ListCompanyNames.ExecuteAsync() in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp\Views\Company\Partials\_ListCompanyNames.cshtml:line 27
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[20/07/2023 15:43:48 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 15:43:48 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 15:43:48 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 15:43:48 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 15:43:48 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 15:44:06 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[20/07/2023 15:44:21 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[20/07/2023 15:44:23 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[20/07/2023 15:59:52 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 15:59:52 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 15:59:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 15:59:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 15:59:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 17:33:40 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 17:33:40 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 17:33:40 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 17:33:40 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 17:33:40 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[20/07/2023 17:36:21 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 17:36:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[20/07/2023 17:36:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 17:36:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 17:36:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 

@@ -1013,6 +1013,10 @@
       "PackagePath": "staticwebassets\\Scripts\\Company\\update.js"
     },
     {
+      "Id": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\Scripts\\ContactForm\\contactform.js",
+      "PackagePath": "staticwebassets\\Scripts\\ContactForm\\contactform.js"
+    },
+    {
       "Id": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\Scripts\\Course\\update.js",
       "PackagePath": "staticwebassets\\Scripts\\Course\\update.js"
     },

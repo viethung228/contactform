@@ -1,0 +1,418 @@
+[17/07/2023 10:28:13 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 10:28:14 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 10:28:14 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 10:28:14 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 10:28:14 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 10:28:14 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 10:31:35 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 10:31:35 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 10:31:35 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 10:31:35 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 10:31:35 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 10:32:16 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 10:32:16 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 10:32:16 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 10:32:16 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 10:32:16 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 10:33:06 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 10:33:06 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 10:33:06 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 10:33:06 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 10:33:06 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 10:33:06 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 11:08:32 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetAll. Error: Could not find stored procedure 'Company_GetAll'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 182
+   at MainApi.DataLayer.Stores.StoreContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 54
+   at MainApi.Controllers.Manager.ContactFormController.GetAllCompany(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 295 
+[17/07/2023 11:32:16 ERR Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor] The view 'Login' was not found. Searched locations: ["/Views/Company/Login.cshtml","/Views/Shared/Login.cshtml","/Pages/Shared/Login.cshtml"] 
+[17/07/2023 11:32:16 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Views/Company/Login.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[17/07/2023 11:32:49 ERR Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor] The view 'Login' was not found. Searched locations: ["/Views/Company/Login.cshtml","/Views/Shared/Login.cshtml","/Pages/Shared/Login.cshtml"] 
+[17/07/2023 11:32:49 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Views/Company/Login.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[17/07/2023 11:33:21 ERR Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor] The view 'Login' was not found. Searched locations: ["/Views/Company/Login.cshtml","/Views/Shared/Login.cshtml","/Pages/Shared/Login.cshtml"] 
+[17/07/2023 11:33:21 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Views/Company/Login.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[17/07/2023 11:43:46 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 11:43:46 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 11:43:46 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 11:43:46 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 11:43:46 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 11:44:25 ERR MainApi.Controllers.CompanyController] Api MainApi.Controllers.CompanyController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetByPage. Error: Procedure or function Company_GetByPage has too many arguments specified.
+   at Manager.Datalayer.Repositories.RpsCompany.GetByPage(IdentityCompany filter, Int32 currentPage, Int32 pageSize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 61
+   at MainApi.DataLayer.Stores.StoreCompany.GetByPage(IdentityCompany filter, Int32 currentPage, Int32 pageSize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 57
+   at MainApi.Controllers.CompanyController.Index() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\CompanyController.cs:line 55 
+[17/07/2023 11:46:18 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 11:46:19 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 11:46:19 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 11:46:19 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 11:46:19 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 11:46:19 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 11:46:44 ERR MainApi.Controllers.CompanyController] Api MainApi.Controllers.CompanyController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetByPage. Error: Id
+   at Manager.Datalayer.Repositories.RpsCompany.GetByPage(IdentityCompany filter, Int32 currentPage, Int32 pageSize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 58
+   at MainApi.DataLayer.Stores.StoreCompany.GetByPage(IdentityCompany filter, Int32 currentPage, Int32 pageSize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 57
+   at MainApi.Controllers.CompanyController.Index() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\CompanyController.cs:line 55 
+[17/07/2023 11:47:02 ERR MainApi.Controllers.CompanyController] Api MainApi.Controllers.CompanyController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetByPage. Error: Id
+   at Manager.Datalayer.Repositories.RpsCompany.GetByPage(IdentityCompany filter, Int32 currentPage, Int32 pageSize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 58
+   at MainApi.DataLayer.Stores.StoreCompany.GetByPage(IdentityCompany filter, Int32 currentPage, Int32 pageSize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 57
+   at MainApi.Controllers.CompanyController.Index() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\CompanyController.cs:line 55 
+[17/07/2023 13:56:22 ERR MainApi.Controllers.CompanyController] Api MainApi.Controllers.CompanyController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetByPage. Error: Id
+   at Manager.Datalayer.Repositories.RpsCompany.GetByPage(IdentityCompany filter, Int32 currentPage, Int32 pageSize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 58
+   at MainApi.DataLayer.Stores.StoreCompany.GetByPage(IdentityCompany filter, Int32 currentPage, Int32 pageSize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 57
+   at MainApi.Controllers.CompanyController.Index() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\CompanyController.cs:line 55 
+[17/07/2023 13:59:49 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:00:57 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:01:02 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:01:06 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetByEmployeeId. Error: Could not find stored procedure 'Employee_ContactForm_GetByEmployeeId'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByEmployeeId(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 474
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByEmployeeId(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 91
+   at MainApi.Controllers.Manager.ContactFormController.GetByEmployeeId(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 177 
+[17/07/2023 14:01:06 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:01:47 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetByEmployeeId. Error: Could not find stored procedure 'Employee_ContactForm_GetByEmployeeId'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByEmployeeId(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 474
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByEmployeeId(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 91
+   at MainApi.Controllers.Manager.ContactFormController.GetByEmployeeId(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 177 
+[17/07/2023 14:01:47 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:03:56 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetAllEmployee. Error: Could not find stored procedure 'Company_GetAllEmployee'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetEmployeeByCompanyName(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 148
+   at MainApi.DataLayer.Stores.StoreContactForm.GetEmployeeByCompanyName(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 50
+   at MainApi.Controllers.Manager.ContactFormController.GetAllContactFormByCompany(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 346 
+[17/07/2023 14:04:14 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetAllEmployee. Error: Could not find stored procedure 'Company_GetAllEmployee'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetEmployeeByCompanyName(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 148
+   at MainApi.DataLayer.Stores.StoreContactForm.GetEmployeeByCompanyName(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 50
+   at MainApi.Controllers.Manager.ContactFormController.GetAllContactFormByCompany(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 346 
+[17/07/2023 14:05:54 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetAllEmployee. Error: Could not find stored procedure 'Company_GetAllEmployee'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetEmployeeByCompanyName(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 148
+   at MainApi.DataLayer.Stores.StoreContactForm.GetEmployeeByCompanyName(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 50
+   at MainApi.Controllers.Manager.ContactFormController.GetAllContactFormByCompany(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 346 
+[17/07/2023 14:07:13 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 14:07:13 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 14:07:13 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 14:07:13 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 14:07:13 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 14:07:33 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetById. Error: Could not find stored procedure 'Employee_ContactForm_GetById'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 442
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 14:09:35 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetById. Error: Could not find stored procedure 'Employee_ContactForm_GetById'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 442
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 14:09:35 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetById. Error: Could not find stored procedure 'Employee_ContactForm_GetById'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 442
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 14:10:11 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetById. Error: Could not find stored procedure 'Employee_ContactForm_GetById'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 442
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 14:10:49 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetById. Error: Could not find stored procedure 'Employee_ContactForm_GetById'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 442
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 14:11:21 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetById. Error: Could not find stored procedure 'Employee_ContactForm_GetById'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 442
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 14:11:23 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Employee_ContactForm_GetById. Error: Could not find stored procedure 'Employee_ContactForm_GetById'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 442
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 14:12:05 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 14:12:05 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 14:12:05 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 14:12:05 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 14:12:05 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 14:20:31 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:20:57 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:21:14 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:22:52 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:23:49 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:24:25 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:24:35 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:24:38 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:25:48 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:27:59 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:28:30 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:35:12 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:38:50 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 14:38:50 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 14:38:50 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 14:38:50 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 14:38:50 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 14:40:40 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 14:40:41 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 14:40:41 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 14:40:41 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 14:40:41 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 14:40:41 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 14:40:50 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:40:53 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:41:42 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 590
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:42:39 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 14:42:39 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 14:42:39 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 14:42:39 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 14:42:39 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 14:42:39 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 14:43:17 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:43:25 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:44:37 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:45:46 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 14:45:46 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 14:45:46 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 14:45:46 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 14:45:46 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 14:45:46 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 14:47:15 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:48:18 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:48:22 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 14:48:22 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 14:48:22 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 14:48:22 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 14:48:22 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 14:48:22 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 14:48:51 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:49:12 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:49:45 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 14:49:52 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 591
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[17/07/2023 15:42:12 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 15:42:12 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 15:42:12 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 15:42:12 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 15:42:12 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 15:52:10 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetAll. Error: Could not find stored procedure 'Company_GetAll'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 182
+   at MainApi.DataLayer.Stores.StoreContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 54
+   at MainApi.Controllers.Manager.ContactFormController.GetAllCompany(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 295 
+[17/07/2023 16:03:47 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetAll. Error: Could not find stored procedure 'Company_GetAll'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 182
+   at MainApi.DataLayer.Stores.StoreContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 54
+   at MainApi.Controllers.Manager.ContactFormController.GetAllCompany(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 295 
+[17/07/2023 16:04:24 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetAll. Error: Could not find stored procedure 'Company_GetAll'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 182
+   at MainApi.DataLayer.Stores.StoreContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 54
+   at MainApi.Controllers.Manager.ContactFormController.GetAllCompany(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 295 
+[17/07/2023 16:05:01 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormControllerr error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetAll. Error: Could not find stored procedure 'Company_GetAll'.
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 182
+   at MainApi.DataLayer.Stores.StoreContactForm.GetAllCompany(IdentityContactForm identity, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 54
+   at MainApi.Controllers.Manager.ContactFormController.GetAllCompany(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 295 
+[17/07/2023 16:23:33 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 16:23:33 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 16:23:33 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 16:23:33 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 16:23:33 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 16:23:33 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 16:42:51 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 16:42:51 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 16:42:51 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 16:42:51 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 16:42:51 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 16:54:11 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 445
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 16:54:48 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 445
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:06:27 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 445
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:07:10 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 445
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:08:31 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[17/07/2023 17:08:31 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 17:08:31 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 17:08:31 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 17:08:31 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 17:08:31 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 17:09:16 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 446
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:09:43 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 446
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:10:22 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 17:10:22 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 17:10:22 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 17:10:22 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 17:10:22 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 17:10:46 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 446
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:11:21 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 17:11:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 17:11:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 17:11:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 17:11:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[17/07/2023 17:11:35 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 446
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:12:07 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 446
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:12:07 ERR MainApi.Controllers.Manager.ContactFormController] Api MainApi.Controllers.Manager.ContactFormController error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_ContactForm_GetById. Error: TotalCount
+   at MainApi.DataLayer.Repositories.Manager.RpsContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsContactForm.cs:line 446
+   at MainApi.DataLayer.Stores.StoreContactForm.GetContactFormByFormId(Int32 formId) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreContactForm.cs:line 86
+   at MainApi.Controllers.Manager.ContactFormController.GetById(Int32 id) in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Controllers\Manager\ContactFormController.cs:line 151 
+[17/07/2023 17:14:50 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[17/07/2023 17:14:51 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[17/07/2023 17:14:51 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[17/07/2023 17:14:51 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[17/07/2023 17:14:51 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 

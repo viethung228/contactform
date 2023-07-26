@@ -28,6 +28,7 @@ namespace Manager.WebApp.Helpers
 
             return baseInfo;
         }
+        
         public static IdentityAllowance UpdateAllowanceDetail(ContactFormFullDetailModel identity)
         {
             IdentityAllowance baseInfo = null;
@@ -37,6 +38,23 @@ namespace Manager.WebApp.Helpers
                 var apiRs = ContactFormServices.UpdateAllowanceAsync(identity).Result;
 
                 baseInfo = apiRs.ConvertData<IdentityAllowance>();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            return baseInfo;
+        }
+        public static IdentityContactForm GetContactFormByFormId(int formId)
+        {
+            IdentityContactForm baseInfo = null;
+
+            try
+            {
+                var apiRs = ContactFormServices.GetContactFormByFormIdAsync(formId).Result;
+
+                baseInfo = apiRs.ConvertData<IdentityContactForm>();
             }
             catch (Exception ex)
             {
@@ -90,6 +108,7 @@ namespace Manager.WebApp.Helpers
                 var apiRs = ContactFormServices.GetAllCompany(companyName, currentpage, pagesize).Result;
 
                 baseInfo = apiRs.ConvertData<List<IdentityContactForm>>();
+
             }
             catch (Exception ex)
             {
@@ -99,13 +118,51 @@ namespace Manager.WebApp.Helpers
             return baseInfo;
         }
 
-        public static List<IdentityContactForm> GetEmployeeByCompanyName(string companyName, int currentpage = 1, int pagesize = 10)
+        public static List<IdentityContactForm> GetByPage(string keyword, int currentpage = 1, int pagesize = 10)
         {
             List<IdentityContactForm> baseInfo = null;
 
             try
             {
-                var apiRs = ContactFormServices.GetEmployeeByCompanyName(companyName, currentpage, pagesize).Result;
+                var apiRs = ContactFormServices.GetByPage(keyword, currentpage, pagesize).Result;
+
+                baseInfo = apiRs.ConvertData<List<IdentityContactForm>>();
+
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            return baseInfo;
+        }
+
+        public static List<IdentityContactForm> GetList()
+        {
+            List<IdentityContactForm> baseInfo = null;
+
+            try
+            {
+                var apiRs = ContactFormServices.GetList().Result;
+
+                baseInfo = apiRs.ConvertData<List<IdentityContactForm>>();
+
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            return baseInfo;
+        }
+
+        public static List<IdentityContactForm> GetContactFormByCompanyName(string keyword, string companyName, int currentpage = 1, int pagesize = 10)
+        {
+            List<IdentityContactForm> baseInfo = null;
+
+            try
+            {
+                var apiRs = ContactFormServices.GetContactFormByCompanyName(keyword, companyName, currentpage, pagesize).Result;
 
                 baseInfo = apiRs.ConvertData<List<IdentityContactForm>>();
             }

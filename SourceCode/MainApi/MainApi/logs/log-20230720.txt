@@ -1,0 +1,135 @@
+[20/07/2023 08:48:24 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 08:48:24 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/07/2023 08:48:24 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 08:48:24 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 08:48:24 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[20/07/2023 10:21:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 10:21:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/07/2023 10:21:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 10:21:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 10:21:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[20/07/2023 10:32:23 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 10:32:28 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 10:34:08 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 10:35:51 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 10:38:20 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/07/2023 10:38:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 10:38:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/07/2023 10:38:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 10:38:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 10:38:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[20/07/2023 10:38:35 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 10:38:35 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/07/2023 10:38:35 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 10:38:35 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 10:38:35 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[20/07/2023 13:38:05 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 13:38:08 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 13:38:11 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 13:38:33 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 13:39:46 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 13:39:57 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 13:44:21 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:16:34 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:21:34 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:23:47 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:25:17 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:26:51 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:30:17 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:30:30 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:34:13 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:34:18 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:34:26 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:34:36 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 14:35:33 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 15:37:15 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 15:37:56 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 15:38:43 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 15:40:33 ERR MainApi.Helpers.HelperCompany] Function MainApi.Helpers.HelperCompany error: MainApi.SharedLibs.Extensions.CustomSQLException: Failed to execute Company_GetList. Error: Could not find stored procedure 'Company_GetList'.
+   at Manager.Datalayer.Repositories.RpsCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Repositories\Manager\RpsCompany.cs:line 593
+   at MainApi.DataLayer.Stores.StoreCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi.Datalayer\Stores\Manager\StoreCompany.cs:line 62
+   at MainApi.Helpers.HelperCompany.GetList() in E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi\Helpers\Business\HelperCompany.cs:line 51 
+[20/07/2023 16:18:25 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[20/07/2023 16:18:26 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[20/07/2023 16:18:26 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[20/07/2023 16:18:26 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[20/07/2023 16:18:26 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[20/07/2023 16:18:26 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 

@@ -1,0 +1,91 @@
+﻿@using System.Linq
+@using MainApi.DataLayer.Entities;
+@using Manager.SharedLibs;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers
+@model Manager.WebApp.Models.CompanyDetailModel
+
+
+@{
+    var imgUrl = CdnHelper.GetFullFilePath(Model.Avatar) == null ? "" : CdnHelper.GetFullFilePath(Model.Avatar);
+
+}
+<div class="m-portlet__body">
+    <div class="row form-group">
+        @Html.HiddenFor(m => m.Id)
+        <div class="form-group align-items-center justify-content-center">
+            <div class="col-sm-3" title="@ManagerResource.LB_COVER_IMAGE">
+                <div class="">
+                    <div class="uploadbox" id="uploadbox">
+                        <img id="preview-image" class="file-upload-btn thumbImg img-full-center pointer @((string.IsNullOrEmpty(Model.Avatar)) ? "hidden" : string.Empty)" src="@imgUrl" />
+                        <label id="preview-upload-btn" for="file-upload" class="custom-file-upload file-upload-icon @((!string.IsNullOrEmpty(Model.Avatar)) ? "hidden" : string.Empty)">
+                            <i class="la la-cloud-upload"></i> <span>顔写真をアップロード</span>
+                        </label>
+                        @Html.HiddenFor(m => m.Avatar)
+                        <input id="file-upload" class="file-upload-storage hidden" name="image_file_upload" type="file" accept="image/*" data-preview="uploadbox" onchange="PreviewImage()">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <label class="form-control-label">@ManagerResource.LB_FULL_NAME <span class="text-danger">*</span></label>
+            @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control", @required="" })
+            @Html.ValidationMessageFor(m => m.CompanyName, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-lg-12">
+            <label class="form-control-label">@ManagerResource.LB_COMPANY_NAME <span class="text-danger">*</span></label>
+            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control", @required="" })
+            @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-lg-12">
+            <label class="form-control-label">@ManagerResource.LB_PHONE<span class="text-danger">*</span> </label>
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control",@required="",type="tel" })
+            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-lg-12">
+            <label class="form-control-label">@ManagerResource.LB_ADDRESS <span class="text-danger">*</span></label>
+            @Html.TextBoxFor(m => m.Address, new { @class = "form-control", @required="" })
+            @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-lg-12">
+            <label class="form-control-label">@ManagerResource.LB_EMAIL <span class="text-danger">*</span></label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @required="" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @{
+        var currentController = ViewContext.RouteData.Values["controller"];
+        var backLink = string.Format("/{0}", currentController);
+    }
+
+    <div class="form-group row mt30">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-info btn-sm" onclick="check()">
+                <i class="fa fa-floppy-o"></i> @ManagerResource.LB_SAVE
+            </button>
+            <button type="submit" class="btn btn-info btn-sm" id="btnSubmit" hidden>
+                <i class="fa fa-floppy-o"></i> @ManagerResource.LB_SAVE
+            </button>
+            <a class="btn btn-outline-info btn-sm btn-back" href="@backLink"><i class="fa fa-remove"></i> @ManagerResource.LB_CANCEL</a>
+        </div>
+    </div>
+</div>
+<script>
+    $('.selectpicker').selectpicker();
+
+    var frmSubmit = document.getElementById("frmUser");
+    var regexletters = /^([^0-9]*)$/;
+    var regexPhone = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+    function check(){
+        var fullname = $('#FullName').val();
+        var phonenumber = $('#PhoneNumber').val();
+        if (regexletters.test(fullname) && regexPhone.test(phonenumber)) {
+            document.getElementById("btnSubmit").click();         
+        }
+        else {
+            alert("Invalid Name or Phone Number. Please check and try again!");
+        }
+    }
+</script>

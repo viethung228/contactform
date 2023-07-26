@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,7 +24,9 @@ namespace MainApi.DataLayer.Stores
         List<IdentityContactForm> GetContactFormByEmployeeId(int id);
         IdentityContactForm DeleteContactForm(int formId);
         List<IdentityContactForm> GetAllCompany(IdentityContactForm identity, int currentpage, int pagesize);
-        List<IdentityContactForm> GetEmployeeByCompanyName(string companyName, int currentpage, int pagesize);
+        List<IdentityContactForm> GetContactFormByCompanyName(string keyword, string companyName, int currentpage, int pagesize);
+        List<IdentityContactForm> GetByPage(string keyword, int currentpage, int pagesize);
+        List<IdentityContactForm> GetList();
     }
     public class StoreContactForm : IStoreContactForm
     {
@@ -40,18 +43,25 @@ namespace MainApi.DataLayer.Stores
             _conStr = AppConfiguration.GetAppsetting(connName);
             r = new RpsContactForm(_conStr);
         }
-
+        public List<IdentityContactForm> GetByPage(string keyword, int currentpage, int pagesize)
+        {
+            return r.GetByPage(keyword, currentpage, pagesize);
+        }
+        public List<IdentityContactForm> GetList()
+        {
+            return r.GetList();
+        }
         public IdentityDependent InsertDependent(IdentityDependent identity)
         {
             return r.InsertDependent(identity);
         }
-        public List<IdentityContactForm> GetEmployeeByCompanyName(string companyName, int currentpage, int pagesize)
+        public List<IdentityContactForm> GetContactFormByCompanyName(string keyword, string companyName, int currentpage, int pagesize)
         {
-            return r.GetEmployeeByCompanyName(companyName, currentpage, pagesize);
+            return r.GetContactFormByCompanyName(keyword, companyName, currentpage, pagesize);
         }
         public List<IdentityContactForm> GetAllCompany(IdentityContactForm identity, int currentpage, int pagesize)
         {
-            return r.GetAllCompany(identity,currentpage,pagesize);
+            return r.GetAllCompany(identity, currentpage, pagesize);
         }
         public IdentityAllowance InsertAllowance(IdentityAllowance identity)
         {

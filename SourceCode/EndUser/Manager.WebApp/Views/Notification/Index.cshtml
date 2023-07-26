@@ -1,0 +1,81 @@
+﻿@using Manager.WebApp.Models
+@using Manager.SharedLibs
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers
+
+@model Manager.WebApp.Models.ManageNotificationModel
+
+@{ ViewBag.Title = "すべての通知"; }
+
+@{
+    var hasData = Model.SearchResults.HasData();
+}
+
+@await Html.PartialAsync("_Notifications")
+
+@await Html.PartialAsync("../Widgets/Modals/_DefaultModal")
+
+<div class="m-portlet">    
+    <div class="m-portlet__body">
+        <div class="m-section text-center">
+            <h4 class="fz-16 text-info"><b><i class="fa fa-bell"></i> すべての通知</b></h4>
+        </div>
+        <div class="m-section">
+            <div class="m-section__content table-responsive" style="max-height:50vh;overflow:auto">
+                @if (hasData)
+                {
+                    @await Html.PartialAsync("../Widgets/Items/Notification/_NotificationItems", Model.SearchResults)
+                }
+                else
+                {
+                    <div class="text-center text-danger">@ManagerResource.LB_HAS_NO_NOTIFICATION !</div>
+                }
+            </div>
+
+            @{
+                await RenderPaging();
+            }
+
+        </div>        
+    </div>
+</div>
+
+@functions {
+    private async Task RenderPaging()
+    {
+        <div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded">
+            <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+                @if (Model.WasOverRecordsInPage())
+                {
+                    var html = HtmlHelpers.BootstrapPager(Model.Page, index => Url.Action("Index", "Notification",
+                    new
+                    {
+                        Page = index,
+                        SearchExec = "Y",
+                        Keyword = Model.Keyword,
+                    }),
+                    Model.TotalCount, pageSize: Model.PageSize, numberOfLinks: 10);
+
+                    await Task.FromResult(html);
+
+                    @html
+                }
+
+                @if (Model.TotalCount > 0)
+                {
+                    <div class="m-datatable__pager-info">
+                        <span class="m-datatable__pager-detail">
+                            @ManagerResource.LB_RECORDS_ALL @Model.TotalCount @ManagerResource.LB_RECORDS @Model.StartCount() 〜 @Model.EndCount(Model.SearchResults.Count())
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
+
+@section PageInlineStyles{
+    <style>
+        .notif-list {margin:0;padding:0;}
+    </style>    
+}

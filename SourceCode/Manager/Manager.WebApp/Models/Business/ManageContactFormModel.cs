@@ -6,6 +6,7 @@ namespace Manager.WebApp.Models
     public class ManageContactFormModel : CommonPagingModel
     {
         public List<IdentityContactForm> SearchResults { get; set; }
+        public string companyNameSelected { get; set; }
     }
     public class ContactFormDetailModel : IdentityContactForm
     {
@@ -25,6 +26,10 @@ namespace Manager.WebApp.Models
         public IdentityAllowanceDetail AllowanceDetail { get; set; }
         public List<IdentityDependent> Dependents { get; set; }
 
+    }
+    public class ListContactFormFullDetailModel
+    {
+        public List<ContactFormFullDetailModel> listContactForm { get; set; }
     }
 
 

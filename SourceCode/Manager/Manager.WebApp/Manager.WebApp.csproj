@@ -15,9 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Company\Partials\_PopupDelete.cshtml" />
-    <Content Remove="Views\Company\Partials\_SearchForm.cshtml" />
-    <Content Remove="Views\Employee\Partials\_PopupDeleteCF.cshtml" />
+    <Content Remove="Views\Company\Partials\_PopupDeleteCF.cshtml" />
+    <Content Remove="Views\ContactForm\Detail.cshtml" />
   </ItemGroup>
  
   <ItemGroup>
@@ -49,15 +48,21 @@
 
   <ItemGroup>
     <None Include="Views\Account\Login.cshtml" />
+    <None Include="Views\Company\Detail.cshtml" />
+    <None Include="Views\Company\Edit.cshtml" />
+    <None Include="Views\Company\Index.cshtml" />
+    <None Include="Views\Company\Partials\_PopupDeleteCF.cshtml" />
     <None Include="Views\Company\Partials\_PopupDelete.cshtml" />
     <None Include="Views\Company\Partials\_SearchForm.cshtml" />
-    <None Include="Views\Employee\Detail.cshtml" />
-    <None Include="Views\Employee\Edit.cshtml" />
-    <None Include="Views\Employee\Index.cshtml" />
-    <None Include="Views\Employee\Partials\_PopupDeleteCF.cshtml" />
-    <None Include="Views\Employee\Partials\_PopupDelete.cshtml" />
-    <None Include="Views\Employee\Partials\_SearchForm.cshtml" />
-    <None Include="Views\Employee\Partials\_UpdateForm.cshtml" />
+    <None Include="Views\Company\Partials\_UpdateForm.cshtml" />
+    <None Include="Views\ContactForm\ContactForm.cshtml" />
+    <None Include="Views\ContactForm\Detail.cshtml" />
+    <None Include="Views\ContactForm\EditContactForm.cshtml" />
+    <None Include="Views\ContactForm\Index.cshtml" />
+    <None Include="Views\ContactForm\Partials\_ExportCSV.cshtml" />
+    <None Include="Views\ContactForm\Partials\_PopupDeleteCF.cshtml" />
+    <None Include="Views\ContactForm\Partials\_SearchForm.cshtml" />
+    <None Include="Views\ContactForm\Partials\_UpdateForm.cshtml" />
     <None Include="Views\EmailForm\TemplateComponents\_Text.cshtml" />
     <None Include="Views\EmailServer\Create.cshtml" />
     <None Include="Views\EmailServer\Edit.cshtml" />
@@ -570,6 +575,14 @@
     <Reference Include="MainApi.DataLayer.Entities">
       <HintPath>..\..\MainApi\MainApi.DataLayer.Entities\bin\Debug\net7.0\MainApi.DataLayer.Entities.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\ContactForm\Detail.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\ContactForm\Detail.cshtml" />
   </ItemGroup>
 
 </Project>

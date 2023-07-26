@@ -55,6 +55,9 @@ namespace MainApi.DataLayer.Repositories.Manager
             record.ForOffice = reader["ForOffice"].ToString();
             record.OwnerId = Utils.ConvertToInt32(reader["OwnerId"]);
             record.Status = Utils.ConvertToInt32(reader["Status"]);
+            if (reader.HasColumn("TotalCount"))
+                record.TotalCount = Utils.ConvertToInt32(reader["TotalCount"]);
+
             return record;
         }
         public static IdentityContactForm ExtractCompanyData(IDataReader reader)
@@ -115,15 +118,16 @@ namespace MainApi.DataLayer.Repositories.Manager
             return record;
         }
         #endregion
-        public List<IdentityContactForm> GetEmployeeByCompanyName(string companyName, int currentpage, int pagesize)
+        public List<IdentityContactForm> GetContactFormByCompanyName(string keyword, string companyName, int currentpage, int pagesize)
         {
             //Common syntax           
-            var sqlCmd = @"Company_GetAllEmployee";
+            var sqlCmd = @"Company_GetAllContactForm";
             var info = new List<IdentityContactForm>();
             //For parameters
             int offset = (currentpage - 1) * pagesize;
             var parameters = new Dictionary<string, object>
             {
+                {"@Keyword", keyword},
                 {"@CompanyName", companyName},
                 {"@Offset", offset},
                 {"@PageSize", pagesize }
@@ -183,6 +187,70 @@ namespace MainApi.DataLayer.Repositories.Manager
             }
             return info;
         }
+
+        public List<IdentityContactForm> GetByPage(string keyword, int currentpage, int pagesize)
+        {
+            //Common syntax           
+            var sqlCmd = @"Company_ContactForm_GetByPage";
+            var info = new List<IdentityContactForm>();
+            int offset = (currentpage - 1) * pagesize;
+            //For parameters
+            var parameters = new Dictionary<string, object>
+            {
+                {"@Keyword", keyword},
+                {"@Offset", offset},
+                {"@PageSize", pagesize }
+            };
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, parameters))
+                    {
+                        while (returnObj.Read())
+                        {
+                            var data = ExtractContactFormData(returnObj);
+                            info.Add(data);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
+
+        public List<IdentityContactForm> GetList()
+        {
+            //Common syntax           
+            var sqlCmd = @"Company_ContactForm_GetList";
+            var info = new List<IdentityContactForm>();
+
+            try
+            {
+                using (var conn = new SqlConnection(_conStr))
+                {
+                    using (var returnObj = MsSqlHelper.ExecuteReader(conn, CommandType.StoredProcedure, sqlCmd, null))
+                    {
+                        while (returnObj.Read())
+                        {
+                            var data = ExtractContactFormData(returnObj);
+                            info.Add(data);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var strError = string.Format("Failed to execute {0}. Error: {1}", sqlCmd, ex.Message);
+                throw new CustomSQLException(strError);
+            }
+            return info;
+        }
+
         public IdentityDependent InsertDependent(IdentityDependent identity)
         {
             //Common syntax           
@@ -300,7 +368,7 @@ namespace MainApi.DataLayer.Repositories.Manager
         public IdentityContactForm InsertContactForm(IdentityContactForm identity)
         {
             //Common syntax           
-            var sqlCmd = @"Employee_ContactForm_Update";
+            var sqlCmd = @"Company_ContactForm_Update";
             var info = new IdentityContactForm();
             //For parameters
             var parameters = new Dictionary<string, object>
@@ -415,7 +483,7 @@ namespace MainApi.DataLayer.Repositories.Manager
         public IdentityContactForm GetContactFormByFormId(int formId)
         {
             //Common syntax           
-            var sqlCmd = @"Employee_ContactForm_GetById";
+            var sqlCmd = @"Company_ContactForm_GetById";
             var info = new IdentityContactForm();
             //For parameters
             var parameters = new Dictionary<string, object>
@@ -446,7 +514,7 @@ namespace MainApi.DataLayer.Repositories.Manager
         public List<IdentityContactForm> GetContactFormByEmployeeId(int id)
         {
             //Common syntax           
-            var sqlCmd = @"Employee_ContactForm_GetByEmployeeId";
+            var sqlCmd = @"Company_ContactForm_GetByEmployeeId";
             var info = new List<IdentityContactForm>();
             //For parameters
             var parameters = new Dictionary<string, object>
@@ -510,7 +578,7 @@ namespace MainApi.DataLayer.Repositories.Manager
         public IdentityContactForm DeleteContactForm(int formId)
         {
             //Common syntax           
-            var sqlCmd = @"Employee_ContactForm_Delete";
+            var sqlCmd = @"Company_ContactForm_Delete";
             var info = new IdentityContactForm();
             //For parameters
             var parameters = new Dictionary<string, object>

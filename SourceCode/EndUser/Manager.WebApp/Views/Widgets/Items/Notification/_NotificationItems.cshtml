@@ -1,0 +1,127 @@
+﻿@using Manager.WebApp.Models
+@using Manager.SharedLibs
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers 
+
+@model List<NotificationItemModel>
+
+@{
+    var hasData = Model.HasData();
+}
+<ul class="notif-list">
+    @if (hasData)
+    {
+        foreach (var item in Model)
+        {
+            if (item.NotifInfo != null)
+            {
+                var notifMsg = "Notification";
+                var cssColor = "info";
+                var notifIcon = "fa fa-bell";
+
+                if (item.NotifInfo.TargetType == (int)EnumNotificationTargetType.Product)
+                {
+                    switch (item.NotifInfo.ActionType)
+                    {
+                        case (int)EnumNotificationActionTypeForManager.ProductCreated:
+                        {
+                            notifMsg = string.Format("New product was created !");
+                                notifIcon = "fa fa-file-word-o";
+                            break;
+                        }
+                        case (int)EnumNotificationActionTypeForManager.ProductUpdated:
+                        {
+                            notifMsg = string.Format("Product was updated !");
+                                notifIcon = "fa fa-file-word-o";
+                            break;
+                        }
+                        default: break;
+                    }
+                }
+                else if (item.NotifInfo.TargetType == (int)EnumNotificationTargetType.Customer)
+                {
+                    switch (item.NotifInfo.ActionType)
+                    {
+                        case (int)EnumNotificationActionTypeForManager.CustomerCreated:
+                        {
+                            notifMsg = string.Format("New customer was created !");
+                                notifIcon = "fa fa-file-word-o";
+                            break;
+                        }
+                        case (int)EnumNotificationActionTypeForManager.CustomerUpdated:
+                        {
+                            notifMsg = string.Format("Customer was updated !");
+                                notifIcon = "fa fa-file-word-o";
+                            break;
+                        }
+                        case (int)EnumNotificationActionTypeForManager.CustomerRegister:
+                        {
+                                notifMsg = string.Format("A new customer has registered !");
+                                notifIcon = "fa fa-file-word-o";
+                            break;
+                        }
+                        default: break;
+                    }
+                }
+                else if (item.NotifInfo.TargetType == (int)EnumNotificationTargetType.Order)
+                {
+                    switch (item.NotifInfo.ActionType)
+                    {
+                        case (int)EnumNotificationActionTypeForManager.OrderCreated:
+                        {
+                            notifMsg = string.Format("New order was created !");
+                                notifIcon = "fa fa-file-word-o";
+                            break;
+                        }
+                        default: break;
+                    }
+                }
+               
+                
+
+                <li class="box-noti-item @(item.NotifInfo.IsRead ? "read" : "unread") @cssColor">
+                    @{
+                        var dtLink = SecurityHelper.GenerateSecureLink("AuthedGlobal", "ReadNotif", new { id = item.NotifInfo.Id, targetId = item.NotifInfo.TargetId });
+                    }
+                    <a href="@dtLink">
+                        <div class="display-flex" style="justify-items:center">
+                            <div class="" style="width:3rem">
+                                <div class="notif-img">
+                                    <div style="height: 100%;width: 100%;border: 1px solid #ccc;border-radius: 3px;text-align: center;padding-top: .6rem;">
+                                        <i class="@notifIcon" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notif-content ml5" style="width:97%">
+                                <div class="">
+                                    <div class="">
+                                        <span class="notif-title">
+                                            @notifMsg
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class=" text-right">
+                                        <div class="notif-time fz-13">
+                                            <i class="fa fa-clock-o"></i>
+                                            @{
+                                                var localTime = item.NotifInfo.CreatedDate.HasValue ? item.NotifInfo.CreatedDate.Value.ToLocalTime() : DateTime.UtcNow.ToLocalTime();
+                                            }
+                                            <span>@localTime.ToString("HH:mm yyyy/MM/dd")</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            }
+
+        }
+    }
+    else
+    {
+        <li class="text-center text-danger">@ManagerResource.LB_HAS_NO_NOTIFICATION !</li>
+    }
+</ul>
+

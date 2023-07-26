@@ -60,12 +60,80 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXplXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/ContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDb250YWN0Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/EditContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxFZGl0Q29udGFjdEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Partials/_ExportCSV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxQYXJ0aWFsc1xfRXhwb3J0Q1NWLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Partials/_ListCompanyNames.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxQYXJ0aWFsc1xfTGlzdENvbXBhbnlOYW1lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Partials/_ListContactForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxQYXJ0aWFsc1xfTGlzdENvbnRhY3RGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Partials/_PopupDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxQYXJ0aWFsc1xfUG9wdXBEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Partials/_SearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxQYXJ0aWFsc1xfU2VhcmNoRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Partials/_UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxQYXJ0aWFsc1xfVXBkYXRlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/ContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cQ29udGFjdEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/EditContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cRWRpdENvbnRhY3RGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/Partials/_ExportCSV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cUGFydGlhbHNcX0V4cG9ydENTVi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/Partials/_PopupDeleteCF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cUGFydGlhbHNcX1BvcHVwRGVsZXRlQ0YuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/Partials/_SearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cUGFydGlhbHNcX1NlYXJjaEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/Partials/_TableContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cUGFydGlhbHNcX1RhYmxlQ29udGFjdEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/Partials/_UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cUGFydGlhbHNcX1VwZGF0ZUZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/EmailServer/Create.cshtml]
@@ -90,42 +158,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/EmailServer/_UpdateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXJ2ZXJcX1VwZGF0ZUZvcm0uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/ContactForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ29udGFjdEZvcm0uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/EditContactForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdENvbnRhY3RGb3JtLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/ListContactForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTGlzdENvbnRhY3RGb3JtLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/Partials/_PopupDelete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUGFydGlhbHNcX1BvcHVwRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/Partials/_SearchForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUGFydGlhbHNcX1NlYXJjaEZvcm0uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Employee/Partials/_UpdateForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUGFydGlhbHNcX1VwZGF0ZUZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Error/404.cshtml]

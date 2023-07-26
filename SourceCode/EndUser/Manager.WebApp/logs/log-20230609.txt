@@ -1,0 +1,679 @@
+[09/06/2023 08:38:27 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[09/06/2023 08:38:28 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 08:38:28 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 08:38:28 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 08:38:28 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 08:38:28 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 08:39:55 ERR Manager.WebApp.Controllers.CategoryController] Function Manager.WebApp.Controllers.CategoryController error: System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Manager.WebApp.Controllers.CategoryController.Detail(Int32 id) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Controllers\Business\CategoryController.cs:line 221 
+[09/06/2023 08:40:59 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Category_Detail.ExecuteAsync() in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Views\Category\Detail.cshtml:line 84
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 08:41:16 ERR Manager.WebApp.Controllers.CategoryController] Function Manager.WebApp.Controllers.CategoryController error: System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Manager.WebApp.Controllers.CategoryController.Detail(Int32 id) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Controllers\Business\CategoryController.cs:line 221 
+[09/06/2023 08:42:12 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[09/06/2023 08:42:12 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 08:42:12 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 08:42:12 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 08:42:12 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 08:42:12 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 08:42:14 ERR Manager.WebApp.Controllers.CategoryController] Function Manager.WebApp.Controllers.CategoryController error: System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Manager.WebApp.Controllers.CategoryController.Detail(Int32 id) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Controllers\Business\CategoryController.cs:line 221 
+[09/06/2023 08:42:20 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Category_Detail.ExecuteAsync() in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Views\Category\Detail.cshtml:line 126
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 08:42:54 ERR Manager.WebApp.Controllers.CategoryController] Function Manager.WebApp.Controllers.CategoryController error: System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Manager.WebApp.Controllers.CategoryController.Detail(Int32 id) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Controllers\Business\CategoryController.cs:line 221 
+[09/06/2023 08:42:58 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Category_Detail.ExecuteAsync() in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Views\Category\Detail.cshtml:line 126
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 08:58:24 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[09/06/2023 08:58:25 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 08:58:25 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 08:58:25 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 08:58:25 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 08:58:25 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 09:16:31 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 09:16:31 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 09:16:31 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 09:16:31 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 09:16:31 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 09:56:59 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[09/06/2023 09:57:00 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 09:57:00 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 09:57:00 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 09:57:00 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 09:57:00 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 09:57:22 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[09/06/2023 09:57:23 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 09:57:23 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 09:57:23 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 09:57:23 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 09:57:23 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 10:15:13 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 10:15:13 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 10:15:13 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 10:15:13 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 10:15:13 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 10:24:53 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.CompilationFailedException: One or more compilation failures occurred:
+E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Views\Category\Detail.cshtml(265,29): error CS0128: 'countrow' という名前のローカル変数または関数はこのスコープで既に定義されています
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.FindView(ActionContext actionContext, PartialViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 10:25:16 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.CompilationFailedException: One or more compilation failures occurred:
+E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Views\Category\Detail.cshtml(246,28): Error RZ1003: A space or line break was encountered after the "@" character.  Only valid identifiers, keywords, comments, "(" and "{" are valid at the start of a code block and they must occur immediately following "@" with no space in between.
+E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Views\Category\Detail.cshtml(297,17): Error RZ1003: A space or line break was encountered after the "@" character.  Only valid identifiers, keywords, comments, "(" and "{" are valid at the start of a code block and they must occur immediately following "@" with no space in between.
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.FindView(ActionContext actionContext, PartialViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 11:26:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:43:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:44:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:45:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:46:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:47:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:48:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:48:36 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:49:06 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:49:36 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:50:06 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:51:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:52:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:53:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:54:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:55:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:56:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:57:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:58:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 11:59:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:00:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:01:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:02:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:03:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:04:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:05:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:06:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:07:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:08:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:09:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:10:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:11:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:12:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:13:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:14:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:15:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:16:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:17:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:18:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:19:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:20:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:21:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:22:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:23:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:24:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:25:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:26:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:27:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:28:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:29:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:30:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:31:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:32:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:33:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:34:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:35:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:36:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:37:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:38:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:39:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:40:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:41:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:42:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:43:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:44:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:45:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:46:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:47:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:48:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:49:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:50:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:51:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:52:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:53:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:54:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:55:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:56:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:57:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:58:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 12:59:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:00:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:01:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:02:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:03:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:04:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:05:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:06:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:07:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:08:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:09:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:10:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:11:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:12:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:13:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:14:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:15:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:16:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:17:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:18:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:19:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:20:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:21:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:22:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:23:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:24:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:25:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:26:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:27:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:28:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:29:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:30:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:31:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:32:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:33:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:34:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:35:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:36:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:37:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:38:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:39:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:40:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:41:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:42:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:43:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:44:25 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:55:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 13:56:24 ERR Manager.WebApp.Services.NotificationServices] Api return error code: 0, URL:  
+[09/06/2023 14:14:02 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 14:14:02 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 14:14:02 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 14:14:02 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 14:14:02 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 14:26:32 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 14:26:32 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 14:26:32 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 14:26:32 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 14:26:32 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 14:27:54 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.CategorySubUpdateModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CategoryUpdateModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method128(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 14:27:57 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.CategorySubUpdateModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CategoryUpdateModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method128(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 14:28:37 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.CategorySubUpdateModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CategoryUpdateModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method128(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 14:29:08 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.CategorySubUpdateModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CategoryUpdateModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method128(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 14:30:03 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.CategorySubUpdateModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CategoryUpdateModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method128(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 14:30:51 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 14:30:51 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 14:30:51 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 14:30:51 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 14:30:51 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 14:38:39 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 14:38:39 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 14:38:39 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 14:38:39 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 14:38:39 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 14:40:16 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 14:40:16 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 14:40:16 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 14:40:16 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 14:40:16 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 14:54:24 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 14:54:24 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 14:54:24 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 14:54:24 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 14:54:24 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 15:02:55 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 15:02:55 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 15:02:55 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 15:02:55 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 15:02:55 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 15:03:11 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The partial view 'Partials/_UpdateSubForm' was not found. The following locations were searched:
+/Views/Category/Partials/_UpdateSubForm.cshtml
+/Views/Shared/Partials/_UpdateSubForm.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCore.Views_Category_CreateSub.ExecuteAsync() in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Views\Category\CreateSub.cshtml:line 27
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 15:03:42 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The partial view 'Partials/_UpdateSubForm' was not found. The following locations were searched:
+/Views/Category/Partials/_UpdateSubForm.cshtml
+/Views/Shared/Partials/_UpdateSubForm.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCore.Views_Category_CreateSub.ExecuteAsync() in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Views\Category\CreateSub.cshtml:line 27
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 15:04:05 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[09/06/2023 15:04:06 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 15:04:06 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 15:04:06 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 15:04:06 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 15:04:06 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 15:05:29 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 15:05:29 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 15:05:29 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 15:05:29 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 15:05:29 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 15:12:52 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 15:12:52 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 15:12:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 15:12:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 15:12:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 15:36:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 15:36:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 15:36:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 15:36:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 15:36:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 16:31:09 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[09/06/2023 16:44:46 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[09/06/2023 17:12:57 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 17:12:57 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 17:12:57 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 17:12:57 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 17:12:57 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 18:02:00 ERR Manager.WebApp.Controllers.CategoryController] Function Manager.WebApp.Controllers.CategoryController error: System.NotSupportedException: Collection was of a fixed size.
+   at System.SZArrayHelper.Add[T](T _)
+   at Manager.WebApp.Helpers.NotificationExtensions.AddNotification(Controller controller, String message, String notificationType) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Helpers\Common\NotificationExtensions.cs:line 35
+   at Manager.WebApp.Controllers.CategoryController.EditSub_Submit(CategorySubUpdateModel model) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Controllers\Business\CategoryController.cs:line 235 
+[09/06/2023 18:02:33 ERR Manager.WebApp.Controllers.CategoryController] Function Manager.WebApp.Controllers.CategoryController error: System.NotSupportedException: Collection was of a fixed size.
+   at System.SZArrayHelper.Add[T](T _)
+   at Manager.WebApp.Helpers.NotificationExtensions.AddNotification(Controller controller, String message, String notificationType) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Helpers\Common\NotificationExtensions.cs:line 35
+   at Manager.WebApp.Controllers.CategoryController.EditSub_Submit(CategorySubUpdateModel model) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Controllers\Business\CategoryController.cs:line 235 
+[09/06/2023 18:12:16 ERR Manager.WebApp.Controllers.CategoryController] Function Manager.WebApp.Controllers.CategoryController error: System.NotSupportedException: Collection was of a fixed size.
+   at System.SZArrayHelper.Add[T](T _)
+   at Manager.WebApp.Helpers.NotificationExtensions.AddNotification(Controller controller, String message, String notificationType) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Helpers\Common\NotificationExtensions.cs:line 35
+   at Manager.WebApp.Controllers.CategoryController.EditSub_Submit(CategorySubUpdateModel model) in E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp\Controllers\Business\CategoryController.cs:line 235 
+[09/06/2023 18:19:44 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[09/06/2023 18:19:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 18:19:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 18:19:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 18:19:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 18:19:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 18:20:58 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 18:20:58 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 18:20:58 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 18:20:58 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 18:20:58 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 18:21:19 ERR Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor] The view '405' was not found. Searched locations: ["/Views/Error/405.cshtml","/Views/Shared/405.cshtml"] 
+[09/06/2023 18:21:19 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The view '405' was not found. The following locations were searched:
+/Views/Error/405.cshtml
+/Views/Shared/405.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[09/06/2023 18:23:14 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[09/06/2023 18:23:14 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[09/06/2023 18:23:14 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[09/06/2023 18:23:14 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[09/06/2023 18:23:14 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 
+[09/06/2023 18:23:23 ERR Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor] The view '405' was not found. Searched locations: ["/Views/Error/405.cshtml","/Views/Shared/405.cshtml"] 
+[09/06/2023 18:23:23 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The view '405' was not found. The following locations were searched:
+/Views/Error/405.cshtml
+/Views/Shared/405.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

@@ -1,0 +1,533 @@
+[28/06/2023 08:24:21 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 08:24:21 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 08:24:21 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 08:24:21 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 08:24:21 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 08:27:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 08:27:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 08:27:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 08:27:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 08:27:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 08:28:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 08:28:11 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 08:28:11 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 08:28:11 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 08:28:11 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 08:29:03 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 08:29:03 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 08:29:03 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 08:29:03 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 08:29:03 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 09:15:26 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 09:15:27 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 09:15:27 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 09:15:27 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 09:15:27 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 09:15:27 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 13:54:54 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 13:54:54 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 13:54:54 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 13:54:54 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 13:54:54 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 13:55:34 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: Manager.SharedLibs.Extensions.CustomSQLException: Failed to execute Revenue_GetAllUserName. Error: Invalid object name 'tbl_users'.
+   at Manager.Datalayer.Repositories.RpsUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Repositories\System\RpsUser.cs:line 214
+   at Manager.DataLayer.Stores.StoreUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Stores\System\StoreUser.cs:line 66
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 49 
+[28/06/2023 13:55:35 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object, String)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at AspNetCore.Views_Revenue_Partials_Detail.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Partials\Detail.cshtml:line 10
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCore.Views_Revenue_Index.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Index.cshtml:line 36
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 13:56:17 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: Manager.SharedLibs.Extensions.CustomSQLException: Failed to execute Revenue_GetAllUserName. Error: Invalid object name 'tbl_users'.
+   at Manager.Datalayer.Repositories.RpsUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Repositories\System\RpsUser.cs:line 214
+   at Manager.DataLayer.Stores.StoreUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Stores\System\StoreUser.cs:line 66
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 49 
+[28/06/2023 13:56:18 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object, String)
+   at AspNetCore.Views_Revenue_Partials_Detail.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Partials\Detail.cshtml:line 10
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCore.Views_Revenue_Index.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Index.cshtml:line 36
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 13:56:19 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: Manager.SharedLibs.Extensions.CustomSQLException: Failed to execute Revenue_GetAllUserName. Error: Invalid object name 'tbl_users'.
+   at Manager.Datalayer.Repositories.RpsUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Repositories\System\RpsUser.cs:line 214
+   at Manager.DataLayer.Stores.StoreUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Stores\System\StoreUser.cs:line 66
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 49 
+[28/06/2023 13:56:19 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object, String)
+   at AspNetCore.Views_Revenue_Partials_Detail.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Partials\Detail.cshtml:line 10
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCore.Views_Revenue_Index.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Index.cshtml:line 36
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 13:57:50 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: Manager.SharedLibs.Extensions.CustomSQLException: Failed to execute Revenue_GetAllUserName. Error: Invalid object name 'tbl_users'.
+   at Manager.Datalayer.Repositories.RpsUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Repositories\System\RpsUser.cs:line 214
+   at Manager.DataLayer.Stores.StoreUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Stores\System\StoreUser.cs:line 66
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 49 
+[28/06/2023 13:57:50 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object, String)
+   at AspNetCore.Views_Revenue_Partials_Detail.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Partials\Detail.cshtml:line 10
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCore.Views_Revenue_Index.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Index.cshtml:line 36
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 13:58:09 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: Manager.SharedLibs.Extensions.CustomSQLException: Failed to execute Revenue_GetAllUserName. Error: Invalid object name 'tbl_users'.
+   at Manager.Datalayer.Repositories.RpsUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Repositories\System\RpsUser.cs:line 214
+   at Manager.DataLayer.Stores.StoreUser.GetAllUserNameHasRevenueHistory() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Stores\System\StoreUser.cs:line 66
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 49 
+[28/06/2023 13:58:09 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object, String)
+   at AspNetCore.Views_Revenue_Partials_Detail.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Partials\Detail.cshtml:line 10
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCore.Views_Revenue_Index.ExecuteAsync() in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Views\Revenue\Index.cshtml:line 36
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 14:00:11 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 75 
+[28/06/2023 14:05:06 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:05:06 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:05:06 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:05:06 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:05:06 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:05:18 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 14:05:31 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 14:05:36 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 99 
+[28/06/2023 14:07:55 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 14:07:55 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:07:55 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:07:55 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:07:55 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:07:55 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:08:27 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 14:14:57 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:14:57 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:14:57 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:14:57 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:14:57 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:15:52 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 14:21:08 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:21:08 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:21:08 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:21:08 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:21:08 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:38:05 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 14:38:05 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:38:05 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:38:05 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:38:05 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:38:05 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:38:51 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?Id=0&Price=0&Coin=0&SourceType=10&CreatedDate=0001%2f01%2f01 0%3a00%3a00&TotalCount=0&ToDate=2023%2f06%2f29 14%3a38%3a08&PageIndex=0&PageSize=0&pagesize=5&currentpage=1 
+[28/06/2023 14:39:33 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:39:33 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:39:33 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:39:33 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:39:33 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:40:16 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?identity=Manager.WebApp.Models.RevenueDetailModel&pagesize=5&currentpage=1 
+[28/06/2023 14:44:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:44:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:44:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:44:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:44:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:44:48 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 14:45:46 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 14:45:46 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:45:46 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:45:46 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:45:46 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:45:46 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:46:20 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 14:47:05 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 14:49:34 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 14:50:40 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 14:50:40 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 14:50:40 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 14:50:40 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 14:50:40 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 14:53:36 ERR Manager.WebApp.Services.RevenueServices] Return code: UnsupportedMediaType, message: http://localhost:3600/api/revenue/gethistoryall?pagesize=5&currentpage=1 
+[28/06/2023 15:01:10 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 15:01:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 15:01:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 15:01:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 15:01:10 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 15:18:04 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 15:18:04 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 15:18:04 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 15:18:04 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 15:18:04 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 15:18:12 ERR Manager.WebApp.Controllers.UserController] Could not display User page because: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.UserController.Index(UserViewModel model) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\UserController.cs:line 57 
+[28/06/2023 15:23:05 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 15:23:05 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 15:23:05 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 15:23:05 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 15:23:05 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 15:38:27 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 15:38:27 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 15:38:27 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 15:38:27 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 15:38:27 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 15:38:27 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 15:38:34 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'Manager.DataLayer.Stores.IStoreCustomer' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at Manager.WebApp.Controllers.RevenueController..ctor(ILogger`1 logger) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 32
+   at lambda_method20(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 15:39:06 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 15:39:06 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 15:39:06 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 15:39:06 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 15:39:06 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 15:39:06 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 15:39:07 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: Manager.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetById. Error: Procedure or function 'Customer_GetById' expects parameter '@UserId', which was not supplied.
+   at Manager.Datalayer.Repositories.RpsCustomer.GetById(String id) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Repositories\Business\RpsCustomer.cs:line 438
+   at Manager.DataLayer.Stores.StoreCustomer.GetById(String id) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Stores\Business\StoreCustomer.cs:line 101
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 70 
+[28/06/2023 15:40:07 ERR Manager.WebApp.Controllers.RevenueController] Could not display Revenue page because: Manager.SharedLibs.Extensions.CustomSQLException: Failed to execute Customer_GetById. Error: Procedure or function 'Customer_GetById' expects parameter '@UserId', which was not supplied.
+   at Manager.Datalayer.Repositories.RpsCustomer.GetById(String id) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Repositories\Business\RpsCustomer.cs:line 438
+   at Manager.DataLayer.Stores.StoreCustomer.GetById(String id) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.Datalayer\Stores\Business\StoreCustomer.cs:line 101
+   at Manager.WebApp.Controllers.RevenueController.Index(ManageRevenueModel model, Int32 pagesize, Int32 currentpage) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\RevenueController.cs:line 70 
+[28/06/2023 15:40:52 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 15:40:52 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 15:40:52 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 15:40:52 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 15:40:52 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 15:41:07 ERR Manager.WebApp.Services.CustomerServices] Return code: NotFound, message: http://localhost:3600/api/customer/86 
+[28/06/2023 15:41:11 ERR Manager.WebApp.Services.CustomerServices] Return code: NotFound, message: http://localhost:3600/api/customer/87 
+[28/06/2023 15:41:25 ERR Manager.WebApp.Services.CustomerServices] Return code: NotFound, message: http://localhost:3600/api/customer/86 
+[28/06/2023 15:42:19 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 15:42:19 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 15:42:19 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 15:42:19 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 15:42:19 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 15:42:19 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 15:42:38 ERR Manager.WebApp.Services.CustomerServices] Return code: NotFound, message: http://localhost:3600/api/customer/87 
+[28/06/2023 15:48:30 ERR Manager.WebApp.Services.CustomerServices] Return code: 0, message:  
+[28/06/2023 15:55:15 ERR Manager.WebApp.Controllers.UserController] Could not display User page because: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.UserController.Index(UserViewModel model) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\UserController.cs:line 57 
+[28/06/2023 16:00:03 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 16:00:03 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 16:00:03 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 16:00:03 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 16:00:03 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 16:00:32 ERR Manager.WebApp.Controllers.UserController] Could not display User page because: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.UserController.Index(CustomerViewModel model) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\UserController.cs:line 57 
+[28/06/2023 16:00:54 ERR Manager.WebApp.Controllers.UserController] Could not display User page because: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.UserController.Index(CustomerViewModel model) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\UserController.cs:line 57 
+[28/06/2023 16:02:00 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 16:02:00 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 16:02:00 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 16:02:00 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 16:02:00 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 16:02:32 ERR Manager.WebApp.Controllers.UserController] Could not display User page because: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.UserController.Index(CustomerViewModel model) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\UserController.cs:line 57 
+[28/06/2023 16:03:16 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 16:03:16 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 16:03:16 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 16:03:16 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 16:03:16 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 16:03:25 ERR Manager.WebApp.Controllers.UserController] Could not display User page because: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.UserController.Index(CustomerViewModel model) in E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\Controllers\Business\UserController.cs:line 57 
+[28/06/2023 16:04:48 ERR Manager.WebApp.Services.CustomerServices] Return code: 0, message:  
+[28/06/2023 16:04:53 ERR Manager.WebApp.Services.CustomerServices] Return code: 0, message:  
+[28/06/2023 16:06:09 ERR Manager.WebApp.Services.CustomerServices] Return code: 0, message:  
+[28/06/2023 16:10:11 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 16:10:11 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 16:10:11 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 16:10:11 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 16:10:11 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 16:10:19 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.UserDetailModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CustomerDetailModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method290(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 16:10:48 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.UserDetailModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CustomerDetailModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method290(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 16:11:07 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.UserDetailModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CustomerDetailModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method290(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 16:11:14 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Manager.WebApp.Models.UserDetailModel', but this ViewDataDictionary instance requires a model item of type 'Manager.WebApp.Models.CustomerDetailModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method290(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.PartialViewResultExecutor.ExecuteAsync(ActionContext context, PartialViewResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[28/06/2023 16:12:22 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 16:12:22 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 16:12:22 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 16:12:22 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 16:12:22 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 16:46:40 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 16:46:40 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[28/06/2023 16:46:41 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 16:46:41 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 16:46:41 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 16:46:41 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 16:46:41 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 
+[28/06/2023 17:12:43 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[28/06/2023 17:12:43 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[28/06/2023 17:12:43 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[28/06/2023 17:12:43 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[28/06/2023 17:12:43 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp 

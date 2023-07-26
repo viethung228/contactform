@@ -93,36 +93,7 @@ namespace MainApi.Helpers
 
             return token;
         }
-        public static string GenerateAuthEmployeeJwtToken(IdentityEmployee info, string secretKey)
-        {
-            var token = string.Empty;
-            try
-            {
-                var dtNow = DateTime.UtcNow;
-                DateTime expDate = dtNow.AddDays(90);
-
-                var payload = new Dictionary<string, object>
-                {
-                    { "Id", info.Id},
-                    { "UserName", info.UserName},
-                    { "iat", dtNow.ToUnixTimestamp()},
-                    { "exp", expDate.ToUnixTimestamp() }
-                };
-
-                IJwtAlgorithm algorithm = new HMACSHA256Algorithm(); // symmetric
-                IJsonSerializer serializer = new JsonNetSerializer();
-                IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
-                IJwtEncoder encoder = new JwtEncoder(algorithm, serializer, urlEncoder);
-
-                token = encoder.Encode(payload, secretKey);
-            }
-            catch (Exception ex)
-            {
-                Log.ForContext<Utility>().Error("Token has invalid signature", ex.ToString());
-            }
-
-            return token;
-        }
+        
         public static bool ValidateJwtToken(string token, string secretKey)
         {
             try

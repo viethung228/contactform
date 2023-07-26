@@ -1,0 +1,37 @@
+[26/07/2023 09:33:45 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[26/07/2023 09:33:45 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[26/07/2023 09:33:45 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[26/07/2023 09:33:45 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[26/07/2023 09:33:45 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[26/07/2023 09:36:07 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[26/07/2023 09:36:07 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[26/07/2023 09:36:07 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[26/07/2023 09:36:07 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[26/07/2023 09:36:07 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[26/07/2023 09:36:07 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[26/07/2023 09:37:35 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[26/07/2023 09:37:35 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[26/07/2023 09:37:35 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[26/07/2023 09:37:35 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[26/07/2023 09:37:35 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[26/07/2023 09:47:00 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[26/07/2023 09:47:00 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[26/07/2023 09:47:00 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[26/07/2023 09:47:00 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[26/07/2023 09:47:00 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[26/07/2023 09:49:38 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[26/07/2023 09:49:38 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[26/07/2023 09:49:38 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[26/07/2023 09:49:38 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[26/07/2023 09:49:38 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[26/07/2023 09:53:17 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[26/07/2023 09:53:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[26/07/2023 09:53:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[26/07/2023 09:53:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[26/07/2023 09:53:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[26/07/2023 09:53:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[26/07/2023 09:57:47 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[26/07/2023 09:57:47 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[26/07/2023 09:57:47 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[26/07/2023 09:57:47 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[26/07/2023 09:57:47 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 

@@ -5,7 +5,9 @@
 @using MainApi.SharedLibs
 @model MainApi.Models.LoginViewModel
 
-@{ Layout = null; }
+@{
+    Layout = null;
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,51 +40,59 @@
     <!--end::Base Styles -->
     <link href="~/Content/Site.css" rel="stylesheet" asp-append-version="true">
     <style>
-        .login-error-state { border: 1px solid #f4516c!important;padding: 10px 0px 10px 0px;border-radius: 30px; }
-        .login-error-state ul { margin:0 }
-        @@media (max-width: 1024px){
+        .login-error-state {
+            border: 1px solid #f4516c !important;
+            padding: 10px 0px 10px 0px;
+            border-radius: 30px;
+        }
+
+            .login-error-state ul {
+                margin: 0
+            }
+
+        @@media (max-width: 1024px) {
             .m-header--fixed-mobile .m-topbar {
                 margin-top: 0;
                 top: 0px;
             }
         }
 
-        .ec-platforms-title{
+        .ec-platforms-title {
             width: 100%;
-            font-size:1rem;
+            font-size: 1rem;
             color: #06586e;
-            font-weight:bold;
-            margin-top:2rem;
+            font-weight: bold;
+            margin-top: 2rem;
             margin-bottom: 0.5rem;
-            text-align:center;
+            text-align: center;
         }
 
-        .ec-platforms-list{
-            width:100%;
+        .ec-platforms-list {
+            width: 100%;
         }
 
-        .ec-platforms{
+        .ec-platforms {
             padding: 0;
-            margin:0;
+            margin: 0;
             list-style: none;
             text-align: center;
         }
 
-        .ec-platforms-item{
-            display:inline-block;
-            margin-right:10px;
+        .ec-platforms-item {
+            display: inline-block;
+            margin-right: 10px;
         }
 
-        .ec-platforms-item img{
-            width:125px;
-        }
+            .ec-platforms-item img {
+                width: 125px;
+            }
 
         .ec-platforms-des {
-            float:left;
+            float: left;
             width: 100%;
             font-size: 1rem;
             color: #06586e;
-            margin-top: 2rem;            
+            margin-top: 2rem;
             text-align: center;
         }
     </style>
@@ -95,59 +105,60 @@
             var langList = LanguagesProvider.GetListLanguages();
             var currentLang = CultureInfo.CurrentCulture.ToString();
 
-                                                                                <div class="m-stack__item m-topbar__nav-wrapper">
-                                                                                    <ul class="m-topbar__nav m-nav m-nav--inline">
-                                                                                        @if (langList.HasData())
+            <div class="m-stack__item m-topbar__nav-wrapper">
+                <ul class="m-topbar__nav m-nav m-nav--inline">
+                    @if (langList.HasData())
                     {
                         var currentLangInfo = langList.FirstOrDefault(s => s.LanguageCultureName == currentLang);
 
                         if (currentLangInfo != null)
                         {
-                                                                                                <li class="m-nav__item m-nav__item--accent m-dropdown m-dropdown--large m-dropdown--arrow m-dropdown--align-center m-dropdown--mobile-full-width" m-dropdown-toggle="click" m-dropdown-persistent="1" aria-expanded="true">
-                                                                                                    <a href="#" class="m-nav__link m-dropdown__toggle">
-                                                                                                        <span class="m-nav__link-icon">
-                                                                                                            <span class="m-nav__link-icon-wrapper" title="@currentLangInfo.LanguageFullName">
-                                                                                                                <img class="image-lang" src="~/Content/images/flags/@(currentLangInfo.LanguageCultureName).png" />
-                                                                                                            </span>
-                                                                                                        </span>
-                                                                                                    </a>
-                                                                                                    <div class="m-dropdown__wrapper dropdown-custom">
-                                                                                                        <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
-                                                                                                        <div class="m-dropdown__inner">
-                                                                                                            <div class="m-dropdown__body">
-                                                                                                                <div class="m-dropdown__content">
-                                                                                                                    <ul class="m-menu__subnav">
+                            <li class="m-nav__item m-nav__item--accent m-dropdown m-dropdown--large m-dropdown--arrow m-dropdown--align-center m-dropdown--mobile-full-width" m-dropdown-toggle="click" m-dropdown-persistent="1" aria-expanded="true">
+                                <a href="#" class="m-nav__link m-dropdown__toggle">
+                                    <span class="m-nav__link-icon">
+                                        <span class="m-nav__link-icon-wrapper" title="@currentLangInfo.LanguageFullName">
+                                            <img class="image-lang" src="~/Content/images/flags/@(currentLangInfo.LanguageCultureName).png" />
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="m-dropdown__wrapper dropdown-custom">
+                                    <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
+                                    <div class="m-dropdown__inner">
+                                        <div class="m-dropdown__body">
+                                            <div class="m-dropdown__content">
+                                                <ul class="m-menu__subnav">
 
-                                                                                                                        @foreach (var item in langList)
+                                                    @foreach (var item in langList)
                                                     {
-                                                                                                                            <li class="m-menu__item @((currentLang == item.LanguageCultureName) ? "m-menu__item--active" : string.Empty)" aria-haspopup="true">
-                                                                                                                                <a href="~/home/changelanguage?lang=@item.LanguageCultureName" class="m-menu__link " style="display:flex">
-                                                                                                                                    <div class="m-menu__link-icon" style="width:30px">
-                                                                                                                                        <img class="image-lang" src="~/Content/images/flags/@(item.LanguageCultureName).png" />
-                                                                                                                                    </div>
-                                                                                                                                    <span class="m-menu__link-text" style="padding-left:10px">
-                                                                                                                                        @{
+                                                        <li class="m-menu__item @((currentLang == item.LanguageCultureName) ? "m-menu__item--active" : string.Empty)" aria-haspopup="true">
+                                                            <a href="~/home/changelanguage?lang=@item.LanguageCultureName" class="m-menu__link " style="display:flex">
+                                                                <div class="m-menu__link-icon" style="width:30px">
+                                                                    <img class="image-lang" src="~/Content/images/flags/@(item.LanguageCultureName).png" />
+                                                                </div>
+                                                                <span class="m-menu__link-text" style="padding-left:10px">
+                                                                    @{
                                                                         var array = item.LanguageCultureName.Split('-');
                                                                         if (array.Length == 2)
                                                                         {
-                                                                                                                                                                                                                    @array[1];
+                                                                            @array[1]
+                                                                            ;
                                                                         }
-                                                                                                                                        }
-                                                                                                                                    </span>
-                                                                                                                                </a>
-                                                                                                                            </li>
+                                                                    }
+                                                                </span>
+                                                            </a>
+                                                        </li>
                                                     }
 
-                                                                                                                    </ul>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                         }
-                    }                    
-                                                                                    </ul>
-                                                                                </div>
+                    }
+                </ul>
+            </div>
         }
     </div>
 
@@ -185,10 +196,10 @@
                                 else if (Model.State == "invalid_login")
                                 {
                                     @*<div class="m-login__account">
-                                        <a href="/Agency/ForgotPassword?email=@Model.Email" class="m-link m-link--light m-login__account-link">
-                                            <i class="fa fa-question-circle"></i> @ManagerResource.LB_FOR_GOT_PASSWORD
-                                        </a>
-                                    </div>*@
+                        <a href="/Agency/ForgotPassword?email=@Model.Email" class="m-link m-link--light m-login__account-link">
+                        <i class="fa fa-question-circle"></i> @ManagerResource.LB_FOR_GOT_PASSWORD
+                        </a>
+                        </div>*@
                                 }
                             }
 
@@ -213,8 +224,8 @@
                                         @ManagerResource.LB_FOR_GOT_PASSWORD ?
                                     </a>
                                     @*<a href="/Agency/ForgotPassword?email=@Model.Email" class="m-link m-link--light m-login__account-link">
-                        <i class="fa fa-question-circle"></i> @ManagerResource.LB_FOR_GOT_PASSWORD
-                    </a>*@
+                                <i class="fa fa-question-circle"></i> @ManagerResource.LB_FOR_GOT_PASSWORD
+                                </a>*@
                                 </div>
                             </div>
                             <div class="m-login__form-action mt10">
@@ -252,37 +263,37 @@
 
                     <div class="m-login__account">
                         @*<span class="m-login__account-msg">
-                            @ManagerResource.LB_DONT_HAVE_ACCOUNT_YET ?
+                        @ManagerResource.LB_DONT_HAVE_ACCOUNT_YET ?
                         </span>
                         &nbsp;&nbsp;*@
                         @*<a href="/Agency/Register" class="m-link m-link--light m-login__account-link">
-                            @ManagerResource.LB_REGISTER_NEW_ACCOUNT
+                        @ManagerResource.LB_REGISTER_NEW_ACCOUNT
                         </a>*@
                     </div>
                 </div>
 
                 @*<div class="ec-platforms-container">
-                    <div class="ec-platforms-title">
-                        Our Supported Platforms
-                    </div>
+                <div class="ec-platforms-title">
+                Our Supported Platforms
+                </div>
 
-                    <div class ="ec-platforms-list">
-                        <ul class="ec-platforms">
-                            <li class="ec-platforms-item">
-                                <img src="~/Content/images/partners/ebay.png" />
-                            </li>
-                            <li class="ec-platforms-item">
-                                <img src="~/Content/images/partners/amazon.png" />
-                            </li>
-                            <li class="ec-platforms-item">
-                                <img src="~/Content/images/partners/etsy.png" />
-                            </li>
-                        </ul>
-                    </div>
+                <div class ="ec-platforms-list">
+                <ul class="ec-platforms">
+                <li class="ec-platforms-item">
+                <img src="~/Content/images/partners/ebay.png" />
+                </li>
+                <li class="ec-platforms-item">
+                <img src="~/Content/images/partners/amazon.png" />
+                </li>
+                <li class="ec-platforms-item">
+                <img src="~/Content/images/partners/etsy.png" />
+                </li>
+                </ul>
+                </div>
 
-                    <div class="ec-platforms-des">
-                        The term 'Etsy' is a trademark of Etsy, Inc. This application uses the Etsy API but is not endorsed or certificated by Etsy, Inc.
-                    </div>
+                <div class="ec-platforms-des">
+                The term 'Etsy' is a trademark of Etsy, Inc. This application uses the Etsy API but is not endorsed or certificated by Etsy, Inc.
+                </div>
                 </div>*@
             </div>
         </div>

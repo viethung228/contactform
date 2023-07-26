@@ -1,0 +1,187 @@
+﻿@using MainApi.DataLayer.Entities;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers
+@using Manager.SharedLibs
+@model Manager.WebApp.Models.ManageContactFormModel
+
+@{
+    ViewBag.Title = "ContactForm manage";
+
+}
+
+@await Html.PartialAsync("_Notifications")
+
+@await Html.PartialAsync("../Widgets/Modals/_DefaultModal")
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .pointer:hover {
+        cursor: pointer;
+        background-color: brown;
+    }
+</style>
+<div class="m-portlet m-portlet--collapse" m-portlet="true" id="FormSearchTool">
+    <div class="m-portlet__head">
+        <div class="m-portlet__head-caption">
+            <div class="m-portlet__head-title">
+                <span class="m-portlet__head-icon">
+                    <i class="fa fa-search"></i>
+                </span>
+                <h3 class="m-portlet__head-text">
+                    @ManagerResource.LB_SEARCH
+                </h3>
+            </div>
+        </div>
+        <div class="m-portlet__head-tools">
+            <ul class="m-portlet__nav">
+                <li class="m-portlet__nav-item">
+                    <a href="javascript:;" m-portlet-tool="toggle" class="m-portlet__nav-link m-portlet__nav-link--icon">
+                        <i class="la la-angle-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    @await Html.PartialAsync("Partials/_SearchForm", Model)
+</div>
+
+@Html.Partial("Partials/_TableContactForm", Model)
+
+<div hidden id="newtempEmExportCSV"></div>
+<div hidden id="tempExportCSV"></div>
+
+@functions {
+    private async Task RenderPaging()
+    {
+        <div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded" id="paginationContactForm">
+            <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+                @if (Model.WasOverRecordsInPage())
+                {
+                    var html = HtmlHelpers.BootstrapPager(Model.Page, index => Url.Action("Index", "ContactForm",
+                    new
+                    {
+                        Page = index,
+                        SearchExec = "Y",
+                        Keyword = Model.Keyword,
+                    }),
+                    Model.TotalCount, pageSize: Model.PageSize, numberOfLinks: 10);
+
+                    await Task.FromResult(html);
+
+                    @html
+                }
+
+                @if (Model.TotalCount > 0)
+                {
+                    <div class="m-datatable__pager-info">
+                        <span class="m-datatable__pager-detail">
+                            @ManagerResource.LB_RECORDS_ALL @Model.TotalCount @ManagerResource.LB_RECORDS @Model.StartCount() 〜 @Model.EndCount(Model.SearchResults.Count())
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
+@section PageInlineScripts{
+    <script src="~/Scripts/ContactForm/contactform.js"></script>
+    <script>
+        function tableToCSV($table, fileName) {
+            // Variable to store the final csv data
+            var csv_data = [];
+
+            // Get each row data
+            var rows = $table.find("tr:has(td),tr:has(th)");
+            for (let i = 0; i < rows.length; i++) {
+                var cols = rows[i].querySelectorAll("td,th");
+
+                var csvrow = [];
+                for (let j = 0; j < cols.length; j++) {
+                    csvrow.push(cols[j].innerHTML);
+                }
+
+                csv_data.push(csvrow.join(","));
+            }
+
+            csv_data = csv_data.join("\n");
+            downloadCSVFile(csv_data, fileName);
+        }
+        function downloadCSVFile(csv_data, fileName) {
+            const bom = new Uint8Array([0xef, 0xbb, 0xbf]);
+            CSVFile = new Blob([bom, csv_data], {
+                type: "text/csv",
+            });
+
+            var temp_link = document.createElement("a");
+
+            // Download csv file
+            temp_link.download = fileName + ".csv";
+            var url = window.URL.createObjectURL(CSVFile);
+            temp_link.href = url;
+
+            // This link should not be displayed
+            temp_link.style.display = "none";
+            document.body.appendChild(temp_link);
+
+            // Automatically click the link to
+            // trigger download
+            temp_link.click();
+            document.body.removeChild(temp_link);
+        }
+        function ExportContactFormByListFormIdCSV(listFormId) {
+            $.aPost(
+                "ContactForm/ExportCSVByListFormId",
+                { listFormId: listFormId },
+                function (result) {
+                    if (result.success) {
+                        var fileName = "_ListContactForm";
+                        let parser = new DOMParser();
+                        const doc = parser.parseFromString(result.html, "text/html");
+                        $("#newtempEmExportCSV").html(doc.body.innerHTML);
+                        tableToCSV($("#newtempEmExportCSV"), fileName);
+                    } else {
+                        $.showErrorMessage(
+                            "Download CSV File",
+                            "Download CSV File Fail!",
+                            null
+                        );
+                    }
+                }
+            );
+        }
+        function ExportEmContactFormByFormIdCSV(formId) {
+            var values = {
+                formId: formId,
+            };
+            //console.log(values);
+            $.aGet("ContactForm/ExportCSVByFormId", values, function (result) {
+                if (result.success) {
+                    var fileName = "_ContactForm";
+                    let parser = new DOMParser();
+                    const doc = parser.parseFromString(result.html, "text/html");
+                    $("#newtempEmExportCSV").html(doc.body.innerHTML);
+                    tableToCSV($("#newtempEmExportCSV"), fileName);
+                } else {
+                    $.showErrorMessage("Download CSV File", "Download CSV File Fail!", null);
+                }
+            });
+        }
+        function ExportContactFormByCompanyNameCSV(companyName) {
+            var values = {
+                companyName: companyName,
+            };
+            //console.log(values);
+            $.aGet("ContactForm/ExportCSVByCompanyName", values, function (result) {
+                if (result.success) {
+                    var fileName = companyName + "_ContactForm";
+                    let parser = new DOMParser();
+                    const doc = parser.parseFromString(result.html, "text/html");
+                    $("#tempExportCSV").html(doc.body.innerHTML);
+                    tableToCSV($("#tempExportCSV"), fileName);
+                } else {
+                    $.showErrorMessage("Download CSV File", "Download CSV File Fail!", null);
+                }
+            });
+        }
+    </script>
+}

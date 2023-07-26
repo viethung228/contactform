@@ -148,7 +148,6 @@ namespace MainApi.Helpers
         public static string LinkSettings = CachePrefix + "LINKSETTINGS_";
         public static string Adss = CachePrefix + "ADSS_";
         public static string Users = CachePrefix + "USERS_";
-        public static string Employees = CachePrefix + "EMPLOYEES_";
         public static string ProductProperties = CachePrefix + "PRODUCTS_PROPERTY_";
         public static string Volumes = CachePrefix + "VOLUMES_";
         public static string Brands = CachePrefix + "BRANDS_";

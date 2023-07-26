@@ -1,0 +1,389 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Manager.WebApp
+build_property.RootNamespace = Manager.WebApp
+build_property.ProjectDir = E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = E:\Project_clone\ogatore\SourceCode\Manager\Manager.WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/AccessRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Access/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Access/_DeleteAccessInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXF9EZWxldGVBY2Nlc3NJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Access/_DeleteLangInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXF9EZWxldGVMYW5nSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Access/_Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXF9EZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Access/_UpdateLang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXF9VcGRhdGVMYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Account/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Account/Lockout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Account/_UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfVXBkYXRlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Authorize/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXplXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/EmailServer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXJ2ZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/EmailServer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXJ2ZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/EmailServer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXJ2ZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/EmailServer/Partials/_PopupSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXJ2ZXJcUGFydGlhbHNcX1BvcHVwU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/EmailServer/_PopupDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXJ2ZXJcX1BvcHVwRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/EmailServer/_UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxTZXJ2ZXJcX1VwZGF0ZUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Error/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcNDA0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Error/AccountLocked.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcQWNjb3VudExvY2tlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Error/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Error/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Error/PermissionDennied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcUGVybWlzc2lvbkRlbm5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Error/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Function/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Function/_DeleteFunctionInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cX0RlbGV0ZUZ1bmN0aW9uSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Function/_DeleteLangInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cX0RlbGV0ZUxhbmdJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Function/_Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cX0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Function/_UpdateLang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cX1VwZGF0ZUxhbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/LinkSetting/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1NldHRpbmdcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/LinkSetting/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1NldHRpbmdcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/LinkSetting/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1NldHRpbmdcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/LinkSetting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1NldHRpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/LinkSetting/Partials/_SearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1NldHRpbmdcUGFydGlhbHNcX1NlYXJjaEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/LinkSetting/Partials/_UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1NldHRpbmdcUGFydGlhbHNcX1VwZGF0ZUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Menu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Menu/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxfQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Menu/_DeleteInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxfRGVsZXRlSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Menu/_DeleteLangInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxfRGVsZXRlTGFuZ0luZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Menu/_Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxfRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Menu/_Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxfVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Menu/_UpdateLang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxfVXBkYXRlTGFuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/MyAccount/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/MyAccount/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Notification/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Notification/_PopupDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXF9Qb3B1cERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Notification/_SearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXF9TZWFyY2hGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Operation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Operation/_DeleteAccessInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0aW9uXF9EZWxldGVBY2Nlc3NJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Operation/_DeleteLangInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0aW9uXF9EZWxldGVMYW5nSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Operation/_Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0aW9uXF9EZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Operation/_UpdateLang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0aW9uXF9VcGRhdGVMYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Revenue/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2ZW51ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/RolesAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/RolesAdmin/_DeleteRoleInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxfRGVsZXRlUm9sZUluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Settings/Email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ3NcRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Settings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Settings/_EmailSettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ3NcX0VtYWlsU2V0dGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Shared/_LeftSideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MZWZ0U2lkZUJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Shared/_NavigationBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZpZ2F0aW9uQmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Shared/_Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Shared/_SubHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdWJIZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/Partials/_PopupSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxQYXJ0aWFsc1xfUG9wdXBTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/_ConfirmResetPwd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxfQ29uZmlybVJlc2V0UHdkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/_DeleteUserInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxfRGVsZXRlVXNlckluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/_SearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxfU2VhcmNoRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/UsersAdmin/_UserInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxfVXNlckluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/User/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/User/Partials/_PopupDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXJ0aWFsc1xfUG9wdXBEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/User/Partials/_SearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXJ0aWFsc1xfU2VhcmNoRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/User/Partials/_UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXJ0aWFsc1xfVXBkYXRlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Area/Notification/_NotificationList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xBcmVhXE5vdGlmaWNhdGlvblxfTm90aWZpY2F0aW9uTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Items/Master/Option/_CityList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xJdGVtc1xNYXN0ZXJcT3B0aW9uXF9DaXR5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Items/Master/Option/_PrefectureList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xJdGVtc1xNYXN0ZXJcT3B0aW9uXF9QcmVmZWN0dXJlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Items/Master/Option/_RegionList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xJdGVtc1xNYXN0ZXJcT3B0aW9uXF9SZWdpb25MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Items/Notification/_NotificationItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xJdGVtc1xOb3RpZmljYXRpb25cX05vdGlmaWNhdGlvbkl0ZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Modals/_DefaultModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xNb2RhbHNcX0RlZmF1bHRNb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Modals/_HugeModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xNb2RhbHNcX0h1Z2VNb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Modals/_LargeModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xNb2RhbHNcX0xhcmdlTW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/Modals/_PlayerModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xNb2RhbHNcX1BsYXllck1vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/_ElementLoading.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xfRWxlbWVudExvYWRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/Widgets/_Status.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1xfU3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_clone/ogatore/SourceCode/Manager/Manager.WebApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

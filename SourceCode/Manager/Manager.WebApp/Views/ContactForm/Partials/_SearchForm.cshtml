@@ -1,0 +1,43 @@
+﻿@using Manager.WebApp.Helpers;
+@using Manager.WebApp.Resources
+@model Manager.WebApp.Models.ManageContactFormModel
+@{
+    var listCompany = ViewBag.listCompany as List<string>;
+    List<SelectListItem> item = listCompany.ConvertAll(a =>
+                {
+                    return new SelectListItem()
+                            {
+                                Text = a.ToString(),
+                                Value = a.ToString(),
+                                Selected = false
+                            };
+                });
+    item.Add(new SelectListItem()
+            {
+                Text = "All",
+                Value = "All",
+                Selected = false
+            });
+}
+<form action="/ContactForm" method="get" class="m-form m-form--fit" id="frmSearch">
+    @Html.HiddenFor(m => m.SearchExec)
+
+    <div class="m-portlet__body">
+        <div class="form-group row">
+            <div class="col-md-4">
+                <label>@ManagerResource.LB_INPUT_KEYWORD_TO_SEARCH</label>
+                <input class="form-control form-control-sm m-input" name="Keyword" id="Keyword" type="text" value="@Model.Keyword">
+            </div>
+            <div class="col-md-2">
+                <label>@ManagerResource.LB_COMPANY</label>
+                @Html.DropDownListFor(m => m.companyNameSelected, item.DistinctBy(x=>x.Value), new {@class="form-control form-control-sm m-input selectpicker", @id="FieldType"})
+            </div>
+
+            <div class="col-md-2 pt-4 mt-2">
+                <button tpye="submit" class="btn btn-info btn-sm m-btn--icon m-btn--icon">
+                    <i class="fa fa-search"></i> @ManagerResource.LB_SEARCH
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

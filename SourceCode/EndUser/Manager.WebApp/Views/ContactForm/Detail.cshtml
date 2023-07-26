@@ -1,0 +1,1334 @@
+﻿@using Manager.WebApp.Helpers;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Models;
+@using System.Reflection;
+@using System.ComponentModel;
+@model Manager.WebApp.Models.ContactFormFullDetailModel
+@{
+    ViewBag.Title = "Contact form";
+    ViewBag.HideSubHeader = true;
+    ViewBag.ParentController = "Company";
+    ViewBag.ParentAction = "Index";
+
+    while (Model.Dependents.Count < 4)
+    {
+        Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
+    }
+
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .m-body .m-content {
+        padding: 30px;
+    }
+
+    .tabset > input[type="radio"] {
+        position: absolute;
+        left: -200vw;
+    }
+
+    .tabset .tab-panel {
+        display: none;
+    }
+
+    .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+    .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+    .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+    .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+    .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+    .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+        display: block;
+    }
+
+    /*
+                                                                                                                                                                                                                                 Styling
+                                                                                                                                                                                                                                */
+    .tabset > label {
+        position: relative;
+        display: inline-block;
+        padding: 15px 15px 10px;
+        /*border: 1px solid transparent;*/
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+        .tabset > label:focus {
+            position: relative;
+            display: inline-block;
+            padding: 15px 15px 10px;
+            /*border: 1px solid transparent;*/
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+    input:focus-visible + label {
+        outline: 1px solid rgba(0,102,204,1);
+        border-radius: 3px;
+    }
+
+    .tabset > label:hover,
+    .tabset > input:focus + label,
+    .tabset > input:checked + label {
+        color: #06586e;
+        border-bottom: 1px solid #06586e;
+    }
+
+        .tabset > label:hover::after,
+        .tabset > input:focus + label::after,
+        .tabset > input:checked + label::after {
+            background: #06586e;
+            border-bottom: 1px solid #06586e;
+        }
+
+    .tabset > input:checked + label {
+        border-color: #06586e;
+    }
+
+    label {
+        margin-bottom: -1px !important;
+    }
+
+    .tab-panel {
+        padding: 30px 0;
+        border-top: 1px solid #ccc;
+    }
+
+    /*
+                                                                                                                                                                                                                                 Demo purposes only
+                                                                                                                                                                                                                                */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .tabset {
+        max-width: 65em;
+    }
+</style>
+
+<div class="d-flex justify-content-center align-items-center">
+    @using (Html.BeginForm("EditSubmitContactForm", "ContactForm", FormMethod.Post, new { @onsubmit = "return validateMyForm();", @class = "m-form m-form--fit", role = "form", id = "frmContactForm", EncType = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(m => m.ContactForm.OwnerId)
+        @Html.HiddenFor(m => m.ContactForm.FormId)
+        @Html.HiddenFor(m => m.Allowance.FormId)
+        @Html.HiddenFor(m => m.Allowance.AllowanceId)
+        @Html.HiddenFor(m => m.AllowanceDetail.Id)
+        @Html.HiddenFor(m => m.AllowanceDetail.AllowanceId)
+        @for (int i = 0; i < Model.Dependents.Count; i++)
+        {
+            @Html.HiddenFor(m => m.Dependents[i].DependentId)
+        }
+        <div class="container-sm">
+            <div class="text-center">
+                <h1 style="line-height: 27pt;text-align: center;">入 社 連 絡 票</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div style="line-height: 27pt;text-decoration:underline;text-underline-offset: 5px; padding-left: 10px;">
+                        会社名：
+                        @Html.TextBoxFor(m => m.ContactForm.CompanyName, new { @class = "input-border-none", @required="",@style="text-decoration:underline;text-underline-offset: 5px;" })
+                        @Html.ValidationMessageFor(m => m.ContactForm.CompanyName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div style="line-height: 27pt;text-align: right;padding-left: 10px;">
+                        <div class="input-group radio-custom-label-title-wrapper-date">
+                            <span id="createdDate">記入日 </span>
+                            @Html.HiddenFor(m=>m.ContactForm.CreatedDate)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <table class="table-responsive" cellspacing="0">
+                        <tr style="height:18pt">
+                            <td class="td-furigana hightlight-color hightlight-color">
+                                <p class="s2 mt-3" style="text-align: center;">
+                                    フリガナ
+                                </p>
+                            </td>
+                            <td class="td-input" colspan="8">
+                                @Html.TextBoxFor(m => m.ContactForm.Furigana, new { @class = "input-border-none", @required="",@style="width: 100%; height: 40px;",@placeholder="エトセトラ" })
+                                @Html.ValidationMessageFor(m => m.ContactForm.Furigana, "", new { @class = "text-danger" })
+                                @*<input class="input-border-none" type="text" name="" id="" placeholder="サトウ ●●"
+                            style="width: 100%; height: 40px;">*@
+                            </td>
+                            <td class="td-first-title hightlight-color">
+                                <p class="s2 mt-2" style="text-align: center;">
+                                    電話番号
+                                </p>
+                            </td>
+                            <td class="td-input" colspan="10">
+                                @Html.TextBoxFor(m => m.ContactForm.PhoneNumber, new { @class = "input-border-none", @required="",@style="width: 100%; height: 40px;",@placeholder="エトセトラ" })
+                                @Html.ValidationMessageFor(m => m.ContactForm.PhoneNumber, "", new { @class = "text-danger" })
+                            </td>
+                        </tr>
+                        <tr style="height:18pt">
+                            <td class="td-medium-first-title hightlight-color" rowspan="2">
+                                <p class="s2 mt-4" style="text-align: center;">氏 名</p>
+                            </td>
+                            <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="8" rowspan="2">
+                                @Html.TextBoxFor(m => m.ContactForm.FullName, new { @class = "mt-2 mb-2 input-border-none", @required="",@style="width: 100%; height: 40px;",@placeholder="エトセトラ" })
+                                @Html.ValidationMessageFor(m => m.ContactForm.FullName, "", new { @class = "text-danger" })
+                                <div class="input-group radio-custom-label-gender-wrapper">
+                                    @Html.RadioButtonFor(m => m.ContactForm.Gender,"1", new {@id="name-gender-pickup-1",@class = "radio-custom radio-custom-gender input-group-field",@hidden=""})
+                                    @Html.LabelFor(m => m.ContactForm.Gender, "男", new { @class = "radio-custom-label radio-custom-label-gender",@for="name-gender-pickup-1"})
+                                    <div>・</div>
+                                    @Html.RadioButtonFor(m => m.ContactForm.Gender,"0", new {@id="name-gender-pickup-2",@class = "radio-custom radio-custom-gender input-group-field",@hidden=""})
+                                    @Html.LabelFor(m => m.ContactForm.Gender, "女", new { @class = "radio-custom-label radio-custom-label-gender",@for="name-gender-pickup-2"})
+                                </div>
+                            </td>
+                            <td class="td-first-title hightlight-color">
+                                <p class="s2" style="padding-left: 6pt;line-height: 17pt;text-align: left;">
+                                    社員区分
+                                </p>
+                            </td>
+                            <td class="td-input" colspan="10">
+                                <div class="input-group radio-custom-label-gender-wrapper-employee">
+                                    @Html.RadioButton("ContactForm.EmployeeClassification","役員",true,new {@id="employee-pickup-1",@class = "radio-custom radio-custom-gender input-group-field",@hidden=""})
+                                    @*@Html.RadioButtonFor(m => m.ContactForm.EmployeeClassification,"役員", new {@id="employee-pickup-1",@class = "radio-custom radio-custom-gender input-group-field",@hidden=""})*@
+                                    @Html.LabelFor(m => m.ContactForm.EmployeeClassification, "役員", new { @class = "radio-custom-label radio-custom-label-employee",@for="employee-pickup-1"})
+                                    <div>・</div>
+                                    @Html.RadioButtonFor(m => m.ContactForm.EmployeeClassification,"正社員", new {@id="employee-pickup-2",@class = "radio-custom radio-custom-gender input-group-field",@hidden=""})
+                                    @Html.LabelFor(m => m.ContactForm.EmployeeClassification, "正社員", new { @class = "radio-custom-label radio-custom-label-employee",@for="employee-pickup-2"})
+                                    <div>・</div>
+                                    @Html.RadioButtonFor(m => m.ContactForm.EmployeeClassification,"契約社員", new {@id="employee-pickup-3",@class = "radio-custom radio-custom-gender input-group-field",@hidden=""})
+                                    @Html.LabelFor(m => m.ContactForm.EmployeeClassification, "契約社員", new { @class = "radio-custom-label radio-custom-label-employee",@for="employee-pickup-3"})
+                                    <div>・</div>
+                                    @Html.RadioButtonFor(m => m.ContactForm.EmployeeClassification,"ﾊﾟｰﾄﾀｲﾏｰ", new {@id="employee-pickup-4",@class = "radio-custom radio-custom-gender input-group-field",@hidden=""})
+                                    @Html.LabelFor(m => m.ContactForm.EmployeeClassification, "ﾊﾟｰﾄﾀｲﾏｰ", new { @class = "radio-custom-label radio-custom-label-employee",@for="employee-pickup-4"})
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="height:26pt">
+                            <td class="td-first-title hightlight-color">
+                                <p class="s9" style="padding-left: 7pt;line-height: 14pt;text-align: left;">
+                                    所属部署 支店等
+                                </p>
+                            </td>
+                            <td class="td-input" colspan="10">
+                                @Html.TextBoxFor(m => m.ContactForm.DepartmentName, new { @class = "input-border-none", @required="",@style="width: 100%; height: 40px;",@placeholder="エトセトラ" })
+                                @Html.ValidationMessageFor(m => m.ContactForm.DepartmentName, "", new { @class = "text-danger" })
+                            </td>
+                        </tr>
+                        <tr style="height:22pt">
+                            <td class="td-second-title hightlight-color">
+                                <p class="s2" style="padding-top: 1pt;padding-left: 13pt;line-height: 20pt;text-align: left;">
+                                    生年月日
+                                </p>
+                            </td>
+                            <td class="td-input" colspan="8">
+                                @Html.HiddenFor(m=>m.ContactForm.DateOfBirth)
+                                <div class="input-group radio-custom-label-gender-wrapper-date">
+                                    <input id="birth-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                           name="birth-radio-group-1" type="radio" value="平" hidden>
+                                    <label for="birth-pickup-1" class="radio-custom-label radio-custom-label-gender">
+                                        平
+                                    </label>
+                                    <div>・</div>
+                                    <input id="birth-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                           name="birth-radio-group-1" type="radio" value="昭" hidden>
+                                    <label for="birth-pickup-2" class="radio-custom-label radio-custom-label-gender">
+                                        昭
+                                    </label>
+                                    <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id="Birthday-Year"
+                                           style="width: 10%;" required>
+                                    <span>年</span>
+                                    <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id="Birthday-Month"
+                                           style="width: 10%;" required>
+                                    <span>月</span>
+                                    <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id="Birthday-Day"
+                                           style="width: 10%;" required>
+                                    <span>日</span>
+                                </div>
+                            </td>
+                            <td class="td-first-title hightlight-color">
+                                <p class="s2" style="padding-top: 1pt;padding-left: 10pt;line-height: 20pt;text-align: left;">
+                                    入 社 日
+                                </p>
+                            </td>
+                            <td class="td-input" colspan="10">
+                                @Html.HiddenFor(m=>m.ContactForm.DateOfJoining)
+                                <div class="input-group radio-custom-label-gender-wrapper-date">
+                                    <span>令和</span>
+                                    <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id="Joining-Year"
+                                           style="width: 10%;">
+                                    <span>年</span>
+                                    <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id="Joining-Month"
+                                           style="width: 10%;">
+                                    <span>月</span>
+                                    <input class="mt-2 mb-2 ml-2 input-center input-border-none" type="number" name="" id="Joining-Day"
+                                           style="width: 10%;">
+                                    <span>日</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="height:20pt">
+                            <td class="td-furigana hightlight-color">
+                                <p class="s9" style="padding-left: 14pt;line-height: 19pt;text-align: left;">
+                                    フリガナ
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
+                                colspan="19">
+                                @Html.TextBoxFor(m => m.ContactForm.Furigana2, new { @class = "input-border-none", @required="",@style="width: 100%;",@placeholder="エトセトラ" })
+                                @Html.ValidationMessageFor(m => m.ContactForm.Furigana2, "", new { @class = "text-danger" })
+                            </td>
+                        </tr>
+                        <tr style="height:17pt">
+                            <td class="td-medium-first-title hightlight-color" rowspan="3">
+
+                                <p class="s2 mt-4" style="text-align: center;">住 所</p>
+                            </td>
+                            @Html.HiddenFor(m=>m.ContactForm.Address)
+                            <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
+                                colspan="19">
+                                <p class="s6" style="line-height: 13pt;text-align: left;">
+                                    〒<input class="s5 input-border-none address_contactform"
+                                            style="padding-left: 4pt;line-height: 22pt;text-align: left;width: 50%;" type="text" name="" id=""
+                                            placeholder="...">
+                                    <span style="float: right;line-height: 22pt; color: red;">※フリガナ・郵便番号を必ずご記入ください</span>
+                            </td>
+                        </tr>
+                        <tr style="height:14pt">
+                            <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
+                                colspan="19">
+                                <input class="s5 input-border-none address_contactform"
+                                       style="padding-left: 4pt;line-height: 22pt;text-align: left;width: 100%;" type="text" name="" id=""
+                                       placeholder="...">
+                            </td>
+                        </tr>
+                        <tr style="height:16pt">
+                            <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="19">
+                                <p class="s11" style="padding-left: 4pt;line-height: 22pt;text-align: left;">
+                                    建物名等： <input class="s5 input-border-none address_contactform"
+                                                 style="padding-left: 4pt;line-height: 16pt;text-align: left;width: 80%;" type="text" name="" id=""
+                                                 placeholder="...">
+                                </p>
+
+                            </td>
+                        </tr>
+                        <tr style="height:15pt">
+                            <td class="td-second-title hightlight-color">
+                                <p class="s9" style="padding-left: 14pt;line-height: 14pt;text-align: left;">
+                                    交通手段
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="19">
+                                <div class="input-group radio-custom-label-gender-wrapper-employee">
+                                    @Html.HiddenFor(m=>m.ContactForm.Transportation)
+                                    <input id="vehicle-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                           name="vehicle-radio-group-2" type="radio" value="自家用車" hidden>
+                                    <label for="vehicle-pickup-1" class="radio-custom-label radio-custom-label-employee">
+                                        自家用車
+                                    </label>
+                                    <div>・</div>
+                                    <input id="vehicle-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                           name="vehicle-radio-group-2" type="radio" value="公共交通機関" hidden>
+                                    <label for="vehicle-pickup-2" class="radio-custom-label radio-custom-label-employee">
+                                        公共交通機関
+                                    </label>
+                                    <div>・</div>
+                                    <input id="vehicle-pickup-3" class="radio-custom radio-custom-gender input-group-field"
+                                           name="vehicle-radio-group-2" type="radio" value="自転車" hidden>
+                                    <label for="vehicle-pickup-3" class="radio-custom-label radio-custom-label-employee">
+                                        自転車
+                                    </label>
+                                    <div>・</div>
+                                    <input id="vehicle-pickup-4" class="radio-custom radio-custom-gender input-group-field"
+                                           name="vehicle-radio-group-2" type="radio" value="徒歩" hidden>
+                                    <label for="vehicle-pickup-4" class="radio-custom-label radio-custom-label-employee">
+                                        徒歩
+                                    </label>
+                                    <div>・</div>
+                                    <input id="vehicle-pickup-5" class="radio-custom radio-custom-gender input-group-field"
+                                           name="vehicle-radio-group-2" type="radio" value="その他" hidden>
+                                    <label for="vehicle-pickup-5" class="radio-custom-label radio-custom-label-employee">
+                                        その他 &nbsp
+                                    </label>
+                                    (
+                                    <input class="mt-2 input-center ml-2 input-border-none mb-1" type="text" name="" id="OtherVehicle"
+                                           style="width: 35%;font-size: 0.75rem;text-align: left;">
+                                    )
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="height:37pt">
+                            <td class="td-second-title hightlight-color">
+                                <p class="s9 mt-3" style="text-align: center;">
+                                    基礎年金番号
+                                </p>
+                            </td>
+                            <td class="general-border"
+                                style="padding:5pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt"
+                                colspan="5">
+                                @Html.HiddenFor(m=>m.ContactForm.NenkinNumber)
+                                <input class="mt-2 input-center ml-2 contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 25%;height: 35px;">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 25%;margin-left: -10px;height: 35px;">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 25%;margin-left: -10px;height: 35px;">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 25%;margin-left: -10px;height: 35px;">
+                                <br />
+
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E;width:10px;">
+                                <p class="s12" style="padding: 6pt;text-align: left;">
+                                    —
+                                </p>
+                            </td>
+                            <td class="" style="width:10px;">
+                                <p style="text-align: left;">
+                                    <br />
+                                </p>
+                            </td>
+                            <td class="general-border"
+                                style="padding:5pt;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="6">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactnenkinnumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <br />
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="6">
+                                <p class="s13" style="padding-top: 2pt;padding-left: 5pt;line-height: 16pt;text-align: left;">
+                                    前職・会社名
+                                </p>
+                                <p class="s13" style="padding-left: 5pt;line-height: 16pt;text-align: left; color: red;">
+                                    ※<span class="s9">雇用保険番号が不明な場合</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:16pt">
+                            <td class="td-second-title hightlight-color" rowspan="2">
+                                <p class="s9" style="line-height: 14pt;text-align: center;">
+                                    雇用保険  被 保 険 者 番 号
+                                </p>
+                            </td>
+                            @Html.HiddenFor(m=>m.ContactForm.Insurance)
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E"
+                                colspan="4" rowspan="2">
+                                <input class="ml-2 mt-2 mb-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 23%;height: 35px;">
+                                <input class="mt-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 23%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 23%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 23%;height: 35px;margin-left: -10px;">
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E"
+                                rowspan="2">
+                                <p class="s12" style="padding: 6pt;text-align: left;">
+                                    —
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E"
+                                colspan="6" rowspan="2">
+                                <input class="ml-2 mt-2 mb-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;">
+                                <input class="mt-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                                <input class="mt-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 16%;height: 35px;margin-left: -10px;">
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:dotted;border-right-width:1pt;border-right-color:#7E7E7E"
+                                rowspan="2">
+                                <p class="s12" style="padding: 6pt;text-align: left;">
+                                    —
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:dotted;border-left-width:1pt;border-left-color:#7E7E7E;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                rowspan="2">
+                                <input class="ml-2 mt-2 mb-2 input-center contactinsurancenumber" type="number" name="" id=""
+                                       style="width: 60%;height: 35px;">
+                            </td>
+                            @Html.HiddenFor(m=>m.ContactForm.PreviousJob)
+                            <td style="border-left-style:solid;border-left-width:1pt">
+                                <p class="s2" style="padding-left: 6pt;line-height: 15pt;text-align: left;">
+                                    1
+                                </p>
+                            </td>
+                            <td style="border-right-style:solid;border-right-width:2pt" colspan="5">
+                                <textarea class="input-border-none previousJob ml-2" placeholder="..." style="height:30px;"></textarea>
+
+                            </td>
+
+                        </tr>
+                        <tr style="height:15pt">
+                            <td style="border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:2pt;">
+                                <p class="s2" style="padding-left: 6pt;line-height: 14pt;text-align: left;">
+                                    2
+                                </p>
+                            </td>
+                            <td style="border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="5">
+                                <textarea class="input-border-none previousJob ml-2" placeholder="..." style="height:30px;"></textarea>
+
+                            </td>
+
+                        </tr>
+                    </table>
+                    <br>
+
+                    <table class="table-responsive" cellspacing="0">
+                        <tr style="height:18pt">
+                            <td class="hightlight-color"
+                                style="width:6%;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                rowspan="4">
+
+                                <p class="s2 mt-5" style="text-align: center;">給 与</p>
+                            </td>
+                            <td style="width:14%;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                <p class="s2" style="padding-left: 10pt;line-height: 16pt;text-align: left;">
+                                    基 本 給
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt" colspan="4">
+                                <div class="input-group" style="width: 100%; float: left;">
+                                    @Html.RadioButtonFor(m => m.Allowance.SalaryType,"月給", new {@id="first-pickup-1",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Allowance.SalaryType, "月給", new { @class = "radio-custom-label radio-custom-label-employee mt-1",@for="first-pickup-1"})
+                                    <div class="mt-1">・</div>
+                                    @Html.RadioButtonFor(m => m.Allowance.SalaryType,"日給", new {@id="first-pickup-2",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Allowance.SalaryType, "日給", new { @class = "radio-custom-label radio-custom-label-employee mt-1",@for="first-pickup-2"})
+                                    <div class="mt-1">・</div>
+                                    @Html.RadioButtonFor(m => m.Allowance.SalaryType,"時給", new {@id="first-pickup-3",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Allowance.SalaryType, "時給", new { @class = "radio-custom-label radio-custom-label-employee mt-1",@for="first-pickup-3"})
+                                    <span style="line-height:30px;">&nbsp￥&nbsp</span>
+                                    @Html.TextBoxFor(m => m.Allowance.Salary, new { @class = "input-border-none allowancemoney", @required="",@style="",@placeholder="..." })
+                                    @Html.ValidationMessageFor(m => m.Allowance.Salary, "", new { @class = "text-danger" })
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="height:18pt;">
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                <p class="s2" style="padding-left: 10pt;line-height: 17pt;text-align: left;">
+                                    諸 手 当
+                                </p>
+                            </td>
+
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt" colspan="4">
+                                <p class="s2" style="padding-top: 2pt;padding-left: 3pt;line-height: 14pt;text-align: left;">
+                                    <span class="">
+                                        役職手当：￥
+                                        @Html.TextBoxFor(m => m.AllowanceDetail.Position, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.ValidationMessageFor(m => m.AllowanceDetail.Position, "", new { @class = "text-danger" })
+                                    </span>
+                                    <span class="ml-3">
+                                        皆勤手当：￥
+                                        @Html.TextBoxFor(m => m.AllowanceDetail.Attendance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.ValidationMessageFor(m => m.AllowanceDetail.Attendance, "", new { @class = "text-danger" })
+                                    </span>
+                                    <span class="ml-3">
+                                        扶養手当：￥
+                                        @Html.TextBoxFor(m => m.AllowanceDetail.Alimony, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.ValidationMessageFor(m => m.AllowanceDetail.Alimony, "", new { @class = "text-danger" })
+                                    </span>
+                                    <span class="ml-3">
+                                        手当：￥
+                                        @Html.TextBoxFor(m => m.AllowanceDetail.Allowance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.ValidationMessageFor(m => m.AllowanceDetail.Allowance, "", new { @class = "text-danger" })
+                                    </span>
+
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18pt">
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                <p class="s2" style="padding-left: 9pt;line-height: 17pt;text-align: left;">
+                                    通勤手当
+                                </p>
+                            </td>
+                            <td style="width:70%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt"
+                                colspan="2">
+                                <p class="s2" style="padding-left: 5pt;line-height: 17pt;text-align: left;">
+                                    <div class="input-group" style="width: 50%; float: left;">
+                                        @Html.RadioButtonFor(m => m.Allowance.CommutingAllowanceType,"月額", new {@id="sec-pickup-1",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                        @Html.LabelFor(m => m.Allowance.CommutingAllowanceType, "月額", new { @class = "radio-custom-label radio-custom-label-salary",@for="sec-pickup-1"})
+                                        <div class="mt-1">・</div>
+                                        @Html.RadioButtonFor(m => m.Allowance.CommutingAllowanceType,"日額", new {@id="sec-pickup-2",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                        @Html.LabelFor(m => m.Allowance.CommutingAllowanceType, "日額", new { @class = "radio-custom-label radio-custom-label-salary",@for="sec-pickup-2"})
+                                        <span style="line-height:30px;">￥</span>
+                                        @Html.TextBoxFor(m => m.Allowance.CommutingAllowance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.ValidationMessageFor(m => m.Allowance.CommutingAllowance, "", new { @class = "text-danger" })
+                                    </div>
+                                </p>
+                            </td>
+                            <td colspan="2"
+                                style="width:50%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s15"
+                                   style="padding-left: 4pt;padding-right: 15pt;line-height: 17pt;text-align: center;">
+                                    @Html.CheckBoxFor(m=>m.Allowance.ApplicableToTax, new { @class = "mt-1"})
+                                    <span class="s9">所得税乙該当</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18pt">
+                            <td class="td-stype-type2" style="border-right-width:1pt">
+                                <p class="s6" style="padding-left: 9pt;line-height: 17pt;text-align: left;">
+                                    月の総額
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt" colspan="4">
+                                <span class="s2" style="padding-left: 5pt;line-height: 17pt;text-align: left;">
+                                    ￥
+                                </span>
+                                @Html.TextBoxFor(m => m.Allowance.TotalMonthlyAmount, new { @class = "input-border-none ml-2", @required="",@style="",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Allowance.TotalMonthlyAmount, "", new { @class = "text-danger" })
+                                <span class="s16 ml-5" style="padding-top: 1pt;line-height: 15pt;">
+                                    ※各手当を含みます ※社会保険等級の決定に係ります
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table class="table-responsive" id="dependents" cellspacing="0">
+                        <tr style="height:30pt">
+                            <td class="td-second-title hightlight-color">
+                                <p class="s9" style="padding-top: 5pt;padding-left: 5pt;padding-right: 5pt;text-align: center;">
+                                    被扶養者
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+                                <div class="input-group" style=" float: left;">
+                                    <input id="third-pickup-1" class="radio-custom radio-custom-gender input-group-field"
+                                           name="third-radio-group-3" type="radio" value="有" hidden>
+                                    <label for="third-pickup-1" class="radio-custom-label radio-custom-label-salary">
+                                        有
+                                    </label>
+                                    <div style="width: 45%;" class="mt-1">
+                                        （
+                                        <input class="input-border-none" id="numberOfDependents" type="number" name="" id="" placeholder="..."
+                                               style="width: 10%;">
+                                        ）人
+                                    </div>
+                                    <div class="mt-1">・</div>
+                                    <input id="third-pickup-2" class="radio-custom radio-custom-gender input-group-field"
+                                           name="third-radio-group-3" type="radio" value="無" checked hidden>
+                                    <label for="third-pickup-2" class="radio-custom-label radio-custom-label-salary">
+                                        無
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="hightlight-color"
+                                style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s1" style="padding: 5pt;line-height: 120%;text-align: left;">
+                                    被扶養配偶者基礎年金番号
+                                </p>
+                            </td>
+                            @Html.HiddenFor(mbox => mbox.Dependents[0].DependentSpouseNenkinNumber)
+                            @Html.HiddenFor(mbox => mbox.Dependents[1].DependentSpouseNenkinNumber)
+                            @Html.HiddenFor(mbox => mbox.Dependents[2].DependentSpouseNenkinNumber)
+                            @Html.HiddenFor(mbox => mbox.Dependents[3].DependentSpouseNenkinNumber)
+
+                            <td class="nenkinnumbers" style="border-left-style:solid;border-left-width:2pt;">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" maxlength="1" size="1" pattern="^\d{1}$" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers" style="">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers" style="">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers" style="">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers">
+                                <p class="s2 mt-2" style="text-align: center;">
+                                    —
+                                </p>
+                            </td>
+                            <td class="nenkinnumbers">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                            <td class="nenkinnumbers" style="border-right-style: solid;border-right-width:2pt">
+                                <input class="mt-2 mb-2 input-center input-border-none nenkinnumbersinput" type="number" name="" id="" style="width: 100%;">
+                            </td>
+                        </tr>
+                        <tr style="height:13pt">
+                            <td class="td-furigana hightlight-color">
+                                <p class="s1"
+                                   style="padding-left: 5pt;padding-right: 5pt;line-height: 12pt;text-align: center;">
+                                    フリガナ
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt">
+
+                                @Html.TextBoxFor(m => m.Dependents[0].Furigana, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1", @style = "width: 100%;", @placeholder = "..." })
+
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt"
+                                colspan="2">
+
+                                @Html.TextBoxFor(m => m.Dependents[1].Furigana, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt"
+                                colspan="5">
+
+                                @Html.TextBoxFor(m => m.Dependents[2].Furigana, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
+                                colspan="5">
+
+                                @Html.TextBoxFor(m => m.Dependents[3].Furigana, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+
+                            </td>
+                        </tr>
+                        <tr style="height:28pt">
+                            <td class="hightlight-color"
+                                style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s9" style="line-height: 14pt;text-align: center;">
+                                    被扶養者 氏 名
+                                </p>
+                            </td>
+                            <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                @Html.TextBoxFor(m => m.Dependents[0].FullName, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                                <div class="input-group radio-custom-label-gender-wrapper itemcol-1">
+                                    @Html.RadioButtonFor(m => m.Dependents[0].Gender,"1", new {@id="pickup-1",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Dependents[0].Gender, "男", new { @class = "radio-custom-label radio-custom-label-gender",@for="pickup-1"})
+                                    <div>・</div>
+                                    @Html.RadioButtonFor(m => m.Dependents[0].Gender,"0", new {@id="pickup-2",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Dependents[0].Gender, "女", new { @class = "radio-custom-label radio-custom-label-gender",@for="pickup-2"})
+                                </div>
+                            </td>
+                            <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="2">
+                                @Html.TextBoxFor(m => m.Dependents[1].FullName, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                                <div class="input-group radio-custom-label-gender-wrapper itemcol-2">
+                                    @Html.RadioButtonFor(m => m.Dependents[1].Gender,"1", new {@id="pickup-3",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Dependents[1].Gender, "男", new { @class = "radio-custom-label radio-custom-label-gender",@for="pickup-3"})
+                                    <div>・</div>
+                                    @Html.RadioButtonFor(m => m.Dependents[1].Gender,"0", new {@id="pickup-4",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Dependents[1].Gender, "女", new { @class = "radio-custom-label radio-custom-label-gender",@for="pickup-4"})
+                                </div>
+                            </td>
+                            <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[2].FullName, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                                <div class="input-group radio-custom-label-gender-wrapper itemcol-3">
+                                    @Html.RadioButtonFor(m => m.Dependents[2].Gender,"1", new {@id="pickup-5",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Dependents[2].Gender, "男", new { @class = "radio-custom-label radio-custom-label-gender",@for="pickup-5"})
+                                    <div>・</div>
+                                    @Html.RadioButtonFor(m => m.Dependents[2].Gender,"0", new {@id="pickup-6",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Dependents[2].Gender, "女", new { @class = "radio-custom-label radio-custom-label-gender",@for="pickup-6"})
+                                </div>
+                            </td>
+                            <td style="border-top-style:dashed;border-top-width:1pt;border-top-color:#7E7E7E;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[3].FullName, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                                <div class="input-group radio-custom-label-gender-wrapper itemcol-4">
+                                    @Html.RadioButtonFor(m => m.Dependents[3].Gender,"1", new {@id="pickup-7",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Dependents[3].Gender, "男", new { @class = "radio-custom-label radio-custom-label-gender",@for="pickup-7"})
+                                    <div>・</div>
+                                    @Html.RadioButtonFor(m => m.Dependents[3].Gender,"0", new {@id="pickup-8",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
+                                    @Html.LabelFor(m => m.Dependents[3].Gender, "女", new { @class = "radio-custom-label radio-custom-label-gender",@for="pickup-8"})
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="height:19pt">
+                            <td class="hightlight-color"
+                                style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s9" style="padding-right: 5pt;line-height: 17pt;text-align: center;">
+                                    生年月日
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                @Html.TextBoxFor(m => m.Dependents[0].DateOfBirth,"{0:yyyy-MM-dd}", new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@type="date"})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="2">
+                                @Html.TextBoxFor(m => m.Dependents[1].DateOfBirth,"{0:yyyy-MM-dd}", new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@type="date"})
+
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[2].DateOfBirth,"{0:yyyy-MM-dd}", new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@type="date"})
+
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[3].DateOfBirth,"{0:yyyy-MM-dd}", new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@type="date"})
+
+                            </td>
+                        </tr>
+                        <tr style="height:19pt">
+                            <td class="hightlight-color"
+                                style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s9" style="padding-right: 5pt;line-height: 17pt;text-align: center;">
+                                    続 柄
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                @Html.TextBoxFor(m => m.Dependents[0].Relationship, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="2">
+                                @Html.TextBoxFor(m => m.Dependents[1].Relationship, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[2].Relationship, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[3].Relationship, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+
+                            </td>
+                        </tr>
+                        <tr style="height:26pt">
+                            <td class="hightlight-color"
+                                style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s9" style="line-height: 15pt;text-align: center;">職業または学年</p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                @Html.TextBoxFor(m => m.Dependents[0].Occupation, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="2">
+                                @Html.TextBoxFor(m => m.Dependents[1].Occupation, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[2].Occupation, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td class=""
+                                style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[3].Occupation, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                        </tr>
+                        <tr style="height:19pt">
+                            <td class="hightlight-color"
+                                style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s9" style="padding-right: 5pt;line-height: 17pt;text-align: center;">
+                                    年 収 ( ¥ )
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                @Html.TextBoxFor(m => m.Dependents[0].AnualIncome, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="2">
+                                @Html.TextBoxFor(m => m.Dependents[1].AnualIncome, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[2].AnualIncome, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[3].AnualIncome, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                        </tr>
+                        <tr style="height:27pt">
+                            <td class="hightlight-color"
+                                style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s9" style="padding-right: 5pt;line-height: 15pt;text-align: center;">
+                                    住 所（別居の場合）
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                                @Html.TextBoxFor(m => m.Dependents[0].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="2">
+                                @Html.TextBoxFor(m => m.Dependents[1].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[2].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[3].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                            </td>
+                        </tr>
+                        <tr style="height:19pt">
+                            <td class="hightlight-color td-stype-type2" style="border-right-width:2pt">
+                                <p class="s10"
+                                   style="padding-top: 3pt;padding-left: 5pt;padding-right: 5pt;line-height: 14pt;text-align: center;">
+                                    扶養加入日
+                                </p>
+                            </td>
+                            <td class="td-stype-type2" style="border-right-width:1pt">
+                                @Html.TextBoxFor(m => m.Dependents[0].EnrollmentDate,"{0:yyyy-MM-dd}", new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@max="2023-12-31",@style="width: 100%;",@type="date",@value = Model.Dependents[0].EnrollmentDate.ToString("yyyy-MM-dd")})
+                            </td>
+                            <td class="td-stype-type1" style="border-right-width:1pt" colspan="2">
+                                @Html.TextBoxFor(m => m.Dependents[1].EnrollmentDate,"{0:yyyy-MM-dd}", new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@type="date"})
+
+                            </td>
+                            <td class="td-stype-type1" style="border-right-width:1pt" colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[2].EnrollmentDate,"{0:yyyy-MM-dd}", new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@type="date"})
+
+                            </td>
+                            <td class="td-stype-type1" style="border-right-width:2pt" colspan="5">
+                                @Html.TextBoxFor(m => m.Dependents[3].EnrollmentDate,"{0:yyyy-MM-dd}", new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@type="date"})
+
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p class="s18" style="padding-left: 10pt;text-align: left;">
+                        ※扶養者の収入には、雇用保険の失業等給付、公的年金、健康保険の傷病手当金や出産手当金も含まれます。
+                    </p>
+                    <table class="table-border" style="width: 100%;" cellspacing="0">
+                        <tr style="height:33pt">
+                            <td class="td-second-title hightlight-color">
+                                <p class="s2 mt-2" style="padding-top: 2pt;text-align: center;">
+                                    備 考
+                                </p>
+                            </td>
+                            <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+                                <p class="s2" style="padding-left: 5pt;line-height: 14pt;text-align: left;">
+                                    ※マイナンバーについては担当にご確認くださいますようお願い致します。
+                                </p>
+                                <p class="s2" style="padding-left: 5pt;line-height: 14pt;text-align: left;">
+                                    @Html.TextBoxFor(m => m.ContactForm.Remarks, new { @class = "mt-2 mb-2 input-border-none",@style="width: 100%;"})
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table class="table-responsive" cellspacing="0">
+                        <tr style="height:15pt">
+                            <td class="hightlight-color"
+                                style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                rowspan="2">
+
+                                <p class="s19 mt-3" style="text-align: center;">※事務所使用欄</p>
+                            </td>
+                            @Html.HiddenFor(mbox=>mbox.ContactForm.ForOffice)
+                            <td class="td-bottom-column" style="border-left-style:solid;border-left-width:2pt">
+                                <p class="s19" style="padding-left: 6pt;line-height: 13pt;text-align: left;">
+                                    契約期間<input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="契約期間" id="">
+                                </p>
+                            </td>
+                            <td class="td-bottom-column">
+                                <p class="s19 mt-1" style="padding-left: 5pt;line-height: 13pt;text-align: center;">
+                                    ～
+                                </p>
+                            </td>
+                            <td class="td-bottom-column">
+                                <p class="s19" style="padding-left: 15pt;line-height: 13pt;text-align: center;">
+                                    年金番号<input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="年金番号" id="">
+                                </p>
+                            </td>
+                            <td class="td-bottom-column">
+                                <p class="s19" style="padding-left: 1pt;line-height: 13pt;text-align: center;">
+                                    雇保番号<input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="雇保番号" id="">
+                                </p>
+                            </td>
+                            <td class="td-bottom-column">
+                                <p class="s19" style="padding-left: 9pt;line-height: 13pt;text-align: center;">
+                                    個人番号<input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="個人番号" id="">
+                                </p>
+                            </td>
+                            <td class="td-bottom-column">
+                                <p class="s19" style="padding-left: 8pt;line-height: 13pt;text-align: center;">
+                                    口座番号<input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="口座番号" id="">
+                                </p>
+                            </td>
+                            <td class="td-bottom-column">
+                                <p class="s19" style="padding-left: 8pt;line-height: 13pt;text-align: center;">
+                                    雇用契約書<input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="雇用契約書" id="">
+                                </p>
+                            </td>
+                            <td class="td-bottom-column" style="border-right-style:solid;border-right-width:2pt">
+                                <p class="s19" style="padding-left: 6pt;line-height: 13pt;text-align: center;">
+                                    喪失証明書<input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="喪失証明書" id="">
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:15pt">
+                            <td style="width:10%;border-bottom-style:solid;border-bottom-width:2pt">
+                                <p class="s19" style="padding-left: 6pt;line-height: 13pt;text-align: left;">
+                                    非課税証明書 <input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="非課税証明書" id="">
+                                </p>
+                            </td>
+                            <td style="border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
+                                colspan="7">
+                                <p class="s19" style="padding-left: 7pt;line-height: 13pt;text-align: left;">
+                                    雇用と給与に関する証明書 <input class="mt-1" style="height: 10px;" type="checkbox" name="cbForOffice" value="雇用と給与に関する証明書" id="">
+                                </p>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            @{
+                var contactFormEditLink = SecurityHelper.GenerateSecureLink("ContactForm", "EditContactForm", new { id = Model.ContactForm.FormId });
+            }
+            <div class="mt-4 d-flex justify-content-center align-items-center">
+                <div>
+                    <a class="btn btn-outline-info btn-sm" href="@contactFormEditLink" title="@ManagerResource.LB_EDIT">
+                        <i class="fas fa-edit"></i> @ManagerResource.LB_EDIT
+                    </a>
+                    <a class="btn btn-outline-info btn-sm" href="/ContactForm"><i class="fa fa-remove"></i> キャンセル</a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+@section PageInlineScripts{
+
+    <script>
+        function validateMyForm() {
+            var flag = true;
+            var isPhoneNumber = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+            if (!isPhoneNumber.test($("#ContactForm_PhoneNumber").val())) {
+                flag = false;
+            }
+            if ($("#Dependents_0__Furigana").val()) {
+                if (!$("#Dependents_0__DependentSpouseNenkinNumber").val())
+                    flag = false;
+            }
+            if (!flag) {
+                alert("validation failed false");
+                window.location.reload();
+            }
+            return flag;
+        }
+        function insertString(origString, stringToAdd, indexPosition) {
+            newString = origString.slice(0, indexPosition)
+                + stringToAdd
+                + origString.slice(indexPosition);
+            return newString;
+        }
+        function GetJapaneseDate(selector) {
+            var tempYear = "";
+            var tempMonth = "";
+            var tempDay = "";
+            var count = 0;
+            var getDate = new Intl.DateTimeFormat('ja-JP-u-ca-japanese', { era: 'long' }).format(Date.parse(selector.val())).split('');
+            for (let i = 0; i < getDate.length; i++) {
+                if (Number.isFinite(parseInt(getDate[i]))) {
+                    if (count == 0)
+                        tempYear += getDate[i];
+                    else if (count == 1)
+                        tempMonth += getDate[i];
+                    else if (count == 2)
+                        tempDay += getDate[i];
+                }
+                if (getDate[i] == '/') {
+                    count++;
+                }
+            }
+            return tempYear + ";" + tempMonth + ";" + tempDay;
+        }
+        window.onload(DisplayValues());
+        function DisplayValues() {
+            //Display values
+            $("input").attr("disabled", "disabled");
+            // Get Vehicle
+            var getvehicle = $('#ContactForm_Transportation').val();
+            $('input[name="vehicle-radio-group-2"]').each(function () {
+                if ($(this).val() == getvehicle) {
+                    $(this).attr("checked", "checked");
+                    return false;
+                }
+                if ($(this).val() == "その他") {
+                    $(this).attr("checked", "checked");
+                    $('#OtherVehicle').val($('#ContactForm_Transportation').val());
+                }
+            });
+
+            //get for Office
+            var getForOfficeValue = $("#ContactForm_ForOffice").val();
+            $("input:checkbox[name='cbForOffice']").each(function () {
+                if (getForOfficeValue.includes($(this).val())) {
+                    $(this).attr("checked", "checked");
+                }
+            });
+
+            // get dependents
+            var countDependents = 0;
+            var getNenkinNumber = "";
+
+            for (let i = 0; i < 4; i++) {
+                if ($("#Dependents_" + i + "__DependentSpouseNenkinNumber").val()) {
+                    getNenkinNumber = $("#Dependents_" + i + "__DependentSpouseNenkinNumber").val();
+                    countDependents++;
+                    $('#third-pickup-1').attr("checked", "checked");
+                }
+                else {
+                    break;
+                }
+            }
+            if (countDependents > 0)
+                $("#numberOfDependents").val(countDependents);
+            if (getNenkinNumber != "") {
+                $(".nenkinnumbersinput").each(function (index) {
+                    $(this).val(getNenkinNumber.split('')[index]);
+                });
+            }
+            for (let i = 1; i <= 4; i++) {
+                if (i <= countDependents)
+                    $('.itemcol-' + i + '').attr("disabled", false);
+                else {
+                    $('.itemcol-' + i + '').attr("disabled", true).val(null);
+                }
+            }
+            //get Previous Job
+            $(".previousJob").each(function (index, value) {
+                $(this).val($("#ContactForm_PreviousJob").val().split(';')[index]);
+            });
+            //get address
+            $(".address_contactform").each(function (index, value) {
+                $(this).val($("#ContactForm_Address").val().split(';')[index]);
+            });
+            //date of join
+            $("#Joining-Year").val(GetJapaneseDate($("#ContactForm_DateOfJoining")).split(';')[0]);
+            $("#Joining-Month").val(GetJapaneseDate($("#ContactForm_DateOfJoining")).split(';')[1]);
+            $("#Joining-Day").val(GetJapaneseDate($("#ContactForm_DateOfJoining")).split(';')[2]);
+            //date of birth
+            var dateOfBirth = new Intl.DateTimeFormat('ja-JP-u-ca-japanese', { era: 'long' }).format(Date.parse($("#ContactForm_DateOfBirth").val()));
+            $("#Birthday-Year").val(GetJapaneseDate($("#ContactForm_DateOfBirth")).split(';')[0]);
+            $("#Birthday-Month").val(GetJapaneseDate($("#ContactForm_DateOfBirth")).split(';')[1]);
+            $("#Birthday-Day").val(GetJapaneseDate($("#ContactForm_DateOfBirth")).split(';')[2]);
+            $('input:radio[name=birth-radio-group-1]').filter('[value=' + dateOfBirth[0] + ']').prop('checked', true);
+            //Nenkin number
+            var arrNenkinNumber = $("#ContactForm_NenkinNumber").val().split('');
+            $(".contactnenkinnumber").each(function (index) {
+                $(this).val(arrNenkinNumber[index]);
+            });
+            //insurance
+            var arrInsurance = $("#ContactForm_Insurance").val().split('');
+            $(".contactinsurancenumber").each(function (index) {
+                $(this).val(arrInsurance[index]);
+            });
+            //created date
+            var createdDate = new Intl.DateTimeFormat('ja-JP-u-ca-japanese', { era: 'long' }).format(Date.parse($("#ContactForm_CreatedDate").val()));
+            createdDate = insertString(createdDate, " ", 2);
+            var stringCreatedDate = "記入日 ";
+            createdDate.split('/').forEach(function (value, index) {
+                if (index == 0) {
+                    stringCreatedDate += value + " 年 ";
+                }
+                else if (index == 1) {
+                    stringCreatedDate += value + " 月 ";
+                }
+                else if (index == 2) {
+                    stringCreatedDate += value + " 日";
+                }
+                else {
+                    stringCreatedDate += " ";
+                }
+            });
+            $("#createdDate").text(stringCreatedDate);
+        }
+
+        $("#numberOfDependents").change(function () {
+            //Get number of dependents
+            if ($("#numberOfDependents").val() > 4) {
+                $("#numberOfDependents").val(4);
+            }
+            else if ($("#numberOfDependents").val() < 1) {
+                $("#numberOfDependents").val(1);
+            }
+            var number = $("#numberOfDependents").val();
+            for (let i = 1; i <= 4; i++) {
+                if (i <= number)
+                    $('.itemcol-' + i + '').attr("disabled", false);
+                else {
+                    $('.itemcol-' + i + '').attr("disabled", true).val(null);
+                }
+            }
+            $('#third-pickup-1').attr("checked", "checked");
+            $('#third-pickup-2').attr("checked", false);
+        });
+        function hasDependents() {
+
+            // Get Has Dependent
+            var vehicle = $('input[name="third-radio-group-3"]:checked').val();
+            if (vehicle) {
+                if (vehicle == "無") {
+                    $('#dependents :input').attr("disabled", true).val(null);
+                    $('input[name="third-radio-group-3"]').attr("disabled", false);
+                }
+                else {
+                    if (!$("#numberOfDependents").val()) {
+                        $("#numberOfDependents").val(1);
+                        $('.itemcol-1').attr("disabled", false);
+                        $('.itemcol-2').attr("disabled", true).val(null);
+                        $('.itemcol-3').attr("disabled", true).val(null);
+                        $('.itemcol-4').attr("disabled", true).val(null);
+                    }
+                    else {
+                        for (let i = 1; i <= $("#numberOfDependents").val(); i++) {
+                            $('.itemcol-' + i + '').attr("disabled", false);
+                        }
+                    }
+                }
+                $('#numberOfDependents').attr("disabled", false);
+            }
+        }
+        $(".allowancemoney").change(function () {
+            //Get Total Allowance money
+            var allowancemoney = 0;
+            $(".allowancemoney").each(function () {
+                allowancemoney += parseInt($(this).val());
+            });
+            $('#Allowance_TotalMonthlyAmount').val(allowancemoney);
+        });
+        $("input").change(function () {
+            getData();
+            hasDependents();
+            //Get nenkinnumbersinput
+            var nenkinnumbers = "";
+            $(".nenkinnumbersinput").each(function () {
+                nenkinnumbers += $(this).val();
+            });
+            if (nenkinnumbers.length == 10) {
+                $('#Dependents_0__DependentSpouseNenkinNumber').val(nenkinnumbers);
+                $('#Dependents_1__DependentSpouseNenkinNumber').val(nenkinnumbers);
+                $('#Dependents_2__DependentSpouseNenkinNumber').val(nenkinnumbers);
+                $('#Dependents_3__DependentSpouseNenkinNumber').val(nenkinnumbers);
+            }
+        });
+        $("textarea").change(function () {
+            getData();
+            hasDependents();
+        });
+        function getData() {
+            //Get value ForOffice
+            var getvalueForOffice = "";
+            $("input:checkbox[name='cbForOffice']:checked").each(function () {
+                getvalueForOffice += $(this).val() + ";";
+            });
+            $("#ContactForm_ForOffice").val(getvalueForOffice);
+
+            //Get Previous Job
+            var previousJob = "";
+            $(".previousJob").each(function () {
+                if ($(this).val())
+                    previousJob += $(this).val() + ";";
+            });
+            $('#ContactForm_PreviousJob').val(previousJob);
+            //Get Insurance number
+            var insurance = "";
+            $(".contactinsurancenumber").each(function () {
+                if ($(this).val())
+                    insurance += $(this).val();
+            });
+            $('#ContactForm_Insurance').val(insurance);
+            //Get Nenkin number
+            var nenkinnumber = "";
+            $(".contactnenkinnumber").each(function () {
+                if ($(this).val())
+                    nenkinnumber += $(this).val();
+            });
+
+            $('#ContactForm_NenkinNumber').val(nenkinnumber);
+            // Get Vehicle
+            var vehicle = $('input[name="vehicle-radio-group-2"]:checked').val();
+            if (vehicle) {
+                vehicle == "その他" ? $('#ContactForm_Transportation').val($('#OtherVehicle').val()) : $('#ContactForm_Transportation').val(vehicle);
+            }
+
+            // Get Address
+            var address = "";
+            $(".address_contactform").each(function () {
+                address += $(this).val() + ";";
+            });
+            $('#ContactForm_Address').val(address);
+            //Date Of Joining
+
+            var getJoiningYear = 2019 + parseInt($('#Joining-Year').val()) - 1;;
+            var JoiningDay = $('#Joining-Day').val();
+            var Joiningmonth = $('#Joining-Month').val();
+            var getJoiningDateTime = getJoiningYear + "-" + (Joiningmonth) + "-" + (JoiningDay);
+            $('#ContactForm_DateOfJoining').val(getJoiningDateTime);
+
+            //Date Of Birth
+            var getBirthdayType = $('input[name="birth-radio-group-1"]:checked').val();
+            var getBirthYear = 0;
+            if (getBirthdayType) {
+                switch (getBirthdayType) {
+                    case "平":
+                        getBirthYear = 1989 + parseInt($('#Birthday-Year').val()) - 1;
+                        break;
+                    case "昭":
+                        getBirthYear = 1926 + parseInt($('#Birthday-Year').val()) - 1;
+                        break;
+                    default:
+                        getBirthYear = 1989 + parseInt($('#Birthday-Year').val()) - 1;
+                }
+            } else
+                getBirthYear = 2019 + parseInt($('#Birthday-Year').val()) - 1;
+
+            var Birthday = $('#Birthday-Day').val();
+            var Birthmonth = $('#Birthday-Month').val();
+            var getBirthDateTime = getBirthYear + "-" + (Birthmonth) + "-" + (Birthday);
+            $('#ContactForm_DateOfBirth').val(getBirthDateTime);
+
+            //Created Date
+            var getNengoYear = $('#listNengoYear').find(":selected").val();
+            var getYear = 0;
+            switch (getNengoYear) {
+                case "reiwa":
+                    getYear = 2019 + parseInt($('#CreatedDate-Year').val()) - 1
+                    break;
+                case "heisei":
+                    getYear = 1989 + parseInt($('#CreatedDate-Year').val()) - 1
+                    break;
+                case "shouwa":
+                    getYear = 1926 + parseInt($('#CreatedDate-Year').val()) - 1
+                    break;
+                case "taishou":
+                    getYear = 1912 + parseInt($('#CreatedDate-Year').val()) - 1
+                    break;
+                default:
+                    getYear = 2019 + parseInt($('#CreatedDate-Year').val()) - 1
+            }
+            var day = $('#CreatedDate-Day').val();
+            var month = $('#CreatedDate-Month').val();
+            var getDateTime = getYear + "-" + (month) + "-" + (day);
+            $('#ContactForm_CreatedDate').val(getDateTime);
+        }
+
+    </script>
+}

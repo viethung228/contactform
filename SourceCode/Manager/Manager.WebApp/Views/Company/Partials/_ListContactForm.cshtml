@@ -7,9 +7,9 @@
 
 @{
     ViewBag.Title = ManagerResource.LB_CONTACT_FORM;
-    ViewBag.ParentController = "Employee";
+    ViewBag.ParentController = "Company";
     ViewBag.ParentAction = "Index";
-    var contactFormAddLink = SecurityHelper.GenerateSecureLink("Employee", "AddContactForm", new { id = Model.SearchResults.FirstOrDefault().OwnerId });
+    var contactFormAddLink = SecurityHelper.GenerateSecureLink("Company", "AddContactForm", new { id = ViewBag.OwnerId, companyName = ViewBag.CompanyName });
 }
 @await Html.PartialAsync("_Notifications")
 @await Html.PartialAsync("../Widgets/Modals/_DefaultModal")
@@ -28,21 +28,31 @@
 <div class="modal-body" data-size="full">
     <div class="m-portlet__body">
         <div class="row mb10">
-            <div class="col-lg-12 text-right">
+            <div class="col-lg-6 text-left">
+                <button type="button" class="btn btn-info btn-sm" id="selectedCSVDownload" disabled style="color:white;" title="@ManagerResource.BT_OUTPUT_CSV">
+                    <i class="fa-solid fa-download"></i> 選択した項目をCSVファイルに出力
+                </button>
+            </div>
+            <div class="col-lg-6 text-right">
                 <a href="@contactFormAddLink" class="btn btn-info btn-sm" data-current="" data-control="" data-modal="">
                     <i class="fa fa-plus"></i> @ManagerResource.LB_ADD_NEW
+                </a>
+                <a class="btn btn-info btn-sm" href="javascript:ExportContactFormByCompanyNameCSV('@ViewBag.CompanyName')" title="@ManagerResource.BT_OUTPUT_CSV">
+                    <i class="fa-solid fa-download"></i> @ManagerResource.BT_OUTPUT_CSV
                 </a>
             </div>
         </div>
         <table id="sample-table-1" class="table table-hover table-bordered">
             <thead class="text-nowrap">
                 <tr class="sticky-row">
+                    <th class="text-center" width="2%"><input type="checkbox" class="childCheckBox" id="bigCheckBox"></th>
                     <th class="text-center" width="3%">#</th>
                     @*<th class="text-center" width="5%">@ManagerResource.LB_CODE</th>*@
                     <th class="text-center">@ManagerResource.LB_COMPANY</th>
                     <th class="text-center">@ManagerResource.LB_FULL_NAME</th>
                     <th class="text-center">@ManagerResource.LB_FULL_NAME_FURIGANA</th>
                     <th class="text-center">@ManagerResource.LB_CREATED_DATE</th>
+                    <th class="text-center">@ManagerResource.BT_OUTPUT_CSV</th>
                     <th class="text-center" width="5%"></th>
                 </tr>
             </thead>
@@ -53,12 +63,15 @@
                     foreach (var record in Model.SearchResults)
                     {
                         stt++;
-                        var delLink = SecurityHelper.GenerateSecureLink("Employee", "DeleteCF", new { id = record.FormId });
-                        var contactFormEditLink = SecurityHelper.GenerateSecureLink("Employee", "EditContactForm", new { id = record.FormId });
+                        var delLink = SecurityHelper.GenerateSecureLink("Company", "DeleteCF", new { id = record.FormId });
+                        var contactFormEditLink = SecurityHelper.GenerateSecureLink("Company", "EditContactForm", new { id = record.FormId });
+                        var contactFormDetailLink = SecurityHelper.GenerateSecureLink("ContactForm", "Detail", new { id = record.FormId });
 
-                        <tr class="listing-item pointer">
+                        <tr class="listing-item-contactform pointer">
+                            <td class="text-center"><input class="childCheckBox" type="checkbox" name="contactForm" value="@record.FormId"></td>
                             <td class="text-center">@(stt + (Model.Page - 1) * Model.PageSize) </td>
                             <td class="text-center">
+                                <input class="DetailLink" value="@contactFormDetailLink" hidden>
                                 @record.CompanyName
                             </td>
                             <td class="text-center">
@@ -69,6 +82,11 @@
                             </td>
                             <td class="text-center">
                                 @record.CreatedDate.ToShortDateString()
+                            </td>
+                            <td class="text-center">
+                                <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" href="javascript:ExportEmContactFormByFormIdCSV('@record.FormId')" title="@ManagerResource.BT_OUTPUT_CSV">
+                                    <i class="fa-solid fa-download"></i>
+                                </a>
                             </td>
                             <td class="text-center">
                                 <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" href="@contactFormEditLink" title="@ManagerResource.LB_EDIT">
@@ -94,9 +112,45 @@
 
             </tbody>
         </table>
+        @{
+            await RenderPaging();
+        }
     </div>
 </div>
 
+@functions {
+    private async Task RenderPaging()
+    {
+        <div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded">
+            <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+                @if (Model.WasOverRecordsInPage())
+                {
+                    var html = HtmlHelpers.BootstrapPager(Model.Page, index => Url.Action("ViewContactFormRelated", "ContactForm",
+                    new
+                    {
+                        Page = index,
+                        SearchExec = "Y",
+                        Keyword = Model.Keyword,
+                    }),
+                    Model.TotalCount, pageSize: Model.PageSize, numberOfLinks: 10);
+
+                    await Task.FromResult(html);
+
+                    @html
+                }
+
+                @if (Model.TotalCount > 0)
+                {
+                    <div class="m-datatable__pager-info">
+                        <span class="m-datatable__pager-detail">
+                            @ManagerResource.LB_RECORDS_ALL @Model.TotalCount @ManagerResource.LB_RECORDS @Model.StartCount() 〜 @Model.EndCount(Model.SearchResults.Count())
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
 <style>
     .resizable {
         resize: vertical !important;
@@ -105,3 +159,49 @@
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 <script src="~/Scripts/ImageModal/preview.js"></script>
+<script>
+    var listFormId = [];
+    $("#bigCheckBox").click(function () {
+        $(".childCheckBox").prop("checked", $(this).prop("checked"));
+        listFormId = []
+        $("input:checkbox[name='contactForm']:checked").each(function () {
+            listFormId.push($(this).val());
+        });
+    });
+    $(".childCheckBox").click(function () {
+        var isDisabled = true;
+        $(".childCheckBox:checked").each(function () {
+            isDisabled = false;
+        });
+        $("#selectedCSVDownload").prop("disabled", isDisabled);
+
+        listFormId = []
+        $("input:checkbox[name='contactForm']:checked").each(function () {
+            listFormId.push($(this).val());
+        });
+    });
+    $("#selectedCSVDownload").click(function () {
+        if (listFormId.length > 0) {
+            ExportContactFormByListFormIdCSV(listFormId);
+        }
+    });
+</script>
+<script>
+    $(".listing-item-contactform").click(function (ev) {
+        var targetClass = ev.target.className;
+        var tagName = ev.target.tagName.toLowerCase();
+        if (tagName === "a" || tagName === "i" || tagName === "img" || targetClass == "childCheckBox") {
+            return true;
+        }
+        else {
+            ev.preventDefault();
+
+            var link = document.createElement('a');
+            link.href = $(this).find(".DetailLink").val();
+            document.body.appendChild(link);
+            link.click();
+
+            return false;
+        }
+    });
+</script>

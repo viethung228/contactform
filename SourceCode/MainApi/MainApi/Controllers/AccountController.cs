@@ -69,10 +69,6 @@ namespace MainApi.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    //var users = new List<IdentityUser>();
-                    //users.Add(new IdentityUser { Id = "10", UserName = "admin", FullName = "Vũ Lương Bằng", PasswordHash = "123456" });
-
-                    //var user = users.Where(x => x.UserName == model.UserName && x.PasswordHash == model.Password).FirstOrDefault();
 
                     model.UserName = model.UserName.ToStringNormally();
 

@@ -221,7 +221,8 @@ namespace Manager.WebApp.Services
 
             return returnModel;
         }
-        public static async Task<ApiResponseModel> GetEmployeeByCompanyName(string companyName, int currentpage = 1, int pagesize = 10)
+
+        public static async Task<ApiResponseModel> GetByPage(string keyword, int currentpage = 1, int pagesize = 10)
         {
             ApiResponseModel returnModel = new ApiResponseModel();
             try
@@ -229,12 +230,12 @@ namespace Manager.WebApp.Services
                 var restClient = new RestClient(SystemSettings.MainApi);
                 MainApiAuthorization(restClient);
 
-                IRestRequest restRequest = new RestRequest(string.Format("{0}/getemployeebycompany", apiRoute), Method.GET);
+                IRestRequest restRequest = new RestRequest(string.Format("{0}", apiRoute), Method.GET);
 
                 restRequest.AddHeader("Accept", "application/json");
                 restRequest.AddParameter("currentpage", currentpage);
                 restRequest.AddParameter("pagesize", pagesize);
-                restRequest.AddParameter("companyName", companyName);
+                restRequest.AddParameter("keyword", keyword);
 
                 var result = await restClient.ExecuteAsync(restRequest);
 
@@ -260,7 +261,85 @@ namespace Manager.WebApp.Services
 
             return returnModel;
         }
-        public static async Task<ApiResponseModel> GetContactFormsByEmployeeIdAsync(int id)
+
+        public static async Task<ApiResponseModel> GetList()
+        {
+            ApiResponseModel returnModel = new ApiResponseModel();
+            try
+            {
+                var restClient = new RestClient(SystemSettings.MainApi);
+                MainApiAuthorization(restClient);
+
+                IRestRequest restRequest = new RestRequest(string.Format("{0}/getall", apiRoute), Method.GET);
+
+                restRequest.AddHeader("Accept", "application/json");
+
+                var result = await restClient.ExecuteAsync(restRequest);
+
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    returnModel = JsonConvert.DeserializeObject<ApiResponseModel>(result.Content);
+                }
+                else
+                {
+                    //Trace log
+                    HttpStatusCodeTrace(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            if (returnModel == null)
+            {
+                returnModel = new ApiResponseModel();
+            }
+
+            return returnModel;
+        }
+
+        public static async Task<ApiResponseModel> GetContactFormByCompanyName(string keyword,string companyName, int currentpage = 1, int pagesize = 10)
+        {
+            ApiResponseModel returnModel = new ApiResponseModel();
+            try
+            {
+                var restClient = new RestClient(SystemSettings.MainApi);
+                MainApiAuthorization(restClient);
+
+                IRestRequest restRequest = new RestRequest(string.Format("{0}/getcontactformbycompany", apiRoute), Method.GET);
+
+                restRequest.AddHeader("Accept", "application/json");
+                restRequest.AddParameter("currentpage", currentpage);
+                restRequest.AddParameter("pagesize", pagesize);
+                restRequest.AddParameter("companyName", companyName);
+                restRequest.AddParameter("keyword", keyword);
+
+                var result = await restClient.ExecuteAsync(restRequest);
+
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    returnModel = JsonConvert.DeserializeObject<ApiResponseModel>(result.Content);
+                }
+                else
+                {
+                    //Trace log
+                    HttpStatusCodeTrace(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            if (returnModel == null)
+            {
+                returnModel = new ApiResponseModel();
+            }
+
+            return returnModel;
+        }
+        public static async Task<ApiResponseModel> GetContactFormsByCompanyIdAsync(int id)
         {
             ApiResponseModel returnModel = new ApiResponseModel();
             try

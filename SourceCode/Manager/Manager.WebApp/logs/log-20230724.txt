@@ -1,0 +1,30 @@
+[24/07/2023 14:30:41 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[24/07/2023 14:30:41 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[24/07/2023 14:30:41 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[24/07/2023 14:30:41 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[24/07/2023 14:30:41 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[24/07/2023 14:44:36 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[24/07/2023 16:05:19 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[24/07/2023 16:05:19 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[24/07/2023 16:05:19 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[24/07/2023 16:05:19 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[24/07/2023 16:05:19 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[24/07/2023 16:37:01 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[24/07/2023 16:37:01 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[24/07/2023 16:37:01 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[24/07/2023 16:37:01 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[24/07/2023 16:37:01 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[24/07/2023 16:43:24 ERR Manager.WebApp.Helpers.CacheProvider] Could not Get because: {0} 
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=0KiB, 1047ms elapsed, timeout is 1000ms), command=GET, next: GET HH-SETTINGS..TYPES.GeneralSettings, inst: 0, qu: 0, qs: 1, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 556, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=4,Free=32763,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 1047ms elapsed, timeout is 1000ms), command=GET, next: GET HH-SETTINGS..TYPES.GeneralSettings, inst: 0, qu: 0, qs: 1, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 556, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=4,Free=32763,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at StackExchange.Redis.Extensions.Core.Implementations.RedisDatabase.GetAsync[T](String key, CommandFlags flag)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Manager.WebApp.Helpers.CacheProvider.Get[T](String key)
+[24/07/2023 16:43:56 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[24/07/2023 16:43:56 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[24/07/2023 16:43:56 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[24/07/2023 16:43:56 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[24/07/2023 16:43:56 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[24/07/2023 16:43:56 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 

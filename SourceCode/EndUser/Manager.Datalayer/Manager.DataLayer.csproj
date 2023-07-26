@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositories\Master\**" />
+    <Compile Remove="Stores\Master\**" />
+    <EmbeddedResource Remove="Repositories\Master\**" />
+    <EmbeddedResource Remove="Stores\Master\**" />
+    <None Remove="Repositories\Master\**" />
+    <None Remove="Stores\Master\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.30" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Manager.SharedLibs\Manager.SharedLibs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MainApi.DataLayer.Entities">
+      <HintPath>..\..\MainApi\MainApi.DataLayer.Entities\bin\Debug\net7.0\MainApi.DataLayer.Entities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

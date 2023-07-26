@@ -1,0 +1,159 @@
+﻿@using MainApi.DataLayer.Entities;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers
+@using Manager.SharedLibs
+@model Manager.WebApp.Models.ManageContactFormModel
+
+<style>
+    .childCheckBox {
+        height: 20px;
+        width: 20px;
+        background-color: blue;
+    }
+
+    input:checked ~ .childCheckBox {
+        background-color: #2196F3;
+    }
+
+</style>
+<div class="m-portlet" id="tableContactForm">
+    <div class="m-portlet__body">
+        <div class="m-section">
+            <div class="m-section__content">
+                <div class="">
+                    <div class="row mb10">
+                        @{
+                            var getCompanyNames = SecurityHelper.GenerateSecureLink("ContactForm", "AddContactForm", new { id = Model.SearchResults.FirstOrDefault().OwnerId, companyName = Model.SearchResults.FirstOrDefault().CompanyName });
+                        }
+                        <div class="col-lg-6 text-left">
+                            <button type="button" class="btn btn-info btn-sm" id="selectedCSVDownload" disabled style="color:white;" title="@ManagerResource.BT_OUTPUT_CSV">
+                                <i class="fa-solid fa-download"></i> 選択した項目をCSVファイルに出力
+                            </button>
+
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <a class="btn btn-info btn-sm " style="color:white;" href="@getCompanyNames" title="@ManagerResource.LB_ADD_NEW">
+                                <i class="fa-solid fa-plus"></i> @ManagerResource.LB_ADD_NEW
+                            </a>
+                            <a class="btn btn-info btn-sm" href="javascript:ExportContactFormByCompanyNameCSV('@ViewBag.CompanyName')" title="@ManagerResource.BT_OUTPUT_CSV">
+                                <i class="fa-solid fa-download"></i> @ManagerResource.BT_OUTPUT_CSV
+                            </a>
+                        </div>
+                    </div>
+                    <div class=" table-responsive">
+                        <table id="sample-table-1" class="table table-hover table-bordered">
+                            <thead class="text-nowrap">
+                                <tr class="">
+                                    <th class="text-center" width="2%"><input type="checkbox" class="childCheckBox" id="bigCheckBox"></th>
+                                    <th class="text-center" width="3%">#</th>
+                                    @*<th class="text-center" width="5%">@ManagerResource.LB_CODE</th>*@
+                                    <th class="text-center">@ManagerResource.LB_COMPANY</th>
+                                    <th class="text-center">@ManagerResource.LB_FULL_NAME</th>
+                                    <th class="text-center">@ManagerResource.LB_FULL_NAME_FURIGANA</th>
+                                    <th class="text-center">@ManagerResource.LB_CREATED_DATE</th>
+                                    <th class="text-center" width="10%">@ManagerResource.BT_OUTPUT_CSV</th>
+                                    <th class="text-center" width="5%"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-nowrap">
+                                @if (Model.SearchResults != null && Model.SearchResults.Count > 0)
+                                {
+                                    var stt = 0;
+                                    foreach (var record in Model.SearchResults)
+                                    {
+                                        stt++;
+                                        var delLink = SecurityHelper.GenerateSecureLink("ContactForm", "DeleteCF", new { id = record.FormId });
+                                        var contactFormEditLink = SecurityHelper.GenerateSecureLink("ContactForm", "EditContactForm", new { id = record.FormId });
+                                        var contactFormDetailLink = SecurityHelper.GenerateSecureLink("ContactForm", "Detail", new { id = record.FormId });
+
+                                        <tr class="listing-item pointer">
+                                            <td class="text-center"><input class="childCheckBox" type="checkbox" name="contactForm" value="@record.FormId"></td>
+                                            <td class="text-center">@(stt + (Model.Page - 1) * Model.PageSize) </td>
+                                            <td class="text-center">
+                                                <input class="DetailLink" value="@contactFormDetailLink" hidden>
+                                                @record.CompanyName
+                                            </td>
+                                            <td class="text-center">
+                                                @record.FullName
+                                            </td>
+                                            <td class="text-center">
+                                                @record.Furigana
+                                            </td>
+                                            <td class="text-center">
+                                                @record.CreatedDate.ToShortDateString()
+                                            </td>
+                                            <td class="text-center">
+                                                <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" href="javascript:ExportEmContactFormByFormIdCSV('@record.FormId')" title="@ManagerResource.BT_OUTPUT_CSV">
+                                                    <i class="fa-solid fa-download"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" href="@contactFormEditLink" title="@ManagerResource.LB_EDIT">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" href="javascript" data-href="@delLink" data-modal="" title="@ManagerResource.LB_DELETE">
+                                                    <i class="la la-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="11">
+                                            @ManagerResource.LB_NO_RECORD
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            @{
+                await RenderPaging();
+            }
+
+        </div>
+    </div>
+</div>
+<div hidden id="newtempEmExportCSV"></div>
+<div hidden id="tempExportCSV"></div>
+
+@functions {
+    private async Task RenderPaging()
+    {
+        <div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded" id="paginationContactForm">
+            <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+                @if (Model.WasOverRecordsInPage())
+                {
+                    var html = HtmlHelpers.BootstrapPager(Model.Page, index => Url.Action("Index", "ContactForm",
+                    new
+                    {
+                        Page = index,
+                        SearchExec = "Y",
+                        Keyword = Model.Keyword,
+                    }),
+                    Model.TotalCount, pageSize: Model.PageSize, numberOfLinks: 10);
+
+                    await Task.FromResult(html);
+
+                    @html
+                }
+
+                @if (Model.TotalCount > 0)
+                {
+                    <div class="m-datatable__pager-info">
+                        <span class="m-datatable__pager-detail">
+                            @ManagerResource.LB_RECORDS_ALL @Model.TotalCount @ManagerResource.LB_RECORDS @Model.StartCount() 〜 @Model.EndCount(Model.SearchResults.Count())
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}

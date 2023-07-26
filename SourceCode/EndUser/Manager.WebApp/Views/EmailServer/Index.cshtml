@@ -1,0 +1,217 @@
+﻿@using Manager.WebApp.Resources;
+@using System.Globalization;
+@using Manager.SharedLibs;
+@using Manager.WebApp.Helpers;
+@model Manager.WebApp.Models.ManageEmailServerModel
+
+@{
+    ViewBag.Title = "EmailServer";
+    var currentLang = CultureInfo.CurrentCulture;
+}
+
+
+@await Html.PartialAsync("_Notifications")
+
+@await Html.PartialAsync("../Widgets/Modals/_LargeModal")
+
+<div class="m-portlet">
+    <!--begin::Form-->
+    @*@RenderSearchForm()*@
+    <!--end::Form-->
+</div>
+
+<div class="space"></div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="m-portlet">
+            <div class="clearfix pull-right m--padding-10">
+                <a class="btn btn-white btn-info btn-sm" href="@Url.Action("Create", "EmailServer")" title="@ManagerResource.LB_ADD_NEW">
+                    <i class="fa fa-plus"></i> @ManagerResource.LB_ADD_NEW
+                </a>
+            </div>
+            <div class="m-portlet__body">
+                <!--end::Section-->
+                <!--begin::Section-->
+                <div class="m-section">
+                    <div class="m-section__content table-responsive">
+                        <table id="sample-table-1" class="table m-table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" width="50"></th>
+                                    <th class="text-center">@ManagerResource.LB_NAME</th>
+                                    <th class="text-center">@ManagerResource.LB_INFORMATION</th>
+                                    <th class="text-center">@ManagerResource.LB_STATUS</th>
+                                    <th class="text-center action-3">@ManagerResource.LB_ACTION</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @if (Model.SearchResults != null && Model.SearchResults.Count > 0)
+                                {
+                                    var stt = 0;
+                                    foreach (var record in Model.SearchResults)
+                                    {
+                                        stt++;
+                                        <tr class="@(stt % 2 != 0 ? "row-even":"")">
+                                            <td class="text-center">@(stt + (Model.Page - 1) * Model.PageSize) </td>
+                                            <td>
+                                                <b class="text-info">@record.Name</b>
+                                            </td>
+                                            <td>
+                                                @if (record.SendingConfig != null)
+                                                {
+                                                    <b>@ManagerResource.LB_EMAIL_SENDING_CONFIG:</b>
+                                                    <table class="email-server-info">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="email-server-title"><span>+ @ManagerResource.LB_SMTP_SERVER: </span></td>
+                                                                <td>@record.SendingConfig.SMTPServer</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="email-server-title"><span>+ @ManagerResource.LB_PORT_SERVER: </span></td>
+                                                                <td>@record.SendingConfig.Port</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="email-server-title"><span>+ @ManagerResource.LB_SSL_REQUIRED: </span></td>
+                                                                <td><i class="text-danger fa @(record.SendingConfig.SSLRequired ? "fa-check": "fa-close")"></i></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <br />
+                                                }
+
+                                                @if (record.ReceivingConfig != null)
+                                                {
+                                                    <b>@ManagerResource.LB_EMAIL_RECEIVING_CONFIG:</b>
+                                                    <table class="email-server-info">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="email-server-title"><span>+ @ManagerResource.LB_POP_SERVER: </span></td>
+                                                                <td>@record.ReceivingConfig.POPServer</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="email-server-title"><span>+ @ManagerResource.LB_PORT_SERVER: </span></td>
+                                                                <td>@record.ReceivingConfig.Port</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="email-server-title"><span>+ @ManagerResource.LB_SSL_REQUIRED: </span></td>
+                                                                <td><i class="text-danger fa @(record.ReceivingConfig.SSLRequired ? "fa-check": "fa-close")"></i></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                }
+                                            </td>
+
+                                            <td class="text-center">
+                                                @await Html.PartialAsync("../Widgets/_Status", record.Status)
+                                            </td>
+                                            <td class="text-center">
+                                                @{
+                                                    var editLink = SecurityHelper.GenerateSecureLink("EmailServer", "Edit", new { Id = record.Id, SearchExec = "Y", Page = Model.Page, Keyword = Model.Keyword, Status = Model.Status });
+                                                }
+
+                                                <div class="dropdown">
+                                                    <a href="javascript:;" class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown">
+                                                        <i class="la la-ellipsis-h"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item btn m-btn m-btn--hover-info" href="@editLink" title="@ManagerResource.LB_EDIT">
+                                                            <i class="la la-pencil"></i>
+                                                            @ManagerResource.LB_EDIT
+                                                        </a>
+
+                                                        <a class="dropdown-item btn m-btn m-btn--hover-danger" data-modal="" data-size="default" data-href="@Url.Action("Delete", "EmailServer", new { id = record.Id })" title="@ManagerResource.LB_DELETE">
+                                                            <i class="la la-trash"></i>
+                                                            @ManagerResource.LB_DELETE
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+
+                                                @*<a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" href="@editLink" title="@ManagerResource.LB_EDIT">
+                                                <i class="la la-pencil"></i>
+                                            </a>
+                                            <a class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" data-modal="" data-size="default" data-href="@Url.Action("Delete", "EmailServer", new { id = record.Id })" title="@ManagerResource.LB_DELETE">
+                                                <i class="la la-trash"></i>
+                                            </a>*@
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="11">
+                                            @ManagerResource.LB_NO_RECORD
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                    @{
+                        await RenderPaging();
+                    }
+                </div>
+                <!--end::Section-->
+            </div>
+            <!--end::Form-->
+        </div>
+    </div>
+
+</div>
+
+@functions {
+    private async Task RenderPaging()
+    {
+    <div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded">
+                <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+                    @if (Model.WasOverRecordsInPage())
+                {
+                    var html = HtmlHelpers.BootstrapPager(Model.Page, index => Url.Action("Index", "EmailServer",
+                    new
+                    {
+                        Page = index,
+                        SearchExec = "Y",
+                        Keyword = Model.Keyword,
+                    }),
+                    Model.TotalCount, pageSize: Model.PageSize, numberOfLinks: 10);
+
+                        @html
+                }
+
+                    @if (Model.TotalCount > 0)
+                {
+                        <div class="m-datatable__pager-info">
+                            <span class="m-datatable__pager-detail">
+                                @ManagerResource.LB_RECORDS_ALL @Model.TotalCount @ManagerResource.LB_RECORDS @Model.StartCount() 〜 @Model.EndCount(Model.SearchResults.Count())
+                            </span>
+                        </div>
+                }
+                </div>
+    </div>
+    }
+}
+
+@section PageInlineStyles{
+    <style>
+        .email-server-info {
+            width: 100%;
+        }
+
+            .email-server-info td {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .email-server-info .email-server-title {
+                width: 30%;
+            }
+    </style>
+}
+
+@section PageInlineScripts{
+
+}

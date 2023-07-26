@@ -1,0 +1,167 @@
+﻿@using Manager.WebApp.Helpers;
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Models;
+@using System.Reflection;
+@using System.ComponentModel;
+@model Manager.WebApp.Models.ListContactFormFullDetailModel
+
+@if (Model.listContactForm != null && Model.listContactForm.Count > 0)
+{
+    <table id="contactForm">
+        <tr>
+            <th>FormId</th>
+            <th>CompanyName</th>
+            <th>CreatedDate</th>
+            <th>UpdatedDate</th>
+            <th>Furigana</th>
+            <th>PhoneNumber</th>
+            <th>FullName</th>
+            <th>Gender</th>
+            <th>EmployeeClassification</th>
+            <th>DepartmentName</th>
+            <th>DateOfBirth</th>
+            <th>DateOfJoining</th>
+            <th>Furigana2</th>
+            <th>Address</th>
+            <th>Transportation</th>
+            <th>NenkinNumber</th>
+            <th>Insurance</th>
+            <th>PreviousJob</th>
+            <th>Remarks</th>
+            <th>ForOffice</th>
+            <th>CompanyId</th>
+        </tr>
+        @foreach (var record in Model.listContactForm)
+        {
+            @if (record.ContactForm != null)
+            {
+                <tr>
+                    <td>@record.ContactForm.FormId</td>
+                    <td>@record.ContactForm.CompanyName</td>
+                    <td>@record.ContactForm.CreatedDate.ToShortDateString()</td>
+                    <td>@record.ContactForm.UpdatedDate.ToShortDateString()</td>
+                    <td>@record.ContactForm.Furigana</td>
+                    <td>@record.ContactForm.PhoneNumber</td>
+                    <td>@record.ContactForm.FullName</td>
+                    <td>@(record.ContactForm.Gender == 0 ? "Female" : "Male")</td>
+                    <td>@record.ContactForm.EmployeeClassification</td>
+                    <td>@record.ContactForm.DepartmentName</td>
+                    <td>@record.ContactForm.DateOfBirth.ToShortDateString()</td>
+                    <td>@record.ContactForm.DateOfJoining.ToShortDateString()</td>
+                    <td>@record.ContactForm.Furigana2</td>
+                    <td>〒@record.ContactForm.Address.Replace(';',' ')</td>
+                    <td>@record.ContactForm.Transportation</td>
+                    <td>@record.ContactForm.NenkinNumber</td>
+                    <td>@record.ContactForm.Insurance</td>
+                    <td>@record.ContactForm.PreviousJob</td>
+                    <td>@record.ContactForm.Remarks</td>
+                    <td>@record.ContactForm.ForOffice</td>
+                    <td>@record.ContactForm.OwnerId</td>
+                </tr>
+            }
+
+        }
+    </table>
+    <table id="allowance">
+        <tr>
+            <th>AllowanceId</th>
+            <th>FormId</th>
+            <th>SalaryType</th>
+            <th>Salary</th>
+            <th>CommutingAllowanceType</th>
+            <th>CommutingAllowance</th>
+            <th>ApplicableToTax</th>
+            <th>TotalMonthlyAmount</th>
+        </tr>
+        @if (Model.listContactForm.FirstOrDefault().Allowance != null)
+        {
+            foreach (var record in Model.listContactForm)
+            {
+                @if (record.Allowance != null)
+                {
+                    <tr>
+                        <td>@record.Allowance.AllowanceId</td>
+                        <td>@record.Allowance.FormId</td>
+                        <td>@record.Allowance.SalaryType</td>
+                        <td>@record.Allowance.Salary</td>
+                        <td>@record.Allowance.CommutingAllowanceType</td>
+                        <td>@record.Allowance.CommutingAllowance</td>
+                        <td>@record.Allowance.ApplicableToTax</td>
+                        <td>@record.Allowance.TotalMonthlyAmount</td>
+                    </tr>
+                }
+
+            }
+        }
+    </table>
+    <table id="allowanceDetail">
+        <tr>
+            <th>AllowanceId</th>
+            <th>Position</th>
+            <th>Attendance</th>
+            <th>Alimony</th>
+            <th>Allowance</th>
+            <th>CreatedDate</th>
+        </tr>
+        @if (Model.listContactForm.FirstOrDefault().Allowance != null)
+        {
+            foreach (var record in Model.listContactForm)
+            {
+                @if (record.AllowanceDetail != null && record.AllowanceDetail.AllowanceId != 0)
+                {
+                    <tr>
+                        <td>@record.AllowanceDetail.AllowanceId</td>
+                        <td>@record.AllowanceDetail.Position</td>
+                        <td>@record.AllowanceDetail.Attendance</td>
+                        <td>@record.AllowanceDetail.Alimony</td>
+                        <td>@record.AllowanceDetail.Allowance</td>
+                        <td>@record.AllowanceDetail.CreatedDate.ToShortDateString()</td>
+                    </tr>
+                }
+
+            }
+        }
+
+    </table>
+    <table id="Dependents">
+        <tr>
+            <th>DependentId</th>
+            <th>FormId</th>
+            <th>DependentSpouseNenkinNumber</th>
+            <th>Furigana</th>
+            <th>FullName</th>
+            <th>Gender</th>
+            <th>DateOfBirth</th>
+            <th>Relationship</th>
+            <th>Occupation</th>
+            <th>AnualIncome</th>
+            <th>Address</th>
+            <th>EnrollmentDate</th>
+
+        </tr>
+        @foreach (var record in Model.listContactForm)
+        {
+            @if (record.Dependents != null && record.Dependents.Count > 0)
+            {
+                foreach (var item in record.Dependents)
+                {
+                    <tr>
+                        <td>@item.DependentId</td>
+                        <td>@item.FormId</td>
+                        <td>@item.DependentSpouseNenkinNumber</td>
+                        <td>@item.Furigana</td>
+                        <td>@item.FullName</td>
+                        <td>@(item.Gender == 0 ? "Female" : "Male")</td>
+                        <td>@item.DateOfBirth.ToShortDateString()</td>
+                        <td>@item.Relationship</td>
+                        <td>@item.Occupation</td>
+                        <td>@item.AnualIncome</td>
+                        <td>@item.Address</td>
+                        <td>@item.EnrollmentDate.ToShortDateString()</td>
+
+                    </tr>
+                }
+            }
+        }
+    </table>
+}

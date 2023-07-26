@@ -165,6 +165,61 @@ namespace MainApi.Controllers.Manager
 
             return returnModel;
         }
+
+        [HttpGet]
+        public ApiResponseModel GetByPage(string keyword, int currentpage = 1, int pagesize = 10)
+        {
+
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+                //Update DB
+                var returnId = store.GetByPage(keyword, currentpage, pagesize);
+                if (returnId != null && returnId.Count > 0)
+                {
+                    returnModel.Data = returnId;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+
+            return returnModel;
+        }
+
+        [HttpGet("getall")]
+        public ApiResponseModel GetList()
+        {
+
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                var store = Startup.IocContainer.Resolve<IStoreContactForm>();
+                //Update DB
+                var returnId = store.GetList();
+                if (returnId != null && returnId.Count > 0)
+                {
+                    returnModel.Data = returnId;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = EnumCommonCode.Error;
+            }
+
+            return returnModel;
+        }
+
         [HttpGet("contact_form_employee")]
         public ApiResponseModel GetByEmployeeId(int id)
         {
@@ -270,7 +325,7 @@ namespace MainApi.Controllers.Manager
             return returnModel;
         }
         [HttpGet("getallcompany")]
-        public ApiResponseModel GetAllCompany(string companyName,int currentpage = 1, int pagesize = 10)
+        public ApiResponseModel GetAllCompany(string companyName, int currentpage = 1, int pagesize = 10)
         {
             var returnModel = new ApiResponseModel();
             try
@@ -317,11 +372,11 @@ namespace MainApi.Controllers.Manager
 
                 returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
                 returnModel.Code = EnumCommonCode.Error;
-            }           
+            }
             return returnModel;
         }
-        [HttpGet("getemployeebycompany")]
-        public ApiResponseModel GetAllEmployeeByCompany(string companyName, int currentpage = 1, int pagesize = 10)
+        [HttpGet("getcontactformbycompany")]
+        public ApiResponseModel GetAllContactFormByCompany(string keyword, string companyName, int currentpage = 1, int pagesize = 10)
         {
             var returnModel = new ApiResponseModel();
             try
@@ -329,7 +384,7 @@ namespace MainApi.Controllers.Manager
                 ManageContactFormModel model = new ManageContactFormModel();
                 model.Page = currentpage;
                 model.PageSize = pagesize;
-                model.Keyword = companyName;
+                model.Keyword = keyword;
 
                 if (model.PageSize <= 0 || model.PageSize > SystemSettings.DefaultPageSize) model.PageSize = SystemSettings.DefaultPageSize;
                 if (model.Page <= 0) model.Page = 1;
@@ -343,7 +398,7 @@ namespace MainApi.Controllers.Manager
 
                 var store = Startup.IocContainer.Resolve<IStoreContactForm>();
 
-                var rs = store.GetEmployeeByCompanyName(filter.Keyword, model.Page, model.PageSize);
+                var rs = store.GetContactFormByCompanyName(filter.Keyword, companyName, model.Page, model.PageSize);
                 if (rs.HasData())
                 {
                     var returnList = new List<IdentityContactForm>();

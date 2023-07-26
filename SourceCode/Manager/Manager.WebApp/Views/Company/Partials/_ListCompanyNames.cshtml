@@ -1,0 +1,91 @@
+﻿@using System.Web
+@using Manager.WebApp.Resources
+@using Manager.WebApp.Helpers
+@using Manager.SharedLibs
+@using MainApi.DataLayer.Entities
+@model Manager.WebApp.Models.ManageCompanyModel
+
+@*<div class="modal">
+    <h5 class="modal-title text-success" id="">
+        会社を選択してください
+    </h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">
+            &times;
+        </span>
+    </button>
+</div>
+@using (Html.BeginForm())
+{    <input type="hidden" name="Id" value="@Model" />
+    <fieldset>
+        <dl>
+            <dt>
+            </dt>
+            <dd>
+                @Html.DropDownListFor(x=>x.SearchResults.FirstOrDefault().CompanyName, Model.SearchResults.Select(name=>new SelectListItem{
+            Text=name.CompanyName.ToString(),
+            Value=name.CompanyName.ToString()
+            }))
+            </dd>
+        </dl>
+    </fieldset>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-info btn-sm" id="btnSubmit">
+            <i class="fa fa-plus"></i> @ManagerResource.LB_SAVE
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+            <i class="fa fa-remove"></i> @ManagerResource.LB_CANCEL
+        </button>
+
+    </div>
+}
+*@
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="">
+            会社を選択してください
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="modal-body" style="overflow-y: visible !important;">
+
+        <form>
+            <div class="form-group">
+                <label for="company-name" class="col-form-label">Company:</label>
+                <select name="companyNames" class="selectpicker" id="companyNames">
+                    @if (Model.SearchResults != null && Model.SearchResults.Count > 0)
+                    {
+                        foreach (var item in Model.SearchResults)
+                        {
+                            var contactFormAddLink = SecurityHelper.GenerateSecureLink("Company", "AddContactForm", new { id = item.CompanyId, companyName = item.CompanyName });
+                            <option class="fz-15" value="@contactFormAddLink">@item.CompanyName</option>
+                        }
+                    }
+
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">@ManagerResource.LB_CLOSE</button>
+        <a href="" class="btn btn-info btn-sm" data-current="" data-control="" id="butAddNew">
+            <i class="fa fa-plus"></i> @ManagerResource.LB_ADD_NEW
+        </a>
+    </div>
+
+</div>
+<script>
+    var selectedItem = $('.selectpicker').val();
+    $('#butAddNew').attr("href", selectedItem);
+
+    $(".selectpicker").selectpicker();
+
+    $('.selectpicker').change(function () {
+        var selectedItem = $('.selectpicker').val();
+        $('#butAddNew').attr("href", selectedItem);
+    });
+</script>

@@ -1,0 +1,62 @@
+[27/07/2023 09:30:09 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 09:30:09 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 09:30:09 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 09:30:09 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 09:30:09 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 09:35:01 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 09:35:01 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 09:35:01 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 09:35:01 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 09:35:01 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 09:35:50 ERR Manager.WebApp.Helpers.CacheProvider] Could not Get because: {0} 
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=0KiB, 1859ms elapsed, timeout is 1000ms), command=GET, next: GET USER_94E7515B-09B1-4B90-872E-6D544BA4A339, inst: 0, qu: 0, qs: 1, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 727, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=3,Free=32764,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 1859ms elapsed, timeout is 1000ms), command=GET, next: GET USER_94E7515B-09B1-4B90-872E-6D544BA4A339, inst: 0, qu: 0, qs: 1, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 727, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=3,Free=32764,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at StackExchange.Redis.Extensions.Core.Implementations.RedisDatabase.GetAsync[T](String key, CommandFlags flag)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Manager.WebApp.Helpers.CacheProvider.Get[T](String key) in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp\Helpers\Master\CachingHelpers.cs:line 53
+[27/07/2023 09:39:22 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 09:39:22 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 09:39:22 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 09:39:22 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 09:39:22 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 09:40:26 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 09:40:26 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 09:40:26 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 09:40:26 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 09:40:26 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 09:44:23 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[27/07/2023 09:44:23 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 09:44:23 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 09:44:23 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 09:44:23 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 09:44:23 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 10:04:20 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 10:04:20 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 10:04:20 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 10:04:20 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 10:04:20 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 10:06:23 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 10:06:23 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 10:06:23 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 10:06:23 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 10:06:23 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 10:06:58 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 10:06:58 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 10:06:58 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 10:06:58 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 10:06:58 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 10:14:10 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[27/07/2023 10:14:11 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 10:14:11 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 10:14:11 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 10:14:11 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 10:14:11 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 10:56:23 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[27/07/2023 10:56:23 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[27/07/2023 10:56:23 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[27/07/2023 10:56:23 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[27/07/2023 10:56:23 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[27/07/2023 14:37:46 ERR Manager.WebApp.Services.CompanyServices] Return code: 0, message:  
+[27/07/2023 14:37:55 ERR Manager.WebApp.Services.CompanyServices] Return code: 0, message:  

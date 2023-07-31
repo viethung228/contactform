@@ -1013,6 +1013,18 @@
       "PackagePath": "staticwebassets\\Scripts\\Company\\update.js"
     },
     {
+      "Id": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\EndUser\\Manager.WebApp\\wwwroot\\Scripts\\ContactForm\\add-form.js",
+      "PackagePath": "staticwebassets\\Scripts\\ContactForm\\add-form.js"
+    },
+    {
+      "Id": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\EndUser\\Manager.WebApp\\wwwroot\\Scripts\\ContactForm\\contactform.js",
+      "PackagePath": "staticwebassets\\Scripts\\ContactForm\\contactform.js"
+    },
+    {
+      "Id": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\EndUser\\Manager.WebApp\\wwwroot\\Scripts\\ContactForm\\edit-form.js",
+      "PackagePath": "staticwebassets\\Scripts\\ContactForm\\edit-form.js"
+    },
+    {
       "Id": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\EndUser\\Manager.WebApp\\wwwroot\\Scripts\\Course\\update.js",
       "PackagePath": "staticwebassets\\Scripts\\Course\\update.js"
     },

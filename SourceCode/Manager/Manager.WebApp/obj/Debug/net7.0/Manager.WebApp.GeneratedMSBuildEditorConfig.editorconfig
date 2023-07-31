@@ -60,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXplXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/AddCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxBZGRDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/ContactForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDb250YWN0Rm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Partials/_AddForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxQYXJ0aWFsc1xfQWRkRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/Company/Partials/_ExportCSV.cshtml]
@@ -106,6 +114,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/ContactForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cQ29udGFjdEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEZvcm1cRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project_VietHung/contact_form/contactform/SourceCode/Manager/Manager.WebApp/Views/ContactForm/EditContactForm.cshtml]

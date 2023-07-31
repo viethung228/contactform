@@ -507,8 +507,8 @@ function exportTableToCSV($table, filename) {
             .split(tmpColDelim).join(colDelim) + '"',
         // Data URI        
         csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(universalBOM + csv);
-
-    if (window.navigator.msSaveBlob) { // IE 10+
+    let _nav = window.navigator;
+    if (_nav.msSaveBlob) { // IE 10+
         //alert('IE' + csv);
         window.navigator.msSaveOrOpenBlob(new Blob([csv], { type: "text/plain;charset=utf-8;" }), filename);
     }

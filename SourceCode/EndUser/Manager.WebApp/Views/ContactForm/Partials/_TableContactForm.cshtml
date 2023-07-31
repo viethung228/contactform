@@ -23,7 +23,7 @@
                 <div class="">
                     <div class="row mb10">
                         @{
-                            var getCompanyNames = SecurityHelper.GenerateSecureLink("ContactForm", "AddContactForm", new { id = Model.SearchResults.FirstOrDefault().OwnerId, companyName = Model.SearchResults.FirstOrDefault().CompanyName });
+                            var getCompanyNames = SecurityHelper.GenerateSecureLink("ContactForm", "AddContactForm", new { id = ViewBag.OwnerId, companyName = ViewBag.CompanyName });
                         }
                         <div class="col-lg-6 text-left">
                             <button type="button" class="btn btn-info btn-sm" id="selectedCSVDownload" disabled style="color:white;" title="@ManagerResource.BT_OUTPUT_CSV">

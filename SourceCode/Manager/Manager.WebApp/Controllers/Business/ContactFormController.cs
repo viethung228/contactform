@@ -205,6 +205,8 @@ namespace Manager.WebApp.Controllers
 
             try
             {
+                model.ContactForm.Remarks = string.IsNullOrEmpty(model.ContactForm.Remarks) ? "" : model.ContactForm.Remarks;
+                model.ContactForm.PreviousJob = string.IsNullOrEmpty(model.ContactForm.PreviousJob) ? "" : model.ContactForm.PreviousJob;
                 var info = HelperCompany.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {
@@ -258,6 +260,8 @@ namespace Manager.WebApp.Controllers
 
             try
             {
+                model.ContactForm.Remarks = string.IsNullOrEmpty(model.ContactForm.Remarks) ? "" : model.ContactForm.Remarks;
+                model.ContactForm.PreviousJob = string.IsNullOrEmpty(model.ContactForm.PreviousJob) ? "" : model.ContactForm.PreviousJob;
                 var info = HelperCompany.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {

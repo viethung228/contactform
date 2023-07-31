@@ -269,7 +269,9 @@ namespace MainApi.Controllers
                         PhoneNumber = model.PhoneNumber,
                         SecurityStamp = hashData,
                         Avatar = model.CoverImage,
-                        CreatedDateUtc = DateTime.UtcNow
+                        CreatedDateUtc = DateTime.UtcNow,
+                        Address = model.Address
+
                     });
                     if (!string.IsNullOrEmpty(newCompany))
                     {

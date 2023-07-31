@@ -163,7 +163,8 @@ namespace Manager.Datalayer.Repositories
                 {"@PasswordHash", identity.PasswordHash },
                 {"@ParentId", identity.ParentId },
                 {"@SecurityStamp",identity.SecurityStamp },
-                {"@Avatar",identity.Avatar }
+                {"@Avatar",identity.Avatar },
+                {"@Address",identity.Address }
 
             };
 

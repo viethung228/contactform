@@ -79,7 +79,7 @@
                                     stt++;
                                     var editLink = SecurityHelper.GenerateSecureLink("Company", "Edit", new { id = record.CompanyId });
                                     var delLink = SecurityHelper.GenerateSecureLink("Company", "Delete", new { id = record.CompanyId });
-                                    var contactFormViewLink = SecurityHelper.GenerateSecureLink("Company", "ViewContactFormRelated", new { companyName = record.CompanyName });
+                                    var contactFormViewLink = SecurityHelper.GenerateSecureLink("Company", "ViewContactFormRelated", new { companyName = record.CompanyName.Replace(" ", "%20") });
                                     var dtLink = SecurityHelper.GenerateSecureLink("Company", "Detail", new { id = record.CompanyId, currentpage = 1 });
                                     var imageUrl = CdnHelper.GetFullFilePath(record.Avatar);
 

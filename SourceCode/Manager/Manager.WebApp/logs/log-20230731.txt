@@ -1,0 +1,71 @@
+[31/07/2023 09:02:47 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 09:02:47 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 09:02:47 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 09:02:47 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 09:02:47 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 09:13:39 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[31/07/2023 09:13:39 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 09:13:39 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 09:13:39 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 09:13:39 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 09:13:39 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 09:13:56 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Manager.WebApp.Controllers.CompanyController.ViewContactFormRelated(String companyName, Int32 currentpage, Int32 pagesize) in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp\Controllers\Business\CompanyController.cs:line 548 
+[31/07/2023 09:16:42 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 09:16:42 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 09:16:42 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 09:16:42 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 09:16:42 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 09:54:15 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 09:54:15 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 09:54:15 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 09:54:15 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 09:54:15 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 09:59:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 09:59:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 09:59:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 09:59:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 09:59:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 10:10:29 ERR Manager.WebApp.Helpers.CacheProvider] Could not Get because: {0} 
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=0KiB, 6312ms elapsed, timeout is 1000ms), command=GET, next: GET HH-SETTINGS..TYPES.GeneralSettings, inst: 0, qu: 0, qs: 1, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 556, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=3,Free=32764,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 6312ms elapsed, timeout is 1000ms), command=GET, next: GET HH-SETTINGS..TYPES.GeneralSettings, inst: 0, qu: 0, qs: 1, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 556, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=3,Free=32764,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at StackExchange.Redis.Extensions.Core.Implementations.RedisDatabase.GetAsync[T](String key, CommandFlags flag)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Manager.WebApp.Helpers.CacheProvider.Get[T](String key)
+[31/07/2023 10:21:11 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[31/07/2023 10:22:15 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[31/07/2023 10:23:09 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[31/07/2023 10:23:09 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 10:23:09 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 10:23:09 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 10:23:09 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 10:23:09 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 10:23:46 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[31/07/2023 10:24:42 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 10:24:42 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 10:24:42 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 10:24:42 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 10:24:42 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 10:26:00 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[31/07/2023 10:26:00 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: System.Exception: Missing input value!
+   at Manager.WebApp.Controllers.CompanyController.ContactForm_Submit(ContactFormFullDetailModel model) in E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp\Controllers\Business\CompanyController.cs:line 436 
+[31/07/2023 10:31:56 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[31/07/2023 10:31:56 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: System.Exception: Missing input value!
+   at Manager.WebApp.Controllers.CompanyController.ContactForm_Submit(ContactFormFullDetailModel model) 
+[31/07/2023 10:33:19 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 10:33:19 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 10:33:19 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 10:33:19 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 10:33:19 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 10:51:12 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 10:51:13 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 10:51:13 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 10:51:13 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 10:51:13 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[31/07/2023 11:13:30 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[31/07/2023 11:13:30 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[31/07/2023 11:13:30 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[31/07/2023 11:13:30 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[31/07/2023 11:13:30 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 

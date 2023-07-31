@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SjtofjRvB/8mbqcMEXPwT/Wml4F+HsO83y3WNMQTBXM=",
+  "Hash": "GAgj6WLOsQuLufEIX6EbtiqyXbi/KxkzU4Brubn2xk0=",
   "Source": "Manager.WebApp",
   "BasePath": "_content/Manager.WebApp",
   "Mode": "Default",
@@ -7344,6 +7344,23 @@
       "OriginalItemSpec": "wwwroot\\Scripts\\Company\\update.js"
     },
     {
+      "Identity": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\Scripts\\ContactForm\\add-form.js",
+      "SourceId": "Manager.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\",
+      "BasePath": "_content/Manager.WebApp",
+      "RelativePath": "Scripts/ContactForm/add-form.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Scripts\\ContactForm\\add-form.js"
+    },
+    {
       "Identity": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\Scripts\\ContactForm\\contactform.js",
       "SourceId": "Manager.WebApp",
       "SourceType": "Discovered",
@@ -7359,6 +7376,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Scripts\\ContactForm\\contactform.js"
+    },
+    {
+      "Identity": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\Scripts\\ContactForm\\edit-form.js",
+      "SourceId": "Manager.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\",
+      "BasePath": "_content/Manager.WebApp",
+      "RelativePath": "Scripts/ContactForm/edit-form.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Scripts\\ContactForm\\edit-form.js"
     },
     {
       "Identity": "E:\\Project_VietHung\\contact_form\\contactform\\SourceCode\\Manager\\Manager.WebApp\\wwwroot\\Scripts\\Course\\update.js",

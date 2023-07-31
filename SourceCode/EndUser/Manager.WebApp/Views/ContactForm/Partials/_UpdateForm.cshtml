@@ -69,14 +69,15 @@
     var frmSubmit = document.getElementById("frmUser");
     var regexletters = /^([^0-9]*)$/;
     var regexPhone = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
-    function check(){
+    function check() {
         var fullname = $('#FullName').val();
         var phonenumber = $('#PhoneNumber').val();
-        if (regexletters.test(fullname) && regexPhone.test(phonenumber)) {
-            document.getElementById("btnSubmit").click();         
+        if (fullname && phonenumber) {
+            document.getElementById("btnSubmit").click();
         }
         else {
             alert("Invalid Name or Phone Number. Please check and try again!");
         }
     }
+
 </script>

@@ -170,6 +170,8 @@ namespace Manager.WebApp.Controllers
 
             try
             {
+                model.ContactForm.Remarks = string.IsNullOrEmpty(model.ContactForm.Remarks) ? "" : model.ContactForm.Remarks;
+                model.ContactForm.PreviousJob = string.IsNullOrEmpty(model.ContactForm.PreviousJob) ? "" : model.ContactForm.PreviousJob;
                 var info = HelperCompany.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {
@@ -223,6 +225,8 @@ namespace Manager.WebApp.Controllers
 
             try
             {
+                model.ContactForm.Remarks = string.IsNullOrEmpty(model.ContactForm.Remarks) ? "" : model.ContactForm.Remarks;
+                model.ContactForm.PreviousJob = string.IsNullOrEmpty(model.ContactForm.PreviousJob) ? "" : model.ContactForm.PreviousJob;
                 var info = HelperCompany.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {
@@ -251,11 +255,12 @@ namespace Manager.WebApp.Controllers
                             model.Dependents.Remove(item);
                         }
                         var apiRes4 = ContactFormServices.UpdateDependentAsync(model).Result;
+                        this.AddNotification(ManagerResource.LB_INSERT_SUCCESS, NotificationType.SUCCESS);
+                        return RedirectToAction("Index");
                     }
 
                 }
-                this.AddNotification(ManagerResource.LB_INSERT_SUCCESS, NotificationType.SUCCESS);
-                return RedirectToAction("Index");
+
                 //return Json(new { success = true, message = ManagerResource.LB_UPDATE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
             }
             catch (Exception ex)

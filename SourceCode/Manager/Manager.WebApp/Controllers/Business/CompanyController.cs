@@ -97,7 +97,41 @@ namespace Manager.WebApp.Controllers
             {
                 _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
             }
-            return PartialView("Edit", model);
+            return PartialView("AddCompany", model);
+        }
+
+        [HttpPost, ActionName("Add")]
+        public ActionResult Add_Submit(CompanyUpdateModel model)
+        {
+            var strError = string.Empty;
+            var apiRes = new ApiResponseModel();
+            try
+            {
+                if (model.image_file_upload != null)
+                {
+                    model.CoverImage = UploadImage(model);
+                }
+                var getByEmail = CompanyServices.GetDetailByEmailAsync(model.Email).Result;
+                var getByCompanyName = CompanyServices.GetDetailByNameAsync(model.CompanyName).Result;
+                if (getByEmail == null || getByEmail.Data == null || getByCompanyName == null || getByCompanyName.Data == null)
+                {
+                    apiRes = CompanyServices.UpdateAsync(model).Result;
+                }
+
+                if (apiRes != null && apiRes.Data != null)
+                {
+                    this.AddNotification(ManagerResource.LB_INSERT_SUCCESS, NotificationType.SUCCESS);
+                    return Json(new { success = true, message = ManagerResource.LB_UPDATE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                this.AddNotification(ManagerResource.LB_ERROR_OCCURED, NotificationType.ERROR);
+            }
+            return Json(new { success = false, message = strError });
         }
 
         [HttpPost, ActionName("Edit")]
@@ -113,7 +147,7 @@ namespace Manager.WebApp.Controllers
                 }
                 var getByEmail = CompanyServices.GetDetailByEmailAsync(model.Email).Result;
                 var getByCompanyName = CompanyServices.GetDetailByNameAsync(model.CompanyName).Result;
-                if (getByEmail != null && getByEmail.Data != null)
+                 if (getByEmail != null && getByEmail.Data != null)
                 {
                     var info = getByEmail.Data.MappingObject<IdentityCompany>();
                     var infoCompany = new IdentityCompany();
@@ -127,7 +161,7 @@ namespace Manager.WebApp.Controllers
                         model.CoverImage = info.Avatar;
                     }
 
-                    if (infoCompany == null && infoCompany.Id == null)
+                    if (infoCompany != null && infoCompany.Id != null)
                     {
                         apiRes = CompanyServices.UpdateAsync(model).Result;
                     }
@@ -314,6 +348,8 @@ namespace Manager.WebApp.Controllers
 
             try
             {
+                model.ContactForm.Remarks = string.IsNullOrEmpty(model.ContactForm.Remarks) ? "" : model.ContactForm.Remarks;
+                model.ContactForm.PreviousJob = string.IsNullOrEmpty(model.ContactForm.PreviousJob) ? "" : model.ContactForm.PreviousJob;
                 var info = HelperCompany.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {
@@ -368,6 +404,8 @@ namespace Manager.WebApp.Controllers
 
             try
             {
+                model.ContactForm.Remarks = string.IsNullOrEmpty(model.ContactForm.Remarks) ? "" : model.ContactForm.Remarks;
+                model.ContactForm.PreviousJob = string.IsNullOrEmpty(model.ContactForm.PreviousJob) ? "" : model.ContactForm.PreviousJob;
                 var info = HelperCompany.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {
@@ -397,11 +435,14 @@ namespace Manager.WebApp.Controllers
                         }
                         var apiRes4 = ContactFormServices.UpdateDependentAsync(model).Result;
                     }
+                    else
+                    {
+                        throw new Exception("Missing input value!");
+                    }
 
                 }
                 this.AddNotification(ManagerResource.LB_INSERT_SUCCESS, NotificationType.SUCCESS);
                 return RedirectToAction("Index");
-                //return Json(new { success = true, message = ManagerResource.LB_UPDATE_SUCCESS, title = ManagerResource.LB_NOTIFICATION, clientcallback = "location.reload();" });
             }
             catch (Exception ex)
             {

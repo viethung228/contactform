@@ -29,13 +29,13 @@
         </div>
         <div class="col-lg-12">
             <label class="form-control-label">@ManagerResource.LB_FULL_NAME <span class="text-danger">*</span></label>
-            @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control", @required="" })
-            @Html.ValidationMessageFor(m => m.CompanyName, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control", @required="" })
+            @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
         </div>
         <div class="col-lg-12">
             <label class="form-control-label">@ManagerResource.LB_COMPANY_NAME <span class="text-danger">*</span></label>
-            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control", @required="" })
-            @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control", @required="", @disabled="disabled" })
+            @Html.ValidationMessageFor(m => m.CompanyName, "", new { @class = "text-danger" })
         </div>
 
         <div class="col-lg-12">
@@ -50,7 +50,7 @@
         </div>
         <div class="col-lg-12">
             <label class="form-control-label">@ManagerResource.LB_EMAIL <span class="text-danger">*</span></label>
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @required="" })
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @required="", @disabled="disabled" })
             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -76,12 +76,10 @@
     $('.selectpicker').selectpicker();
 
     var frmSubmit = document.getElementById("frmUser");
-    var regexletters = /^([^0-9]*)$/;
-    var regexPhone = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
     function check(){
         var fullname = $('#FullName').val();
         var phonenumber = $('#PhoneNumber').val();
-        if (regexletters.test(fullname) && regexPhone.test(phonenumber)) {
+        if (fullname && phonenumber) {
             document.getElementById("btnSubmit").click();         
         }
         else {

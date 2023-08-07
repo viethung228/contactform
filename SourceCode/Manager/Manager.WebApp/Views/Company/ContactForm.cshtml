@@ -40,8 +40,8 @@
     }
 
     /*
-                                                                                                                                                     Styling
-                                                                                                                                                    */
+                                                                                                                                                                 Styling
+                                                                                                                                                                */
     .tabset > label {
         position: relative;
         display: inline-block;
@@ -93,8 +93,8 @@
     }
 
     /*
-                                                                                                                                                     Demo purposes only
-                                                                                                                                                    */
+                                                                                                                                                                 Demo purposes only
+                                                                                                                                                                */
     *,
     *:before,
     *:after {
@@ -511,7 +511,7 @@
                                 style="width:6%;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt"
                                 rowspan="4">
 
-                                <p class="s2 mt-5" style="text-align: center;">給 与</p>
+                                <p class="s2" style="text-align: center;">給 与</p>
                             </td>
                             <td style="width:14%;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
                                 <p class="s2" style="padding-left: 10pt;line-height: 16pt;text-align: left;">
@@ -529,7 +529,7 @@
                                     @Html.RadioButtonFor(m => m.Allowance.SalaryType,"時給", new {@id="first-pickup-3",@class = "radio-custom radio-custom-gender input-group-field",@hidden=""})
                                     @Html.LabelFor(m => m.Allowance.SalaryType, "時給", new { @class = "radio-custom-label radio-custom-label-employee mt-1",@for="first-pickup-3"})
                                     <span style="line-height:30px;">&nbsp￥&nbsp</span>
-                                    @Html.TextBoxFor(m => m.Allowance.Salary, new { @class = "input-border-none allowancemoney", @required="",@style="",@placeholder="..." })
+                                    @Html.TextBoxFor(m => m.Allowance.Salary, new { @class = "input-border-none allowancemoney", @required="",@style="",@placeholder="0" })
                                     @Html.ValidationMessageFor(m => m.Allowance.Salary, "", new { @class = "text-danger" })
                                 </div>
                             </td>
@@ -545,22 +545,22 @@
                                 <p class="s2" style="padding-top: 2pt;padding-left: 3pt;line-height: 14pt;text-align: left;">
                                     <span class="">
                                         役職手当：￥
-                                        @Html.TextBoxFor(m => m.AllowanceDetail.Position, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.TextBoxFor(m => m.AllowanceDetail.Position, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="0"})
                                         @Html.ValidationMessageFor(m => m.AllowanceDetail.Position, "", new { @class = "text-danger" })
                                     </span>
                                     <span class="ml-3">
                                         皆勤手当：￥
-                                        @Html.TextBoxFor(m => m.AllowanceDetail.Attendance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.TextBoxFor(m => m.AllowanceDetail.Attendance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="0"})
                                         @Html.ValidationMessageFor(m => m.AllowanceDetail.Attendance, "", new { @class = "text-danger" })
                                     </span>
                                     <span class="ml-3">
                                         扶養手当：￥
-                                        @Html.TextBoxFor(m => m.AllowanceDetail.Alimony, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.TextBoxFor(m => m.AllowanceDetail.Alimony, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="0"})
                                         @Html.ValidationMessageFor(m => m.AllowanceDetail.Alimony, "", new { @class = "text-danger" })
                                     </span>
                                     <span class="ml-3">
                                         手当：￥
-                                        @Html.TextBoxFor(m => m.AllowanceDetail.Allowance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.TextBoxFor(m => m.AllowanceDetail.Allowance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="0"})
                                         @Html.ValidationMessageFor(m => m.AllowanceDetail.Allowance, "", new { @class = "text-danger" })
                                     </span>
 
@@ -583,7 +583,7 @@
                                         @Html.RadioButtonFor(m => m.Allowance.CommutingAllowanceType,"日額", new {@id="sec-pickup-2",@class = "radio-custom radio-custom-gender input-group-field",@hidden="",@checked=""})
                                         @Html.LabelFor(m => m.Allowance.CommutingAllowanceType, "日額", new { @class = "radio-custom-label radio-custom-label-salary",@for="sec-pickup-2"})
                                         <span style="line-height:30px;">￥</span>
-                                        @Html.TextBoxFor(m => m.Allowance.CommutingAllowance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="..."})
+                                        @Html.TextBoxFor(m => m.Allowance.CommutingAllowance, new { @class = "input-border-none ml-2 allowancemoney", @required="",@style="",@placeholder="0"})
                                         @Html.ValidationMessageFor(m => m.Allowance.CommutingAllowance, "", new { @class = "text-danger" })
                                     </div>
                                 </p>
@@ -700,19 +700,23 @@
                             </td>
                             <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt">
                                 @Html.TextBoxFor(m => m.Dependents[0].Furigana, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[0].Furigana, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt"
                                 colspan="2">
 
                                 @Html.TextBoxFor(m => m.Dependents[1].Furigana, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[1].Furigana, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:1pt"
                                 colspan="5">
                                 @Html.TextBoxFor(m => m.Dependents[2].Furigana, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[2].Furigana, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:dashed;border-bottom-width:1pt;border-bottom-color:#7E7E7E;border-right-style:solid;border-right-width:2pt"
                                 colspan="5">
                                 @Html.TextBoxFor(m => m.Dependents[3].Furigana, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[3].Furigana, "", new { @class = "text-danger" })
                             </td>
                         </tr>
                         <tr style="height:28pt">
@@ -774,21 +778,28 @@
                                 </p>
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
-                                @Html.TextBoxFor(m => m.Dependents[0].DateOfBirth, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@type="date"})
+                                @Html.TextBoxFor(m => m.Dependents[0].DateOfBirth, new { @class = "mt-2 mb-2 datepicker input-border-none input-center itemcol-1",@style="width: 100%;",@type="date"})
+                                @Html.ValidationMessageFor(m => m.Dependents[0].DateOfBirth, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="2">
-                                @Html.TextBoxFor(m => m.Dependents[1].DateOfBirth, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@type="date"})
+                                @Html.TextBoxFor(m => m.Dependents[1].DateOfBirth, new { @class = "mt-2 mb-2 datepicker input-border-none input-center itemcol-2",@style="width: 100%;",@type="date"})
+                                @Html.ValidationMessageFor(m => m.Dependents[1].DateOfBirth, "", new { @class = "text-danger" })
+
 
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="5">
-                                @Html.TextBoxFor(m => m.Dependents[2].DateOfBirth, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@type="date"})
+                                @Html.TextBoxFor(m => m.Dependents[2].DateOfBirth, new { @class = "mt-2 mb-2 datepicker input-border-none input-center itemcol-3",@style="width: 100%;",@type="date"})
+                                @Html.ValidationMessageFor(m => m.Dependents[2].DateOfBirth, "", new { @class = "text-danger" })
+
 
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
                                 colspan="5">
-                                @Html.TextBoxFor(m => m.Dependents[3].DateOfBirth, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@type="date"})
+                                @Html.TextBoxFor(m => m.Dependents[3].DateOfBirth, new { @class = "mt-2 mb-2 datepicker input-border-none input-center itemcol-4",@style="width: 100%;",@type="date"})
+                                @Html.ValidationMessageFor(m => m.Dependents[3].DateOfBirth, "", new { @class = "text-danger" })
+
 
                             </td>
                         </tr>
@@ -801,20 +812,24 @@
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
                                 @Html.TextBoxFor(m => m.Dependents[0].Relationship, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[0].Relationship, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="2">
                                 @Html.TextBoxFor(m => m.Dependents[1].Relationship, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[1].Relationship, "", new { @class = "text-danger" })
 
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="5">
                                 @Html.TextBoxFor(m => m.Dependents[2].Relationship, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[2].Relationship, "", new { @class = "text-danger" })
 
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
                                 colspan="5">
                                 @Html.TextBoxFor(m => m.Dependents[3].Relationship, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[3].Relationship, "", new { @class = "text-danger" })
 
                             </td>
                         </tr>
@@ -825,19 +840,23 @@
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
                                 @Html.TextBoxFor(m => m.Dependents[0].Occupation, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[0].Occupation, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="2">
                                 @Html.TextBoxFor(m => m.Dependents[1].Occupation, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[1].Occupation, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="5">
                                 @Html.TextBoxFor(m => m.Dependents[2].Occupation, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[2].Occupation, "", new { @class = "text-danger" })
                             </td>
                             <td class=""
                                 style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
                                 colspan="5">
                                 @Html.TextBoxFor(m => m.Dependents[3].Occupation, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[3].Occupation, "", new { @class = "text-danger" })
                             </td>
                         </tr>
                         <tr style="height:19pt">
@@ -849,18 +868,22 @@
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
                                 @Html.TextBoxFor(m => m.Dependents[0].AnualIncome, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[0].AnualIncome, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="2">
                                 @Html.TextBoxFor(m => m.Dependents[1].AnualIncome, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[1].AnualIncome, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="5">
                                 @Html.TextBoxFor(m => m.Dependents[2].AnualIncome, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[2].AnualIncome, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
                                 colspan="5">
                                 @Html.TextBoxFor(m => m.Dependents[3].AnualIncome, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[3].AnualIncome, "", new { @class = "text-danger" })
                             </td>
                         </tr>
                         <tr style="height:27pt">
@@ -871,19 +894,23 @@
                                 </p>
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
-                                @Html.TextBoxFor(m => m.Dependents[0].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                                @Html.TextBoxFor(m => m.Dependents[0].Address, new { @class = "mt-2 mb-2 input-border-none dpaddress input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[0].Address, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="2">
-                                @Html.TextBoxFor(m => m.Dependents[1].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                                @Html.TextBoxFor(m => m.Dependents[1].Address, new { @class = "mt-2 mb-2 input-border-none dpaddress input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[1].Address, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="5">
-                                @Html.TextBoxFor(m => m.Dependents[2].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                                @Html.TextBoxFor(m => m.Dependents[2].Address, new { @class = "mt-2 mb-2 input-border-none dpaddress input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[2].Address, "", new { @class = "text-danger" })
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
                                 colspan="5">
-                                @Html.TextBoxFor(m => m.Dependents[3].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                                @Html.TextBoxFor(m => m.Dependents[3].Address, new { @class = "mt-2 mb-2 input-border-none dpaddress input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                                @Html.ValidationMessageFor(m => m.Dependents[3].Address, "", new { @class = "text-danger" })
                             </td>
                         </tr>
                         <tr style="height:19pt">
@@ -895,25 +922,25 @@
                             </td>
                             <td class="td-stype-type2" style="border-right-width:1pt">
                                 @Html.TextBoxFor(m => m.Dependents[0].EnrollmentDate, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@max="2023-12-31",@style="width: 100%;",@type="date",@value = Model.Dependents[0].EnrollmentDate.ToString("yyyy-MM-dd")})
+                                @Html.ValidationMessageFor(m => m.Dependents[0].EnrollmentDate, "", new { @class = "text-danger" })
                             </td>
                             <td class="td-stype-type1" style="border-right-width:1pt" colspan="2">
-                                @Html.TextBoxFor(m => m.Dependents[1].EnrollmentDate, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@type="date"})
+                                @Html.TextBoxFor(m => m.Dependents[1].EnrollmentDate, new { @class = "mt-2 mb-2 datepicker input-border-none input-center itemcol-2",@style="width: 100%;",@type="date"})
+                                @Html.ValidationMessageFor(m => m.Dependents[1].EnrollmentDate, "", new { @class = "text-danger" })
 
                             </td>
                             <td class="td-stype-type1" style="border-right-width:1pt" colspan="5">
-                                @Html.TextBoxFor(m => m.Dependents[2].EnrollmentDate, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@type="date"})
+                                @Html.TextBoxFor(m => m.Dependents[2].EnrollmentDate, new { @class = "mt-2 mb-2 datepicker input-border-none input-center itemcol-3",@style="width: 100%;",@type="date"})
+                                @Html.ValidationMessageFor(m => m.Dependents[2].EnrollmentDate, "", new { @class = "text-danger" })
 
                             </td>
                             <td class="td-stype-type1" style="border-right-width:2pt" colspan="5">
-                                @Html.TextBoxFor(m => m.Dependents[3].EnrollmentDate, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@type="date"})
+                                @Html.TextBoxFor(m => m.Dependents[3].EnrollmentDate, new { @class = "mt-2 mb-2 datepicker input-border-none input-center itemcol-4",@style="width: 100%;",@type="date"})
+                                @Html.ValidationMessageFor(m => m.Dependents[3].EnrollmentDate, "", new { @class = "text-danger" })
 
                             </td>
                         </tr>
                     </table>
-                    @foreach (var dep in Model.Dependents)
-                    {
-
-                    }
                     <br>
                     <p class="s18" style="padding-left: 10pt;text-align: left;">
                         ※扶養者の収入には、雇用保険の失業等給付、公的年金、健康保険の傷病手当金や出産手当金も含まれます。
@@ -931,6 +958,7 @@
                                 </p>
                                 <p class="s2" style="padding-left: 5pt;line-height: 14pt;text-align: left;">
                                     @Html.TextBoxFor(m => m.ContactForm.Remarks, new { @class = "mt-2 mb-2 input-border-none",@style="width: 100%;"})
+                                    @Html.ValidationMessageFor(m =>m.ContactForm.Remarks, "", new { @class = "text-danger" })
                                 </p>
                             </td>
                         </tr>
@@ -1005,7 +1033,7 @@
             </div>
             <div class="mt-4 d-flex justify-content-center align-items-center">
                 <div>
-                    <button type="submit" class="btn btn-warning btn-sm btn-save-version" id="butSubmitContactForm">
+                    <button type="button" class="btn btn-warning btn-sm btn-save-version" id="butSubmitContactForm">
                         <i class="fa fa-save"></i> 新しいバージョンを保存
                     </button>
                     <a class="btn btn-outline-info btn-sm" href="/Company"><i class="fa fa-remove"></i> キャンセル</a>
@@ -1018,4 +1046,36 @@
 
 @section PageInlineScripts{
     <script src="~/Scripts/ContactForm/add-form.js"></script>
+    <script>
+        $("#butSubmitContactForm").click(function () {
+            var pattern = /[a-zA-Z]/;
+            var alertMessage = "";
+            if (!$("#ContactForm_NenkinNumber").val()) {
+                alertMessage += "基礎年金番号が抜けている" + "\n";
+            }
+            if (!$("#ContactForm_Insurance").val()) {
+                alertMessage += "雇用保険被保険者番号が記載されていない" + "\n";
+            }
+            if (!$("#ContactForm_Address").val() || !$("#ContactForm_Address").val().match(pattern) ? true : false) {
+                alertMessage += "住所がありません" + "\n";
+            }
+            if (!$("#ContactForm_DateOfBirth").val() || $("#ContactForm_DateOfBirth").val().includes("NaN")) {
+                alertMessage += "生年月日を入力してください" + "\n";
+            }
+            if (!$("#ContactForm_DateOfJoining").val()) {
+                alertMessage += "入社日を入力してください" + "\n";
+            }
+            if (!$("#ContactForm_ForOffice").val()) {
+                alertMessage += "事務分野で行方不明" + "\n";
+            }
+            
+            if (alertMessage) {
+                alert(alertMessage);
+            }
+            else{
+                $("#frmContactForm").submit();
+            }
+
+        });
+    </script>
 }

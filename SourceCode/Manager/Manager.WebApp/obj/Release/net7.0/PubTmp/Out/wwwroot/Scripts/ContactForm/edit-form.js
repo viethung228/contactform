@@ -42,6 +42,15 @@ function GetJapaneseDate(selector) {
   return tempYear + ";" + tempMonth + ";" + tempDay;
 }
 window.onload(DisplayValues());
+window.onload = (event) => (
+
+    $(".dpaddress").each(function () {
+
+        if (!$(this).val()) {
+            $(this).val('なし');
+        }
+    })
+);
 function DisplayValues() {
   //Display values
 

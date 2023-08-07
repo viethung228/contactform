@@ -11,9 +11,9 @@ namespace MainApi.Helpers
 {
     public class MenuHelper
     {
-        const string CST_ALL_MENU_ITEMS_PREFIX = "MNU_ALL_MENU_ITEMS";
-        const string CST_ALL_PERMISSIONS_PREFIX = "PRIVILEGES_";
-        const string CST_ALL_MENU_ITEMS_PATTERN = "MNU_ALL_MENU_ITEMS.{0}";
+        const string CST_ALL_MENU_ITEMS_PREFIX = "FORM_MNU_ALL_MENU_ITEMS";
+        const string CST_ALL_PERMISSIONS_PREFIX = "FORM_PRIVILEGES_";
+        const string CST_ALL_MENU_ITEMS_PATTERN = "FORM_MNU_ALL_MENU_ITEMS.{0}";
 
         public static void ClearAllMenuCache()
         {

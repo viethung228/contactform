@@ -10,7 +10,7 @@ namespace MainApi.Helpers
 {
     public static class PermissionHelper
     {
-        private static readonly string ALL_PERMISSIONS_KEY = "PRIVILEGES_";
+        private static readonly string ALL_PERMISSIONS_KEY = "FORM_PRIVILEGES_";
 
         public static bool CheckPermission(string actionName = "", string controllerName = "", string currentUserId = "")
         {

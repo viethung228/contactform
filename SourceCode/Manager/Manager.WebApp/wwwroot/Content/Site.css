@@ -868,14 +868,14 @@ input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-calen
 .floating-panel{position: fixed;bottom: 0;width: 100%;text-align: center;background-color: #9fd1cc;padding: 10px;z-index: 333;left: 0;}
 .floating-error-focus, .floating-error-focus:focus{border: 2px solid red !important;}
 .bootbox-close-button:focus{outline:none !important;}
-input[type="date"] {position: relative;}
-input[type="date"]:after {font-family: FontAwesome;content: "\f133";padding: 0 5px;}
+/*input[type="date"] {position: relative;}
+input[type="date"]:after {font-family: FontAwesome;content: "\f133";padding: 0 5px;}*/
 /* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
-input[type="date"]::-webkit-calendar-picker-indicator {position: absolute;top: 0;left: 0;right: 0;bottom: 0;width: auto;height: auto;color: transparent;background: transparent;}
+/*input[type="date"]::-webkit-calendar-picker-indicator {position: absolute;top: 0;left: 0;right: 0;bottom: 0;width: auto;height: auto;color: transparent;background: transparent;}*/
 /* adjust increase/decrease button */
-input[type="date"]::-webkit-inner-spin-button {z-index: 1;}
+/*input[type="date"]::-webkit-inner-spin-button {z-index: 1;}*/
 /* adjust clear button */
-input[type="date"]::-webkit-clear-button {z-index: 1;}
+/*input[type="date"]::-webkit-clear-button {z-index: 1;}*/
 
 .no-border{border: none;}
 .m-portlet.m-portlet--fullscreen>.m-form, .m-portlet.m-portlet--fullscreen>.m-portlet__body{top:6.1rem}

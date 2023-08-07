@@ -145,7 +145,26 @@ namespace Manager.WebApp.Controllers
 
                 //Change password
                 var userStore = Startup.IocContainer.Resolve<IStoreCompany>();
+                var currentPass = userStore.GetById(userId).PasswordHash;
 
+                if (model.OldPassword == currentPass)
+                {
+                    var result1 = userStore.ChangePassword(new IdentityCompany { Id = userId, PasswordHash = model.NewPassword });
+                    if (result1)
+                    {
+                        this.AddNotification(ManagerResource.LB_CHANGE_PWD_SUCCESS, NotificationType.SUCCESS);
+                    }
+                    else
+                    {
+                        this.AddNotification(ManagerResource.LB_ERROR_OCCURED, NotificationType.ERROR);
+
+                    }
+                }
+                else
+                {
+                    this.AddNotification(ManagerResource.ERROR_CONFRIM_PASSWORD_NOT_MATCH, NotificationType.ERROR);
+
+                }
                 var result = userStore.ChangePassword(new IdentityCompany { Id = userId, PasswordHash = model.NewPassword });
 
                 this.AddNotification(ManagerResource.LB_CHANGE_PWD_SUCCESS, NotificationType.SUCCESS);

@@ -42,7 +42,7 @@ namespace Manager.WebApp.Controllers
             try
             {
                 var userInfo = GetCurrentUser();
-                if(userInfo != null)
+                if (userInfo != null)
                 {
                     model = userInfo.MappingObject<AccountDetailViewModel>();
 
@@ -81,7 +81,7 @@ namespace Manager.WebApp.Controllers
                 //    }
                 //}
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError("Could not display Profile page because: {0}", ex.ToString());
             }
@@ -145,10 +145,25 @@ namespace Manager.WebApp.Controllers
 
                 //Change password
                 var userStore = Startup.IocContainer.Resolve<IStoreUser>();
+                var currentPass = userStore.GetById(userId).PasswordHash;
+                if (model.OldPassword == currentPass)
+                {
+                    var result = userStore.ChangePassword(new IdentityUser { Id = userId, PasswordHash = model.NewPassword });
+                    if (result)
+                    {
+                        this.AddNotification(ManagerResource.LB_CHANGE_PWD_SUCCESS, NotificationType.SUCCESS);
+                    }
+                    else
+                    {
+                        this.AddNotification(ManagerResource.LB_ERROR_OCCURED, NotificationType.ERROR);
 
-                var result = userStore.ChangePassword(new IdentityUser { Id = userId, PasswordHash = model.NewPassword });
+                    }
+                }
+                else
+                {
+                    this.AddNotification(ManagerResource.ERROR_CONFRIM_PASSWORD_NOT_MATCH, NotificationType.ERROR);
 
-                this.AddNotification(ManagerResource.LB_CHANGE_PWD_SUCCESS, NotificationType.SUCCESS);
+                }
 
                 return RedirectToAction("Profile", "MyAccount");
             }
@@ -260,7 +275,7 @@ namespace Manager.WebApp.Controllers
                                 try
                                 {
                                     if (!string.IsNullOrEmpty(oldPath))
-                                    {                                       
+                                    {
                                         var delPath = Path.Combine(Directory.GetCurrentDirectory(), "Media" + "/" + oldPath);
                                         System.IO.File.Delete(delPath);
                                     }

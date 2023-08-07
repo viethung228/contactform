@@ -421,6 +421,15 @@ namespace Manager.WebApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 会社のフルネーム.
+        /// </summary>
+        public static string COMPANY_FULLNAME {
+            get {
+                return ResourceManager.GetString("COMPANY_FULLNAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 注文を受け付けますか？.
         /// </summary>
         public static string CONFIRM_ACCEPT_ORDER {

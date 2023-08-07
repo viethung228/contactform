@@ -16,6 +16,7 @@ using Autofac;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Manager.SharedLibs.Extensions;
+using System.Dynamic;
 
 namespace Manager.WebApp.Controllers
 {
@@ -115,6 +116,7 @@ namespace Manager.WebApp.Controllers
                 var getByCompanyName = CompanyServices.GetDetailByNameAsync(model.CompanyName).Result;
                 if (getByEmail == null || getByEmail.Data == null || getByCompanyName == null || getByCompanyName.Data == null)
                 {
+                    model.image_file_upload = null;
                     apiRes = CompanyServices.UpdateAsync(model).Result;
                 }
 
@@ -147,7 +149,7 @@ namespace Manager.WebApp.Controllers
                 }
                 var getByEmail = CompanyServices.GetDetailByEmailAsync(model.Email).Result;
                 var getByCompanyName = CompanyServices.GetDetailByNameAsync(model.CompanyName).Result;
-                 if (getByEmail != null && getByEmail.Data != null)
+                if (getByEmail != null && getByEmail.Data != null)
                 {
                     var info = getByEmail.Data.MappingObject<IdentityCompany>();
                     var infoCompany = new IdentityCompany();
@@ -155,14 +157,14 @@ namespace Manager.WebApp.Controllers
                     {
                         infoCompany = getByCompanyName.Data.MappingObject<IdentityCompany>();
                     }
-
-                    if (info.Avatar != null && model.CoverImage == null)
+                    if (model.image_file_upload == null || (info.Avatar != null && model.CoverImage == null))
                     {
                         model.CoverImage = info.Avatar;
                     }
 
                     if (infoCompany != null && infoCompany.Id != null)
                     {
+                        model.image_file_upload = null;
                         apiRes = CompanyServices.UpdateAsync(model).Result;
                     }
                 }
@@ -170,6 +172,7 @@ namespace Manager.WebApp.Controllers
                 {
                     if (getByCompanyName.Data == null)
                     {
+                        model.image_file_upload = null;
                         apiRes = CompanyServices.UpdateAsync(model).Result;
                     }
                 }
@@ -406,6 +409,8 @@ namespace Manager.WebApp.Controllers
             {
                 model.ContactForm.Remarks = string.IsNullOrEmpty(model.ContactForm.Remarks) ? "" : model.ContactForm.Remarks;
                 model.ContactForm.PreviousJob = string.IsNullOrEmpty(model.ContactForm.PreviousJob) ? "" : model.ContactForm.PreviousJob;
+                model.ContactForm.ForOffice = string.IsNullOrEmpty(model.ContactForm.ForOffice) ? "" : model.ContactForm.ForOffice;
+
                 var info = HelperCompany.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {
@@ -442,7 +447,7 @@ namespace Manager.WebApp.Controllers
 
                 }
                 this.AddNotification(ManagerResource.LB_INSERT_SUCCESS, NotificationType.SUCCESS);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","ContactForm", null);
             }
             catch (Exception ex)
             {
@@ -712,7 +717,6 @@ namespace Manager.WebApp.Controllers
                 {
                     var fileRs = apiResult.ConvertData<List<ApiResponseUploadFileModel>>();
 
-                    model.image_file_upload = null;
                     if (fileRs.HasData())
                     {
                         if (fileRs[0] != null)

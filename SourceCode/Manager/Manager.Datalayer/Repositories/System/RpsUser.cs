@@ -100,6 +100,7 @@ namespace Manager.Datalayer.Repositories
             record.CreatedDateUtc = reader["CreatedDateUtc"] != DBNull.Value ? (DateTime)reader["CreatedDateUtc"] : DateTime.MinValue;
             record.LockoutEndDateUtc = reader["LockoutEndDateUtc"] != DBNull.Value ? (DateTime?)reader["LockoutEndDateUtc"] : null;
             record.Qrcode = reader["Qrcode"].ToString();
+            record.PasswordHash = reader["PasswordHash"].ToString();
             record.ReceiveAllUpdate = Utils.ConvertToBoolean(reader["ReceiveAllUpdate"]);
 
             return record;

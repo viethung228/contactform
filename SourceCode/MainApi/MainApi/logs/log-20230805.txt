@@ -1,0 +1,10 @@
+[05/08/2023 09:00:18 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[05/08/2023 09:00:18 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[05/08/2023 09:00:18 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[05/08/2023 09:00:18 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[05/08/2023 09:00:18 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 
+[05/08/2023 13:54:39 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[05/08/2023 13:54:39 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3600 
+[05/08/2023 13:54:39 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[05/08/2023 13:54:39 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[05/08/2023 13:54:39 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\MainApi\MainApi 

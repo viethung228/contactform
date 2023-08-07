@@ -414,7 +414,7 @@ namespace MainApi.Controllers.Manager
 
                     model.SearchResults = returnList.MappingObject<List<ContactFormDetailModel>>();
                 }
-
+                
                 returnModel.Data = model.SearchResults;
             }
             catch (Exception ex)

@@ -871,19 +871,19 @@
                                 </p>
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
-                                @Html.TextBoxFor(m => m.Dependents[0].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
+                                @Html.TextBoxFor(m => m.Dependents[0].Address, new { @class = "mt-2 mb-2 input-border-none dpaddress input-center itemcol-1",@style="width: 100%;",@placeholder="..."})
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="2">
-                                @Html.TextBoxFor(m => m.Dependents[1].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
+                                @Html.TextBoxFor(m => m.Dependents[1].Address, new { @class = "mt-2 mb-2 input-border-none dpaddress input-center itemcol-2",@style="width: 100%;",@placeholder="..."})
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
                                 colspan="5">
-                                @Html.TextBoxFor(m => m.Dependents[2].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
+                                @Html.TextBoxFor(m => m.Dependents[2].Address, new { @class = "mt-2 mb-2 input-border-none dpaddress input-center itemcol-3",@style="width: 100%;",@placeholder="..."})
                             </td>
                             <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt"
                                 colspan="5">
-                                @Html.TextBoxFor(m => m.Dependents[3].Address, new { @class = "mt-2 mb-2 input-border-none input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
+                                @Html.TextBoxFor(m => m.Dependents[3].Address, new { @class = "mt-2 mb-2 input-border-none dpaddress input-center itemcol-4",@style="width: 100%;",@placeholder="..."})
                             </td>
                         </tr>
                         <tr style="height:19pt">
@@ -1005,10 +1005,10 @@
             </div>
             <div class="mt-4 d-flex justify-content-center align-items-center">
                 <div>
-                    <button type="submit" class="btn btn-warning btn-sm btn-save-version" id="butSubmitContactForm">
+                    <button type="button" class="btn btn-warning btn-sm btn-save-version" id="butSubmitContactForm">
                         <i class="fa fa-save"></i> 新しいバージョンを保存
                     </button>
-                    <a class="btn btn-outline-info btn-sm" href="/Company"><i class="fa fa-remove"></i> キャンセル</a>
+                    <a class="btn btn-outline-info btn-sm" href="/ContactForm"><i class="fa fa-remove"></i> キャンセル</a>
                 </div>
             </div>
         </div>
@@ -1018,4 +1018,36 @@
 
 @section PageInlineScripts{
     <script src="~/Scripts/ContactForm/add-form.js"></script>
+    <script>
+        $("#butSubmitContactForm").click(function () {
+            var pattern = /[a-zA-Z]/;
+            var alertMessage = "";
+            if (!$("#ContactForm_NenkinNumber").val()) {
+                alertMessage += "基礎年金番号が抜けている" + "\n";
+            }
+            if (!$("#ContactForm_Insurance").val()) {
+                alertMessage += "雇用保険被保険者番号が記載されていない" + "\n";
+            }
+            if (!$("#ContactForm_Address").val() || !$("#ContactForm_Address").val().match(pattern) ? true : false) {
+                alertMessage += "住所がありません" + "\n";
+            }
+            if (!$("#ContactForm_DateOfBirth").val() || $("#ContactForm_DateOfBirth").val().includes("NaN")) {
+                alertMessage += "生年月日を入力してください" + "\n";
+            }
+            if (!$("#ContactForm_DateOfJoining").val()) {
+                alertMessage += "入社日を入力してください" + "\n";
+            }
+            if (!$("#ContactForm_ForOffice").val() || !$("#ContactForm_ForOffice").val().match(pattern) ? true : false) {
+                alertMessage += "事務分野で行方不明" + "\n";
+            }
+
+            if (alertMessage) {
+                alert(alertMessage);
+            }
+            else {
+                $("#frmContactForm").submit();
+            }
+
+        });
+    </script>
 }

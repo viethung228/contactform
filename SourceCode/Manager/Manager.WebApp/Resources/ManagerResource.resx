@@ -237,6 +237,9 @@
   <data name="COMMON_ERROR_QUANTITY_MUST_NUMBERIC" xml:space="preserve">
     <value>３桁以下の半額の数字を入力して下さい</value>
   </data>
+  <data name="COMPANY_FULLNAME" xml:space="preserve">
+    <value>会社のフルネーム</value>
+  </data>
   <data name="CONFIRM_ACCEPT_ORDER" xml:space="preserve">
     <value>注文を受け付けますか？</value>
   </data>

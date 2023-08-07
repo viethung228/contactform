@@ -19,7 +19,14 @@
     .pointer:hover {
         cursor: pointer;
         background-color:brown;
-    }    
+    }
+
+    .header {
+        position: sticky;
+        top: 0;
+        border:1px solid black;
+        opacity:100%;
+    }
 </style>
 <div class="m-portlet m-portlet--collapse" m-portlet="true" id="FormSearchTool">
     <div class="m-portlet__head">
@@ -55,12 +62,12 @@
                 </a>
             </div>
         </div>
-        <div class="m-section">
-            <div class="m-section__content table-responsive">
-                <div class="sticky-table sticky-headers sticky-ltr-cells">
-                    <table id="sample-table-1" class="table table-hover table-bordered">
+        <div class=" mt10">
+            <div class="table-responsive">
+                <div class="meo-table-fixed-head meo-table-fixed-head--50">
+                    <table class="meo-table ">
                         <thead class="text-nowrap">
-                            <tr class="sticky-row">
+                            <tr>
                                 <th class="text-center" width="3%">#</th>
                                 @*<th class="text-center" width="5%">@ManagerResource.LB_CODE</th>*@
                                 <th class="text-center">@ManagerResource.LB_COMPANY_NAME</th>
@@ -137,7 +144,9 @@
 
                         </tbody>
                     </table>
+                    <div class="fixed-table-border"></div>
                 </div>
+
             </div>
             @{
                 await RenderPaging();

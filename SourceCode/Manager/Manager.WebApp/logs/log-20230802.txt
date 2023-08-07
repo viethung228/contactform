@@ -1,0 +1,54 @@
+[02/08/2023 09:00:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[02/08/2023 09:00:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[02/08/2023 09:00:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[02/08/2023 09:00:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[02/08/2023 09:00:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[02/08/2023 09:07:34 ERR Manager.WebApp.Helpers.CacheProvider] Could not Get because: {0} 
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=0KiB, 2125ms elapsed, timeout is 1000ms), command=GET, next: GET HH-SETTINGS..TYPES.GeneralSettings, inst: 0, qu: 0, qs: 1, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 556, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=3,Free=32764,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 2125ms elapsed, timeout is 1000ms), command=GET, next: GET HH-SETTINGS..TYPES.GeneralSettings, inst: 0, qu: 0, qs: 1, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 556, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=3,Free=32764,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at StackExchange.Redis.Extensions.Core.Implementations.RedisDatabase.GetAsync[T](String key, CommandFlags flag)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Manager.WebApp.Helpers.CacheProvider.Get[T](String key)
+[02/08/2023 09:11:38 ERR Manager.WebApp.Services.CompanyServices] Return code: InternalServerError, message: http://localhost:3600/api/company/update 
+[02/08/2023 09:12:30 ERR Manager.WebApp.Helpers.CacheProvider] Could not Get because: {0} 
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=0KiB, 12469ms elapsed, timeout is 1000ms), command=GET, next: GET HH-SETTINGS..TYPES.GeneralSettings, inst: 0, qu: 0, qs: 1, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=4,Free=32763,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 12469ms elapsed, timeout is 1000ms), command=GET, next: GET HH-SETTINGS..TYPES.GeneralSettings, inst: 0, qu: 0, qs: 1, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: localhost:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-NKBJNNC, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=4,Free=32763,Min=16,Max=32767), v: 2.2.50.36290 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at StackExchange.Redis.Extensions.Core.Implementations.RedisDatabase.GetAsync[T](String key, CommandFlags flag)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Manager.WebApp.Helpers.CacheProvider.Get[T](String key)
+[02/08/2023 09:13:08 ERR Manager.WebApp.Services.CompanyServices] Return code: InternalServerError, message: http://localhost:3600/api/company/update 
+[02/08/2023 09:59:42 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[02/08/2023 10:01:19 WRN Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page. 
+[02/08/2023 10:02:30 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[02/08/2023 10:02:30 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: System.Exception: Missing input value!
+   at Manager.WebApp.Controllers.CompanyController.ContactForm_Submit(ContactFormFullDetailModel model) 
+[02/08/2023 10:04:39 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[02/08/2023 10:04:39 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: System.Exception: Missing input value!
+   at Manager.WebApp.Controllers.CompanyController.ContactForm_Submit(ContactFormFullDetailModel model) 
+[02/08/2023 10:08:21 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[02/08/2023 10:08:21 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: System.Exception: Missing input value!
+   at Manager.WebApp.Controllers.CompanyController.ContactForm_Submit(ContactFormFullDetailModel model) 
+[02/08/2023 10:37:41 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[02/08/2023 10:37:42 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[02/08/2023 10:37:42 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[02/08/2023 10:37:42 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[02/08/2023 10:37:42 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[02/08/2023 10:45:43 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[02/08/2023 10:45:44 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[02/08/2023 10:45:44 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[02/08/2023 10:45:44 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[02/08/2023 10:45:44 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[02/08/2023 10:45:44 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[02/08/2023 13:56:34 ERR StackExchange.Redis.Extensions.Core.Implementations.RedisCacheConnectionPoolManager] Redis connection error restored. 
+[02/08/2023 13:56:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[02/08/2023 13:56:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[02/08/2023 13:56:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[02/08/2023 13:56:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[02/08/2023 13:56:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[02/08/2023 14:01:16 ERR Manager.WebApp.Services.CompanyServices] Return code: InternalServerError, message: http://localhost:3600/api/company/update 
+[02/08/2023 14:02:04 ERR Manager.WebApp.Services.CompanyServices] Return code: InternalServerError, message: http://localhost:3600/api/company/update 
+[02/08/2023 14:02:50 ERR Manager.WebApp.Services.CompanyServices] Return code: InternalServerError, message: http://localhost:3600/api/company/update 

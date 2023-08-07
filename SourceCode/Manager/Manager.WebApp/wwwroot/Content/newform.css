@@ -441,3 +441,77 @@ input[type='checkbox'] {
     cursor: pointer;
     accent-color: var(--root--color-info);
 }
+
+table.meo-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.meo-table tr:last-child td {
+    border-bottom: none;
+}
+
+.meo-table td,
+.meo-table th {
+    padding: 0.75rem;
+}
+
+.meo-table td {
+    border-bottom: 1px solid #f4f5f8;
+    border-left: 1px solid #f4f5f8;
+}
+
+.meo-table tr td:last-child {
+    border-right: 1px solid #f4f5f8;
+}
+
+.meo-table tr th {
+    border-bottom: 1px solid #dee2e6;
+    border-left: 1px solid #f4f5f8;
+    border-top: 1px solid #f4f5f8;
+    background: #fff;
+}
+
+    .meo-table tr th:last-child {
+        border-right: 1px solid #f4f5f8;
+    }
+
+.meo-table tbody tr:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.meo-table-fixed-head {
+    overflow: auto;
+}
+
+.meo-table-fixed-head--40 {
+    max-height: 40vh;
+}
+
+.meo-table-fixed-head--50 {
+    max-height: 50vh;
+}
+
+.meo-table-fixed-head--60 {
+    max-height: 60vh;
+}
+
+.meo-table-fixed-head table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+    .meo-table-fixed-head table th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+.meo-table-fixed-head div.fixed-table-border {
+    position: sticky;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #dee2e6;
+}

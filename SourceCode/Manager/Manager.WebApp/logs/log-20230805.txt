@@ -1,0 +1,18 @@
+[05/08/2023 09:00:34 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[05/08/2023 09:00:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[05/08/2023 09:00:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[05/08/2023 09:00:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[05/08/2023 09:00:34 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[05/08/2023 10:02:55 ERR Manager.WebApp.Services.ContactFormServices] Return code: BadRequest, message: http://localhost:3600/api/contactform/contact_form 
+[05/08/2023 10:02:55 ERR Manager.WebApp.Controllers.CompanyController] Function Manager.WebApp.Controllers.CompanyController error: System.Exception: Missing input value!
+   at Manager.WebApp.Controllers.CompanyController.ContactForm_Submit(ContactFormFullDetailModel model) 
+[05/08/2023 10:41:13 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[05/08/2023 10:41:13 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[05/08/2023 10:41:13 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[05/08/2023 10:41:13 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[05/08/2023 10:41:13 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 
+[05/08/2023 13:55:00 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
+[05/08/2023 13:55:00 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
+[05/08/2023 13:55:00 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[05/08/2023 13:55:00 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[05/08/2023 13:55:00 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project_VietHung\contact_form\contactform\SourceCode\Manager\Manager.WebApp 

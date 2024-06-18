@@ -1,3 +1,5 @@
+
+var alertText = '<span class="text-danger field-validation-error" data-valmsg-replace="true"><span class="">空白のままにしないでください</span></span>';
 window.onload = (event) => {
     $('label[for="first-pickup-1"]').click();
     $('label[for="sec-pickup-1"]').click();
@@ -12,13 +14,44 @@ window.onload = (event) => {
     $("#CreatedDate-Day").val(
         GetJapaneseDate($("#ContactForm_CreatedDate")).split(";")[2]
     );
-    $(".dpaddress").each(function () { 
+    $(".dpaddress").each(function () {
 
         if (!$(this).val()) {
             $(this).val('なし');
         }
     });
 };
+function isFullWidth(str) {
+    for (var i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i) < 0x4E00 || str.charCodeAt(i) > 0x9FFF) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function toASCII(chars) {
+    if (isFullWidth(chars)) {
+        var ascii = '';
+        for (var i = 0, l = chars.length; i < l; i++) {
+            var c = chars[i].charCodeAt(0);
+
+            // make sure we only convert half-full width char
+            if (c >= 0xFF00 && c <= 0xFFEF) {
+                c = 0xFF & (c + 0x20);
+            }
+
+            ascii += String.fromCharCode(c);
+        }
+        return ascii;
+    }
+    else {
+        return chars;
+    }
+}
+$("input").change(function () {
+    $(this).val(ConvertFullWidthNumber($(this).val()));
+});
 function formatDate(date) {
     var d = new Date(date),
         month = "" + (d.getMonth() + 1),

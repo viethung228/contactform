@@ -43,7 +43,9 @@ function GetJapaneseDate(selector) {
         }
     }
     return tempYear + ";" + tempMonth + ";" + tempDay;
-}
+} $("input").change(function () {
+    $(this).val(ConvertFullWidthNumber($(this).val()));
+});
 $("#third-pickup-2").click(function () {
     $("#numberOfDependents").val(null);
     hasDependents();

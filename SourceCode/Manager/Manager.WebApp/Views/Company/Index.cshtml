@@ -73,7 +73,6 @@
                                 <th class="text-center">@ManagerResource.LB_COMPANY_NAME</th>
                                 <th class="text-center">@ManagerResource.LB_EMAIL</th>
                                 <th class="text-center">@ManagerResource.LB_PHONE</th>
-                                <th class="text-center">@ManagerResource.LB_CONTACT_FORM</th>
                                 <th class="text-center" width="5%"></th>
                             </tr>
                         </thead>
@@ -115,11 +114,7 @@
                                         <td class="text-center">
                                             @record.PhoneNumber                                            
                                         </td>
-                                        <td class="text-center">
-                                            <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-modal="" data-href="@contactFormViewLink" title="@ManagerResource.LB_VIEW_DETAIL">
-                                                <i class="fa-solid fa-eye"></i>
-                                            </a>                                                                                       
-                                        </td>
+                                        
                                         <td class="text-center">
                                             <a class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-href="@editLink" data-modal="" title="@ManagerResource.LB_EDIT">
                                                 <i class="la la-pencil"></i>
@@ -259,17 +254,25 @@
     </script>
     <script>
         function ExportContactFormByListFormIdCSV(listFormId) {
-            $.aPost("Company/ExportCSVByListFormId", { listFormId: listFormId }, function (result) {
-                if (result.success) {
-                    var fileName = "_ListContactForm";
-                    let parser = new DOMParser();
-                    const doc = parser.parseFromString(result.html, 'text/html');
-                    $("#newtempEmExportCSV").html(doc.body.innerHTML);
-                    tableToCSV($("#newtempEmExportCSV"), fileName);
-                } else {
-                    $.showErrorMessage('Download CSV File', "Download CSV File Fail!", null);
+            $.aPost(
+                "ContactForm/ExportCSVByListFormId",
+                { listFormId: listFormId },
+                function (result) {
+                    if (result.success) {
+                        var fileName = "_ListContactForm";
+                        let parser = new DOMParser();
+                        const doc = parser.parseFromString(result.html, "text/html");
+                        $("#newtempEmExportCSV").html(doc.body.innerHTML);
+                        tableToCSV($("#newtempEmExportCSV"), fileName);
+                    } else {
+                        $.showErrorMessage(
+                            "Download CSV File",
+                            "Download CSV File Fail!",
+                            null
+                        );
+                    }
                 }
-            });
+            );
         }
         function ExportEmContactFormByFormIdCSV(formId) {
             var values = {

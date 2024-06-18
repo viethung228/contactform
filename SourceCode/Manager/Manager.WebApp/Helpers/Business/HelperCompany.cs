@@ -28,7 +28,24 @@ namespace Manager.WebApp.Helpers
 
             return baseInfo;
         }
-       
+        public static IdentityCompany GetBaseByCompanyNameInfo(string companyName)
+        {
+            IdentityCompany baseInfo = null;
+
+            try
+            {
+                var apiRs = CompanyServices.GetDetailByNameAsync(companyName).Result;
+
+                baseInfo = apiRs.ConvertData<IdentityCompany>();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            return baseInfo;
+        }
+
         public static List<IdentityCompany> GetList()
         {
             List<IdentityCompany> list = null;

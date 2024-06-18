@@ -75,55 +75,7 @@
                             @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
-                    <div class="form-group row">
-                        <div class="col-2 col-form-label">
-                            <label>@ManagerResource.LB_ROLES_ASSIGNED</label>
-                        </div>
-                        <div class="col-10">
-                            <div class="m-checkbox-inline mt5">
-                                @if (Model != null && Model.RolesList != null && Model.RolesList.Count() > 0)
-                                {
-                                    var isAdmin = CommonHelpers.CurrentUserIsAdmin();
-                                    foreach (var item in Model.RolesList)
-                                    {
-                                        if (item.Value.ToLower() == "admin")
-                                        {
-                                            <label class="m-checkbox" style="@((!isAdmin)? "color:#ccc" : string.Empty)">
-                                                <input type="checkbox" value="@item.Value" name="SelectedRole" checked="@item.Selected" @((!isAdmin) ? "disabled" : string.Empty)>
-                                                @item.Text
-                                                <span></span>
-                                            </label>
-                                        }
-                                        else
-                                        {
-                                            <label class="m-checkbox">
-                                                <input type="checkbox" name="SelectedRole[]" value="@item.Value" checked="@item.Selected">
-                                                @item.Text
-                                                <span></span>
-                                            </label>
-                                        }
-                                    }
-                                }
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row">
-                        <div class="col-2 col-form-label">
-                            <label>全てステータス更新</label>
-                        </div>
-                        <div class="col-4">
-                            <div class="m-checkbox-inline mt5">
-                                <label class="m-checkbox">
-                                    <input type="checkbox" @(Model.ReceiveAllUpdate ? "checked" : string.Empty) name="@Html.NameFor(m=>m.ReceiveAllUpdate)" value="true">
-                                    通知が届く
-                                    <span></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
+                                    
                     <div class="form-group row hidden">
                         <div class="col-2 col-form-label">
                             <label>@ManagerResource.LB_STATUS</label>

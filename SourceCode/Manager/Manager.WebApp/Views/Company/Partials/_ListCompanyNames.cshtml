@@ -5,42 +5,6 @@
 @using MainApi.DataLayer.Entities
 @model Manager.WebApp.Models.ManageCompanyModel
 
-@*<div class="modal">
-    <h5 class="modal-title text-success" id="">
-        会社を選択してください
-    </h5>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">
-            &times;
-        </span>
-    </button>
-</div>
-@using (Html.BeginForm())
-{    <input type="hidden" name="Id" value="@Model" />
-    <fieldset>
-        <dl>
-            <dt>
-            </dt>
-            <dd>
-                @Html.DropDownListFor(x=>x.SearchResults.FirstOrDefault().CompanyName, Model.SearchResults.Select(name=>new SelectListItem{
-            Text=name.CompanyName.ToString(),
-            Value=name.CompanyName.ToString()
-            }))
-            </dd>
-        </dl>
-    </fieldset>
-    <div class="modal-footer">
-        <button type="submit" class="btn btn-info btn-sm" id="btnSubmit">
-            <i class="fa fa-plus"></i> @ManagerResource.LB_SAVE
-        </button>
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
-            <i class="fa fa-remove"></i> @ManagerResource.LB_CANCEL
-        </button>
-
-    </div>
-}
-*@
-
 <div class="modal-content">
     <div class="modal-header">
         <h5 class="modal-title" id="">

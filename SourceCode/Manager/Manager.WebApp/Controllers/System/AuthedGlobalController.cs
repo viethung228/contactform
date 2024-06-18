@@ -1,203 +1,156 @@
-﻿//using System;
-//using System.Linq;
-//using Manager.WebApp.Helpers;
-//using Manager.WebApp.Resources;
-//using Manager.SharedLibs;
-//using Microsoft.Extensions.Logging;
-//using Manager.WebApp.Models;
-//using MainApi.DataLayer.Entities;
-//using Microsoft.AspNetCore.Mvc;
-//using Manager.DataLayer.Stores;
-//using Manager.DataLayer;
-//using Autofac;
-//using System.Threading.Tasks;
-//using System.Collections.Generic;
-//using Manager.WebApp.Services;
-//using System.Reflection;
-//using System.Diagnostics;
+﻿using System;
+using System.Linq;
+using Manager.WebApp.Helpers;
+using Manager.WebApp.Resources;
+using Manager.SharedLibs;
+using Microsoft.Extensions.Logging;
+using Manager.WebApp.Models;
+using MainApi.DataLayer.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Manager.DataLayer.Stores;
+using Manager.DataLayer;
+using Autofac;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Manager.WebApp.Services;
+using System.Reflection;
+using System.Diagnostics;
 
-//namespace Manager.WebApp.Controllers
-//{
-//    public class AuthedGlobalController : BaseAuthedController
-//    {
-//        private readonly ILogger<AuthedGlobalController> _logger;
+namespace Manager.WebApp.Controllers
+{
+    public class AuthedGlobalController : BaseAuthedController
+    {
+        private readonly ILogger<AuthedGlobalController> _logger;
 
-//        public AuthedGlobalController(ILogger<AuthedGlobalController> logger)
-//        {
-//            _logger = logger;
-//        }
+        public AuthedGlobalController(ILogger<AuthedGlobalController> logger)
+        {
+            _logger = logger;
+        }
 
-//        [HttpPost]
-//        public async Task<ActionResult> GetNotifCount()
-//        {
-//            var isSuccess = false;
-//            var msg = string.Empty;
-//            var counter = 0;
-//            try
-//            {
-//                var apiRs = NotificationServices.GetUnreadCountAsync().Result;
-                
-//                counter = apiRs.ConvertData<int>();
+        [HttpPost]
+        public async Task<ActionResult> GetNotifCount()
+        {
+            var isSuccess = false;
+            var msg = string.Empty;
+            var counter = 0;
+            try
+            {
+                var apiRs = NotificationServices.GetUnreadCountAsync().Result;
 
-//                await Task.FromResult(counter);
+                counter = apiRs.ConvertData<int>();
 
-//                isSuccess = true;
-//            }
-//            catch (Exception ex)
-//            {
-//                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
-//            }
+                await Task.FromResult(counter);
 
-//            return Json(new { success = isSuccess, message = msg, data = counter });
-//        }
+                isSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
 
-//        [HttpPost]
-//        public async Task<ActionResult> GetNotification()
-//        {
-//            var isSuccess = false;
-//            var htmlReturn = string.Empty;
-//            List<NotificationItemModel> returnList = new List<NotificationItemModel>();
+            return Json(new { success = isSuccess, message = msg, data = counter });
+        }
 
-//            var msg = string.Empty;
-//            try
-//            {
-//                var pageIndex = Utils.ConvertToInt32(HttpContext.Request.Query["Page"]);
-//                if (pageIndex == 0)
-//                    pageIndex = 1;
+        [HttpPost]
+        public async Task<ActionResult> GetNotification()
+        {
+            var isSuccess = false;
+            var htmlReturn = string.Empty;
+            List<NotificationItemModel> returnList = new List<NotificationItemModel>();
 
-//                var filter = new ManageNotificationModel();
-//                filter.Page = pageIndex;
-//                filter.PageSize = 20;
+            var msg = string.Empty;
+            try
+            {
+                var pageIndex = Utils.ConvertToInt32(HttpContext.Request.Query["Page"]);
+                if (pageIndex == 0)
+                    pageIndex = 1;
 
-//                var apiRs = NotificationServices.GetByPageAsync(filter).Result;
-//                var listNotif = apiRs.ConvertData<List<NotificationItemModel>>();
+                var filter = new ManageNotificationModel();
+                filter.Page = pageIndex;
+                filter.PageSize = 20;
 
-//                await Task.FromResult(listNotif);
-                
-//                isSuccess = true;
-//                htmlReturn = PartialViewAsString("../Widgets/Items/Notification/_NotificationItems", listNotif);
-//            }
-//            catch (Exception ex)
-//            {
-//                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
-//            }
+                var apiRs = NotificationServices.GetByPageAsync(filter).Result;
+                var listNotif = apiRs.ConvertData<List<NotificationItemModel>>();
 
-//            return Json(new { success = isSuccess, message = msg, html = htmlReturn });
-//        }
+                await Task.FromResult(listNotif);
 
-//        public async Task<ActionResult> ReadNotif(int? id = 0, int? targetId = 0)
-//        {
-//            var model = new NotificationItemModel();
-//            try
-//            {
-//                var notifId = Utils.ConvertToIntFromNullable(id);
-//                if (notifId == 0)
-//                    return RedirectToErrorPage();
+                isSuccess = true;
+                htmlReturn = PartialViewAsString("../Widgets/Items/Notification/_NotificationItems", listNotif);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
 
-//                var apiRs = NotificationServices.GetNotificationByIdAsync(notifId).Result;
-//                var info = apiRs.ConvertData<IdentityNotification>();
+            return Json(new { success = isSuccess, message = msg, html = htmlReturn });
+        }
 
-//                await Task.FromResult(info);
-//                if (info != null)
-//                {
-//                    if (info.TargetType == (int)EnumNotificationTargetType.Product)
-//                    {
-//                        if (info.ActionType == (int)EnumNotificationActionTypeForManager.ProductCreated)
-//                        {
-//                            if (targetId != null && targetId > 0)
-//                            {
+        public async Task<ActionResult> ReadNotif(int? id = 0, int? targetId = 0)
+        {
+            var model = new NotificationItemModel();
+            try
+            {
+                var notifId = Utils.ConvertToIntFromNullable(id);
+                if (notifId == 0)
+                    return RedirectToErrorPage();
 
-//                                var rs = ProductServices.GetDetailAsync(new ProductDetailModel { Id = (int)targetId }).Result;
-//                                var course = rs.ConvertData<IdentityProduct>();
-//                                if (course != null)
-//                                {
-//                                    var link = SecurityHelper.GenerateSecureLink("Product", "Index", new { id = targetId});
-//                                    return Redirect(link);
-//                                }
-//                            }
-//                        }
+                var apiRs = NotificationServices.GetNotificationByIdAsync(notifId).Result;
+                var info = apiRs.ConvertData<IdentityNotification>();
 
-//                        if (info.ActionType == (int)EnumNotificationActionTypeForManager.ProductUpdated)
-//                        {
-//                            if (targetId != null && targetId > 0)
-//                            {
-//                                var rs = ProductServices.GetDetailAsync(new ProductDetailModel { Id = (int)targetId }).Result;
-//                                var course = rs.ConvertData<IdentityProduct>();
-//                                if (course != null)
-//                                {
-//                                    var link = SecurityHelper.GenerateSecureLink("Product", "Index", new { id = targetId});
-//                                    return Redirect(link);
-//                                }
-//                            }
-//                        }
-//                    }
-//                    if (info.TargetType == (int)EnumNotificationTargetType.Order)
-//                    {
-//                        if (info.ActionType == (int)EnumNotificationActionTypeForManager.OrderCreated)
-//                        {
-//                            if (targetId > 0)
-//                            {
-//                                var link = SecurityHelper.GenerateSecureLink("Order", "Index", new { id = targetId});
-//                                return Redirect(link);
-//                            }
-//                        }
-//                    }
-//                    if (info.TargetType == (int)EnumNotificationTargetType.Customer)
-//                    {
-//                        if (info.ActionType == (int)EnumNotificationActionTypeForManager.CustomerCreated)
-//                        {
-//                            if (targetId != null && targetId > 0)
-//                            {
-//                                var rs = CustomerServices.GetDetailAsync(new CustomerDetailModel { Id = (int)targetId }).Result;
-//                                var course = rs.ConvertData<IdentityCustomer>();
-//                                if (course != null)
-//                                {
-//                                    var link = SecurityHelper.GenerateSecureLink("Customer", "Index", new { id = targetId});
-//                                    return Redirect(link);
-//                                }
-//                            }
-//                        }
+                await Task.FromResult(info);
+                if (info != null)
+                {
+                    if (info.TargetType == (int)EnumNotificationTargetType.Company)
+                    {
+                        if (targetId != null && targetId > 0)
+                        {
 
-//                        if (info.ActionType == (int)EnumNotificationActionTypeForManager.CustomerUpdated)
-//                        {
-//                            if (targetId != null && targetId > 0)
-//                            {
-//                                var rs = CustomerServices.GetDetailAsync(new CustomerDetailModel { Id = (int)targetId }).Result;
-//                                var course = rs.ConvertData<IdentityCustomer>();
-//                                if (course != null)
-//                                {
-//                                    var link = SecurityHelper.GenerateSecureLink("Customer", "Index", new { id = targetId});
-//                                    return Redirect(link);
-//                                }
-//                            }
-//                        }
-                        
-//                        if (info.ActionType == (int)EnumNotificationActionTypeForManager.CustomerRegister)
-//                        {
-//                            if (targetId != null && targetId > 0)
-//                            {
-//                                var rs = CustomerServices.GetDetailAsync(new CustomerDetailModel { Id = (int)targetId }).Result;
-//                                var course = rs.ConvertData<IdentityCustomer>();
-//                                if (course != null)
-//                                {
-//                                    var link = SecurityHelper.GenerateSecureLink("Customer", "Index", new { id = targetId}); 
-//                                    return Redirect(link);
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//                else
-//                {
-//                    return RedirectToErrorPage();
-//                }
-//            }
-//            catch (Exception ex)
-//            {
-//                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
-//            }
+                            var rs = CompanyServices.GetDetailAsync(new CompanyUpdateModel { Id = targetId.Value }).Result;
+                            var company = rs.ConvertData<IdentityCompany>();
+                            if (company != null)
+                            {
+                                var link = SecurityHelper.GenerateSecureLink("Company", "Index", null);
+                                return Redirect(link);
+                            }
+                            else
+                            {
+                                var link = SecurityHelper.GenerateSecureLink("Company", "Index", null);
+                                return Redirect(link);
+                            }
+                        }
+                    }
+                    if (info.TargetType == (int)EnumNotificationTargetType.ContactForm)
+                    {
+                        if (targetId != null && targetId > 0)
+                        {
 
-//            return RedirectToErrorPage();
-//        }
-//    }
-//}
+                            var rs = ContactFormServices.GetContactFormByFormIdAsync(targetId.Value).Result;
+                            var contactForm = rs.ConvertData<IdentityContactForm>();
+                            if (contactForm != null)
+                            {
+                                var link = SecurityHelper.GenerateSecureLink("ContactForm", "Detail", new { id = targetId.Value });
+                                return Redirect(link);
+                            }
+                            else
+                            {
+                                var link = SecurityHelper.GenerateSecureLink("ContactForm", "Index", null);
+                                return Redirect(link);
+                            }
+                        }
+                    }
+
+                }
+                else
+                {
+                    return RedirectToErrorPage();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Function {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            return RedirectToErrorPage();
+        }
+    }
+}

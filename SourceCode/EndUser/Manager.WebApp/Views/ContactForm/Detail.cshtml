@@ -5,14 +5,14 @@
 @using System.ComponentModel;
 @model Manager.WebApp.Models.ContactFormFullDetailModel
 @{
-    ViewBag.Title = "Contact form";
+    ViewBag.Title = "お問い合わせフォーム";
     ViewBag.HideSubHeader = true;
     ViewBag.ParentController = "Company";
     ViewBag.ParentAction = "Index";
 
     while (Model.Dependents.Count < 4)
     {
-        Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
+        Model.Dependents.Add(new DependentModel());
     }
 
 }

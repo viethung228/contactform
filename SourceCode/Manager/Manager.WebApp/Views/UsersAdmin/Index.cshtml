@@ -60,8 +60,6 @@
                                 <th class="text-center" width="3%">#</th>
                                 <th class="text-center">@ManagerResource.LB_USERNAME</th>
                                 <th class="text-center">@ManagerResource.LB_FULL_NAME</th>
-                                <th class="text-center">@ManagerResource.LB_ROLE</th>
-                                <th class="text-center" width="10%">通知が届く</th>
                                 <th class="text-center" width="10%">@ManagerResource.LB_CREATED_DATE</th>
                                 <th class="text-center" width="10%">@ManagerResource.LB_ACTION</th>
                             </tr>
@@ -149,19 +147,7 @@
                                             </div>
                                         </td>
                                         <td>@record.FullName</td>
-                                        <td>
-                                            @if (record.Roles != null)
-                                            {
-                                                @String.Join(", ", record.Roles.ToArray())
-                                                ;
-                                            }
-                                        </td>
-                                        <td class="text-center">
-                                            @if (record.ReceiveAllUpdate)
-                                            {
-                                                <i class="fa fa-check text-success"></i>
-                                            }
-                                        </td>
+                                                                               
                                         <td>
                                             @{
                                                 var localTime = record.CreatedDateUtc;
@@ -203,25 +189,7 @@
                 }
             </div>
         </div>
-        <div class="col-md-12">
-            <div class="separator description-title">ボタンの説明</div>
-            @if (Model.SearchResult != null && Model.SearchResult.Count > 0)
-            {
-                if (CommonHelpers.CurrentUserIsAgency())
-                {
-                    <div class="pt-3">
-                        <a class="btn btn-white btn-sm btn-info" href="javascript:;" title="追加"><i class="fa fa-plus"></i> 追加</a><span class="description-item">新規ユーザを追加する。</span>
-                    </div>
-                }
-            }
-            else
-            {
-                <div>
-                    <span class="description-item">※ 従業員様専用のアカウント「追加」のボタンをクリックして発給しましょう。</span>
-                </div>
-            }
-
-        </div>
+        
         <!--end::Section-->
     </div>
     <!--end::Form-->

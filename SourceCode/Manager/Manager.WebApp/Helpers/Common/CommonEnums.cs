@@ -13,21 +13,29 @@ namespace Manager.WebApp.Helpers
 
     public enum EnumNotificationTargetType
     {
-        Order = 10,
-        Product = 20,
-        Customer = 30
+        Company = 1,
+        ContactForm = 2,
     }
 
     public enum EnumNotificationActionTypeForManager
     {
-        ProductCreated = 0,
-        ProductUpdated = 1,
+        CompanyCreated = 10,
+        CompanyUpdated = 11,
+        CompanyDeleted = 12,
+        ContactFormCreated = 20,
+        ContactFormUpdated = 21,
+        ContactFormDeleted = 22,
+    }
 
-        CustomerCreated = 100,
-        CustomerUpdated = 101,
-        CustomerRegister = 102,
+    public static class EnumNotificationMessageTypeForManager
+    {
+        public static string CompanyCreated = "CompanyCreated";
+        public static string CompanyUpdated = "CompanyUpdated";
+        public static string CompanyDeleted = "CompanyDeleted";
+        public static string ContactFormCreated = "入社連絡票が届きました";
+        public static string ContactFormUpdated = "ContactFormUpdated";
+        public static string ContactFormDeleted = "ContactFormDeleted";
 
-        OrderCreated = 200,
     }
 
     public enum EnumNotificationActionTypeForCustomer
@@ -62,8 +70,8 @@ namespace Manager.WebApp.Helpers
 
         [Description("承認")]
         Active = 1
-	}
-	
+    }
+
     public enum EnumOrderStatus
     {
         Pending = 0,
@@ -124,7 +132,7 @@ namespace Manager.WebApp.Helpers
     {
         Text = 0,
         Dropdown = 1,
-        DropdownGroup=2,
+        DropdownGroup = 2,
     }
 
     public enum EnumProjectStatus
@@ -133,7 +141,7 @@ namespace Manager.WebApp.Helpers
         Locked = 0,
 
         [LocalizedDescription("LB_ACTIVE", typeof(ManagerResource))]
-        Activated = 1       
+        Activated = 1
     }
 
     public static class EnumListCacheKeys
@@ -148,7 +156,7 @@ namespace Manager.WebApp.Helpers
 
         //Detail info
         public static string City = CachePrefix + "CITY_{0}";
-        public static string Region = CachePrefix+ "REGION_{0}";
+        public static string Region = CachePrefix + "REGION_{0}";
         public static string Station = CachePrefix + "STATION_{0}";
         public static string EmailServers = CachePrefix + "EMAIL_SERVERS_{0}";
         public static string EmailSettings = CachePrefix + "EMAIL_SETTINGS_{0}_{1}";
@@ -209,7 +217,7 @@ namespace Manager.WebApp.Helpers
     public enum EnumHouseTransactionMethod
     {
         [Description("売主")]
-        DirectWithSeller = 0        
+        DirectWithSeller = 0
     }
 
     public enum EnumHouseStatus
@@ -318,12 +326,12 @@ namespace Manager.WebApp.Helpers
     public enum EnumSalesReportType
     {
         MonthlySales = 0,
-    //    DayOfWeek = 1,
-    //    TimeFrame = 2,
-    //    Platforms = 3,
-    //    Region = 4,
-    //    ProductLine = 5,
-    //    TopProductLine = 6
+        //    DayOfWeek = 1,
+        //    TimeFrame = 2,
+        //    Platforms = 3,
+        //    Region = 4,
+        //    ProductLine = 5,
+        //    TopProductLine = 6
     }
 
     public enum EnumDayOfWeek
@@ -409,5 +417,5 @@ namespace Manager.WebApp.Helpers
             else
                 return value.ToString();
         }
-    }    
+    }
 }

@@ -74,7 +74,9 @@ function DisplayValues() {
       $(this).attr("checked", "checked");
     }
   });
-
+    $("input").change(function () {
+        $(this).val(ConvertFullWidthNumber($(this).val()));
+    });
   // get dependents
   var countDependents = 0;
   var getNenkinNumber = "";

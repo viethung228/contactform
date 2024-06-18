@@ -15,6 +15,7 @@ namespace Manager.WebApp.Models
     public class CompanyDetailModel : IdentityCompany
     {
         public string CurrentTab { get; set; }
+        public ManageContactFormModel ContactForm { get; set; }
     }
 
     public class CompanyUpdateModel

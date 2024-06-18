@@ -32,6 +32,7 @@ namespace Manager.WebApp.Controllers
 
         public ActionResult Index(ManageContactFormModel model)
         {
+            var a = GetCurrentAgencyId();
             int currentPage = 1;
             int pageSize = SystemSettings.DefaultPageSize;
             var companyName = model.companyNameSelected == "全て" ? string.Empty : model.companyNameSelected;
@@ -52,7 +53,7 @@ namespace Manager.WebApp.Controllers
                 List<string> getAllCompanyName = new List<string>();
                 getAllCompanyName.Add("全て");
                 getAllCompanyName.AddRange(HelperCompany.GetList().Select(x => x.CompanyName).ToList());
-                
+
                 ViewBag.listCompany = getAllCompanyName;
 
                 var getData = string.IsNullOrEmpty(companyName) ? HelperContactForm.GetByPage(model.Keyword, currentPage, pageSize) : HelperContactForm.GetContactFormByCompanyName(model.Keyword, companyName, currentPage, pageSize);
@@ -135,19 +136,19 @@ namespace Manager.WebApp.Controllers
                 var apiRes = ContactFormServices.GetContactFormByFormIdAsync(id).Result;
                 if (apiRes != null && apiRes.Data != null)
                 {
-                    model.ContactForm = apiRes.ConvertData<IdentityContactForm>();
-                    var allowance = ContactFormServices.GetAllowanceByFormIdAsync(model.ContactForm.FormId).Result.ConvertData<IdentityAllowance>();
+                    model.ContactForm = apiRes.ConvertData<ContactFormModel>();
+                    var allowance = ContactFormServices.GetAllowanceByFormIdAsync(model.ContactForm.FormId).Result.ConvertData<AllowanceModel>();
                     if (allowance != null)
                     {
                         model.Allowance = allowance;
-                        var allowance_type = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(allowance.AllowanceId).Result.ConvertData<IdentityAllowanceDetail>();
+                        var allowance_type = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(allowance.AllowanceId).Result.ConvertData<AllowanceDetailModel>();
                         model.AllowanceDetail = allowance_type;
                     }
 
                     var dependents = ContactFormServices.GetDependentsByFormIdAsync(model.ContactForm.FormId).Result;
                     if (dependents != null && dependents.Data != null)
                     {
-                        foreach (var item in dependents.ConvertData<List<IdentityDependent>>())
+                        foreach (var item in dependents.ConvertData<List<DependentModel>>())
                         {
                             model.Dependents.Add(item);
                         }
@@ -171,19 +172,19 @@ namespace Manager.WebApp.Controllers
                 var apiRes = ContactFormServices.GetContactFormByFormIdAsync(id).Result;
                 if (apiRes != null && apiRes.Data != null)
                 {
-                    model.ContactForm = apiRes.ConvertData<IdentityContactForm>();
-                    var allowance = ContactFormServices.GetAllowanceByFormIdAsync(model.ContactForm.FormId).Result.ConvertData<IdentityAllowance>();
+                    model.ContactForm = apiRes.ConvertData<ContactFormModel>();
+                    var allowance = ContactFormServices.GetAllowanceByFormIdAsync(model.ContactForm.FormId).Result.ConvertData<AllowanceModel>();
                     if (allowance != null)
                     {
                         model.Allowance = allowance;
-                        var allowance_type = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(allowance.AllowanceId).Result.ConvertData<IdentityAllowanceDetail>();
+                        var allowance_type = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(allowance.AllowanceId).Result.ConvertData<AllowanceDetailModel>();
                         model.AllowanceDetail = allowance_type;
                     }
 
                     var dependents = ContactFormServices.GetDependentsByFormIdAsync(model.ContactForm.FormId).Result;
                     if (dependents != null && dependents.Data != null)
                     {
-                        foreach (var item in dependents.ConvertData<List<IdentityDependent>>())
+                        foreach (var item in dependents.ConvertData<List<DependentModel>>())
                         {
                             model.Dependents.Add(item);
                         }
@@ -211,17 +212,17 @@ namespace Manager.WebApp.Controllers
                 if (info != null)
                 {
                     model.ContactForm.UpdatedDate = DateTime.Now;
-                    var apiResContactForm = ContactFormServices.UpdateContactFormAsync(model).Result.Data.MappingObject<IdentityContactForm>();
+                    var apiResContactForm = ContactFormServices.UpdateContactFormAsync(model).Result.Data.MappingObject<ContactFormModel>();
                     if (apiResContactForm != null)
                     {
                         model.Allowance.FormId = apiResContactForm.FormId;
-                        var apiRes2 = ContactFormServices.UpdateAllowanceAsync(model).Result.Data.MappingObject<IdentityAllowance>();
+                        var apiRes2 = ContactFormServices.UpdateAllowanceAsync(model).Result.Data.MappingObject<AllowanceModel>();
                         if (apiRes2 != null)
                         {
                             model.AllowanceDetail.AllowanceId = apiRes2.AllowanceId;
                             var apiRes3 = ContactFormServices.UpdateAllowanceDetailAsync(model).Result;
                         }
-                        var tempListDependents = new List<IdentityDependent>();
+                        var tempListDependents = new List<DependentModel>();
                         for (int i = 0; i < model.Dependents.Count; i++)
                         {
                             if (string.IsNullOrEmpty(model.Dependents[i].FullName) && model.Dependents[i].DependentId == 0)
@@ -260,22 +261,23 @@ namespace Manager.WebApp.Controllers
 
             try
             {
+                var a = GetCurrentAgencyId();
                 model.ContactForm.Remarks = string.IsNullOrEmpty(model.ContactForm.Remarks) ? "" : model.ContactForm.Remarks;
                 model.ContactForm.PreviousJob = string.IsNullOrEmpty(model.ContactForm.PreviousJob) ? "" : model.ContactForm.PreviousJob;
                 var info = HelperCompany.GetBaseInfo(model.ContactForm.OwnerId);
                 if (info != null)
                 {
-                    var apiResContactForm = ContactFormServices.UpdateContactFormAsync(model).Result.Data.MappingObject<IdentityContactForm>();
+                    var apiResContactForm = ContactFormServices.UpdateContactFormAsync(model).Result.Data.MappingObject<ContactFormModel>();
                     if (apiResContactForm != null)
                     {
                         model.Allowance.FormId = apiResContactForm.FormId;
-                        var apiRes2 = ContactFormServices.UpdateAllowanceAsync(model).Result.Data.MappingObject<IdentityAllowance>();
+                        var apiRes2 = ContactFormServices.UpdateAllowanceAsync(model).Result.Data.MappingObject<AllowanceModel>();
                         if (apiRes2 != null)
                         {
                             model.AllowanceDetail.AllowanceId = apiRes2.AllowanceId;
                             var apiRes3 = ContactFormServices.UpdateAllowanceDetailAsync(model).Result;
                         }
-                        var tempListDependents = new List<IdentityDependent>();
+                        var tempListDependents = new List<DependentModel>();
                         for (int i = 0; i < model.Dependents.Count; i++)
                         {
                             if (string.IsNullOrEmpty(model.Dependents[i].FullName))
@@ -290,6 +292,8 @@ namespace Manager.WebApp.Controllers
                             model.Dependents.Remove(item);
                         }
                         var apiRes4 = ContactFormServices.UpdateDependentAsync(model).Result;
+                        var createNot = NotificationServices.CreateNotificationAsync((int)EnumNotificationActionTypeForManager.ContactFormCreated, (int)EnumNotificationTargetType.ContactForm, 1, apiResContactForm.FormId);
+
                     }
 
                 }
@@ -362,18 +366,18 @@ namespace Manager.WebApp.Controllers
             model = new ContactFormFullDetailModel();
             try
             {
-                var apiResContactForm = ContactFormServices.GetContactFormByFormIdAsync(formId).Result.Data.MappingObject<IdentityContactForm>();
+                var apiResContactForm = ContactFormServices.GetContactFormByFormIdAsync(formId).Result.Data.MappingObject<ContactFormModel>();
                 if (apiResContactForm != null)
                 {
                     if (apiResContactForm != null)
                     {
-                        var apiRes3 = new IdentityAllowanceDetail();
-                        var apiRes2 = ContactFormServices.GetAllowanceByFormIdAsync(formId).Result != null ? ContactFormServices.GetAllowanceByFormIdAsync(formId).Result.Data.MappingObject<IdentityAllowance>() : null;
+                        var apiRes3 = new AllowanceDetailModel();
+                        var apiRes2 = ContactFormServices.GetAllowanceByFormIdAsync(formId).Result != null ? ContactFormServices.GetAllowanceByFormIdAsync(formId).Result.Data.MappingObject<AllowanceModel>() : null;
                         if (apiRes2 != null)
                         {
-                            apiRes3 = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result.Data.MappingObject<IdentityAllowanceDetail>();
+                            apiRes3 = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result.Data.MappingObject<AllowanceDetailModel>();
                         }
-                        var apiRes4 = ContactFormServices.GetDependentsByFormIdAsync(formId).Result != null ? ContactFormServices.GetDependentsByFormIdAsync(formId).Result.Data.MappingObject<List<IdentityDependent>>() : null;
+                        var apiRes4 = ContactFormServices.GetDependentsByFormIdAsync(formId).Result != null ? ContactFormServices.GetDependentsByFormIdAsync(formId).Result.Data.MappingObject<List<DependentModel>>() : null;
                         model = new ContactFormFullDetailModel
                         {
                             ContactForm = apiResContactForm,
@@ -386,6 +390,7 @@ namespace Manager.WebApp.Controllers
                 var data = new ListContactFormFullDetailModel();
                 data.listContactForm = new List<ContactFormFullDetailModel>();
                 data.listContactForm.Add(model);
+                //return PartialView("Partials/_ExportCSV", data);
                 html = PartialViewAsString("Partials/_ExportCSV", data);
             }
             catch (Exception ex)
@@ -410,16 +415,16 @@ namespace Manager.WebApp.Controllers
                 {
                     foreach (var item in info)
                     {
-                        var apiResContactForm = ContactFormServices.GetContactFormByFormIdAsync(item.FormId).Result.Data.MappingObject<IdentityContactForm>();
+                        var apiResContactForm = ContactFormServices.GetContactFormByFormIdAsync(item.FormId).Result.Data.MappingObject<ContactFormModel>();
                         if (apiResContactForm != null)
                         {
-                            var apiRes3 = new IdentityAllowanceDetail();
-                            var apiRes2 = ContactFormServices.GetAllowanceByFormIdAsync(item.FormId).Result != null ? ContactFormServices.GetAllowanceByFormIdAsync(item.FormId).Result.Data.MappingObject<IdentityAllowance>() : null;
+                            var apiRes3 = new AllowanceDetailModel();
+                            var apiRes2 = ContactFormServices.GetAllowanceByFormIdAsync(item.FormId).Result != null ? ContactFormServices.GetAllowanceByFormIdAsync(item.FormId).Result.Data.MappingObject<AllowanceModel>() : null;
                             if (apiRes2 != null)
                             {
-                                apiRes3 = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result != null ? ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result.Data.MappingObject<IdentityAllowanceDetail>() : null;
+                                apiRes3 = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result != null ? ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result.Data.MappingObject<AllowanceDetailModel>() : null;
                             }
-                            var apiRes4 = ContactFormServices.GetDependentsByFormIdAsync(item.FormId).Result != null ? ContactFormServices.GetDependentsByFormIdAsync(item.FormId).Result.Data.MappingObject<List<IdentityDependent>>() : null;
+                            var apiRes4 = ContactFormServices.GetDependentsByFormIdAsync(item.FormId).Result != null ? ContactFormServices.GetDependentsByFormIdAsync(item.FormId).Result.Data.MappingObject<List<DependentModel>>() : null;
 
                             model.listContactForm.Add(new ContactFormFullDetailModel
                             {
@@ -457,16 +462,16 @@ namespace Manager.WebApp.Controllers
                         var info = HelperContactForm.GetContactFormByFormId(listFormId[i]);
                         if (info != null)
                         {
-                            var apiResContactForm = ContactFormServices.GetContactFormByFormIdAsync(info.FormId).Result.Data.MappingObject<IdentityContactForm>();
+                            var apiResContactForm = ContactFormServices.GetContactFormByFormIdAsync(info.FormId).Result.Data.MappingObject<ContactFormModel>();
                             if (apiResContactForm != null)
                             {
-                                var apiRes3 = new IdentityAllowanceDetail();
-                                var apiRes2 = ContactFormServices.GetAllowanceByFormIdAsync(info.FormId).Result != null ? ContactFormServices.GetAllowanceByFormIdAsync(info.FormId).Result.Data.MappingObject<IdentityAllowance>() : null;
+                                var apiRes3 = new AllowanceDetailModel();
+                                var apiRes2 = ContactFormServices.GetAllowanceByFormIdAsync(info.FormId).Result != null ? ContactFormServices.GetAllowanceByFormIdAsync(info.FormId).Result.Data.MappingObject<AllowanceModel>() : null;
                                 if (apiRes2 != null)
                                 {
-                                    apiRes3 = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result != null ? ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result.Data.MappingObject<IdentityAllowanceDetail>() : null;
+                                    apiRes3 = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result != null ? ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result.Data.MappingObject<AllowanceDetailModel>() : null;
                                 }
-                                var apiRes4 = ContactFormServices.GetDependentsByFormIdAsync(info.FormId).Result != null ? ContactFormServices.GetDependentsByFormIdAsync(info.FormId).Result.Data.MappingObject<List<IdentityDependent>>() : null;
+                                var apiRes4 = ContactFormServices.GetDependentsByFormIdAsync(info.FormId).Result != null ? ContactFormServices.GetDependentsByFormIdAsync(info.FormId).Result.Data.MappingObject<List<DependentModel>>() : null;
 
                                 model.listContactForm.Add(new ContactFormFullDetailModel
                                 {
@@ -510,16 +515,16 @@ namespace Manager.WebApp.Controllers
                 {
                     foreach (var item in info)
                     {
-                        var apiResContactForm = ContactFormServices.GetContactFormByFormIdAsync(item.FormId).Result.Data.MappingObject<IdentityContactForm>();
+                        var apiResContactForm = ContactFormServices.GetContactFormByFormIdAsync(item.FormId).Result.Data.MappingObject<ContactFormModel>();
                         if (apiResContactForm != null)
                         {
-                            var apiRes3 = new IdentityAllowanceDetail();
-                            var apiRes2 = ContactFormServices.GetAllowanceByFormIdAsync(item.FormId).Result != null ? ContactFormServices.GetAllowanceByFormIdAsync(item.FormId).Result.Data.MappingObject<IdentityAllowance>() : null;
+                            var apiRes3 = new AllowanceDetailModel();
+                            var apiRes2 = ContactFormServices.GetAllowanceByFormIdAsync(item.FormId).Result != null ? ContactFormServices.GetAllowanceByFormIdAsync(item.FormId).Result.Data.MappingObject<AllowanceModel>() : null;
                             if (apiRes2 != null)
                             {
-                                apiRes3 = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result != null ? ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result.Data.MappingObject<IdentityAllowanceDetail>() : null;
+                                apiRes3 = ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result != null ? ContactFormServices.GetAllowanceDetailByAllowanceIdAsync(apiRes2.AllowanceId).Result.Data.MappingObject<AllowanceDetailModel>() : null;
                             }
-                            var apiRes4 = ContactFormServices.GetDependentsByFormIdAsync(item.FormId).Result != null ? ContactFormServices.GetDependentsByFormIdAsync(item.FormId).Result.Data.MappingObject<List<IdentityDependent>>() : null;
+                            var apiRes4 = ContactFormServices.GetDependentsByFormIdAsync(item.FormId).Result != null ? ContactFormServices.GetDependentsByFormIdAsync(item.FormId).Result.Data.MappingObject<List<DependentModel>>() : null;
 
                             model.listContactForm.Add(new ContactFormFullDetailModel
                             {

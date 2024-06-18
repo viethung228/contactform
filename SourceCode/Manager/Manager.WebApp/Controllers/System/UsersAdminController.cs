@@ -48,7 +48,7 @@ namespace Manager.WebApp.Controllers
             model = GetDefaultFilterModel(model);
             try
             {
-                var agencyId = GetCurrentAgencyId();                
+                var agencyId = GetCurrentAgencyId();
 
                 var roles = _roleStore.GetListByAgencyId(agencyId);
 
@@ -63,7 +63,8 @@ namespace Manager.WebApp.Controllers
                 }
 
                 var isLocked = Convert.ToBoolean(model.IsLocked);
-                var filter = new IdentityUser { 
+                var filter = new IdentityUser
+                {
                     Keyword = model.Keyword,
                     ParentId = agencyId,
                     RoleId = model.RoleId,
@@ -118,7 +119,7 @@ namespace Manager.WebApp.Controllers
                     return RedirectToErrorPage();
                 }
 
-                
+
                 var userRoles = _roleStore.GetRolesByUserId(user.Id);
                 ViewBag.RoleNames = userRoles.HasData() ? userRoles.Select(x => x.Name).ToList() : null;
 
@@ -147,10 +148,10 @@ namespace Manager.WebApp.Controllers
         [AccessRoleChecker(AgencyRequired = true)]
         public ActionResult Create()
         {
-            var model = new RegisterViewModel();            
+            var model = new RegisterViewModel();
             try
             {
-                model.StaffId = GetCurrentStaffId();                
+                model.StaffId = GetCurrentStaffId();
 
                 var agencyId = GetCurrentAgencyId();
                 var roles = _roleStore.GetListByAgencyId(agencyId);
@@ -176,16 +177,22 @@ namespace Manager.WebApp.Controllers
         // POST: /Users/Create
         [HttpPost]
         [AccessRoleChecker]
-        public async Task<ActionResult> Create(RegisterViewModel userViewModel, params string[] selectedRole)
+        public async Task<ActionResult> Create(RegisterViewModel userViewModel)
         {
             try
             {
+                string[] selectedRole = new string[3];
+                selectedRole[0] = "411D30E4-3621-4204-A644-591C71197753";
+                selectedRole[1] = "4BB2D197-919E-40FD-84ED-E81AE995E459";
+                selectedRole[2] = "C049CF8B-1C9C-4A29-9ECE-C072E737C8D5";
+
                 userViewModel.Password = Utility.Md5HashingData(userViewModel.Password);
                 int parentId = GetCurrentAgencyId();
                 if (parentId == 0)
                 {
                     GetCurrentStaffId();
                 }
+                userViewModel.ReceiveAllUpdate = true;
 
                 var user = new IdentityUser
                 {
@@ -195,7 +202,7 @@ namespace Manager.WebApp.Controllers
                     ParentId = parentId,
                     PasswordHash = userViewModel.Password,
                     ReceiveAllUpdate = userViewModel.ReceiveAllUpdate
-                };                
+                };
 
                 var agencyId = GetCurrentAgencyId();
                 var roles = _roleStore.GetListByAgencyId(agencyId);
@@ -219,12 +226,12 @@ namespace Manager.WebApp.Controllers
                     }
                 }
                 user.Email = user.UserName;
-                user.SecurityStamp = GenereateHashingForNewAccount(user.UserName,user.Email);
+                user.SecurityStamp = GenereateHashingForNewAccount(user.UserName, user.Email);
                 var newId = _mainStore.Insert(user);
                 await Task.FromResult(newId);
 
                 var newUserInfo = _mainStore.GetById(newId);
-                if(newUserInfo != null)
+                if (newUserInfo != null)
                 {
                     if (selectedRole.HasData())
                     {

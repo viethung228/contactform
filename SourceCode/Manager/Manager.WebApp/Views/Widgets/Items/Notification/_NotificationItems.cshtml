@@ -1,7 +1,7 @@
 ﻿@using Manager.WebApp.Models
 @using Manager.SharedLibs
 @using Manager.WebApp.Resources
-@using Manager.WebApp.Helpers 
+@using Manager.WebApp.Helpers
 
 @model List<NotificationItemModel>
 
@@ -19,65 +19,57 @@
                 var cssColor = "info";
                 var notifIcon = "fa fa-bell";
 
-                if (item.NotifInfo.TargetType == (int)EnumNotificationTargetType.Product)
+                if (item.NotifInfo.TargetType == (int)EnumNotificationTargetType.Company)
                 {
                     switch (item.NotifInfo.ActionType)
                     {
-                        case (int)EnumNotificationActionTypeForManager.ProductCreated:
-                        {
-                            notifMsg = string.Format("New product was created !");
-                                notifIcon = "fa fa-file-word-o";
-                            break;
-                        }
-                        case (int)EnumNotificationActionTypeForManager.ProductUpdated:
-                        {
-                            notifMsg = string.Format("Product was updated !");
-                                notifIcon = "fa fa-file-word-o";
-                            break;
-                        }
+                        case (int)EnumNotificationActionTypeForManager.CompanyCreated:
+                            {
+                                notifMsg = EnumNotificationMessageTypeForManager.CompanyCreated;
+                                notifIcon = "fa fa-building-o";
+                                break;
+                            }
+                        case (int)EnumNotificationActionTypeForManager.CompanyUpdated:
+                            {
+                                notifMsg = EnumNotificationMessageTypeForManager.CompanyUpdated;
+                                notifIcon = "fa fa-building-o";
+                                break;
+                            }
+                        case (int)EnumNotificationActionTypeForManager.CompanyDeleted:
+                            {
+                                notifMsg = EnumNotificationMessageTypeForManager.CompanyDeleted;
+                                notifIcon = "fa fa-building-o";
+                                break;
+                            }
                         default: break;
                     }
                 }
-                else if (item.NotifInfo.TargetType == (int)EnumNotificationTargetType.Customer)
+                else if (item.NotifInfo.TargetType == (int)EnumNotificationTargetType.ContactForm)
                 {
                     switch (item.NotifInfo.ActionType)
                     {
-                        case (int)EnumNotificationActionTypeForManager.CustomerCreated:
-                        {
-                            notifMsg = string.Format("New customer was created !");
+                        case (int)EnumNotificationActionTypeForManager.ContactFormCreated:
+                            {
+                                notifMsg = EnumNotificationMessageTypeForManager.ContactFormCreated;
                                 notifIcon = "fa fa-file-word-o";
-                            break;
-                        }
-                        case (int)EnumNotificationActionTypeForManager.CustomerUpdated:
-                        {
-                            notifMsg = string.Format("Customer was updated !");
+                                break;
+                            }
+                        case (int)EnumNotificationActionTypeForManager.ContactFormUpdated:
+                            {
+                                notifMsg = EnumNotificationMessageTypeForManager.ContactFormUpdated;
                                 notifIcon = "fa fa-file-word-o";
-                            break;
-                        }
-                        case (int)EnumNotificationActionTypeForManager.CustomerRegister:
-                        {
-                                notifMsg = string.Format("A new customer has registered !");
+                                break;
+                            }
+                        case (int)EnumNotificationActionTypeForManager.ContactFormDeleted:
+                            {
+                                notifMsg = EnumNotificationMessageTypeForManager.ContactFormDeleted;
                                 notifIcon = "fa fa-file-word-o";
-                            break;
-                        }
+                                break;
+                            }
                         default: break;
                     }
                 }
-                else if (item.NotifInfo.TargetType == (int)EnumNotificationTargetType.Order)
-                {
-                    switch (item.NotifInfo.ActionType)
-                    {
-                        case (int)EnumNotificationActionTypeForManager.OrderCreated:
-                        {
-                            notifMsg = string.Format("New order was created !");
-                                notifIcon = "fa fa-file-word-o";
-                            break;
-                        }
-                        default: break;
-                    }
-                }
-               
-                
+
 
                 <li class="box-noti-item @(item.NotifInfo.IsRead ? "read" : "unread") @cssColor">
                     @{

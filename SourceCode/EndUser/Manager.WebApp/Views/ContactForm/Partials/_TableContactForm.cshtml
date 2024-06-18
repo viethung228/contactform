@@ -26,26 +26,26 @@
                             var getCompanyNames = SecurityHelper.GenerateSecureLink("ContactForm", "AddContactForm", new { id = ViewBag.OwnerId, companyName = ViewBag.CompanyName });
                         }
                         <div class="col-lg-6 text-left">
-                            <button type="button" class="btn btn-info btn-sm" id="selectedCSVDownload" disabled style="color:white;" title="@ManagerResource.BT_OUTPUT_CSV">
+                 @*           <button type="button" class="btn btn-info btn-sm" id="selectedCSVDownload" disabled style="color:white;" title="@ManagerResource.BT_OUTPUT_CSV">
                                 <i class="fa-solid fa-download"></i> 選択した項目をCSVファイルに出力
-                            </button>
+                            </button>*@
 
                         </div>
                         <div class="col-lg-6 text-right">
                             <a class="btn btn-info btn-sm " style="color:white;" href="@getCompanyNames" title="@ManagerResource.LB_ADD_NEW">
                                 <i class="fa-solid fa-plus"></i> @ManagerResource.LB_ADD_NEW
                             </a>
-                            <a class="btn btn-info btn-sm" href="javascript:ExportContactFormByCompanyNameCSV('@ViewBag.CompanyName')" title="@ManagerResource.BT_OUTPUT_CSV">
+          @*                  <a class="btn btn-info btn-sm" href="javascript:ExportContactFormByCompanyNameCSV('@ViewBag.CompanyName')" title="@ManagerResource.BT_OUTPUT_CSV">
                                 <i class="fa-solid fa-download"></i> @ManagerResource.BT_OUTPUT_CSV
-                            </a>
+                            </a>*@
                         </div>
                     </div>
                     <div class="meo-table-fixed-head meo-table-fixed-head--50">
                         <table class="meo-table ">
                             <thead class="text-nowrap">
                                 <tr class="">
-                                    <th class="text-center" width="2%"><input type="checkbox" class="childCheckBox" id="bigCheckBox"></th>
-                                    <th class="text-center" width="3%">#</th>
+@*                                    <th class="text-center" width="2%"><input type="checkbox" class="childCheckBox" id="bigCheckBox"></th>
+*@                                    <th class="text-center" width="3%">#</th>
                                     @*<th class="text-center" width="5%">@ManagerResource.LB_CODE</th>*@
                                     <th class="text-center">@ManagerResource.LB_COMPANY</th>
                                     <th class="text-center">@ManagerResource.LB_FULL_NAME</th>
@@ -67,8 +67,8 @@
                                         var contactFormDetailLink = SecurityHelper.GenerateSecureLink("ContactForm", "Detail", new { id = record.FormId });
 
                                         <tr class="listing-item pointer">
-                                            <td class="text-center"><input class="childCheckBox" type="checkbox" name="contactForm" value="@record.FormId"></td>
-                                            <td class="text-center">@(stt + (Model.Page - 1) * Model.PageSize) </td>
+@*                                            <td class="text-center"><input class="childCheckBox" type="checkbox" name="contactForm" value="@record.FormId"></td>
+*@                                            <td class="text-center">@(stt + (Model.Page - 1) * Model.PageSize) </td>
                                             <td class="text-center">
                                                 <input class="DetailLink" value="@contactFormDetailLink" hidden>
                                                 @record.CompanyName

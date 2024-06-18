@@ -20,6 +20,9 @@ window.onload = (event) => {
         $(this).prop("checked", false);
     });
 };
+$("input").change(function () {
+    $(this).val(ConvertFullWidthNumber($(this).val()));
+});
 function isChecked() {
     listFormId = localStorage.getItem("items")
         ? JSON.parse(localStorage.getItem("items"))

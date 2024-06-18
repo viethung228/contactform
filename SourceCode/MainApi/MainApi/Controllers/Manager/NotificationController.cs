@@ -11,10 +11,12 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.AspNetCore.Authorization;
+using Stripe;
+using System.Linq;
+using System.Diagnostics.Metrics;
 
 namespace MainApi.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/notification")]
     public class NotificationController : AuthorizeManagerController
@@ -122,6 +124,54 @@ namespace MainApi.Controllers
                 var counter = store.CountUnread(filter);
 
                 returnModel.Data = counter;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+
+                returnModel.Message = ManagerResource.COMMON_ERROR_EXTERNALSERVICE_TIMEOUT;
+                returnModel.Code = (int)EnumCommonCode.Error;
+            }
+
+            return returnModel;
+        }
+        [AllowAnonymous]
+        [HttpPost("create")]
+        public ApiResponseModel CreateNotification(int actionType, int targetType, int agencyId, int contactFormId)
+        {
+            var returnModel = new ApiResponseModel();
+            try
+            {
+                if (agencyId > 0)
+                {
+                    var _notifStore = Startup.IocContainer.Resolve<IStoreNotification>();
+
+                    var notifInfo = new IdentityNotification();
+                    notifInfo.ActionType = actionType;
+
+                    notifInfo.SenderId = 0; //Sender: 0 - system
+                    notifInfo.TargetType = targetType;
+
+                    notifInfo.TargetId = contactFormId;
+                    notifInfo.UserType = (int)EnumNotificationUserType.Manager;
+
+                    var userStore = Startup.IocContainer.Resolve<IStoreUser>();
+
+                    //Get all users who have the permission
+                    var listAccs = userStore.GetUsersByPermission(agencyId, "Index", "UsersAdmin");
+                    var listIds = new List<int>();
+                    if (listAccs.HasData())
+                    {
+                        listIds = listAccs.Select(x => x.StaffId).ToList();
+                        if (listIds.HasData())
+                        {
+                            var getResult = _notifStore.MultiplePush(listIds, notifInfo);
+
+                            returnModel.Data = getResult;
+                        }
+                    }
+                }
+
             }
             catch (Exception ex)
             {

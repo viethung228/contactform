@@ -21,6 +21,9 @@ function insertString(origString, stringToAdd, indexPosition) {
     origString.slice(indexPosition);
   return newString;
 }
+$("input").change(function () {
+    $(this).val(ConvertFullWidthNumber($(this).val()));
+});
 function GetJapaneseDate(selector) {
   var tempYear = "";
   var tempMonth = "";

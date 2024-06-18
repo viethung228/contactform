@@ -1,5 +1,0 @@
-[13/06/2023 08:16:17 WRN Microsoft.AspNetCore.Server.Kestrel] Overriding address(es) 'http://localhost:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. 
-[13/06/2023 08:16:17 INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:3601 
-[13/06/2023 08:16:17 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
-[13/06/2023 08:16:17 INF Microsoft.Hosting.Lifetime] Hosting environment: Development 
-[13/06/2023 08:16:17 INF Microsoft.Hosting.Lifetime] Content root path: E:\Project\ec-wine\SourceCode\Manager\Manager.WebApp 

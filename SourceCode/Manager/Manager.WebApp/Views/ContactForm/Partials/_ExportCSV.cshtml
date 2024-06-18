@@ -55,10 +55,10 @@
                 <td>@record.ContactForm.DateOfBirth.ToShortDateString()</td>
                 <td></td>
                 <td></td>
-                <td>@getAddress[1]</td>
-                <td>@getAddress[2]</td>
-                <td>@getAddress[0].Insert(3,"-")</td>
-                <td>@record.ContactForm.PhoneNumber.Insert(3,"-").Insert(8,"-")</td>
+                <td>@(getAddress.Length >= 2 ? getAddress[1] : "")</td>
+                <td>@(getAddress.Length >= 3 ? getAddress[2] : "")</td>
+                <td>@(getAddress.Length >= 1 ? getAddress[0] : "")</td>
+                <td>@record.ContactForm.PhoneNumber</td>
                 <td></td>
                 <td></td>
                 <td>@record.ContactForm.DateOfJoining.ToShortDateString()</td>

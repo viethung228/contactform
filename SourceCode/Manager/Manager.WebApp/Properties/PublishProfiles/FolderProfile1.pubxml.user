@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\Publish\WineEC\Manager</_PublishTargetUrl>
-    <History>True|2023-06-14T09:42:49.0599372Z;True|2023-05-24T15:39:15.3475947+07:00;True|2023-05-24T15:19:05.4340054+07:00;True|2023-05-24T15:17:58.1884474+07:00;True|2023-05-24T14:41:08.8604214+07:00;False|2023-05-24T14:40:17.9392554+07:00;True|2022-09-27T00:32:41.0125480+07:00;</History>
+    <History>True|2023-12-04T04:35:03.8934395Z;True|2023-06-14T16:42:49.0599372+07:00;True|2023-05-24T15:39:15.3475947+07:00;True|2023-05-24T15:19:05.4340054+07:00;True|2023-05-24T15:17:58.1884474+07:00;True|2023-05-24T14:41:08.8604214+07:00;False|2023-05-24T14:40:17.9392554+07:00;True|2022-09-27T00:32:41.0125480+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

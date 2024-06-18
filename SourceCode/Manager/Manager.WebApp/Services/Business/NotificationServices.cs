@@ -93,6 +93,48 @@ namespace Manager.WebApp.Services
             return returnModel;
         }
 
+        public static async Task<ApiResponseModel> CreateNotificationAsync(int actionType, int targetType, int agencyId, int contactFormId)
+        {
+            ApiResponseModel returnModel = new ApiResponseModel();
+            try
+            {
+                var restClient = new RestClient(SystemSettings.MainApi);
+                MainApiAuthorization(restClient);
+
+                IRestRequest restRequest = new RestRequest(string.Format("api/notification/create"), Method.POST);
+
+                restRequest.AddHeader("Accept", "application/json");
+
+                restRequest.AddQueryParameter("actionType", actionType.ToString());
+                restRequest.AddQueryParameter("targetType", targetType.ToString());
+                restRequest.AddQueryParameter("agencyId", agencyId.ToString());
+                restRequest.AddQueryParameter("contactFormId", contactFormId.ToString());
+
+                var result = await restClient.ExecuteAsync(restRequest);
+
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    returnModel = JsonConvert.DeserializeObject<ApiResponseModel>(result.Content);
+                }
+                else
+                {
+                    //Trace log
+                    HttpStatusCodeTrace(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Api {0} error: {1}", MethodBase.GetCurrentMethod().ReflectedType.FullName, ex.ToString());
+            }
+
+            if (returnModel == null)
+            {
+                returnModel = new ApiResponseModel();
+            }
+
+            return returnModel;
+
+        }
         public static async Task<ApiResponseModel> GetUnreadCountAsync()
         {
             ApiResponseModel returnModel = new ApiResponseModel();

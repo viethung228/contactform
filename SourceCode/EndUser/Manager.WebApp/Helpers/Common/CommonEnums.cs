@@ -13,23 +13,30 @@ namespace Manager.WebApp.Helpers
 
     public enum EnumNotificationTargetType
     {
-        Order = 10,
-        Product = 20,
-        Customer = 30
+        Company = 1,
+        ContactForm = 2,
     }
 
     public enum EnumNotificationActionTypeForManager
     {
-        ProductCreated = 0,
-        ProductUpdated = 1,
-
-        CustomerCreated = 100,
-        CustomerUpdated = 101,
-        CustomerRegister = 102,
-
-        OrderCreated = 200,
+        CompanyCreated = 10,
+        CompanyUpdated = 11,
+        CompanyDeleted = 12,
+        ContactFormCreated = 20,
+        ContactFormUpdated = 21,
+        ContactFormDeleted = 22,
     }
 
+    public static class EnumNotificationMessageTypeForManager
+    {
+        public static string CompanyCreated = "CompanyCreated";
+        public static string CompanyUpdated = "CompanyUpdated";
+        public static string CompanyDeleted = "CompanyDeleted";
+        public static string ContactFormCreated = "入 社 連 絡 票が届きました。";
+        public static string ContactFormUpdated = "ContactFormUpdated";
+        public static string ContactFormDeleted = "ContactFormDeleted";
+
+    }
     public enum EnumNotificationActionTypeForCustomer
     {
 

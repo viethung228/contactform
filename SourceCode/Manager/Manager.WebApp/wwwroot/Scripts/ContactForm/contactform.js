@@ -19,7 +19,19 @@ window.onload = (event) => {
     $("input:checkbox[name='contactForm']:checked").each(function () {
         $(this).prop("checked", false);
     });
+
+    $("#bigCheckBox").prop("checked", false);
 };
+
+function IsSelect() {
+    if ($(".childCheckBox:checked").length > 0) {
+        $("#selectedCSVDownload").prop("hidden", false);
+        $("#CSVDownloadAll").prop("hidden", true);
+    } else {
+        $("#CSVDownloadAll").prop("hidden", false);
+        $("#selectedCSVDownload").prop("hidden", true);
+    }
+}
 function isChecked() {
     listFormId = localStorage.getItem("items")
         ? JSON.parse(localStorage.getItem("items"))
@@ -57,7 +69,9 @@ function contactForm() {
             }
         );
     });
-
+    $("input").change(function () {
+        $(this).val(ConvertFullWidthNumber($(this).val()));
+    });
     $("#bigCheckBox").click(function () {
         arrDel = [];
         $(".childCheckBox").prop("checked", $(this).prop("checked"));
@@ -75,6 +89,7 @@ function contactForm() {
             "disabled",
             listFormId.length > 0 ? false : true
         );
+        IsSelect();
     });
     $(".childCheckBox").click(function () {
         $("input:checkbox[name='contactForm']:checked").each(function () {
@@ -96,6 +111,7 @@ function contactForm() {
             "disabled",
             listFormId.length > 0 ? false : true
         );
+        IsSelect();
     });
     $("#selectedCSVDownload").click(function () {
         if (listFormId.length > 0) {

@@ -5,15 +5,15 @@
 @using System.ComponentModel;
 @model Manager.WebApp.Models.ContactFormFullDetailModel
 @{
-    ViewBag.Title = "Contact form";
+    ViewBag.Title = "入社連絡票";
     ViewBag.HideSubHeader = true;
     ViewBag.ParentController = "Company";
     ViewBag.ParentAction = "Index";
 
-    Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
-    Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
-    Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
-    Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
+    Model.Dependents.Add(new DependentModel());
+    Model.Dependents.Add(new DependentModel());
+    Model.Dependents.Add(new DependentModel());
+    Model.Dependents.Add(new DependentModel());
 }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
@@ -1033,8 +1033,8 @@
             </div>
             <div class="mt-4 d-flex justify-content-center align-items-center">
                 <div>
-                    <button type="button" class="btn btn-warning btn-sm btn-save-version" id="butSubmitContactForm">
-                        <i class="fa fa-save"></i> 新しいバージョンを保存
+                    <button type="submit" class="btn btn-warning btn-sm btn-save-version" id="butSubmitContactForm">
+                        <i class="fa fa-save"></i> 保存
                     </button>
                     <a class="btn btn-outline-info btn-sm" href="/Company"><i class="fa fa-remove"></i> キャンセル</a>
                 </div>
@@ -1047,34 +1047,41 @@
 @section PageInlineScripts{
     <script src="~/Scripts/ContactForm/add-form.js"></script>
     <script>
+        var alertText = '<span class="text-danger field-validation-error" data-valmsg-replace="true"><span class="">空白のままにしないでください</span></span>';
+
+        $("input").change(function () {
+            $(this).val(ConvertFullWidthNumber($(this).val()));
+
+        });
+        
         $("#butSubmitContactForm").click(function () {
-            var pattern = /[a-zA-Z]/;
-            var alertMessage = "";
-            if (!$("#ContactForm_NenkinNumber").val()) {
-                alertMessage += "基礎年金番号が抜けている" + "\n";
-            }
-            if (!$("#ContactForm_Insurance").val()) {
-                alertMessage += "雇用保険被保険者番号が記載されていない" + "\n";
-            }
-            if (!$("#ContactForm_Address").val() || !$("#ContactForm_Address").val().match(pattern) ? true : false) {
-                alertMessage += "住所がありません" + "\n";
-            }
-            if (!$("#ContactForm_DateOfBirth").val() || $("#ContactForm_DateOfBirth").val().includes("NaN")) {
-                alertMessage += "生年月日を入力してください" + "\n";
-            }
-            if (!$("#ContactForm_DateOfJoining").val()) {
-                alertMessage += "入社日を入力してください" + "\n";
-            }
-            if (!$("#ContactForm_ForOffice").val()) {
-                alertMessage += "事務分野で行方不明" + "\n";
-            }
+            //var pattern = /[a-zA-Z]/;
+            //var alertMessage = "";
+            //if (!$("#ContactForm_NenkinNumber").val()) {
+            //    alertMessage += "基礎年金番号が抜けている" + "\n";
+            //}
+            //if (!$("#ContactForm_Insurance").val()) {
+            //    alertMessage += "雇用保険被保険者番号が記載されていない" + "\n";
+            //}
+            //if (!$("#ContactForm_Address").val() || !$("#ContactForm_Address").val().match(pattern) ? true : false) {
+            //    alertMessage += "住所がありません" + "\n";
+            //}
+            //if (!$("#ContactForm_DateOfBirth").val() || $("#ContactForm_DateOfBirth").val().includes("NaN")) {
+            //    alertMessage += "生年月日を入力してください" + "\n";
+            //}
+            //if (!$("#ContactForm_DateOfJoining").val()) {
+            //    alertMessage += "入社日を入力してください" + "\n";
+            //}
+            //if (!$("#ContactForm_ForOffice").val()) {
+            //    alertMessage += "事務分野で行方不明" + "\n";
+            //}
             
-            if (alertMessage) {
-                alert(alertMessage);
-            }
-            else{
-                $("#frmContactForm").submit();
-            }
+            //if (alertMessage) {
+            //    alert(alertMessage);
+            //}
+            //else{
+            //    $("#frmContactForm").submit();
+            //}
 
         });
     </script>

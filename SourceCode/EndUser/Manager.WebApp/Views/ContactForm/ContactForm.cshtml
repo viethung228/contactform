@@ -5,15 +5,15 @@
 @using System.ComponentModel;
 @model Manager.WebApp.Models.ContactFormFullDetailModel
 @{
-    ViewBag.Title = "Contact form";
+    ViewBag.Title = "入社連絡票";
     ViewBag.HideSubHeader = true;
     ViewBag.ParentController = "Company";
     ViewBag.ParentAction = "Index";
 
-    Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
-    Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
-    Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
-    Model.Dependents.Add(new MainApi.DataLayer.Entities.IdentityDependent());
+    Model.Dependents.Add(new DependentModel());
+    Model.Dependents.Add(new DependentModel());
+    Model.Dependents.Add(new DependentModel());
+    Model.Dependents.Add(new DependentModel());
 }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
@@ -1006,7 +1006,7 @@
             <div class="mt-4 d-flex justify-content-center align-items-center">
                 <div>
                     <button type="submit" class="btn btn-warning btn-sm btn-save-version" id="butSubmitContactForm">
-                        <i class="fa fa-save"></i> 新しいバージョンを保存
+                        <i class="fa fa-save"></i> 保存
                     </button>
                     <a class="btn btn-outline-info btn-sm" href="/ContactForm"><i class="fa fa-remove"></i> キャンセル</a>
                 </div>
